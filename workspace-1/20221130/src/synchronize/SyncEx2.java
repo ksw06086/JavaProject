@@ -44,6 +44,7 @@ class Buffer {
 	}
 }
 
+// 생산자
 class Producer extends Thread {
 	Buffer dataBuffer;
 	
@@ -68,6 +69,40 @@ class Producer extends Thread {
 	}
 }
 
-public class SyncEx2 {
+// 소비자
+class Consumer extends Thread {
+	Buffer dataBuffer;
 	
+	public Consumer(Buffer b) {
+		dataBuffer = b;
+	}
+	
+	public void run() {
+		Random r = new Random();
+		
+		for (int i = 0; i < 10; i++) {
+			int num = dataBuffer.get();
+			System.out.println("소비자: " + num);
+			
+			try {
+				sleep(Math.abs(r.nextInt() % 100));
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+public class SyncEx2 {
+	public static void main(String[] args) {
+		Buffer b = new Buffer();
+		
+		Producer p = new Producer(b);
+		p.start();
+		
+		Consumer c = new Consumer(b);
+		c.start();
+		
+	}
 }
