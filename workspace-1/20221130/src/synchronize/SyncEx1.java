@@ -1,4 +1,4 @@
-package thread1;
+package synchronize;
 
 import java.util.Random;
 
@@ -25,8 +25,8 @@ class Gyul {
 	}
 }
 
-public class ThreadTest3 extends Thread{
-	public ThreadTest3(String name) {
+class MyThread extends Thread{
+	public MyThread(String name) {
 		super(name);
 	}
 	
@@ -40,6 +40,27 @@ public class ThreadTest3 extends Thread{
 				e.printStackTrace();
 				return;
 			}
+			
+			if(Gyul.gyul_count == 0){
+				System.out.println("귤을 다 먹었습니다.");
+				return;
+			}
+			
+			Gyul.TakeOut(this.getName(), Math.abs(r.nextInt() % 7));
 		}
+	}
+}
+
+public class SyncEx1 {
+	public static void main(String[] args) {
+		MyThread my1, my2, my3;
+		
+		my1 = new MyThread("이지민");
+		my2 = new MyThread("정지원");
+		my3 = new MyThread("정해인");
+		
+		my1.start();
+		my2.start();
+		my3.start();
 	}
 }
