@@ -1,0 +1,32 @@
+Exception
+1. RunTime : Exception
+① 정수 / 0 => ArithmeticException(산술예외)
+② InputMismatchException(입력 매칭 잘못됨)
+③ ArrayIndexOutOfBoundsException(배열의 인덱스를 경계를 벗어났을 때)
+
+
+2. CompileTime : java.io.~, java.sql.~, java.net~
+
+예외처리 구문
+try {
+	예외가 발생할 가능성 있는 문장
+} catch(ArithmeticException e) {
+
+} catch(InputMismatchException e) {
+
+} 생략가능finally {
+
+}
+
+
+******** Exception 종류 ***********
+ArithmeticException - 정수를 0으로 나눌 때 발생
+NullPointer null - 레퍼런스를 참조할 때
+ㄴ Scanner를 사용하는데 null값을 가질 때 => 사용하려는 객체가 null일 때 
+ClassCast - 변환할 수 없는 유형으로 객체를 변환할 때 발생 => 상속관계
+OutOfMemory - 메모리가 부족한 경우 발생
+ArrayIndexOutOfBounds - 배열의 범위를 벗어난 접근 시
+IllegalArgument - 잘못된 인자 전달시
+IO - 입출력 동작 실패 또는 인터럽트 시
+InputMismatch - Scanner 클래스를 이용하여 입력 받은 문자를 nextint(), nextDouble()등의 메소ㄷ로 변혼하고자 할 때 일치하지 않는 유형의 데이터가 입력 되었을 때 발생
+NumberFormat - 문자열이 나타내는 숫자와 일치하지 않는 유형의 숫자로 변환할 때

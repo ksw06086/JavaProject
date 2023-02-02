@@ -1,0 +1,42 @@
+jButton
+- 버튼 기능
+- 클릭할 수 잇는 버튼 모양
+JButton lb = new JButton("버튼 글씨")
+add(객체명);
+
+layout Manager = 배치관리자 
+- Borderlayout(JFrame)
+- flowLayout(JPanel) => 물이 흐르듯 왼 -> 오른쪽 추가공간 없으면 아래로
+
+setLayout(레이아웃을 객체생성하면됨)
+
+화면
+위 : North, 아래 : South, 왼 : West, 오 : East, 가운데 : Center
+
+//// 글자/배경 색상 지정
+- 지정방법
++ 객체.setBackground(Color.색상);
++ 객체.setForeground(Color.색상);
+
+//// JPanel
+- 다른 컴포넌트를 포함할 수 있다.
+- 컴포넌트들을 배치하기 위해 사용
+- new JPanel(Layout y);
+ex) p.setLayout(new GridLayout(3.4))
+- 배치관리자가 없으면 setlocation으로 x,y 위치 선정해주면 됨
+
+//// 배치관리자
+- 컴포넌트를 배치하기 위한 방법 제공
+- borderlayout(JFrame), flowlayout(JPanel), 
+gridlayout(행렬<table같음>), null
++ setlayout(layoutmanager);
++ flowlayout(int align, int hGap, int vGap);
+// align : flowlayout.Left, Flowlayout.Right, FlowLayout.CENTER 중 한개 지정
+// hGap : 컴포넌트 사이의 수평간격을 픽셀단위로 지정(기본 5pixel)
+// vGap : 컴포넌트 사이의 수직간격을 픽셀단위로 지정(기본 5pixel)
+
++ borderlayout(int hGap, int vGap);
+++ add("위치", 컴포넌트명);
+
+
+
