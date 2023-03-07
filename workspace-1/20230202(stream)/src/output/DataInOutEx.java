@@ -10,7 +10,7 @@ import java.io.IOException;
 
 /**
  * <클래스>
- * DataOutputStream : 문자,문자열이 아닌 일반 데이터(숫자, Bool, 실수 등)를 입력받을 때 사용하는 스트림 클래스
+ * DataOutputStream : 문자,문자열이 아닌 일반 데이터(숫자, Bool, 실수 등)를 출력할 때 사용하는 스트림 클래스
  * <메소드>
  * + writeBoolean(), writeByte(), writeInt(), writeLong(), writeFloat(), writeDouble()
  * 
