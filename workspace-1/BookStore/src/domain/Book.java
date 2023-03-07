@@ -26,6 +26,7 @@ import java.io.Serializable;
 public class Book implements Serializable{
 	// 직렬화 객체 번호
 	private static final long serialVersionUID = 100L;
+	private static int serialCode = 1000;
 	
 	// 멤버 변수
 	private String bookTitle; 						// 책 제목
@@ -41,6 +42,10 @@ public class Book implements Serializable{
 		this.bookPrice = bookPrice;
 		this.bookCount = bookCount;
 		this.bookCode = bookCode;
+	}
+
+	public static int getCodeNumber() {
+		return serialCode++;
 	}
 
 	// Getter, Setter
@@ -78,6 +83,12 @@ public class Book implements Serializable{
 
 	public void setBookCount(int bookCount) {
 		this.bookCount = bookCount;
+	}
+	public void addBookCount(int bookCount) {
+		this.bookCount += bookCount;
+	}
+	public void subBookCount(int bookCount) {
+		this.bookCount -= bookCount;
 	}
 	
 	// 책 코드
