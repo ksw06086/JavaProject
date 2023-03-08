@@ -112,42 +112,60 @@ public class HostImpl implements Host{
 		System.out.print("수정할 책의 코드를 입력해주세요. [이전 : 0] : ");
 		int code = Console.codeInput();
 		if(Stock.stockList.containsKey(code)) {
-			System.out.print("무엇을 수정하시겠습니까?. [제목 : 1, 저자 : 2, 가격 : 3, 수량 : 4, 이전 : 0] : ");
-			int swit = Console.codeInput();
-			switch (swit) {
-				case 1:
-					System.out.print("현재 제목 : " + Stock.stockList.get(code).getBookTitle() + 
-							", 수정하고 싶으신 제목을 입력해주세요. : ");
-					String title = Console.strInput();
-					break;
-				case 2:
-					System.out.print("현재 저자 : " + Stock.stockList.get(code).getBookAuthor() + 
-							", 수정하고 싶으신 저자를 입력해주세요. : ");
-					String author = Console.strInput();
-					break;
-				case 3:
-					System.out.print("현재 가격 : " + Stock.stockList.get(code).getBookPrice() + 
-							", 수정하고 싶으신 가격을 입력해주세요. : ");
-					int price = Console.codeInput();
-					break;
-				case 4:
-					System.out.print("현재 수량 : " + Stock.stockList.get(code).getBookCount() + 
-							", 수정하고 싶으신 수량을 입력해주세요. : ");
-					int count = Console.codeInput();
-					break;
-				case 0:
-					break;
-				default:
-					System.out.println("0~4까지의 숫자 중 하나만 입력해 주세요.");
-					break;
-			}
-			if(Console.inputReadSwit) {
-				System.out.println("키보드 오류로 인해 수정이 취소됩니다.");
-				return;
-			} else if() {
-				
-			}
-			
+			while(true) {
+				System.out.print("무엇을 수정하시겠습니까?. [제목 : 1, 저자 : 2, 가격 : 3, 수량 : 4, 수정종료 : 0] : ");
+				int swit = Console.codeInput();
+				switch (swit) {
+					case 1:
+						System.out.print("현재 제목 : " + Stock.stockList.get(code).getBookTitle() + 
+								", 수정하고 싶으신 제목을 입력해주세요. : ");
+						Stock.stockList.get(code).setBookTitle(Console.strInput());
+						break;
+					case 2:
+						System.out.print("현재 저자 : " + Stock.stockList.get(code).getBookAuthor() + 
+								", 수정하고 싶으신 저자를 입력해주세요. : ");
+						Stock.stockList.get(code).setBookAuthor(Console.strInput());
+						break;
+					case 3:
+						System.out.print("현재 가격 : " + Stock.stockList.get(code).getBookPrice() + 
+								", 수정하고 싶으신 가격을 입력해주세요. : ");
+						int price = Console.codeInput();
+						if(price < 0) {
+							System.out.println("0원(공짜)보다 더 낮은 금액은 없습니다.");
+							return;
+						}
+						Stock.stockList.get(code).setBookPrice(price);
+						break;
+					case 4:
+						System.out.print("현재 수량 : " + Stock.stockList.get(code).getBookCount() + 
+								", 수정하고 싶으신 수량을 입력해주세요. : ");
+						int count = Console.codeInput();
+						if(count < 0) {
+							System.out.println("수량은 1개 이상입니다.");
+							return;
+						}
+						Stock.stockList.get(code).setBookCount(count);
+						break;
+					case 0:
+						return;
+					default:
+						System.out.println("0~4까지의 숫자 중 하나만 입력해 주세요.");
+						break;
+				}
+				if(Console.inputReadSwit) {
+					System.out.println("키보드 오류로 인해 수정이 취소됩니다.");
+					return;
+				}
+				System.out.println("=================================");
+				System.out.println(code + "의 코드를 가진 도서가 수정되었습니다.");
+				System.out.println("=================================");
+			} 
+		} else if(code == 0) {
+			return ;		// 종료
+		} else {
+			System.out.println("=================================");
+			System.out.println(code + "의 코드를 가진 도서가 목록에 잇지 않습니다. 목록을 다시 확인해주시기 바랍니다. ");
+			System.out.println("=================================");
 		}
 	}
 
