@@ -19,7 +19,7 @@ import service.Host;
 import service.HostImpl;
 
 /*
- * 작성일 : 2023.03.06.~2023.03.07
+ * 작성일 : 2023.03.06.~2023.03.09
  * 작성자 : 김선우
  * 개요 : 해당 기능에 대한 화면 호출
  * **/
@@ -28,52 +28,52 @@ public class MenuImpl implements Menu{
 	private Host host = new HostImpl();
 
 	@Override
-	public void commonMenu(MenuList code) {	// 공통메뉴
+	public void commonMenu(MenuList code) {		// 공통메뉴
 		switch (code) {
-		case SHOP_LOGIN : 								// 메인화면(로그인)
-			loginMenu(); break;
-		case HOST_MENU :									// 관리자 메뉴
-			hostMenu(); break;
-		case HOST_STOCK_MENU :						// 재고관리
-			stockMenu(); break;
-		case HOST_BOOK_LIST :							// 책목록
-			hostMenu(); break;
-		case HOST_BOOK_ADD :							// 책추가
-			hostMenu(); break;
-		case HOST_BOOK_UPDATE :					// 책수정
-			hostMenu(); break;
-		case HOST_BOOK_DEL :							// 책삭제
-			hostMenu(); break;
-		case HOST_ORDER_MENU :					// 주문관리
-			orderMenu(); break;
-		case HOST_ORDER_LIST :						// 주문목록
-			hostMenu(); break;
-		case HOST_ORDER_CONFIRM :				// 결제승인
-			hostMenu(); break;
-		case HOST_ORDER_CANCEL :					// 결제취소
-			hostMenu(); break;
-		case HOST_SALE_TOTAL :						// 결산
-			hostMenu(); break;
-		case GUEST_MENU :								// 고객 메뉴
-			guestMenu(); break;
-		case GUEST_GOODS_LIST :					// 상품목록
-			goodsMenu(); break;
-		case GUEST_NOWBUY :							// 바로구매
-			hostMenu(); break;
-		case GUEST_CART_ADD :						// 장바구니 담기
-			hostMenu(); break;
-		case GUEST_CART_LIST :						// 장바구니 목록
-			cartMenu(); break;
-		case GUEST_CART_DEL :						// 장바구니 삭제
-			hostMenu(); break;
-		case GUEST_CART_BUY :						// 장바구니 구매
-			hostMenu(); break;
-		case GUEST_REFUND :							// 환불
-			hostMenu(); break;
-		case GUEST_JOIN :									// 회원가입
-			hostMenu(); break;
-		default:
-			break;
+			case SHOP_LOGIN : 									// 메인화면(로그인)
+				loginMenu(); break;
+			case HOST_MENU :									// 관리자 메뉴
+				hostMenu(); break;
+			case HOST_STOCK_MENU :						// 재고관리
+				stockMenu(); break;
+			case HOST_BOOK_LIST :							// 책목록
+				host.bookList(); break;
+			case HOST_BOOK_ADD :							// 책추가
+				host.bookAdd();; break;
+			case HOST_BOOK_UPDATE :						// 책수정
+				host.bookUpdate(); break;
+			case HOST_BOOK_DEL :							// 책삭제
+				host.bookDel(); break;
+			case HOST_ORDER_MENU :						// 주문관리
+				orderMenu(); break;
+			case HOST_ORDER_LIST :						// 주문목록
+				host.orderList(); break;
+			case HOST_ORDER_CONFIRM :				// 결제승인
+				host.orderConfirm(); break;
+			case HOST_ORDER_CANCEL :					// 결제취소
+				host.orderCancel(); break;
+			case HOST_SALE_TOTAL :						// 결산
+				host.saleTotal(); break;
+			case GUEST_MENU :									// 고객 메뉴
+				guestMenu(); break;
+			case GUEST_GOODS_LIST :						// 상품목록
+				goodsMenu(); break;
+			case GUEST_NOWBUY :								// 바로구매
+				guest.nowBuy(); break;
+			case GUEST_CART_ADD :							// 장바구니 담기
+				guest.cartAdd(); break;
+			case GUEST_CART_LIST :							// 장바구니 목록
+				cartMenu(); break;
+			case GUEST_CART_DEL :							// 장바구니 삭제
+				guest.cartDel(); break;
+			case GUEST_CART_BUY :							// 장바구니 구매
+				guest.cartBuy(); break;
+			case GUEST_REFUND :								// 환불
+				guest.refund(); break;
+			case GUEST_JOIN :									// 회원가입
+				guest.guestJoin(); break;
+			default:
+				break;
 		}
 	}
 

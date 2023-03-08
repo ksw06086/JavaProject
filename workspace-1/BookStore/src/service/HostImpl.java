@@ -3,13 +3,14 @@ package service;
 import java.util.Iterator;
 
 import domain.Book;
+import domain.Order;
 import domain.Stock;
 import view.Console;
 
 /**
  * @fileName		: BookStore
  * @project		: 서점 관리 프로그램
- * @date				: 2023.03.07.
+ * @date				: 2023.03.07.~2023.03.09
  * @author			: 김선우
  * @summary		: 관리자 관련 기능 호출 용도
  */
@@ -169,16 +170,44 @@ public class HostImpl implements Host{
 		}
 	}
 
+	// 책 삭제
 	@Override
 	public void bookDel() {
-		
+		System.out.print("삭제할 책의 코드를 입력하세요. [이전 : 0] : ");
+		int code = Console.codeInput();
+		if(Stock.stockList.containsKey(code)) {	// 코드에 맞는 책이 재고목록에 있는지 확인
+			Stock.stockList.remove(code);
+			System.out.println("===========================");
+			System.out.println(code + "의 코드를 가진 도서가 삭제되었습니다.");
+			System.out.println("===========================");
+		} else if(code == 0) {
+			return ;		// 종료
+		} else {
+			System.out.println("===========================");
+			System.out.println(code + "의 코드를 가진 도서가 목록에 있지 않습니다. 목록을 다시 확인해주시기 바랍니다.");
+			System.out.println("===========================");
+		}
 	}
 
+	// 주문목록
 	@Override
 	public void orderList() {
-		
+		System.out.println("********** 구매 요청 목록 *********");
+		System.out.println("ID\t번호\t도서명\t저자\t가격\t수량");
+		System.out.println("*************************");
+		Iterator<String> ir = Order.idOrderList.keySet().iterator();
+		while (ir.hasNext()) {			// ID별 주문한 도서 목록들 가져오기
+			String key = ir.next();
+			Iterator<Integer> ir2 = Order.idOrderList.get(key).keySet().iterator();
+			while (ir2.hasNext()) {		// code별 도서 객체 가져오기
+				int code = ir2.next();
+				System.out.println(key + "\t" + Order.idOrderList.get(key).get(code));
+			}
+			
+		}
 	}
 
+	// 결제승인
 	@Override
 	public void orderConfirm() {
 		
