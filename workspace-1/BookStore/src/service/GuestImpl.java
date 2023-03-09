@@ -9,14 +9,18 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
+import java.util.Iterator;
 
 import domain.Book;
 import domain.Buy;
 import domain.Cart;
+import domain.Order;
+import domain.Refund;
+import domain.Stock;
 import view.Console;
 
 /**
- * @date				: 2023.02.16.-2023.03.07
+ * @date				: 2023.02.16.-2023.03.10
  * @author			: 김선우
  * @summary		: 고객 관련 기능 호출 용도
  */
@@ -46,7 +50,7 @@ public class GuestImpl implements Guest{
 			FileInputStream fileMemberIn = new FileInputStream("C:\\Users\\Happy\\Downloads\\" + id + ".txt");
 			DataInputStream memberIn = new DataInputStream(fileMemberIn);
 			
-			// 아이디랑 비번이 입력한게 맞는지 확인
+			// ID랑 PASSWORD가 맞는지 확인
 			if(id.equals(memberIn.readUTF())) {
 				if(pw.equals(memberIn.readUTF())) {
 					Id = id;
@@ -80,7 +84,7 @@ public class GuestImpl implements Guest{
 					return false;
 				}
 			}
-		} catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {			// 아이디 파일이 안만들어져있음
 			System.out.println("존재하는 아이디가 아닙니다.");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -88,33 +92,241 @@ public class GuestImpl implements Guest{
 		return false;
 	}
 
+	// 장바구니 삭제
 	@Override
 	public void cartDel() {
+		// 삭제할 책 코드 입력
+		System.out.print("삭제하려는 책의 코드를 입력하세요. [ 이전 : 0 ] : ");
+		int code = Console.codeInput();
 		
+		// 장바구니 안에 입력한 코드 책이 있는지 확인
+		if(Cart.cartList.containsKey(code)) {
+			System.out.println("=================================");
+			System.out.println("목록에서 삭제되었습니다.");
+			System.out.println("=================================");
+			Cart.cartList.remove(code);
+		} else if(code == 0) {
+			
+		} else {
+			System.out.println("=================================");
+			System.out.println(code + "의 코드를 가진 도서가 장바구니에 있지 않습니다. 목록을 다시 확인해주시기 바랍니다.");
+		}
 	}
 
+	// 장바구니 구매
 	@Override
 	public void cartBuy() {
-		// TODO Auto-generated method stub
+		// 장바구니 안에서 구매할 항목 입력
+		System.out.print("구매할 책의 코드를 입력하세요. [이전 : 0] : ");
+		int code = Console.codeInput();
 		
+		// 입력한 코드와 맞는 책이 장바구니에 있는지 확인
+		if(Cart.cartList.containsKey(code)) {
+			// 구매할 개수 입력
+			System.out.println("구매할 책의 개수를 입력하세요. [이전 : 0] : ");
+			int count = Console.codeInput();
+			
+			// count가 장바구니 속 수량보다 많거나 재고 수량보다 많을 때
+			if(count > Cart.cartList.get(code).getBookCount()) {
+				System.out.println("입력하신 수량이 장바구니에 있는 수량보다 많습니다. 목록을 다시 확인해 주시기 바랍니다.");
+			} else if(	count > Stock.stockList.get(code).getBookCount()) {
+				System.out.println("입력하신 수량이 재고수량보다 많습니다. " + Stock.stockList.get(code).getBookCount() + 
+						"이하의 수량을 입력해주시길 바랍니다.");
+			} else {
+				System.out.println("=================================");
+				System.out.println("구매요청 되었습니다.");
+				System.out.println("=================================");
+				
+				// 구매 요청 목록 추가 
+				// 한번이라도 구매를 안했었다면 해당 ID의 리스트 공간 생성하기
+				if(!Order.idOrderList.containsKey(Id)) {
+					Order.idOrderList.put(Id, Order.getOrderList());
+				}
+				
+				// 해당 책을 이전에 구매 요청했던 이력이 있으면 count++ / 없으면 new add 
+				if(Order.idOrderList.get(Id).containsKey(code)) {
+					Order.idOrderList.get(Id).get(code).addBookCount(count);
+				} else {
+					Order.idOrderList.get(Id).put(code, new Book(Stock.stockList.get(code)));
+				}
+				
+				// 장바구니/재고에서 삭제
+				// Buy count == Cart count => remove / != => count--
+				if(Cart.cartList.get(code).getBookCount() - count == 0) {
+					Cart.cartList.remove(code);
+				} else {
+					Cart.cartList.get(code).subBookCount(count);
+				}
+				// Buy count == Stock count => remove / != => count--
+				if(Stock.stockList.get(code).getBookCount() - count == 0) {
+					Stock.stockList.remove(code);
+				} else {
+					Stock.stockList.get(code).subBookCount(count);
+				}
+			} 
+		} else if(code == 0) {
+			return ;
+		} else {
+			System.out.println("==============================");
+			System.out.println(code + "의 코드를 가진 도서가 장바구니에 있지 않습니다. 목록을 다시 확인해 주시기 바랍니다.");
+		}
 	}
 
+	// 바로 구매
 	@Override
 	public void nowBuy() {
-		// TODO Auto-generated method stub
+		// 구매할 책 코드 입력
+		System.out.print("구매할 책의 코드를 입력하세요. [이전 : 0] : ");
+		int code = Console.codeInput();
 		
+		// 재고에 남아있는 책인지 확인
+		if(Stock.stockList.containsKey(code)) {
+			// 구매 수량 입력
+			System.out.print("구햄할 책의 개수를 입력하세요. [이전 : 0] : ");
+			int count = Console.codeInput();
+			
+			// 입력한 수량이 재고 수량보다 큰지 확인
+			if(count > Stock.stockList.get(code).getBookCount()) {
+				System.out.println("입력하신 수량이 재고 수량보다 많습니다. " 
+						+ Stock.stockList.get(code).getBookCount()
+						+ "이하의 수량을 입력해주세요.");
+			} else {
+				System.out.println("==================================");
+				System.out.println("구매요청 되었습니다.");
+				System.out.println("==================================");
+				
+				// 구매 요청 목록 추가 
+				// 한번이라도 구매를 안했었다면 해당 ID의 리스트 공간 생성하기
+				if(!Order.idOrderList.containsKey(Id)) {
+					Order.idOrderList.put(Id, Order.getOrderList());
+				}
+				
+				// 해당 책을 이전에 구매 요청했던 이력이 있으면 count++ / 없으면 new add 
+				if(Order.idOrderList.get(Id).containsKey(code)) {
+					Order.idOrderList.get(Id).get(code).addBookCount(count);
+				} else {
+					Order.idOrderList.get(Id).put(code, new Book(Stock.stockList.get(code)));
+				}
+				
+				// 재고에서 삭제
+				// Buy count == Stock count => remove / != => count--
+				if(Stock.stockList.get(code).getBookCount() == count) {
+					Stock.stockList.remove(code);
+				} else {
+					Stock.stockList.get(code).subBookCount(count);
+				}
+			}
+		} else if(code == 0) {		// 종료
+			return ;
+		} else {							// 코드 잘못 입력
+			System.out.println("==============================");
+			System.out.println(code + "의 코드를 가진 도서가 재고에 있지 않습니다. 목록을 다시 확인해 주시기 바랍니다.");
+		}
 	}
 
+	// 장바구니 추가
 	@Override
 	public void cartAdd() {
-		// TODO Auto-generated method stub
+		// 추가할 도서 코드 입력
+		System.out.println("장바구니에 추가할 책의 코드를 입력하세요. [이전 : 0] : ");
+		int code = Console.codeInput();
 		
+		// 재고에 있는 책인지 확인
+		if(Stock.stockList.containsKey(code)) {
+			// 추가할 개수 입력
+			System.out.print("구매할 책의 개수를 입력하세요. [이전 : 0] : ");
+			int count = Console.codeInput();
+			
+			// 입력한 수량이 재고 수량보다 큰지 확인
+			if(count > Stock.stockList.get(code).getBookCount()) {
+				System.out.println("입력하신 수량이 재고 수량보다 많습니다. " 
+						+ Stock.stockList.get(code).getBookCount()
+						+ "이하의 수량을 입력해주세요.");
+			} else {
+				System.out.println("==================================");
+				System.out.println("장바구니에 추가되었습니다.");
+				System.out.println("==================================");
+				
+				// 장바구니 목록 추가 
+				// 해당 책을 이전에 장바구니에 추가한 이력이 있으면 count++ / 없으면 new add 
+				if(Cart.cartList.containsKey(code)) {
+					Cart.cartList.get(code).addBookCount(count);
+				} else {
+					Cart.cartList.put(code, new Book(Stock.stockList.get(code)));
+				}
+			}
+		} else if(code == 0) {		// 종료
+			return ;
+		} else {							// 코드 잘못 입력
+			System.out.println("==============================");
+			System.out.println(code + "의 코드를 가진 도서가 재고에 있지 않습니다. 목록을 다시 확인해 주시기 바랍니다.");
+		}
 	}
 
+	// 구매 완료 목록 리스트
+	public void buyBookList() {
+		System.out.println("*********** 구매 완료 목록 *********");
+		System.out.println("번호\t도서명\t저자\t가격\t수량");
+		System.out.println("**************************");
+		Iterator<Integer> ir = Buy.buyList.keySet().iterator();
+		while (ir.hasNext()) {
+			int code = ir.next();
+			System.out.println(Buy.buyList.get(code));
+		}
+	}
+	
+	// 환불 요청
 	@Override
 	public void refund() {
-		// TODO Auto-generated method stub
+		// 구매한 도서 목록 출력
+		buyBookList();
 		
+		// 환불할 책 코드 입력
+		System.out.print("환불할 책의 개수를 입력하세요. [이전 : 0] : ");
+		int code = Console.codeInput();
+		
+		// 책을 구매 했었는지 확인
+		if(Buy.buyList.containsKey(code)) {
+			// 환불할 개수 입력
+			System.out.print("환불할 책의 개수를 입력하세요. [이전 : 0] : ");
+			int count = Console.codeInput();
+			
+			// 입력한 수량이 구매한 수량보다 큰지 확인
+			if(count > Buy.buyList.get(code).getBookCount()) {
+				System.out.println("입력하신 수량이 구매했던 책의 수량보다 많습니다. " 
+						+ Buy.buyList.get(code).getBookCount()
+						+ "이하의 수량을 입력해주세요.");
+			} else {
+				System.out.println("==================================");
+				System.out.println(count + "개의 책을 환불 요청하였습니다.");
+				System.out.println("==================================");
+				
+				// 환불 요청목록 추가 
+				// 한번이라도 환불 요청을 안했었다면 해당 ID의 리스트 공간 생성하기
+				if(!Refund.idRefundList.containsKey(Id)) {
+					Refund.idRefundList.put(Id, Refund.getRefundList());
+				} 
+				// 해당 책을 이전에 환불요청한 이력이 있으면 count++ / 없으면 new add 
+				if(Refund.idRefundList.get(Id).containsKey(code)) {
+					Refund.idRefundList.get(Id).get(code).addBookCount(count);
+				} else {
+					Refund.idRefundList.get(Id).put(code, new Book(Buy.buyList.get(code)));
+				}
+				
+				// 구매 목록 삭제
+				// Buy count == Refund count => remove / != => count--
+				if(Buy.buyList.get(code).getBookCount() == count) {
+					Buy.buyList.remove(code);
+				} else {
+					Buy.buyList.get(code).subBookCount(count);
+				}
+			}
+		} else if(code == 0) {		// 종료
+			return ;
+		} else {							// 코드 잘못 입력
+			System.out.println("==============================");
+			System.out.println(code + "의 코드를 가진 도서를 구매하지 않았습니다. 목록을 다시 확인해 주시기 바랍니다.");
+		}
 	}
 
 	// 회원가입
