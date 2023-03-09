@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 /*
- * 작성일 : 2023.03.06.
+ * 작성일 : 2023.02.06.
  * 작성자 : 김선우
  * 개요 : 환불요청 목록을 아이디별로 데이터 호출하는 용도
  * **/

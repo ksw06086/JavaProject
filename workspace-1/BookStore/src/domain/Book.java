@@ -19,7 +19,7 @@ import java.io.Serializable;
  * <> 캐스팀 되지 않은 Object 객체를 직렬화 해당 객체에 생성하면 에러가 생김 객체의 조상이기 때문에
  * 
  * 
- * 작성일 : 2023.03.06.
+ * 작성일 : 2023.02.06. / 2023.03.09
  * 작성자 : 김선우
  * 개요 : 책 데이터 호출 용도
  * **/
@@ -42,6 +42,14 @@ public class Book implements Serializable{
 		this.bookPrice = bookPrice;
 		this.bookCount = bookCount;
 		this.bookCode = bookCode;
+	}
+	
+	public Book(Book book) {
+		this.bookTitle = book.getBookTitle();
+		this.bookAuthor = book.getBookAuthor();
+		this.bookPrice = book.getBookPrice();
+		this.bookCount = book.getBookCount();
+		this.bookCode = book.getBookCode();
 	}
 
 	public static int getCodeNumber() {
@@ -89,6 +97,11 @@ public class Book implements Serializable{
 	}
 	public void subBookCount(int bookCount) {
 		this.bookCount -= bookCount;
+	}
+	
+	// 책 수량*가격(총 가격)
+	public int getBookTotalPrice() {
+		return (bookPrice * bookCount);
 	}
 	
 	// 책 코드

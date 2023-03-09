@@ -1,5 +1,10 @@
 package service;
 
+/*
+ * 작성일 : 2023.02.10.
+ * 작성자 : 김선우
+ * 개요 : 관리자 관련 기능명세서
+ * **/
 public interface Host {
 	// 기능 테스트용 관리자 로그인 데이터
 	static String ID = "host";								// 관리자 고유ID 생성

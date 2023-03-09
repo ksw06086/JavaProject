@@ -19,7 +19,7 @@ import service.Host;
 import service.HostImpl;
 
 /*
- * 작성일 : 2023.03.06.~2023.03.09
+ * 작성일 : 2023.02.04.~2023.02.06 / 2023.02.15.-2023.03.06
  * 작성자 : 김선우
  * 개요 : 해당 기능에 대한 화면 호출
  * **/
@@ -236,7 +236,7 @@ public class MenuImpl implements Menu{
 	public void goodsMenu() {	
 		// 상품 리스트 출력
 		System.out.println("********* 도서 목록 *********");
-		System.out.println("번호\t도서명\t저자\t가격\t수량\t상태");
+		System.out.println("번호\t도서명\t저자\t가격\t수량");
 		System.out.println("*************************");
 		Iterator<Integer> ir = Stock.stockList.keySet().iterator();
 		while (ir.hasNext()) {
