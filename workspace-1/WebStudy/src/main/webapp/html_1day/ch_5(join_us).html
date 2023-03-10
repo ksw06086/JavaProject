@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>회원가입 양식</title>
+<style type="text/css">
+		ul{
+			/* 불릿을 없애겠다 들여쓰기만 쓰겠다 */
+			list-style-type: none;
+		}
+		
+		fieldset {
+			/* 여백 시계방향 */
+			margin: 15px, /* 위아래 */ 10px /* 좌우 */;
+			max-width: 400px;
+		}
+		
+		fieldset legend {
+			font-size: 14px;				/* 글자크기 */
+			font-weight: bold;			/* 글자굵기 */
+			color: blue;						/* 글자색 */
+		}
+		
+		label {
+			font-size: 14px;				/* 글자크기 */
+			font-weight: bold;			/* 글자굵기 */
+			width: 120px;					/* 태그 폭 */
+		}
+</style>
+</head>
+<body>
+		<h3>회원가입 정보</h3>
+		<!-- fieldset 태그		 : <form> 요소에서 연관된 요소를 하나의 그룹으로 묶음 
+				 legend 태그			 : <fieldset>에서 캡션으로 활용	-->
+		<!-- <input> 태그 속성
+				 - size 					: 보여지는 글자 수 
+				 - placeholder 		: 힌트 표시
+				 - required 			: 필수 입력 
+				 - autofocus 		: 커서 자동 이동 -->
+		<!-- div 						: CSS를 적용하고 싶은 그룹이 있으면 묶을 때 주로 사용함 
+				 <div>와 <span>의 차이점
+				 span					: 내용 그대로인 상태에서 CSS 적용 
+				 div						: 새로 단락을 만들어서 CSS 적용-->
+		
+		<form action="8_link.html" method = "get">
+			<fieldset>			<!-- <form> 요소에서 연관된 요소를 하나의 그룹으로 묶음 -->
+				<legend> 회원가입 </legend>			<!-- <fieldset>에서 캡션으로 활용 -->
+				<table>
+					<tr>
+						<!-- size : 보여지는 글자 수 / placeholder : 힌트 표시 / required : 필수 입력 
+						/ autofocus : 커서 자동 이동 -->
+						<th align = "right"><label for = "userid">아이디</label></th>
+						<td><input type = "text" id = "userid" size = "20" placeholder="공백없이입력" required="required" autofocus="autofocus"/></td>
+					</tr>
+					<tr>
+						<th align = "right"><label for = "userpw">비밀번호</label></th>
+						<td><input type = "password" id = "userpw" size = "20" placeholder="공백없이입력" /></td>
+					</tr>
+					<tr>
+						<th align = "right"><label for = "userpwchk">비밀번호 확인</label></th>
+						<td><input type = "password" id = "userpwchk" size = "20" placeholder="비밀번호 확인" /></td>
+					</tr>
+					<tr>
+						<th colspan="2"><input type = "submit" value = "회원가입"/>
+						<input type="reset" value = "초기화"/></th>
+					</tr>
+				</table>
+			
+			</fieldset>
+		</form>
+
+
+</body>
+</html>
