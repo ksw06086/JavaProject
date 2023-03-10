@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>폼과 관련된 태그들</title>
+<style>
+	fieldset {
+		margin:15px, 10px;
+		max-width: 400px;
+	}
+	
+	fieldset legend {
+		font-size: 14px;
+		font-weight: bold;
+		color: blue;
+	}
+</style>
+</head>
+<body>
+<h3> 폼과 관련된 태그들 </h3>
+<form action="next.jsp" method="post">
+	<fieldset>
+		<legend>검색</legend>
+		<table>
+			<tr>
+				<td><input type = "search"/></td>
+				<td><input type = "submit" value = "검색"/><input type="reset" value = "다시입력"/></td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<fieldset>
+		<legend>우편번호 검색</legend>
+		<table>
+			<tr>
+				<td colspan="2"><input type = "button" value = "우편번호 검색" onclick="zipsearch();"/>
+				<input type="reset" value = "다시입력"/></td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<fieldset>
+		<legend>파일첨부</legend>
+		<table>
+			<tr>
+				<td><label for = "attachFile">첨부파일</label></td>
+				<td><input id = "attachFile" type = "file"/></td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<fieldset>
+		<legend>조회기간 선택</legend>
+		<table>
+			<tr>
+				<td><label for = "startDate">시작일</label></td>
+				<td><input type="date" id = "startDate"/>~</td>
+				<td><label for = "endDate">종료일</label></td>
+				<td><input type="date" id = "endDate"/></td>
+			</tr>
+			
+			<tr>
+				<td><label for = "weekDate">개강주</label></td>
+				<td><input type="week" id = "weekDate"/></td>
+			</tr>
+			
+			<tr>
+				<td><label for = "studyTime">강의시간</label></td>
+				<td><input type="time" id = "studyTime"/></td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<fieldset>
+		<legend>대관시간</legend>
+		<h5>선택(오늘)</h5>
+		
+		<table>
+			<tr>
+				<td><label for = "start">시작</label>
+				<input type="time" value = "09:00" id = "start"/>~</td>
+				<td><label for = "end">종료</label>
+				<input type="time" value = "18:00" id = "end"/></td>
+			</tr>
+		</table>
+		
+		<h5>선택(다른날짜)</h5>
+		
+		<table>	
+			<tr>
+				<td><label for = "dStart">시작</label></td>
+				<td><input type = "datetime-local" value = "2019-05-13T09:00" id = "dStart"/></td>
+			</tr>
+			<tr>
+				<td><label for = "dEnd">종료</label></td>
+				<td><input type = "datetime-local" value = "2019-05-13T18:00" id = "dEnd"/></td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<fieldset>
+		<legend>지원현황</legend>
+		<table>
+			<tr>
+				<td><label>참여인원 <small>(최대 10명)</small></label></td>
+				<td><input type="number" id = "member" value = "1" min = "0" max = "10"/></td>
+			</tr>
+			
+			<tr>
+				<td><label>지원물품<small>(1인당 5개)</small></label></td>
+				<td><input type="number" id = "stuffs" value = "1" min = "0" max = "50" step = "5"/></td>
+			</tr>
+			
+			<tr>
+				<td><label>희망단계<small>(상,중,하)</small></label></td>
+				<td><input type="range" id = "level" value = "1" min = "1" max = "3"/></td>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+</body>
+</html>

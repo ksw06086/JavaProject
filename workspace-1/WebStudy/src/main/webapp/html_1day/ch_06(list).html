@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>여러 데이터 나열해서 보여주기</title>
+</head>
+<body>
+	<h3> 여러 데이턴 나열해서 보여주기 </h3>
+	
+<form action="next.jsp" method="post">
+	<fieldset>
+		<legend>지민이의 수강 신청</legend>
+		<table>
+			<tr>
+				<td><label class = "reg" for = "stdnum">학번</label></td>
+				<td><input type = "number" id = "stdnum" min = "0" max = "100" required autofocus /></td>
+			</tr>
+			
+			<tr>
+				<td><label class = "reg" for = "stdname">이름</label></td>
+				<td><input type = "text" id = "stdname" size="20" /></td>
+			</tr>
+			
+			<tr>
+				<td><label class = "reg" for = "stdmajor">학과</label></td>
+				<td>
+				<select size="5" id = "major" multiple="multiple">
+					<optgroup label="예술대학">
+						<option value = "dance">무용과</option>
+						<option value = "music">실용음악과</option>
+						<option value = "art">미술학과</option>
+						<option value = "romance">연애학과</option>
+						<option value = "sing">성악과</option>
+					</optgroup>
+					
+					<optgroup label="인문대학">
+						<option value = "kor">국문학과</option>
+						<option value = "eng">영문학과</option>
+						<option value = "phil">철학과</option>
+						<option value = "china">중국어학과</option>
+						<option value = "history">사학과</option>
+					</optgroup>
+				</select>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<fieldset>
+		<legend>모바일 OS</legend>
+		<table>
+			<tr>
+				<td><label for = "mobile">사용중인 모바일 OS?</label></td>
+				<td><input type = "text" id = "mobile" list = "mobilelist" /></td>
+				<td>
+					<datalist id = "mobilelist">
+						<option value = "임창정"></option>
+						<option value = "아이즈원"></option>
+						<option value = "트와이스"></option>
+						<option value = "레드벨벳"></option>
+					</datalist>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Progress 태그 - 진행상테 보여주기</legend>
+		<table>
+			<tr>
+				<td><label> 10초 남음 </label></td>
+				<td><progress value = "50" max = "60" /></td>
+			</tr>
+			
+			<tr>
+				<td><label> 진행률 30% </label></td>
+				<td><progress value = "30" max = "60" /></td>
+			</tr>
+			
+		</table>
+	</fieldset>
+</form>
+
+
+</body>
+</html>
