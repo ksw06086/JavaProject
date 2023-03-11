@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	nav ul li{
+		display	: inline-block;		/* 적절하게 공백도 넣어준다. */
+		margin	: 20px;				/* 요소와 요소사이의 공백(바깥여백) */
+	}
+	
+	ul{
+		background: skyblue;		/* 배경색 */
+		text-align: auto;			/* 가운데 정렬 */
+	}
+	
+	a {
+		text-decoration: none;		/* 밑줄 없애기 */
+		color : white;				/* 글자색 흰색 */
+		font-weight: bold;			/* 굵게 */
+	}
+</style>
+</head>
+<body>
+	<!-- display 속성
+	1. block(세로로 보여주기)
+			혼자 한줄을 차지하는 요소로 너비가 100%를 의미
+			따라서 그 요소의 오른쪽이나 오른쪽에 다른 요소가 올 수 없다.
+			대표적인 태그는 <div>, <p>, <li>, <hn>..
+	
+	2. inline(가로로 보여주기)
+			줄을 차지하지 않는 요소로 화면에 표시되는 컨텐츠만큼 영역을 차지하고,
+			나머지 공간에는 다른 요소가 올 수 있다. 따라서 한줄에 여러개의 인라인 레벨요소를 표시할 수 있다.
+			대표적인 태그는 <img>, <span>, <button> .. 
+	
+	3. inline-block		많이 사용
+			요소를 인라인 레벨로 배치하면서, 내용은 블럭레벨로 지정(너비, 높이, 마진)
+			
+	4. none : 해당요소를 화면에 표시하지 않음
+	-->
+	
+	<!-- 여백
+	margin 	: 요소와 요소사이의 공백(바깥쪽 여백)
+	padding : 컨텐츠내용과 테두리 사이의 여백(안쪽 여백) 
+	-->
+	<nav>
+		<ul>
+			<li><a href = "#">애완견 종류</a></li>
+			<li><a href = "#">입양하기</a></li>
+			<li><a href = "#">건강돌보기</a></li>
+			<li><a href = "#">더불어살기</a></li>
+		</ul>
+	</nav>
+</body>
+</html>

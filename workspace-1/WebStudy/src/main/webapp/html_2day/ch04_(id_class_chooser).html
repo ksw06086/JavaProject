@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>id/class 선택자</title>
+<style type="text/css">
+	p{
+		font-size: 15px;					/* 글자크기 		: 15px */
+		line-height: 30px;					/* 줄간격 조정하기 	: 30px */
+	}
+	
+	#mynavi{
+		color:green;						/* 글자색			: green */
+		font-style: italic;					/* 글자스타일		: italic */
+	}
+	
+	.accent{
+		color:blue;							/* 글자색			: blue */
+		font-weight: bold;					/* 글자굵기		: 굵게 */
+	}
+	
+	#shadow{
+		color:#ffffff;						/* 글자색			: white */
+		margin-left: 20px;					/* 왼쪽여백		: 20px */
+		text-shadow: 5px 3px 10px #000000;	/* 그림자 		: 오른쪽 아래 번짐 검정색 */
+		/* 그림자(text-shadow) : <가로길이><세로길이><번짐정도><색상>
+			<가로길이> 필수
+			- 양수 : 글자의 오른쪽
+			- 음수 : 글자의 왼쪽
+			<세로길이> 필수
+			- 양수 : 글자의 아래쪽
+			- 음수 : 글자의 위쪽
+			<번짐정도> 기본값 - 0
+			- 양수 : 확대 / 음수 : 축소
+			<색상> 기본값 - 현재 글자색 */
+	}
+</style>
+</head>
+<body>
+	<header>
+		<h3 id = "shadow">예약방법 및 요금</h3>
+	</header>
+	
+	<section>
+		<article>
+			<p> 끌레르펜션 예약의 가장 빠른 방법 </p>
+			<ul>
+				<li> 예약 방법
+					<ul>
+						<li>직접통화</li>
+						<li>문자남기기</li>
+					</ul>
+				</li>
+				
+				<li> 요금
+					<ul>
+						<li> 1인		: 50,000원 </li>
+						<li> 2인		: 80,000원 </li>
+						<li> 4인		: 150,000원 </li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ol id = "mynavi">
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ol>
+			
+			<p>가평의 날씨는 다음주 내내 높은 구름, 햇살 가득이라고 합니다.</p>
+			<p>금요일이면 <span class = "accent">섭씨 20도</span>까지 오른다고 합니다.</p>
+			<p>산택하기 좋은 날씨, 바람도 적당할 듯 합니다.</p>
+		</article>
+	</section>
+</body>
+</html>

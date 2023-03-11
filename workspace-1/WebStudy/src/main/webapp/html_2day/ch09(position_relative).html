@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>position - relative</title>
+<style type="text/css">
+/*
+	relative 속성 :
+		static처럼 요소를 나열한 순서대로 배치됨.
+		float 속성을 이용해 좌우로 배치 가능
+		top, right, bottom, left 속성을 사용할 수 있으며,
+		좌표값을 사용해 위치 지정 가능
+		
+	static과 relative의 차이점
+	- static : 좌표를 움직일 수 없음
+			   이전 객체를 기준으로 상하좌우만 가능함
+	- relative : 좌표 top, bottom, left, right 로 원하는 좌표 가능
+				 위 요소가 float 속성을 사용안했으면 적용 안됨
+	
+	float
+	- 상단 float에 따라 아래가 결정됨 
+	- left면 right나 left할 때 같은 줄에 됨
+	- bottom이나 top이면 다른 줄에 됨
+	- relative로 좌표를 할 때에는 다른 줄로 함
+	- 좌표에 값을 + 해주면 해당 면에 빈칸이 추가되면서 밀림
+*/	
+	.box1{
+		float: left;
+		width: 100px;
+		background: #ffd800;
+		margin-right: 10px;
+		padding: 20px;
+	}
+	
+	.box2{
+		position:relative;
+		float: left;
+		width: 200px;
+		background: #00ff00;
+		padding: 20px;
+	}
+	
+	.box3{
+		position:relative;
+		left: 50px;
+		bottom: 30px;
+		float: right;
+		width: 100px;
+		background: #ffff00;
+		padding: 20px;
+	}
+</style>
+</head>
+<body>
+	<h3>position - relative</h3>
+	<div class="box1">박스1</div>
+	<div class="box2">박스2</div>
+	<div class="box3">박스3</div>
+</body>
+</html>
