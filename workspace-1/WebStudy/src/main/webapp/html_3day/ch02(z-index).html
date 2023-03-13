@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>z-index 속성 - 요소 쌓는 순서 정하기</title>
+<style type="text/css">
+	/* 
+		z-index 속성
+		- 요소 위에 요소를 쌓을 때 싼느 순서를 지정한다.
+		- z-index 값이 작을수록 아래에 쌓이고, 값이 클수록 위에 쌓인다.
+		- z-index 값을 명시하지 않을 경우, 웹문서에 맨 먼저 삽입하는 요소가 1이라는 값을 가지며,
+			그 후 삽입하는 요소들은 z-index값이 1씩 증가한다.
+		- 
+	 */
+	 #wrap{
+	 	position: relative;
+	 	width: 300px;
+	 	height: 300px;
+	 	border: 1px solid #ccc;
+	 }
+	 
+	 .box{
+	 	position: absolute;
+	 	width: 100px;
+	 	height: 100px;
+	 	background: #0094ff;
+	 }
+	 
+	 #box1{
+	 	top:0;
+	 	left:0;
+	 	background: #ff6a00;
+	 	z-index: 999;			/* 숫자가 낮을 수록 맨 아래에 위치 */
+	 }
+	 
+	 #box2{
+	 	top:20px;
+	 	left:60px;
+	 	background: #0000ff;
+	 	z-index: 1;			/* 숫자가 낮을 수록 맨 아래에 위치 */
+	 }
+	 
+	 #box3{
+	 	top:40px;
+	 	left:60px;
+	 	background: #00ff00;
+	 	z-index: 2;			/* 숫자가 낮을 수록 맨 아래에 위치 */
+	 }
+</style>
+</head>
+<body>
+	<h3>z-index 속성 - 요소 쌓는 순서 정하기</h3>
+	
+	<!-- div : 주로 컨텐츠를 묶어 시각적 효과 적용시, css 적용시 이용 -->
+	<div id = "wrap">
+		<div class="box" id = "box1">box1</div>
+		<div class="box" id = "box2">box2</div>
+		<div class="box" id = "box3">box3</div>
+	</div>
+</body>
+</html>
