@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>enabled disabled 가상클래스</title>
+<style type="text/css">
+	input:disabled{
+		background: #ddd;
+		border: 1px solid #ccc;
+	}
+	input:checked + span{
+		color:blue;
+	}
+</style>
+</head>
+<body>
+<h3> enabled disabled 가상클래스 </h3>
+
+<form action="text.jsp" method="post">
+	<fieldset>
+		<legend> 사용자 정보 </legend>
+		<table>
+			<tr>
+				<td><label for = "username">이름</label></td>
+				<td><input type="text" id="username" size="20" disabled></td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<fieldset>
+		<legend> 신청과목 </legend>
+		<p>이달에 신청할 과목을 선택하세요.</p>
+		<table>
+			<tr>
+				<td><label><input type = "radio" name ="subject" value = "speaking"><span>회화</span></label></td>
+				<td><label><input type = "radio" name ="subject" value = "grammer"><span>문법</span></label></td>
+				<td><label><input type = "radio" name ="subject" value = "writing"><span>작문</span></label></td>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+</body>
+</html>

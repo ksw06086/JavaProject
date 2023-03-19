@@ -24,34 +24,34 @@ public class GrimProgram extends JFrame implements MouseListener, MouseMotionLis
 	int startX, startY, endX, endY;
 	
 	public GrimProgram() {
-		setTitle("°£´Ü ±×¸²ÆÇ");
+		setTitle("ê·¸ë¦¼íŒ");
 		setLayout(new BorderLayout());
-		menus[0] = new JMenu("»ö»ó");
-		menus[1] = new JMenu("µµÇü");
-		menus[2] = new JMenu("Ã¤¿ì±â");
+		menus[0] = new JMenu("ìƒ‰");
+		menus[1] = new JMenu("ëª¨ì–‘");
+		menus[2] = new JMenu("ì±„ìš°ê¸°");
 		for(int i = 0; i<3; i++) 
 			mbar.add(menus[i]);
 		
-		colors[0] = new JMenuItem("»¡°­");
-		colors[1] = new JMenuItem("ÃÊ·Ï");
-		colors[2] = new JMenuItem("ÆÄ¶û");
-		colors[3] = new JMenuItem("ÇÏ¾ç");
-		colors[4] = new JMenuItem("°ËÁ¤");
+		colors[0] = new JMenuItem("red");
+		colors[1] = new JMenuItem("blue");
+		colors[2] = new JMenuItem("green");
+		colors[3] = new JMenuItem("white");
+		colors[4] = new JMenuItem("black");
 		for(int i = 0; i<5; i++) {
 			colors[i].addActionListener(this);
 			menus[0].add(colors[i]);
 		}
 		
-		shapes[0] = new JMenuItem("¼±");
-		shapes[1] = new JMenuItem("»ç°¢Çü");
-		shapes[2] = new JMenuItem("Å¸¿ø");
+		shapes[0] = new JMenuItem("Line");
+		shapes[1] = new JMenuItem("Rect");
+		shapes[2] = new JMenuItem("Oval");
 		for(int i = 0; i<3; i++) { 
 			shapes[i].addActionListener(this);
 			menus[1].add(shapes[i]);
 		}
 		
-		fills[0] = new JMenuItem("Å×µÎ¸®");
-		fills[1] = new JMenuItem("Ã¤¿ì±â");
+		fills[0] = new JMenuItem("draw");
+		fills[1] = new JMenuItem("fill");
 		for(int i = 0; i<2; i++) { 
 			fills[i].addActionListener(this);
 			menus[2].add(fills[i]);
@@ -129,34 +129,34 @@ public class GrimProgram extends JFrame implements MouseListener, MouseMotionLis
 		// TODO Auto-generated method stub
 		String text = ((JMenuItem) e.getSource()).getText();
 		switch (text) {
-		case "»¡°­":
+		case "red":
 			cColor = Color.RED;
 			break;
-		case "ÃÊ·Ï":
+		case "green":
 			cColor = Color.GREEN;
 			break;
-		case "ÆÄ¶û":
+		case "blue":
 			cColor = Color.BLUE;
 			break;
-		case "ÇÏ¾ç":
+		case "white":
 			cColor = Color.WHITE;
 			break;
-		case "°ËÁ¤":
+		case "black":
 			cColor = Color.BLACK;
 			break;
-		case "¼±":
+		case "Line":
 			cShape = "Line";
 			break;
-		case "»ç°¢Çü":
+		case "Rect":
 			cShape = "Rect";
 			break;
-		case "Å¸¿ø":
+		case "Oval":
 			cShape = "Oval";
 			break;
-		case "Å×µÎ¸®":
+		case "draw":
 			cFill = "draw";
 			break;
-		case "Ã¤¿ì±â":
+		case "fill":
 			cFill = "fill";
 			break;
 		default:

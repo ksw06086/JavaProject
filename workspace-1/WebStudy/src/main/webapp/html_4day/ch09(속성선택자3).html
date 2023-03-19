@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성 선택자</title>
+<style type="text/css">
+	/*
+		속성 선택자
+		3. [속성~=값] 선택자 - 여러값 중 특정 값이 포함된 속성에 스타일 적용하기
+	*/
+	li{
+		line-height: 40px;
+	}
+	.flat {/* 메뉴 4 */
+		background:blue;
+		color:white;
+	}
+	/* 메뉴3, 4 모두 해당 button이 포함된 모든 속성에 공통으로 그림자 지정 */
+	[class ~= "button"] {
+		border: 2px solid black;
+		box-shadow: rgba(0.0.0.0.4) 5px 5px; /* 그림자 : 검정색 40% 투명도 오른쪽 아래쪽 */
+	}
+	
+</style>
+</head>
+<body>
+	<h3>3. [속성~=값] 선택자 - 여러값 중 특정 값이 포함된 속성에 스타일 적용하기 </h3>
+	
+	<ul>
+		<li><a href="#">메뉴1 : </a></li>
+		<li><a href="#">메뉴2 : </a></li>
+		<li><a href="#" class = "button">메뉴3 : </a></li>
+		<li><a href="#" class = "flat button">메뉴4 : </a></li>
+	</ul>
+
+</body>
+</html>
