@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>체크박스의 전체선택 기능</title>
+<style type="text/css">
+	fieldset{
+		width: 400px;
+	}
+</style>
+<script type="text/javascript" src = "../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		/*  
+			all_check 요소(= 전체 선택용 체크박스)의 상태가 변한 경우
+			전체전택이 체크된 경우, 아래 4개 항목이 동시에 체크되고,
+			전체선택 체크가 해제된 경우, 아래 4개 항목이 동시에 체크가 해제된다.
+		*/
+		$("#all_check").change(function(){
+			var is_check = $(this).is(":checked");
+			
+			/*  
+				전체선택시 .hobby_check요소(=개별 선택용 체크박스)들의 체크상태를 일괄변경함
+				attr("속성", "값"); - html의 속성(=attribute)을 지정
+				prop("속성", "값"); - javascript의 속성(property)을 지정
+			*/
+			if(is_check){	// 일괄체크
+				$(".hobby_check").prop("checked", "true");
+			} else {
+				$(".hobby_check").prop("checked", "");
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<h2>체크박스의 전체선택 기능</h2>
+	<form name = "myForm" action = "" method = "post">
+		<fieldset>
+			<legend>취미</legend>
+			<!-- 전체 선택용 체크박스 -->
+			<p>
+				<label for = "all_check">전체선택</label>
+				<input type = "checkbox" id = "all_check">
+			</p>
+			
+			<hr>
+			<!-- 개별 선택용 체크박스 -->
+			<p>
+				<label for = "hobby1">바이올린</label>
+				<input type = "checkbox" id = "hobby1" class = "hobby_check" value = "바이올린">
+				<label for = "hobby2">드럼</label>
+				<input type = "checkbox" id = "hobby2" class = "hobby_check" value = "드럼">
+				<label for = "hobby3">개스터네츠</label>
+				<input type = "checkbox" id = "hobby3" class = "hobby_check" value = "개스터네츠">
+				<label for = "hobby4">가야금</label>
+				<input type = "checkbox" id = "hobby4" class = "hobby_check" value = "가야금">
+			</p>
+			
+		</fieldset>
+	</form>
+</body>
+</html>
