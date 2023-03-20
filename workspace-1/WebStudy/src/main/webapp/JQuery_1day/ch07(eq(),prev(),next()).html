@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스타일 지정</title>
+<style type="text/css">
+	table{
+		border-collapse: collapse;	/* 줄이 중복되지 않게 */
+	}
+	
+	td{
+		border: 1px solid violet;
+		width : 100px;
+		height: 100px;
+		text-align: center;
+		vertical-align: middle;	/* 세로 - top(위) / middle(가운데) */
+	}
+</style>
+<script type = "text/javascript" src = "https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type = "text/javascript">
+	/* 5번 배경색 : 밝은노랑 */
+	/* 4번 배경색 : 밝은녹색 */
+	/* 6번 배경색 : 보라색 */
+	/* 3번 배경색 : 빨강 */
+	/* 7,8,9번 밑줄 */
+	$(function(){
+		$("td").eq(4).css("background-color", "lightyellow");
+		$("td").eq(4).prev().css("background-color", "lightgreen");
+		$("td").eq(4).next().css("background-color", "violet");
+		
+		$("td").eq(2).css("background", "red");
+		$("tr").eq(2).css("text-decoration", "underline");
+		
+		/* 7번 빨간글자 */ 
+		/* 8번 진한글자 */
+		$("td").eq(3).parent().next().children().eq(0).css("color","red");
+		$("td").eq(3).parent().next().children().eq(1).css("font-weight","bold");
+	});
+</script>
+</head>
+<body>
+	<h3> DOM </h3>
+	
+	<table>
+		<tr>
+			<td>1번</td>
+			<td>2번</td>
+			<td>3번</td>
+		</tr>
+		
+		<tr>
+			<td>4번</td>
+			<td>5번</td>
+			<td>6번</td>
+		</tr>
+		
+		<tr>
+			<td>7번</td>
+			<td>8번</td>
+			<td>9번</td>
+		</tr>
+	</table>
+</body>
+</html>
