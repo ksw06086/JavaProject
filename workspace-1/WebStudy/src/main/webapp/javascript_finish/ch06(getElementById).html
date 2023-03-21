@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementById(Id명) 예제</title>
+</head>
+<body id = "body_id">
+	<h3 id = "h3_id">getElementById(Id명)</h3>
+	
+	<hr>
+	<div>
+		<img src = "../img/people5.png">
+	</div>
+	
+	<hr>
+	<div id = "div_id">
+		<!-- 이미지 삽입 -->
+	</div>
+	
+	<hr>
+	
+	같이 가고 싶은 사람
+	<ul>
+		<li id = "li_id1"></li>
+		<li id = "li_id2"></li>
+		<li id = "li_id3"></li>
+	</ul>
+	
+	<hr>
+	
+<script type="text/javascript">
+/* 직접접근 - 중요
+   1) getElementsByTagName(태그) 		: 태그를 이용해서 노드에 직접 접근
+   2) getElementsByName(태그의 name)	: 태그의 name을 이용해서 노드에 직접접근
+   3) getElementById				: id속성을 이용해서 해당 속성을 가진 노드에 직접접근 	
+*/	
+	
+	// var 변수명 = document.getElementById(Id명);
+   	var vBody = document.getElementById("body_id");
+   	var vH3_id = document.getElementById("h3_id");
+   	var vDiv_id = document.getElementById("div_id");
+   	var vLi_id1 = document.getElementById("li_id1");
+   	var vLi_id2 = document.getElementById("li_id2");
+   	var vLi_id3 = document.getElementById("li_id3");
+   	
+   	vBody.style.backgroundColor = "lightyellow";
+   	vH3_id.style.fontSize = "25px";
+   	vH3_id.style.fontFamily = "굴림";
+   	vH3_id.style.color = "violet";
+   	vDiv_id.innerHTML = "<img src = '../img/people1.png'>";
+   	vLi_id1.innerHTML = "<img src = '../img/people2.png'>";
+   	vLi_id2.innerHTML = "AI그림 이쁘다~~!!!!!!";
+   	vLi_id3.innerHTML = "<input type='text'>";
+</script>
+</body>
+</html>

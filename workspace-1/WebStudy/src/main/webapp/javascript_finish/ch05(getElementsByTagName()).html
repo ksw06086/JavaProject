@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementsByTagName() 예제 - 중요</title>
+</head>
+<body>
+<form action="" name = "myForm" method = "post">
+	<ul>
+		<li name = "frt">사과</li>
+		<li name = "frt">딸기</li>
+		<li name = "frt">천혜향</li>
+		<li name = "frt">토마토</li>
+	</ul>
+</form>
+
+<script type="text/javascript">
+/*
+ * 직접접근
+   1) getElementsByTagName(태그) : 태그를 이용해서 노드에 직접 접근
+   2) getElementById
+ */
+ 	document.write("==== getElementsByTagName(태그명) 예제 ====<br>");
+    var fruits = document.getElementsByTagName("li");
+    document.write("모두" + fruits.length + "개의 li요소가 존재<br>");
+    for (var i = 0; i < fruits.length; i++) {
+		document.write("i : " + i + "<br>");
+		document.write(fruits[i].nodeName + " : " + fruits[i].childNodes[0].nodeValue + "<br>");
+	}
+    
+    document.write("==== getElementsByName(태그의 name) 예제 ====<br>");
+    var fruits2 = document.getElementsByName("frt");
+    document.write("모두" + fruits2.length + "개의 li요소가 존재<br>");
+    for (var i = 0; i < fruits2.length; i++) {
+		document.write("i : " + i + "<br>");
+		document.write(fruits2[i].nodeName + " : " + fruits2[i].childNodes[0].nodeValue + "<br>");
+	}
+</script>
+</body>
+</html>

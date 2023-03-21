@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 핸들러 활용</title>
+<script type="text/javascript">
+	function big_image(){
+		window.open("ch01_sub.html", "bigW", 
+				"top = 100 left = 50 width = 500 height = 200");
+	}
+</script>
+</head>
+<body>
+<form name = "myForm" action="" method = "post">
+	<img src = "../img/people5.png" onmouseover="big_image();">
+	
+	<h3>세계 3대 여자</h3>
+	
+	<ul>
+		<li>일반 여자</li>
+		<li>애니 여자</li>
+		<li>AI 여자</li>
+	</ul>
+</form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>list박스에서 항목 이동 예제</title>
+<script type="text/javascript">
+	function moveR(frm){
+		frm.myMenu.options[frm.myMenu.options.length]
+		= new Option(frm.menu[frm.menu.selectedIndex].text, 
+					 frm.menu[frm.menu.selectedIndex].value);
+		
+		frm.menu.options[frm.menu.selectedIndex] = null; // 이동 후 기존선택된 값 초기화 
+	}
+	
+	function moveL(frm){
+		frm.menu.options[frm.menu.options.length]
+		= new Option(frm.myMenu[frm.myMenu.selectedIndex].text, 
+					 frm.myMenu[frm.myMenu.selectedIndex].value);
+		
+		frm.myMenu.options[frm.myMenu.selectedIndex] = null; // 이동 후 기존선택된 값 초기화 
+	}
+</script>
+</head>
+<body>
+<form name = "myForm" action="" method = "post">
+	<fieldset>
+		<legend> list박스에서 항목 이동 예제 </legend>
+		<p>나만의 메뉴를 고르시오.</p>
+		<table>
+			<tr>
+				<td>메뉴</td>
+				<td>     </td>
+				<td>나만의 메뉴</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<select name = "menu" size = "13">
+						<option value = "파일">파일</option>
+						<option value = "편집">편집</option>
+						<option value = "보기">보기</option>
+						<option value = "삽입">삽입</option>
+						<option value = "삭제">삭제</option>
+						<option value = "선택">선택</option>
+						<option value = "복사">복사</option>
+						<option value = "붙여넣기">붙여넣기</option>
+						<option value = "닫기">닫기</option>
+						<option value = "저장">저장</option>
+						<option value = "인쇄">인쇄</option>
+						<option value = "설정">설정</option>
+						<option value = "도움말">도움말</option>
+					</select>
+				</td>
+				<td align = "center">
+					<input type = "button" value = ">>" onclick = "moveR(this.form);"><br>
+					<input type = "button" value = "<<" onclick = "moveL(this.form);"><br>
+				</td>
+				
+				<td>
+					<select name = "myMenu" size = "13">
+					</select>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+</body>
+</html>
