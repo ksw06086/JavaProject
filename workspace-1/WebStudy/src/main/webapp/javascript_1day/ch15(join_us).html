@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<style type="text/css">
+	fieldset{
+		width: 350px;
+	}
+</style>
+<script type="text/javascript">
+	// validation check document.폼이름.input태그이름.value // 값이 있는지 없는지
+	function inputCheck(){
+		// 아이디 입력 확인
+		if(!document.signIn.userID.value){
+			alert("아이디를 입력하세요.");
+			document.signIn.userID.focus();
+			return false;
+		}
+		
+		// 패스워드 입력 확인
+		if(!document.signIn.userPWD.value){
+			alert("패스워드를 입력하세요.");
+			document.signIn.userPWD.focus();
+			return false;
+		}
+		
+		// 패스워드 확인 입력 확인
+		if(!document.signIn.userREPWD.value){
+			alert("패스워드 확인을 입력하세요.");
+			document.signIn.userREPWD.focus();
+			return false;
+		} else if (document.signIn.userREPWD.value != document.signIn.userPWD.value){
+			alert("패스워드가 일치하지 않습니다. 다시 입력하세요.");
+			document.signIn.userREPWD.value = "";
+			document.signIn.userREPWD.focus();
+			return false;
+		}
+		
+		// 아이디 입력 확인
+		if(!document.signIn.userEmail.value){
+			alert("이메일을 입력하세요.");
+			document.signIn.userEmail.focus();
+			return false;
+		}
+	}
+</script>
+</head>
+<!-- onsubmit : submit(전송)할 때 이벤트가 발생함.
+	 "return inputCheck();"
+	 -- action에서 지정한 페이지로 전송시에 inputCheck()로 호출한 함수내에서
+	 	false 값이 리턴되면 에러가 발생한 것이므로 동작을 중지한다.
+	 	그렇지 않으면 action에서 지정한 페이지로 입력한 값들을 가지고 전송한다.
+ -->
+<body onload="document.signIn.userID.focus();">
+	<form name = "signIn" action = "ch15(next).jsp" method = "post"
+		onsubmit = "return inputCheck();">
+		<fieldset>
+			<legend> 회원가입 </legend>
+			<table>
+				<tr>
+					<!-- 자바스크립트에서는 name으로 접근 j쿼리에서는 아이디로도 접근가능 -->
+					<td align = "right"><label for = "label_id">아이디 : </label></td>
+					<td><input type = "text" id = "label_id" name = "userID"></td>
+				</tr>
+				<tr>
+					<td align = "right"><label for = "label_pwd">패스워드 : </label></td>
+					<td><input type = "password" id = "label_pwd" name = "userPWD"></td>
+				</tr>
+				<tr>
+					<td align = "right"><label for = "label_repwd">패스워드 확인 : </label></td>
+					<td><input type = "password" id = "label_repwd" name = "userREPWD"></td>
+				</tr>
+				<tr>
+					<td align = "right"><label for = "label_email">이메일 : </label></td>
+					<td><input type = "email" id = "label_email" name = "userEmail"></td>
+				</tr>
+				
+				<tr>
+					<td colspan = "2">
+					<br>
+					<div align = "center">
+						<!-- submit : 현재 페이지에서 입력한 값들을 가지고 action에서 지정한 페이지로 이동 -->
+						<input type = "submit" value = "회원가입">
+						<input type = "reset" value = "가입취소">
+					</div>
+					</td>
+				</tr>
+				
+				
+			</table>
+		</fieldset>
+	</form>
+
+</body>
+</html>

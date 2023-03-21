@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+<script type="text/javascript">
+/*
+ * 방법1.
+    var 참조변수명 = new Array();
+    참조변수명[0] = 값;
+    참조변수명[1] = 값;
+    ...
+ */
+ 	var array = new Array();
+    array[0] = "아이스커피";
+    array[1] = "캐러멜 마끼아또";
+    array[2] = "블루베리 스무디";
+    array[3] = "민트초코";
+    array[4] = 3;
+    array[5] = true;
+    array[6] = Number("001");
+    
+    for (var a = 0; a < array.length; a++) {
+		document.write(array[a], "<br>");
+	}
+    
+    document.write("=================<br>");
+    
+    // for(데이터타입 인덱스명 in 배열명) : 변수에 인덱스 저장;
+    // cf) 자바의 for each문 : 변수의 값을 저장
+    for (var a in array) {
+		document.write(array[a], "<br>");
+	}
+    
+    document.write("=================<br>");
+    
+    /*
+    방법2. var 참조변수명 = new Array(값1, 값2, 값3, ... 값n);
+    */
+    var arr2 = new Array("아이스케익", "고구마케익", "티라미수", "치즈케익", "레드벨벳", 10, 15);
+    
+    for (var a1 in arr2) {
+		document.write(arr2[a1], "<br>");
+	}
+    
+    for (var a2 = 0; a2 < arr2.length; a2++) {
+    	document.write(arr2[a2], "<br>");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

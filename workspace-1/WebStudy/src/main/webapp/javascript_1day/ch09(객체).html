@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체</title>
+</head>
+<body>
+	<h2>객체</h2>
+	
+	<pre>
+	클래슨느 디자인이며, 객체는 이 디자인을 바탕으로 만들어진 메모리 공간이다.
+	1) 객체란?
+		자바스크립트는 객체기반언어이다.
+		객체는 속성(=변수)과 기능(=메소드)을 가지고 있다.
+		주변의 모든 사물들을 객체라고 한다.
+		객체.속성 = 값;
+		객체.메소드();
+		
+	2) 객체의 종류
+	1) 내장 객체
+		(1) 정의 : 브라우저 자바스크립트 엔진에 내장된 객체
+		(2) 종류 : 문자(String), 날짜(Date), 배열(Array), 수학(Math), 정규표현객체...
+		(3) 생성 : var 참조변수 = new 생성함수();
+		
+	2) 브라우저 객체 모델(BOM : Browser Object Model)
+		(1) 정의 : 브라우저에 내장된 객체
+			window는 브라우저 객체의 최상위 객체이다.
+			window 하위 객체에는 document, screen, location, history, navigation 등이 있다.
+		(2) window 객체 메소드 종류
+			alert()		: 경고창을 띄운다.
+			prompt()	: 질의응답창을 띄운다.
+			confirm()	: 확인/취소창을 띄운다.
+			open()		: 새창을 띄운다.
+			
+	3) 문서 객체모델(DOM : Document Object Model) - 중요
+		(1) 정의 : HTML 문서구조를 말하며, 자바스크립트를 사용하여 문서객체를 선택하고,
+				  속성 또는 스타일을 적용한다.
+				  즉, DOM은 문서를읽고 조작하는 객체의 집합이다.
+		(2) 종류 : 
+			document 하위에는 body, div, a, form, input, .....
+	</pre>
+</body>
+</html>

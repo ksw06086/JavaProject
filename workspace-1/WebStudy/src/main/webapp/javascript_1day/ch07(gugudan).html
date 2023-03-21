@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단 출력</title>
+<script type = "text/javascript">
+/*
+ * 1. 시작단 입력
+   2. 종료단 입력
+   시작단이 종료단보다 크면 "시작단이 종료단보다 큽니다.";
+   그렇지 않으면 구구단 출력
+   3. 출력양식
+   === 2단 ===
+ */
+ var firstdan = prompt("시작단을 입력하세요.");
+ var lastdan = prompt("종료단을 입력하세요.");
+ 
+ // prompt() 메소드에서 숫자값을 입력하더라도 문자로 인식한다.
+ // (시작단 10, 종료단 4로 입력하더라도 시작단이 크다는 판단이 불가)
+ // Number("숫자"); => integer.parseInt("숫자");
+ if(firstdan > lastdan){
+	 alert("시작단이 종료단보다 큽니다.");
+ } else {
+	 for(var i = firstdan; i <= lastdan; i++){
+		 document.write("===" + i + "단===", "<br>");
+		 for(var j = 1; j<=9; j++){
+			 document.write(i + " * " + j + " = " + i*j + "<br>");
+		 }
+	 }
+ }
+</script>
+</head>
+<body>
+
+</body>
+</html>

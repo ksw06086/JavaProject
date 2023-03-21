@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수</title>
+<script type="text/javascript">
+/*
+ * 함수
+ 1. 기본형 .. 중요
+ 	function 함수명() {
+		일련의 실행문;
+	}
+	
+	호출 : 함수명();
+	
+	function 함수명(매개변수1, 매개변수2, ... 매개변수n){
+		일련의 실행문;
+	}
+	
+	호출 : 함수명(값1, 값2, ... 값n);
+ 2. 매개변수가 있는 함수
+ 	function 함수명(매개변수1, 매개변수2, .. 매개변수n){
+		this.속성1 = 매개변수1;
+		this.속성2 = 매개변수2;
+		..
+		
+		this.메소드1 = function(){
+			처리할 코드들;
+		}
+ 	}
+ 
+ 	호출방법1) 객체생성없이 매개변수가 있는 함수의 데이터 접근
+ 		함수명(값1, 값2, ... 값n);
+ 		메소드1();
+ 	호출방법2) 객체 생성하고 메소드 접근
+ 		var 참조변수명 = new 생성함수(값1, 값2, .. 값n);
+ 		참조변수명, 메소드1();
+ 	
+ 	3. 참조형 .. 중요
+ 		var 참조변수 = function() {
+ 			일련의 실행문;
+ 		}
+ 	
+ 		호출 : 참조변수();
+ */
+ // 1. 기본형 ... 중요
+ document.write("1.기본함수<br>");
+ 
+ var i = 0;
+ function myfunction(){
+	 i++;
+	 document.write(i,"<br>");
+ }
+ 
+ myfunction();
+ 
+ function sum(){
+	 var sum=0;
+	 for(; i<11; i++){
+		 sum += i;
+	 }
+	 document.write("sum : " + sum + "<br>");
+ }
+ sum();
+ 
+ // 2. 매개변수가 있는 함수
+ document.write("===========================<br>");
+ document.write("2. 매개변수가 있는 함수<br>");
+ 
+ function cities(country, city) {
+	 this.country = country;
+	 this.city = city;
+	 
+	 // 메소드 : print() : 국가와 도시명 출력
+	 this.print = function() {
+		 document.write("국가 : " + country + ", 도시명 : " + city + "<br>");
+	 } // 함수호출로 메소드가 만들어만 졌다.
+ }
+ 
+ // 호출방법 1)
+ cities("아파트", "선우아파트");
+ print();
+ 
+ // 호출방법 2)
+ let ci = new cities("아르헨티나", "부에노스아이레스");
+ ci.print();
+ 
+ /***-------------------------***/
+ function cities2(){
+	 this.country;
+	 this.city;
+	 this.loc;
+	 
+	 // 메소드 : print() - 국가와 도서명 출력
+	 this.print2 = function(country, city){
+		 this.country = country;
+		 this.city = city;
+		 document.write("국가 : " + country + ", 도시명 : "+ city + "<br>");
+	 }
+	 
+	// 메소드 : print() - 국가와 도서명, 지역 출력
+	this.print3 = function(country, city, loc){
+		 this.country = country;
+		 this.city = city;
+		 this.loc = loc;
+		 document.write("국가 : " + country + ", 도시명 : "+ city + ", 지역명 : " + loc + "<br>");
+	}
+	 
+ }
+
+ //호출방법 1)
+ document.write("==============<br>")
+ cities2();
+ print2("아파트", "선우아파트");
+
+ // 호출방법 2)
+ document.write("==============<br>")
+ let ci2 = new cities2();
+ ci2.print3("아르헨티나", "부에노스아이레스", "라 보카");
+
+ /**-----------------------------------------------**/
+ // 3. 참조형 함수
+ document.write("==============<br>")
+ document.write("3. 참조형 함수<br>");
+
+ var mySum = function(){
+ 	var sum = 0;
+	for(var i = 1; i<=10; i++){
+		sum+=i;
+	}
+	document.write("sum : " + sum + "<br>");
+ }
+ mySum();
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
