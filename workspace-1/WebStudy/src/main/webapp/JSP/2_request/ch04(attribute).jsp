@@ -31,7 +31,7 @@
 	<jsp:forward> 액션태그
 	<jsp:forward page = "이동할 페이지" /> - 주의사항 /꼭 주어야한다.
 --%>
-	<jsp:forward page = "ch07(nowTime).jsp"/>
+	<jsp:forward page = "ch04(nowTime).jsp"/>
 
 </body>
 </html>

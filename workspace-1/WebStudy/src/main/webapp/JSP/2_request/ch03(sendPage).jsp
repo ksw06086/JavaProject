@@ -21,9 +21,9 @@
 <% 
 	int inputAge = Integer.parseInt(request.getParameter("age"));
 	if(inputAge > 19){
-		response.sendRedirect("ch05(pass).jsp?age="+inputAge);
+		response.sendRedirect("ch03(pass).jsp?age="+inputAge);
 	} else {
-		response.sendRedirect("ch05(ng).jsp?age="+inputAge);
+		response.sendRedirect("ch03(ng).jsp?age="+inputAge);
 	}
 %>
 </body>

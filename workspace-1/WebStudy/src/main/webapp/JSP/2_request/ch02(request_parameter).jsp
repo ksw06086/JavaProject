@@ -10,7 +10,7 @@
 	<h3>request - parameter 메소드</h3>
 	parameter 메소드는 JSP 페이지의 데이터값을 전송하기 위해 사용
 	
-	<form action = "ch03(subPage).jsp" method = "get">
+	<form action = "ch02(subPage).jsp" method = "get">
 		<table border = 1>
 			<tr>
 				<td>아이디</td>
