@@ -3,39 +3,39 @@ package domain;
 import java.io.Serializable;
 
 /**
- * Âü°í
- * - Serializable(Á÷·ÄÈ­) : ¿ì¸®°¡ ¸¸µç Å¬·¡½º°¡ ÆÄÀÏ¿¡ ÀÐ°Å³ª ¾µ ¼ö ÀÖµµ·Ï ÇÏ°Å³ª, 
- * 									´Ù¸¥ ¼­¹ö·Î º¸³»°Å³ª ¹ÞÀ» ¼ö ÀÖµµ·Ï ÇÒ ¶§(JVMÀÌ °´Ã¼¸¦ ÀúÀåÇÏ°Å³ª ´Ù¸¥ ¼­¹ö·Î Àü¼ÛÇÒ ¼ö ÀÖµµ·Ï ÇØÁÜ)
- * <°³¹ßÀ» ÇÏ´Ùº¸¸é ¾Æ·¡ °æ¿ì°¡ ¹ß»ýÇÔ ÀÌ·² ¶§ ÇÊ¿äÇÔ>
- * 1) »ý¼ºÇÑ °´Ã¼¸¦ ÆÄÀÏ·Î ÀúÀåÇÒ ÀÏÀÌ ÀÖÀ» ¼öµµ ÀÖÀ½
- * 2) ÀúÀåÇÑ °´Ã¼¸¦ ÀÐÀ» ÀÏÀÌ »ý±æ ¼ö ÀÖÀ½
- * 3) ´Ù¸¥ ¼­¹ö¿¡¼­ »ý¼ºÇÑ °´Ã¼¸¦ ¹ÞÀ» ÀÏµµ ÀÖÀ» ¼ö ÀÖÀ½
- * * Á÷·ÄÈ­ : °´Ã¼(¶Ç´Â µ¥ÀÌÅÍ)¸¦ ¿ÜºÎÀÇ ÀÚ¹Ù ½Ã½ºÅÛ¿¡¼­µµ »ç¿ëÇÒ ¼ö ÀÕµµ·Ï ¹ÙÀÌÆ® ÇüÅÂ·Î µ¥ÀÌÅÍ º¯È¯
- * * ¿ªÁ÷·ÄÈ­ : ¹ÙÀÌÆ®·Î º¯È¯µÈ µ¥ÀÌÅÍ¸¦ ´Ù½Ã °´Ã¼·Î º¯È¯ÇÏ´Â ±â¼ú
- * <> serialVersionUID °ªÀ» ÁöÁ¤ÇØÁÖ´Â °ÍÀÌ ÁÁÀ½ / ex) private static final long serialVersionUID = 362498820763181265L;
- * ¤¤ ÀÌ°É ÇØÁÖ¸é ÁÁÀº Á¡ 1) °°Àº °´Ã¼ ÀÌ¸§ÀÌ¶óµµ ¹øÈ£ ´Ù¸£¸é ´Ù¸¥ °´Ã¼·Î ÀÎ½Ä 2) °°Àº ¹øÈ£¶óµµ ³»¿ëÀÌ ´Ù¸£¸é ´Ù¸£°Ô ÀÎ½Ä
- * <> º¯¼ö¿¡ transient¶ó´Â ¿¹¾à¾î¸¦ Á¢±ÙÀÚ Àü¿¡ ³Ö¾îÁÖ¸é Á÷·ÄÈ­¿¡¼­ Á¦¿ÜµÊ
- * <> »ó¼Ó : ºÎ¸ð°¡ Á÷·ÄÈ­¸é ÀÚ½ÄÀÇ ºÎ¸ð °ªµµ Á÷·ÄÈ­µÊ, ºÎ¸ð°¡ ¾ø°í ÀÚ½Ä¸¸ Á÷·ÄÈ­¸é ÀÚ½Ä °Í¸¸ Á÷·ÄÈ­µÊ
- * <> Ä³½ºÆÀ µÇÁö ¾ÊÀº Object °´Ã¼¸¦ Á÷·ÄÈ­ ÇØ´ç °´Ã¼¿¡ »ý¼ºÇÏ¸é ¿¡·¯°¡ »ý±è °´Ã¼ÀÇ Á¶»óÀÌ±â ¶§¹®¿¡
+ * ì°¸ê³ 
+ * - Serializable(ì§ë ¬í™”) : ìš°ë¦¬ê°€ ë§Œë“  í´ëž˜ìŠ¤ê°€ íŒŒì¼ì— ì½ê±°ë‚˜ ì“¸ ìˆ˜ ìžˆë„ë¡ í•˜ê±°ë‚˜, 
+ * 									ë‹¤ë¥¸ ì„œë²„ë¡œ ë³´ë‚´ê±°ë‚˜ ë°›ì„ ìˆ˜ ìžˆë„ë¡ í•  ë•Œ(JVMì´ ê°ì²´ë¥¼ ì €ìž¥í•˜ê±°ë‚˜ ë‹¤ë¥¸ ì„œë²„ë¡œ ì „ì†¡í•  ìˆ˜ ìžˆë„ë¡ í•´ì¤Œ)
+ * <ê°œë°œì„ í•˜ë‹¤ë³´ë©´ ì•„ëž˜ ê²½ìš°ê°€ ë°œìƒí•¨ ì´ëŸ´ ë•Œ í•„ìš”í•¨>
+ * 1) ìƒì„±í•œ ê°ì²´ë¥¼ íŒŒì¼ë¡œ ì €ìž¥í•  ì¼ì´ ìžˆì„ ìˆ˜ë„ ìžˆìŒ
+ * 2) ì €ìž¥í•œ ê°ì²´ë¥¼ ì½ì„ ì¼ì´ ìƒê¸¸ ìˆ˜ ìžˆìŒ
+ * 3) ë‹¤ë¥¸ ì„œë²„ì—ì„œ ìƒì„±í•œ ê°ì²´ë¥¼ ë°›ì„ ì¼ë„ ìžˆì„ ìˆ˜ ìžˆìŒ
+ * * ì§ë ¬í™” : ê°ì²´(ë˜ëŠ” ë°ì´í„°)ë¥¼ ì™¸ë¶€ì˜ ìžë°” ì‹œìŠ¤í…œì—ì„œë„ ì‚¬ìš©í•  ìˆ˜ ìž‡ë„ë¡ ë°”ì´íŠ¸ í˜•íƒœë¡œ ë°ì´í„° ë³€í™˜
+ * * ì—­ì§ë ¬í™” : ë°”ì´íŠ¸ë¡œ ë³€í™˜ëœ ë°ì´í„°ë¥¼ ë‹¤ì‹œ ê°ì²´ë¡œ ë³€í™˜í•˜ëŠ” ê¸°ìˆ 
+ * <> serialVersionUID ê°’ì„ ì§€ì •í•´ì£¼ëŠ” ê²ƒì´ ì¢‹ìŒ / ex) private static final long serialVersionUID = 362498820763181265L;
+ * ã„´ ì´ê±¸ í•´ì£¼ë©´ ì¢‹ì€ ì  1) ê°™ì€ ê°ì²´ ì´ë¦„ì´ë¼ë„ ë²ˆí˜¸ ë‹¤ë¥´ë©´ ë‹¤ë¥¸ ê°ì²´ë¡œ ì¸ì‹ 2) ê°™ì€ ë²ˆí˜¸ë¼ë„ ë‚´ìš©ì´ ë‹¤ë¥´ë©´ ë‹¤ë¥´ê²Œ ì¸ì‹
+ * <> ë³€ìˆ˜ì— transientë¼ëŠ” ì˜ˆì•½ì–´ë¥¼ ì ‘ê·¼ìž ì „ì— ë„£ì–´ì£¼ë©´ ì§ë ¬í™”ì—ì„œ ì œì™¸ë¨
+ * <> ìƒì† : ë¶€ëª¨ê°€ ì§ë ¬í™”ë©´ ìžì‹ì˜ ë¶€ëª¨ ê°’ë„ ì§ë ¬í™”ë¨, ë¶€ëª¨ê°€ ì—†ê³  ìžì‹ë§Œ ì§ë ¬í™”ë©´ ìžì‹ ê²ƒë§Œ ì§ë ¬í™”ë¨
+ * <> ìºìŠ¤íŒ€ ë˜ì§€ ì•Šì€ Object ê°ì²´ë¥¼ ì§ë ¬í™” í•´ë‹¹ ê°ì²´ì— ìƒì„±í•˜ë©´ ì—ëŸ¬ê°€ ìƒê¹€ ê°ì²´ì˜ ì¡°ìƒì´ê¸° ë•Œë¬¸ì—
  * 
  * 
- * ÀÛ¼ºÀÏ : 2023.02.06. / 2023.03.09
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : Ã¥ µ¥ÀÌÅÍ È£Ãâ ¿ëµµ
+ * ìž‘ì„±ì¼ : 2023.02.06. / 2023.03.09
+ * ìž‘ì„±ìž : ê¹€ì„ ìš°
+ * ê°œìš” : ì±… ë°ì´í„° í˜¸ì¶œ ìš©ë„
  * **/
 public class Book implements Serializable{
-	// Á÷·ÄÈ­ °´Ã¼ ¹øÈ£
+	// ì§ë ¬í™” ê°ì²´ ë²ˆí˜¸
 	private static final long serialVersionUID = 100L;
 	private static int serialCode = 1000;
 	
-	// ¸â¹ö º¯¼ö
-	private String bookTitle; 						// Ã¥ Á¦¸ñ
-	private String bookAuthor;					// Ã¥ ÀúÀÚ
-	private int bookPrice;							// Ã¥ °¡°Ý
-	private int bookCount;							// Ã¥ ¼ö·®
-	private int bookCode;							// Ã¥ ÄÚµå
+	// ë©¤ë²„ ë³€ìˆ˜
+	private String bookTitle; 						// ì±… ì œëª©
+	private String bookAuthor;					// ì±… ì €ìž
+	private int bookPrice;							// ì±… ê°€ê²©
+	private int bookCount;							// ì±… ìˆ˜ëŸ‰
+	private int bookCode;							// ì±… ì½”ë“œ
 	
-	// »ý¼ºÀÚ : Ã¥ »ý¼º½Ã Á¦¸ñ, ÀúÀÚ, °¡°Ý, ¼ö·®, ÄÚµå ÀÔ·Â
+	// ìƒì„±ìž : ì±… ìƒì„±ì‹œ ì œëª©, ì €ìž, ê°€ê²©, ìˆ˜ëŸ‰, ì½”ë“œ ìž…ë ¥
 	public Book(String bookTitle, String bookAuthor, int bookPrice, int bookCount, int bookCode) {
 		this.bookTitle = bookTitle;
 		this.bookAuthor = bookAuthor;
@@ -57,7 +57,7 @@ public class Book implements Serializable{
 	}
 
 	// Getter, Setter
-	// Ã¥ Á¦¸ñ
+	// ì±… ì œëª©
 	public String getBookTitle() {
 		return bookTitle;
 	}
@@ -66,7 +66,7 @@ public class Book implements Serializable{
 		this.bookTitle = bookTitle;
 	}
 	
-	// Ã¥ ÀúÀÚ
+	// ì±… ì €ìž
 	public String getBookAuthor() {
 		return bookAuthor;
 	}
@@ -75,7 +75,7 @@ public class Book implements Serializable{
 		this.bookAuthor = bookAuthor;
 	}
 	
-	// Ã¥ °¡°Ý
+	// ì±… ê°€ê²©
 	public int getBookPrice() {
 		return bookPrice;
 	}
@@ -84,7 +84,7 @@ public class Book implements Serializable{
 		this.bookPrice = bookPrice;
 	}
 	
-	// Ã¥ ¼ö·®
+	// ì±… ìˆ˜ëŸ‰
 	public int getBookCount() {
 		return bookCount;
 	}
@@ -99,12 +99,12 @@ public class Book implements Serializable{
 		this.bookCount -= bookCount;
 	}
 	
-	// Ã¥ ¼ö·®*°¡°Ý(ÃÑ °¡°Ý)
+	// ì±… ìˆ˜ëŸ‰*ê°€ê²©(ì´ ê°€ê²©)
 	public int getBookTotalPrice() {
 		return (bookPrice * bookCount);
 	}
 	
-	// Ã¥ ÄÚµå
+	// ì±… ì½”ë“œ
 	public int getBookCode() {
 		return bookCode;
 	}

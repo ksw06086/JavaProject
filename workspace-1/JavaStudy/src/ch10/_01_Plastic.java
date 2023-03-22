@@ -3,11 +3,11 @@ package ch10;
 public class _01_Plastic extends _01_Meterial{
 	@Override
 	public void doPrinting() {
-		System.out.println("Plastic Àç·á·Î Ãâ·ÂÇÕ´Ï´Ù.");
+		System.out.println("Plastic ìž¬ë£Œë¡œ ì¶œë ¥í•©ë‹ˆë‹¤.");
 	}
 	
 	@Override
 	public String toString() {
-		return "Àç·á´Â PlasticÀÔ´Ï´Ù.";
+		return "ìž¬ë£ŒëŠ” Plasticìž…ë‹ˆë‹¤.";
 	}
 }

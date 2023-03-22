@@ -1,13 +1,13 @@
 package ch05;
 
 public class _04_Book {
-	// ¸â¹öº¯¼ö
-	private String bookName;				// Ã¥ÀÌ¸§
-	private String author;					// ÀúÀÚ
+	// ë©¤ë²„ë³€ìˆ˜
+	private String bookName;				// ì±…ì´ë¦„
+	private String author;					// ì €ì
 	
-	// µğÆúÆ® »ı¼ºÀÚ
+	// ë””í´íŠ¸ ìƒì„±ì
 	public _04_Book() {}
-	// ¸Å°³º¯¼ö »ı¼ºÀÚ
+	// ë§¤ê°œë³€ìˆ˜ ìƒì„±ì
 	public _04_Book(String bookName, String author) {
 		this.bookName = bookName;
 		this.author = author;
@@ -27,7 +27,7 @@ public class _04_Book {
 	}
 	
 	public void showBookInfo() {
-		System.out.println("Á¦¸ñ : " + bookName + ", ÀúÀÚ : " + author);
+		System.out.println("ì œëª© : " + bookName + ", ì €ì : " + author);
 	}
 	
 }

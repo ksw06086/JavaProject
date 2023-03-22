@@ -3,8 +3,8 @@ package ch05;
 public class _08_EnHancedFor {
 	public static void main(String[] args) {
 		/*
-		 * Çâ»óµÈ for¹®
-		 * - ¹è¿­¿ä¼Ò °ªÀ» ¼ø¼­´ë·Î ÇÏ³ª¾¿ °¡Á®¿Í¼­ º¯¼ö¿¡ ´ëÀÔÇÔ
+		 * í–¥ìƒëœ forë¬¸
+		 * - ë°°ì—´ìš”ì†Œ ê°’ì„ ìˆœì„œëŒ€ë¡œ í•˜ë‚˜ì”© ê°€ì ¸ì™€ì„œ ë³€ìˆ˜ì— ëŒ€ì…í•¨
 		 * */
 		String[] langArray = {"java", "jsp", "spring", "Android", "Python"};
 		

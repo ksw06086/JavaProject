@@ -4,9 +4,9 @@ public class _06_StaticEx {
 	public static void main(String[] args) {
 		_06_Student lee = new _06_Student();
 		lee.setStudentID(1001);
-		lee.setStudentName("ÀÌÁö¹Î");
+		lee.setStudentName("ì´ì§€ë¯¼");
 		
-		System.out.println("ÇĞ¹ø : " + lee.getStudentID() + ", ÀÌ¸§ : " + lee.getStudentName());
+		System.out.println("í•™ë²ˆ : " + lee.getStudentID() + ", ì´ë¦„ : " + lee.getStudentName());
 		
 		System.out.println("serialNum : " + _06_Student.serialNum);
 		System.out.println("serialNum : " + lee.serialNum);
@@ -16,9 +16,9 @@ public class _06_StaticEx {
 		
 		_06_Student son = new _06_Student();
 		son.setStudentID(1002);
-		son.setStudentName("¼Õ¼®±¸");
+		son.setStudentName("ì†ì„êµ¬");
 		
-		System.out.println("ÇĞ¹ø : " + son.getStudentID() + ", ÀÌ¸§ : " + son.getStudentName());
+		System.out.println("í•™ë²ˆ : " + son.getStudentID() + ", ì´ë¦„ : " + son.getStudentName());
 		
 		System.out.println("serialNum : " + _06_Student.serialNum);
 		System.out.println("serialNum : " + lee.serialNum);

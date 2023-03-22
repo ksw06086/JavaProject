@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class _01_ByteInputTest {
 	public static void main(String[] args) {
-		System.out.println("¾ËÆÄºª ÇÏ³ª¸¦ ¾²°í [Enter]¸¦ ´©¸£¼¼¿ä.");
+		System.out.println("ì•ŒíŒŒë²³ í•˜ë‚˜ë¥¼ ì“°ê³  [Enter]ë¥¼ ëˆ„ë¥´ì„¸ìš”.");
 		
 		int i ;
 		try {
@@ -16,4 +16,3 @@ public class _01_ByteInputTest {
 		}
 	}
 }
-

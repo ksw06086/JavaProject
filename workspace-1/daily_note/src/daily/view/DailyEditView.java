@@ -20,26 +20,26 @@ public class DailyEditView extends JFrame{
 		Container cp = getContentPane();
 	    cp.setLayout(new BorderLayout());
 		
-		count++;	//¸Ş¸ğÀå °¹¼ö Áõ°¡
+		count++;	//ë©”ëª¨ì¥ ê°¯ìˆ˜ ì¦ê°€
 		if (count > 10)
 			count = 0;
 		
-		//¸Ş¸ğÀåÀÌ ¿­¸±¶§¸¶´Ù À§Ä¡¸¦ º¯È­½ÃÅ²´Ù
-		setLocation(300 + count * 30, 200 + count * 30); //À§Ä¡
+		//ë©”ëª¨ì¥ì´ ì—´ë¦´ë•Œë§ˆë‹¤ ìœ„ì¹˜ë¥¼ ë³€í™”ì‹œí‚¨ë‹¤
+		setLocation(300 + count * 30, 200 + count * 30); //ìœ„ì¹˜
 		
 		JTabbedPane tab = new JTabbedPane();
 		
-		// ¸Ó¸®ÆÇ
-		tab.add("ÀÏ¹İÀÏ±â", defaultPan);
-		tab.add("°¨Á¤ÀÏ±â", emotionPan);
+		// ë¨¸ë¦¬íŒ
+		tab.add("ì¼ë°˜ì¼ê¸°", defaultPan);
+		tab.add("ê°ì •ì¼ê¸°", emotionPan);
 		tab.add("To do list", todolistPan);
 		
 		cp.add(tab);
 		
-		tab.setBorder(BorderFactory.createRaisedBevelBorder()); //Å×µÎ¸®
-		tab.setBackground(new Color(255, 242, 245)); // ¹è°æ ÇÎÄí
+		tab.setBorder(BorderFactory.createRaisedBevelBorder()); //í…Œë‘ë¦¬
+		tab.setBackground(new Color(255, 242, 245)); // ë°°ê²½ í•‘ì¿ 
 		
-		setTitle("Memo - " + (date.getYear()+1900) +"³â"+(date.getMonth() + 1)+"¿ù"+date.getDate()+"ÀÏ");
+		setTitle("Memo - " + (date.getYear()+1900) +"ë…„"+(date.getMonth() + 1)+"ì›”"+date.getDate()+"ì¼");
 		pack();
 		setVisible(true);
 	}

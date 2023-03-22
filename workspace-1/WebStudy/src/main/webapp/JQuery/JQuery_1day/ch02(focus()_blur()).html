@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>focus(), blur()</title>
+<script type = "text/javascript" src = "../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#input > input[type = 'text']").focus(function(){
+			$("#result").html("포커스가 적용되었습니다!!");
+		});
+		
+		$("#input > input[type = 'text']").blur(function(){
+			$("#result").html("포커스가 사라졌습니다!!");
+		});
+	});
+</script>
+
+</head>
+<body>
+	<h2> focus/blur 이벤트 확인하기 </h2>
+	<div id = "input">
+		<input type = "text">
+	</div>
+	
+	<h2> 결과 </h2>
+	<div id = "result">
+	<!-- 결과 출력 위치 -->
+	</div>
+</body>
+</html>

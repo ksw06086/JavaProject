@@ -19,71 +19,71 @@ import service.Host;
 import service.HostImpl;
 
 /*
- * ÀÛ¼ºÀÏ : 2023.02.04.~2023.02.06 / 2023.02.15.-2023.03.06
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : ÇØ´ç ±â´É¿¡ ´ëÇÑ È­¸é È£Ãâ
+ * ì‘ì„±ì¼ : 2023.02.04.~2023.02.06 / 2023.02.15.-2023.03.06
+ * ì‘ì„±ì : ê¹€ì„ ìš°
+ * ê°œìš” 	: í•´ë‹¹ ê¸°ëŠ¥ì— ëŒ€í•œ í™”ë©´ í˜¸ì¶œ
  * **/
 public class MenuImpl implements Menu{
 	private Guest guest = new GuestImpl();
 	private Host host = new HostImpl();
 
 	@Override
-	public void commonMenu(MenuList code) {		// °øÅë¸Ş´º
+	public void commonMenu(MenuList code) {		// ê³µí†µë©”ë‰´
 		switch (code) {
-			case SHOP_LOGIN : 									// ¸ŞÀÎÈ­¸é(·Î±×ÀÎ)
+			case SHOP_LOGIN : 									// ë©”ì¸í™”ë©´(ë¡œê·¸ì¸)
 				loginMenu(); break;
-			case HOST_MENU :									// °ü¸®ÀÚ ¸Ş´º
+			case HOST_MENU :									// ê´€ë¦¬ì ë©”ë‰´
 				hostMenu(); break;
-			case HOST_STOCK_MENU :						// Àç°í°ü¸®
+			case HOST_STOCK_MENU :						// ì¬ê³ ê´€ë¦¬
 				stockMenu(); break;
-			case HOST_BOOK_LIST :							// Ã¥¸ñ·Ï
+			case HOST_BOOK_LIST :							// ì±…ëª©ë¡
 				host.bookList(); break;
-			case HOST_BOOK_ADD :							// Ã¥Ãß°¡
+			case HOST_BOOK_ADD :							// ì±…ì¶”ê°€
 				host.bookAdd();; break;
-			case HOST_BOOK_UPDATE :						// Ã¥¼öÁ¤
+			case HOST_BOOK_UPDATE :						// ì±…ìˆ˜ì •
 				host.bookUpdate(); break;
-			case HOST_BOOK_DEL :							// Ã¥»èÁ¦
+			case HOST_BOOK_DEL :							// ì±…ì‚­ì œ
 				host.bookDel(); break;
-			case HOST_ORDER_MENU :						// ÁÖ¹®°ü¸®
+			case HOST_ORDER_MENU :						// ì£¼ë¬¸ê´€ë¦¬
 				orderMenu(); break;
-			case HOST_ORDER_LIST :						// ÁÖ¹®¸ñ·Ï
+			case HOST_ORDER_LIST :						// ì£¼ë¬¸ëª©ë¡
 				host.orderList(); break;
-			case HOST_ORDER_CONFIRM :				// °áÁ¦½ÂÀÎ
+			case HOST_ORDER_CONFIRM :				// ê²°ì œìŠ¹ì¸
 				host.orderConfirm(); break;
-			case HOST_ORDER_CANCEL :					// °áÁ¦Ãë¼Ò
+			case HOST_ORDER_CANCEL :					// ê²°ì œì·¨ì†Œ
 				host.orderCancel(); break;
-			case HOST_SALE_TOTAL :						// °á»ê
+			case HOST_SALE_TOTAL :						// ê²°ì‚°
 				host.saleTotal(); break;
-			case GUEST_MENU :									// °í°´ ¸Ş´º
+			case GUEST_MENU :									// ê³ ê° ë©”ë‰´
 				guestMenu(); break;
-			case GUEST_GOODS_LIST :						// »óÇ°¸ñ·Ï
+			case GUEST_GOODS_LIST :						// ìƒí’ˆëª©ë¡
 				goodsMenu(); break;
-			case GUEST_NOWBUY :								// ¹Ù·Î±¸¸Å
+			case GUEST_NOWBUY :								// ë°”ë¡œêµ¬ë§¤
 				guest.nowBuy(); break;
-			case GUEST_CART_ADD :							// Àå¹Ù±¸´Ï ´ã±â
+			case GUEST_CART_ADD :							// ì¥ë°”êµ¬ë‹ˆ ë‹´ê¸°
 				guest.cartAdd(); break;
-			case GUEST_CART_LIST :							// Àå¹Ù±¸´Ï ¸ñ·Ï
+			case GUEST_CART_LIST :							// ì¥ë°”êµ¬ë‹ˆ ëª©ë¡
 				cartMenu(); break;
-			case GUEST_CART_DEL :							// Àå¹Ù±¸´Ï »èÁ¦
+			case GUEST_CART_DEL :							// ì¥ë°”êµ¬ë‹ˆ ì‚­ì œ
 				guest.cartDel(); break;
-			case GUEST_CART_BUY :							// Àå¹Ù±¸´Ï ±¸¸Å
+			case GUEST_CART_BUY :							// ì¥ë°”êµ¬ë‹ˆ êµ¬ë§¤
 				guest.cartBuy(); break;
-			case GUEST_REFUND :								// È¯ºÒ
+			case GUEST_REFUND :								// í™˜ë¶ˆ
 				guest.refund(); break;
-			case GUEST_JOIN :									// È¸¿ø°¡ÀÔ
+			case GUEST_JOIN :									// íšŒì›ê°€ì…
 				guest.guestJoin(); break;
 			default:
 				break;
 		}
 	}
 
-	// ·Î±×ÀÎ¸Ş´º ±â´É Ã³¸®¸¦ ¿©±â¼­
+	// ë¡œê·¸ì¸ë©”ë‰´ ê¸°ëŠ¥ ì²˜ë¦¬ë¥¼ ì—¬ê¸°ì„œ
 	@Override
 	public void loginMenu() {		
-		boolean loginErrorSwit = false;		// ·Î±×ÀÎ ÇÒ ¶§ ¿À·ù°¡ »ı±â¸é ´Ù½Ã ·Î±×ÀÎÀ¸·Î µ¹¾Æ¿À±â À§ÇÑ ½ºÀ§Ä¡
-		System.out.println("======= ·Î±×ÀÎ =======");
-		System.out.println("1.±¸¸ÅÀÚ\t2.°ü¸®ÀÚ\t3.È¸¿ø°¡ÀÔ\t4.Á¾·á");
-		System.out.println("¸Ş´º¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ");
+		boolean loginErrorSwit = false;		// ë¡œê·¸ì¸ í•  ë•Œ ì˜¤ë¥˜ê°€ ìƒê¸°ë©´ ë‹¤ì‹œ ë¡œê·¸ì¸ìœ¼ë¡œ ëŒì•„ì˜¤ê¸° ìœ„í•œ ìŠ¤ìœ„ì¹˜
+		System.out.println("======= ë¡œê·¸ì¸ =======");
+		System.out.println("1.êµ¬ë§¤ì\t2.ê´€ë¦¬ì\t3.íšŒì›ê°€ì…\t4.ì¢…ë£Œ");
+		System.out.println("ë©”ë‰´ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”. : ");
 		switch (Console.codeInput()) {
 			case	 1:
 				loginErrorSwit = guest.guestLogin();
@@ -99,7 +99,7 @@ public class MenuImpl implements Menu{
 				commonMenu(MenuList.GUEST_JOIN);
 				break;
 			case 4:
-				// ½Ã½ºÅÛ Á¾·á ½Ã Àç°í, ±¸¸Å¿äÃ», È¯ºÒ¿äÃ», °á»ê(°ü¸®ÀÚ) ÆÄÀÏ »ı¼º // Á÷·ÄÈ­
+				// ì‹œìŠ¤í…œ ì¢…ë£Œ ì‹œ ì¬ê³ , êµ¬ë§¤ìš”ì²­, í™˜ë¶ˆìš”ì²­, ê²°ì‚°(ê´€ë¦¬ì) íŒŒì¼ ìƒì„± // ì§ë ¬í™”
 				try {
 					FileOutputStream memberFile = new FileOutputStream("C:\\Users\\Happy\\Downloads\\hostList.out");
 					ObjectOutputStream memberObject = new ObjectOutputStream(memberFile);
@@ -128,12 +128,12 @@ public class MenuImpl implements Menu{
 		commonMenu(MenuList.SHOP_LOGIN);
 	}
 
-	// °ü¸®ÀÚ ¸Ş´º
+	// ê´€ë¦¬ì ë©”ë‰´
 	@Override
 	public void hostMenu() {		
-		System.out.println("======= °ü¸®ÀÚ ¸Ş´º =======");
-		System.out.println("1.Àç°í°ü¸®\t2.ÁÖ¹®°ü¸®\t3.·Î±×¾Æ¿ô");
-		System.out.println("¸Ş´º¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ");
+		System.out.println("======= ê´€ë¦¬ì ë©”ë‰´ =======");
+		System.out.println("1.ì¬ê³ ê´€ë¦¬\t2.ì£¼ë¬¸ê´€ë¦¬\t3.ë¡œê·¸ì•„ì›ƒ");
+		System.out.println("ë©”ë‰´ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”. : ");
 		switch (Console.codeInput()) {
 			case 1:
 				commonMenu(MenuList.HOST_STOCK_MENU);
@@ -150,12 +150,12 @@ public class MenuImpl implements Menu{
 		commonMenu(MenuList.HOST_MENU);
 	}
 	
-	// °ü¸®ÀÚ Àç°í°ü¸®¸Ş´º
+	// ê´€ë¦¬ì ì¬ê³ ê´€ë¦¬ë©”ë‰´
 	@Override
 	public void stockMenu() {		
-		System.out.println("======= Àç°í°ü¸® =======");
-		System.out.println("1.¸ñ·Ï\t2.Ãß°¡\t3.¼öÁ¤\t4.»èÁ¦\t5.ÀÌÀü");
-		System.out.println("¸Ş´º¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ");
+		System.out.println("======= ì¬ê³ ê´€ë¦¬ =======");
+		System.out.println("1.ëª©ë¡\t2.ì¶”ê°€\t3.ìˆ˜ì •\t4.ì‚­ì œ\t5.ì´ì „");
+		System.out.println("ë©”ë‰´ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”. : ");
 		switch (Console.codeInput()) {
 			case 1:
 				commonMenu(MenuList.HOST_BOOK_LIST);
@@ -178,12 +178,12 @@ public class MenuImpl implements Menu{
 		commonMenu(MenuList.HOST_STOCK_MENU);
 	}
 	
-	// °ü¸®ÀÚ ÁÖ¹®°ü¸® ¸Ş´º
+	// ê´€ë¦¬ì ì£¼ë¬¸ê´€ë¦¬ ë©”ë‰´
 	@Override
 	public void orderMenu() {		
-		System.out.println("======= ÁÖ¹®°ü¸® =======");
-		System.out.println("1.ÁÖ¹®¸ñ·Ï\t2.°áÁ¦½ÂÀÎ\t3.°áÁ¦Ãë¼Ò\t4.°á»ê\t5.ÀÌÀü");
-		System.out.println("¸Ş´º¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ");
+		System.out.println("======= ì£¼ë¬¸ê´€ë¦¬ =======");
+		System.out.println("1.ì£¼ë¬¸ëª©ë¡\t2.ê²°ì œìŠ¹ì¸\t3.ê²°ì œì·¨ì†Œ\t4.ê²°ì‚°\t5.ì´ì „");
+		System.out.println("ë©”ë‰´ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”. : ");
 		switch (Console.codeInput()) {
 			case 1:
 				commonMenu(MenuList.HOST_ORDER_LIST);
@@ -206,12 +206,12 @@ public class MenuImpl implements Menu{
 		commonMenu(MenuList.HOST_ORDER_MENU);
 	}
 
-	// °í°´ ¸Ş´º
+	// ê³ ê° ë©”ë‰´
 	@Override
 	public void guestMenu() {		
-		System.out.println("======= °í°´¸Ş´º =======");
-		System.out.println("1.»óÇ°¸ñ·Ï\t2.Àå¹Ù±¸´Ï\t3.È¯ºÒ\t4.·Î±×¾Æ¿ô");
-		System.out.println("¸Ş´º¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ");
+		System.out.println("======= ê³ ê°ë©”ë‰´ =======");
+		System.out.println("1.ìƒí’ˆëª©ë¡\t2.ì¥ë°”êµ¬ë‹ˆ\t3.í™˜ë¶ˆ\t4.ë¡œê·¸ì•„ì›ƒ");
+		System.out.println("ë©”ë‰´ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”. : ");
 		switch (Console.codeInput()) {
 			case 1:
 				commonMenu(MenuList.GUEST_GOODS_LIST);
@@ -231,12 +231,12 @@ public class MenuImpl implements Menu{
 		}
 	}
 
-	// »óÇ°¸ñ·Ï¸Ş´º
+	// ìƒí’ˆëª©ë¡ë©”ë‰´
 	@Override
 	public void goodsMenu() {	
-		// »óÇ° ¸®½ºÆ® Ãâ·Â
-		System.out.println("********* µµ¼­ ¸ñ·Ï *********");
-		System.out.println("¹øÈ£\tµµ¼­¸í\tÀúÀÚ\t°¡°İ\t¼ö·®");
+		// ìƒí’ˆ ë¦¬ìŠ¤íŠ¸ ì¶œë ¥
+		System.out.println("********* ë„ì„œ ëª©ë¡ *********");
+		System.out.println("ë²ˆí˜¸\të„ì„œëª…\tì €ì\tê°€ê²©\tìˆ˜ëŸ‰");
 		System.out.println("*************************");
 		Iterator<Integer> ir = Stock.stockList.keySet().iterator();
 		while (ir.hasNext()) {
@@ -244,10 +244,10 @@ public class MenuImpl implements Menu{
 			System.out.println(Stock.stockList.get(key));
 		}
 		
-		// »óÇ°¸ñ·Ï ¸Ş´º
-		System.out.println("======== »óÇ°¸ñ·Ï ========");
-		System.out.println("1.¹Ù·Î±¸¸Å\t2.Àå¹Ù±¸´Ï¿¡ ´ã±â\t3.ÀÌÀü");
-		System.out.print("¸Ş´º¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ");
+		// ìƒí’ˆëª©ë¡ ë©”ë‰´
+		System.out.println("======== ìƒí’ˆëª©ë¡ ========");
+		System.out.println("1.ë°”ë¡œêµ¬ë§¤\t2.ì¥ë°”êµ¬ë‹ˆì— ë‹´ê¸°\t3.ì´ì „");
+		System.out.print("ë©”ë‰´ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”. : ");
 		switch (Console.codeInput()) {
 		case 1:
 			commonMenu(MenuList.GUEST_NOWBUY);
@@ -264,12 +264,12 @@ public class MenuImpl implements Menu{
 		commonMenu(MenuList.GUEST_GOODS_LIST);
 	}
 	
-	// °í°´ Àå¹Ù±¸´Ï ¸Ş´º
+	// ê³ ê° ì¥ë°”êµ¬ë‹ˆ ë©”ë‰´
 	@Override
 	public void cartMenu() {	
-		// Àå¹Ù±¸´Ï ¸®½ºÆ® Ãâ·Â
-		System.out.println("******* Àå¹Ù±¸´Ï ¸ñ·Ï *******");
-		System.out.println("¹øÈ£\tµµ¼­¸í\tÀúÀÚ\t°¡°İ\t¼ö·®");
+		// ì¥ë°”êµ¬ë‹ˆ ë¦¬ìŠ¤íŠ¸ ì¶œë ¥
+		System.out.println("******* ì¥ë°”êµ¬ë‹ˆ ëª©ë¡ *******");
+		System.out.println("ë²ˆí˜¸\të„ì„œëª…\tì €ì\tê°€ê²©\tìˆ˜ëŸ‰");
 		System.out.println("**********************");
 		Iterator<Integer> ir = Cart.cartList.keySet().iterator();
 		while (ir.hasNext()) {
@@ -277,10 +277,10 @@ public class MenuImpl implements Menu{
 			System.out.println(Cart.cartList.get(key));
 		}
 		
-		// Àå¹Ù±¸´Ï ¸Ş´º
-		System.out.println("======== Àå¹Ù±¸´Ï ========");
-		System.out.println("1.±¸¸Å\t2.»èÁ¦\t3.ÀÌÀü");
-		System.out.print("¸Ş´º¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ");
+		// ì¥ë°”êµ¬ë‹ˆ ë©”ë‰´
+		System.out.println("======== ì¥ë°”êµ¬ë‹ˆ ========");
+		System.out.println("1.êµ¬ë§¤\t2.ì‚­ì œ\t3.ì´ì „");
+		System.out.print("ë©”ë‰´ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”. : ");
 		switch (Console.codeInput()) {
 			case 1:
 				commonMenu(MenuList.GUEST_CART_BUY);
@@ -297,10 +297,10 @@ public class MenuImpl implements Menu{
 		commonMenu(MenuList.GUEST_CART_LIST);
 	}
 
-	// ¸Ş´º¿¡ ¾ø´Â ¹øÈ£¸¦ ÀÔ·ÂÇßÀ» ¶§ Ãâ·Â¹®
+	// ë©”ë‰´ì— ì—†ëŠ” ë²ˆí˜¸ë¥¼ ì…ë ¥í–ˆì„ ë•Œ ì¶œë ¥ë¬¸
 	@Override
 	public void inputError() {
-		System.out.println("¸Ş´º¿¡ ¾ø´Â ¹øÈ£ÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ë©”ë‰´ì— ì—†ëŠ” ë²ˆí˜¸ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 	}
 
 }

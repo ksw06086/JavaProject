@@ -16,70 +16,70 @@ import domain.Refund;
 import domain.Stock;
 
 /*
- * ÀÛ¼ºÀÏ : 2023.02.11.~2023.02.13.
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : ÀúÀåµÈ °´Ã¼ ºÒ·¯¿À±â ¹× Menu Login È­¸é È£Ãâ ¿ëµµ
+ * ì‘ì„±ì¼ : 2023.02.11.~2023.02.13.
+ * ì‘ì„±ì : ê¹€ì„ ìš°
+ * ê°œìš” 	: ì €ì¥ëœ ê°ì²´ ë¶ˆëŸ¬ì˜¤ê¸° ë° Menu Login í™”ë©´ í˜¸ì¶œ ìš©ë„
  * **/
 public class Console extends MenuImpl{
-	public static boolean inputReadSwit = false;		// ¼ıÀÚ ¶Ç´Â ¹®ÀÚ¿­ ÀÔ·Â ½Ã ¿À·ù°¡ ³ª¸é true¸¦ ¹İÈ¯ÇÔ
-	private static BufferedReader reader;				// °´Ã¼ µ¥ÀÌÅÍ¸¦ °¡Á®¿À±â À§ÇÑ IO°´Ã¼
+	public static boolean inputReadSwit = false;		// ìˆ«ì ë˜ëŠ” ë¬¸ìì—´ ì…ë ¥ ì‹œ ì˜¤ë¥˜ê°€ ë‚˜ë©´ trueë¥¼ ë°˜í™˜í•¨
+	private static BufferedReader reader;				// ê°ì²´ ë°ì´í„°ë¥¼ ê°€ì ¸ì˜¤ê¸° ìœ„í•œ IOê°ì²´
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	@SuppressWarnings("unchecked")
 	public Console() {
-		FileInputStream listIn;										// ¹ÙÀÌÆ®·Î ÀúÀå µÇ¾îÀÖ´Â °´Ã¼ ÀĞ¾î¿À´Â º¯¼ö
+		FileInputStream listIn;										// ë°”ì´íŠ¸ë¡œ ì €ì¥ ë˜ì–´ìˆëŠ” ê°ì²´ ì½ì–´ì˜¤ëŠ” ë³€ìˆ˜
 		try {
-			// Àı´ë °æ·Î¸¦ ÅëÇØ¼­ byte(°´Ã¼) ÀĞ¾î¿À±â
+			// ì ˆëŒ€ ê²½ë¡œë¥¼ í†µí•´ì„œ byte(ê°ì²´) ì½ì–´ì˜¤ê¸°
 			listIn = new FileInputStream("C:\\Users\\Happy\\Downloads\\hostList.out");
 			
-			// byte¸¦ °´Ã¼·Î º¯È¯
+			// byteë¥¼ ê°ì²´ë¡œ ë³€í™˜
 			ObjectInputStream hostListIn = new ObjectInputStream(listIn);
 			
-			// µ¥ÀÌÅÍ ½Î±×¸® °¬´Ù ³Ö±â
+			// ë°ì´í„° ì‹¸ê·¸ë¦¬ ê°”ë‹¤ ë„£ê¸°
 			Stock.stockList = (HashMap<Integer, Book>) hostListIn.readObject();
 			Order.idOrderList = (HashMap<String, HashMap<Integer,Book>>) hostListIn.readObject();
 			Refund.idRefundList = (HashMap<String, HashMap<Integer,Book>>) hostListIn.readObject();
 		} catch (FileNotFoundException e) {
-			// Ã³À½À¸·Î ¼­Á¡ ÀÔÀåÇÒ ¶§´Â ÆÄÀÏÀÌ ¾ø¾î¼­ ¿¡·¯ »ı±è	
+			// ì²˜ìŒìœ¼ë¡œ ì„œì  ì…ì¥í•  ë•ŒëŠ” íŒŒì¼ì´ ì—†ì–´ì„œ ì—ëŸ¬ ìƒê¹€	
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// ¼­Á¡ÀÔÀå
+		// ì„œì ì…ì¥
 		commonMenu(MenuList.SHOP_LOGIN);
 	}
 	
-	// ¹®ÀÚ¿­ ÀÔ·Â
+	// ë¬¸ìì—´ ì…ë ¥
 	public static String strInput() {
 		inputReadSwit = false;
 		reader = new BufferedReader(new InputStreamReader(System.in));
 		String str = "";
-		// ¿¹¿ÜÃ³¸®
+		// ì˜ˆì™¸ì²˜ë¦¬
 		try {
 			str = reader.readLine();
 		} catch (IOException e) {
 			inputReadSwit = true;
-			System.out.println("Å°º¸µå ÀÔ·Â ¿¡·¯~!");
+			System.out.println("í‚¤ë³´ë“œ ì…ë ¥ ì—ëŸ¬~!");
 		}
 		return str;
 	}
 	
-	// ¼ıÀÚ ÀÔ·Â
+	// ìˆ«ì ì…ë ¥
 	public static int codeInput() {
 		inputReadSwit = false;
 		reader = new BufferedReader(new InputStreamReader(System.in));
 		int code = 0;
-		// ¿¹¿ÜÃ³¸®
+		// ì˜ˆì™¸ì²˜ë¦¬
 		try {
 			code = Integer.parseInt(reader.readLine());
 		} catch (NumberFormatException e) {
 			inputReadSwit = true;
-			System.out.println("int ¹üÀ§¸¦ ¹ş¾î³µ½À´Ï´Ù. Å°º¸µå ÀÔ·Â ¿¡·¯~!");
+			System.out.println("int ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤. í‚¤ë³´ë“œ ì…ë ¥ ì—ëŸ¬~!");
 		} catch (IOException e) {
 			inputReadSwit = true;
-			System.out.println("Å°º¸µå ÀÔ·Â ¿¡·¯~!");
+			System.out.println("í‚¤ë³´ë“œ ì…ë ¥ ì—ëŸ¬~!");
 		}
 		return code;
 	}

@@ -2,22 +2,22 @@ package ch05;
 
 public class _04_ArrayEx {
 	public static void main(String[] args) {
-		_04_Book library = new _04_Book("¾Æ±âµÅÁö »ïÇüÁ¦", " ´Á´ë");
+		_04_Book library = new _04_Book("ì•„ê¸°ë¼ì§€ ì‚¼í˜•ì œ", " ëŠ‘ëŒ€");
 		library.showBookInfo();
 		
 		_04_Book[] books = new _04_Book[5];
-		// ¹è¿­ÃÊ±âÈ­
-		books[0] = new _04_Book("10³â ÈÄ", "Á¶Á¤·¡");
-		books[1] = new _04_Book("ÀûÀ» ¸¸µéÁö ¾Ê´Â ´ëÈ­¹ý", "´ëÈ­ÀÚ");
-		books[2] = new _04_Book("¹Ì¿ò¹ÞÀ» ¿ë±â", "¸ð¸§");
-		books[3] = new _04_Book("¸¶À½ÀÇ ÁÖÀÎ", "ÀÌ±âÁÖ");
-		books[4] = new _04_Book("¾ð¾îÀÇ ¿Âµµ", "ÀÌ±âÁÖ");
+		// ë°°ì—´ì´ˆê¸°í™”
+		books[0] = new _04_Book("10ë…„ í›„", "ì¡°ì •ëž˜");
+		books[1] = new _04_Book("ì ì„ ë§Œë“¤ì§€ ì•ŠëŠ” ëŒ€í™”ë²•", "ëŒ€í™”ìž");
+		books[2] = new _04_Book("ë¯¸ì›€ë°›ì„ ìš©ê¸°", "ëª¨ë¦„");
+		books[3] = new _04_Book("ë§ˆìŒì˜ ì£¼ì¸", "ì´ê¸°ì£¼");
+		books[4] = new _04_Book("ì–¸ì–´ì˜ ì˜¨ë„", "ì´ê¸°ì£¼");
 		
-		// ÁÖ¼Ò°ª È£Ãâ
+		// ì£¼ì†Œê°’ í˜¸ì¶œ
 		for(int i = 0; i < books.length; i++) {
 			System.out.println(books[i]);
 		}
-		// °ª È£Ãâ
+		// ê°’ í˜¸ì¶œ
 		for(int i = 0; i < books.length; i++) {
 			books[i].showBookInfo();
 		}

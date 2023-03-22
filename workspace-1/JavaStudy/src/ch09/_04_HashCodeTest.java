@@ -3,7 +3,7 @@ package ch09;
 public class _04_HashCodeTest {
 	public static void main(String[] args) {
 		
-		// Integer¿Í StringÀÇ equals¿Í hashCode ÇÔ¼ö´Â ÀçÁ¤ÀÇ µÇ¾îÀÖ´Ù.
+		// Integerì™€ Stringì˜ equalsì™€ hashCode í•¨ìˆ˜ëŠ” ì¬ì •ì˜ ë˜ì–´ìˆë‹¤.
 		String str1 = new String("abc");
 		String str2 = new String("abc");
 		

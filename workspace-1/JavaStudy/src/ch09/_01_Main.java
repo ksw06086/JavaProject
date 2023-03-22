@@ -2,8 +2,8 @@ package ch09;
 
 public class _01_Main {
 	public static void main(String[] args) {
-		// ¸Å°³º¯¼ö »ı¼ºÀÚ
-		_01_Book book = new _01_Book(100, "¾ÆÁÖ ÀÛÀº ¿Üµı ¼¶");
+		// ë§¤ê°œë³€ìˆ˜ ìƒì„±ì
+		_01_Book book = new _01_Book(100, "ì•„ì£¼ ì‘ì€ ì™¸ë”´ ì„¬");
 		System.out.println(book);
 		
 		System.out.println(book.toString());

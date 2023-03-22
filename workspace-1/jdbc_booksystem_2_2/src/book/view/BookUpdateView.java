@@ -25,12 +25,12 @@ public class BookUpdateView extends JPanel{
 	DefaultTableModel model;
 	String searchWord = "";
 	JPanel panS = new JPanel(new GridLayout(4,4));
-	String[] header = {"µµ¼­¹øÈ£", "µµ¼­¸í", "ÀúÀÚ¸í", "ÃâÆÇ»ç", "°¡°İ", "ºĞ·ù¸í"};
-	String[] comStr = {"ITµµ¼­", "°³¹ßµµ¼­", "À¥Å÷", "¿¡¼¼ÀÌ", "°æÁ¦"};
+	String[] header = {"ë„ì„œë²ˆí˜¸", "ë„ì„œëª…", "ì €ìëª…", "ì¶œíŒì‚¬", "ê°€ê²©", "ë¶„ë¥˜ëª…"};
+	String[] comStr = {"ITë„ì„œ", "ê°œë°œë„ì„œ", "ì›¹íˆ°", "ì—ì„¸ì´", "ê²½ì œ"};
 	JLabel[] lbls = new JLabel[header.length];
 	JTextField[] tf = new JTextField[lbls.length-1];
 	JComboBox<String> comboCategory = new JComboBox<String>(comStr);
-	JButton btnUpdate = new JButton("µµ¼­¼öÁ¤");
+	JButton btnUpdate = new JButton("ë„ì„œìˆ˜ì •");
 	
 	public BookUpdateView() {
 		setLayout(new BorderLayout(10, 10));
@@ -61,7 +61,7 @@ public class BookUpdateView extends JPanel{
 		model = new DefaultTableModel(header, bookList.size()) {
 			@Override
 			public boolean isCellEditable(int row, int column) {
-				// ¼öÁ¤ÇÒ ¼ö ¾ø°Ô ¸¸µé¾îÁÖ±â À§ÇØ¼­ false¸¦ ÇÔ true¸¦ ÇÏ¸é ¼öÁ¤ °¡´É
+				// ìˆ˜ì •í•  ìˆ˜ ì—†ê²Œ ë§Œë“¤ì–´ì£¼ê¸° ìœ„í•´ì„œ falseë¥¼ í•¨ trueë¥¼ í•˜ë©´ ìˆ˜ì • ê°€ëŠ¥
 				return false;
 			}
 		};

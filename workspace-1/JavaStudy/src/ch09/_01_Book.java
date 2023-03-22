@@ -1,7 +1,7 @@
 package ch09;
 
 public class _01_Book {
-	// ¸â¹öº¯¼ö
+	// ë©¤ë²„ë³€ìˆ˜
 	private int bookNumber;
 	private String bookTitle;
 	

@@ -18,15 +18,15 @@ import domain.Stock;
 import view.Console;
 
 /**
- * @fileName		: BookStore
- * @project		: ¼­Á¡ °ü¸® ÇÁ·Î±×·¥
- * @date				: 2023.02.16.~2023.03.09
- * @author			: ±è¼±¿ì
- * @summary		: °ü¸®ÀÚ °ü·Ã ±â´É È£Ãâ ¿ëµµ
+ * @fileName	: BookStore
+ * @project		: ì„œì  ê´€ë¦¬ í”„ë¡œê·¸ë¨
+ * @date		: 2023.02.16.~2023.03.09
+ * @author		: ê¹€ì„ ìš°
+ * @summary		: ê´€ë¦¬ì ê´€ë ¨ ê¸°ëŠ¥ í˜¸ì¶œ ìš©ë„
  */
 public class HostImpl implements Host{
 	/*
-	 * ½Ì±ÛÅæ
+	 * ì‹±ê¸€í†¤
 	 * 
 	 * private static HostImpl guest = new GuestImpl(); 
 	 * private HostImpl() {} 
@@ -35,33 +35,33 @@ public class HostImpl implements Host{
 	
 	public HostImpl() {}
 	
-	// °ü¸®ÀÚ ·Î±×ÀÎ
+	// ê´€ë¦¬ì ë¡œê·¸ì¸
 	@Override
 	public boolean hostLogin() {		
-		System.out.print("°ü¸®ÀÚ ID : ");
+		System.out.print("ê´€ë¦¬ì ID : ");
 		String id = Console.strInput();
-		System.out.print("°ü¸®ÀÚ PW : ");
+		System.out.print("ê´€ë¦¬ì PW : ");
 		String pw = Console.strInput();
 		if(id.equals(ID) && pw.equals(PASSWORD)) {
 			System.out.println("=================================");
-			System.out.println("·Î±×ÀÎ µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ë¡œê·¸ì¸ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			System.out.println("=================================");
 			return true;
 		} else if(id.equals(ID)) {
-			System.out.println("ºñ¹Ğ¹øÈ£°¡ ¸ÂÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ë¹„ë°€ë²ˆí˜¸ê°€ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		} else if(id.equals(PASSWORD)) {
-			System.out.println("¾ÆÀÌµğ°¡ ¸ÂÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ì•„ì´ë””ê°€ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		} else {
-			System.out.println("¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£ µÑ ´Ù ¸ÂÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ ë‘˜ ë‹¤ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 		return false;
 	}
 
-	// Ã¥ ¸ñ·Ï
+	// ì±… ëª©ë¡
 	@Override
 	public void bookList() {
-		System.out.println("********* µµ¼­ ¸ñ·Ï *********");
-		System.out.println("¹øÈ£\tµµ¼­¸í\tÀúÀÚ\t°¡°İ\t¼ö·®");
+		System.out.println("********* ë„ì„œ ëª©ë¡ *********");
+		System.out.println("ë²ˆí˜¸\të„ì„œëª…\tì €ì\tê°€ê²©\tìˆ˜ëŸ‰");
 		System.out.println("*************************");
 		Iterator<Integer> ir = Stock.stockList.keySet().iterator();
 		while (ir.hasNext()) {
@@ -70,30 +70,30 @@ public class HostImpl implements Host{
 		}
 	}
 
-	// Ã¥ Ãß°¡
+	// ì±… ì¶”ê°€
 	@Override
 	public void bookAdd() {
-		System.out.println("============ µµ¼­ µî·Ï =============");
-		System.out.println("Ã¥ Á¦¸ñ : ");
+		System.out.println("============ ë„ì„œ ë“±ë¡ =============");
+		System.out.println("ì±… ì œëª© : ");
 		String name = Console.strInput();
-		System.out.println("Ã¥ ÀúÀÚ : ");
+		System.out.println("ì±… ì €ì : ");
 		String author = Console.strInput();
-		System.out.println("Ã¥ °¡°İ : ");
+		System.out.println("ì±… ê°€ê²© : ");
 		int price = Console.codeInput();
-		System.out.println("Ã¥ ¼ö·® : ");
+		System.out.println("ì±… ìˆ˜ëŸ‰ : ");
 		int count = Console.codeInput();
 		
-		// Å°º¸µå ¿À·ù, °¡°İ ¿À±âÀÔ, ¼ö·® ¿À±âÀÔ½Ã µî·Ï Ãë¼ÒÇÏ°í °ü¸®ÀÚ È­¸éÀ¸·Î µ¹¾Æ°¨
+		// í‚¤ë³´ë“œ ì˜¤ë¥˜, ê°€ê²© ì˜¤ê¸°ì…, ìˆ˜ëŸ‰ ì˜¤ê¸°ì…ì‹œ ë“±ë¡ ì·¨ì†Œí•˜ê³  ê´€ë¦¬ì í™”ë©´ìœ¼ë¡œ ëŒì•„ê°
 		if(Console.inputReadSwit) {
-			System.out.println("Å°º¸µå ¿À·ù·Î ÀÎÇØ µî·ÏÀÌ Ãë¼ÒµË´Ï´Ù.");
+			System.out.println("í‚¤ë³´ë“œ ì˜¤ë¥˜ë¡œ ì¸í•´ ë“±ë¡ì´ ì·¨ì†Œë©ë‹ˆë‹¤.");
 			return ;
 		} else if(price < 0) {
-			System.out.println("°¡°İÀº 0¿øÀÌ»óÀÔ´Ï´Ù.");
+			System.out.println("ê°€ê²©ì€ 0ì›ì´ìƒì…ë‹ˆë‹¤.");
 		} else if(count < 1) {
-			System.out.println("Ãß°¡ÇÒ Ã¥Àº 1°³ ÀÌ»óºÎÅÍÀÔ´Ï´Ù.");
+			System.out.println("ì¶”ê°€í•  ì±…ì€ 1ê°œ ì´ìƒë¶€í„°ì…ë‹ˆë‹¤.");
 		}
 		
-		// ¸ğµÎ °°°í ¼ö·®¸¸ ´Ù¸¦ ¶§ °³¼ö Ãß°¡¸¸ ÇÏ±â
+		// ëª¨ë‘ ê°™ê³  ìˆ˜ëŸ‰ë§Œ ë‹¤ë¥¼ ë•Œ ê°œìˆ˜ ì¶”ê°€ë§Œ í•˜ê¸°
 		Iterator<Integer> ir = Stock.stockList.keySet().iterator();
 		while (ir.hasNext()) {
 			int key = ir.next();
@@ -102,57 +102,57 @@ public class HostImpl implements Host{
 					Stock.stockList.get(key).getBookPrice() == price) {
 					Stock.stockList.get(key).addBookCount(count);
 					System.out.println("===========================");
-					System.out.println("¼ö·®¸¸ ´Ù¸£±â¿¡ ÇØ´ç µµ¼­ÀÇ °³¼ö°¡ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+					System.out.println("ìˆ˜ëŸ‰ë§Œ ë‹¤ë¥´ê¸°ì— í•´ë‹¹ ë„ì„œì˜ ê°œìˆ˜ê°€ ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.");
 					System.out.println("===========================");
 					return;
 			}
 		}
 		
-		// ÄÚµå »ı¼ºÇØ¼­ »õ·Î µî·ÏÇÏ±â
+		// ì½”ë“œ ìƒì„±í•´ì„œ ìƒˆë¡œ ë“±ë¡í•˜ê¸°
 		int code = Book.getCodeNumber();
 		Stock.stockList.put(code, new Book(name, author, price, count, code));
 		System.out.println("===========================");
-		System.out.println("µµ¼­°¡ µî·ÏµÇ¾ú½À´Ï´Ù.");
+		System.out.println("ë„ì„œê°€ ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		System.out.println("===========================");
 	}
 
-	// Ã¥ ¼öÁ¤
+	// ì±… ìˆ˜ì •
 	@Override
 	public void bookUpdate() {
 		bookList();
-		System.out.print("¼öÁ¤ÇÒ Ã¥ÀÇ ÄÚµå¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. [ÀÌÀü : 0] : ");
+		System.out.print("ìˆ˜ì •í•  ì±…ì˜ ì½”ë“œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. [ì´ì „ : 0] : ");
 		int code = Console.codeInput();
 		if(Stock.stockList.containsKey(code)) {
 			while(true) {
-				System.out.print("¹«¾ùÀ» ¼öÁ¤ÇÏ½Ã°Ú½À´Ï±î?. [Á¦¸ñ : 1, ÀúÀÚ : 2, °¡°İ : 3, ¼ö·® : 4, ¼öÁ¤Á¾·á : 0] : ");
+				System.out.print("ë¬´ì—‡ì„ ìˆ˜ì •í•˜ì‹œê² ìŠµë‹ˆê¹Œ?. [ì œëª© : 1, ì €ì : 2, ê°€ê²© : 3, ìˆ˜ëŸ‰ : 4, ìˆ˜ì •ì¢…ë£Œ : 0] : ");
 				int swit = Console.codeInput();
 				switch (swit) {
 					case 1:
-						System.out.print("ÇöÀç Á¦¸ñ : " + Stock.stockList.get(code).getBookTitle() + 
-								", ¼öÁ¤ÇÏ°í ½ÍÀ¸½Å Á¦¸ñÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. : ");
+						System.out.print("í˜„ì¬ ì œëª© : " + Stock.stockList.get(code).getBookTitle() + 
+								", ìˆ˜ì •í•˜ê³  ì‹¶ìœ¼ì‹  ì œëª©ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. : ");
 						Stock.stockList.get(code).setBookTitle(Console.strInput());
 						break;
 					case 2:
-						System.out.print("ÇöÀç ÀúÀÚ : " + Stock.stockList.get(code).getBookAuthor() + 
-								", ¼öÁ¤ÇÏ°í ½ÍÀ¸½Å ÀúÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. : ");
+						System.out.print("í˜„ì¬ ì €ì : " + Stock.stockList.get(code).getBookAuthor() + 
+								", ìˆ˜ì •í•˜ê³  ì‹¶ìœ¼ì‹  ì €ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. : ");
 						Stock.stockList.get(code).setBookAuthor(Console.strInput());
 						break;
 					case 3:
-						System.out.print("ÇöÀç °¡°İ : " + Stock.stockList.get(code).getBookPrice() + 
-								", ¼öÁ¤ÇÏ°í ½ÍÀ¸½Å °¡°İÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. : ");
+						System.out.print("í˜„ì¬ ê°€ê²© : " + Stock.stockList.get(code).getBookPrice() + 
+								", ìˆ˜ì •í•˜ê³  ì‹¶ìœ¼ì‹  ê°€ê²©ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. : ");
 						int price = Console.codeInput();
 						if(price < 0) {
-							System.out.println("0¿ø(°øÂ¥)º¸´Ù ´õ ³·Àº ±İ¾×Àº ¾ø½À´Ï´Ù.");
+							System.out.println("0ì›(ê³µì§œ)ë³´ë‹¤ ë” ë‚®ì€ ê¸ˆì•¡ì€ ì—†ìŠµë‹ˆë‹¤.");
 							return;
 						}
 						Stock.stockList.get(code).setBookPrice(price);
 						break;
 					case 4:
-						System.out.print("ÇöÀç ¼ö·® : " + Stock.stockList.get(code).getBookCount() + 
-								", ¼öÁ¤ÇÏ°í ½ÍÀ¸½Å ¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä. : ");
+						System.out.print("í˜„ì¬ ìˆ˜ëŸ‰ : " + Stock.stockList.get(code).getBookCount() + 
+								", ìˆ˜ì •í•˜ê³  ì‹¶ìœ¼ì‹  ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. : ");
 						int count = Console.codeInput();
 						if(count < 0) {
-							System.out.println("¼ö·®Àº 1°³ ÀÌ»óÀÔ´Ï´Ù.");
+							System.out.println("ìˆ˜ëŸ‰ì€ 1ê°œ ì´ìƒì…ë‹ˆë‹¤.");
 							return;
 						}
 						Stock.stockList.get(code).setBookCount(count);
@@ -160,56 +160,56 @@ public class HostImpl implements Host{
 					case 0:
 						return;
 					default:
-						System.out.println("0~4±îÁöÀÇ ¼ıÀÚ Áß ÇÏ³ª¸¸ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+						System.out.println("0~4ê¹Œì§€ì˜ ìˆ«ì ì¤‘ í•˜ë‚˜ë§Œ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
 						break;
 				}
 				if(Console.inputReadSwit) {
-					System.out.println("Å°º¸µå ¿À·ù·Î ÀÎÇØ ¼öÁ¤ÀÌ Ãë¼ÒµË´Ï´Ù.");
+					System.out.println("í‚¤ë³´ë“œ ì˜¤ë¥˜ë¡œ ì¸í•´ ìˆ˜ì •ì´ ì·¨ì†Œë©ë‹ˆë‹¤.");
 					return;
 				}
 				System.out.println("=================================");
-				System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­°¡ ¼öÁ¤µÇ¾ú½À´Ï´Ù.");
+				System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œê°€ ìˆ˜ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				System.out.println("=================================");
 			} 
 		} else if(code == 0) {
-			return ;		// Á¾·á
+			return ;		// ì¢…ë£Œ
 		} else {
 			System.out.println("=================================");
-			System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­°¡ ¸ñ·Ï¿¡ ÀÕÁö ¾Ê½À´Ï´Ù. ¸ñ·ÏÀ» ´Ù½Ã È®ÀÎÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. ");
+			System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œê°€ ëª©ë¡ì— ì‡ì§€ ì•ŠìŠµë‹ˆë‹¤. ëª©ë¡ì„ ë‹¤ì‹œ í™•ì¸í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤. ");
 			System.out.println("=================================");
 		}
 	}
 
-	// Ã¥ »èÁ¦
+	// ì±… ì‚­ì œ
 	@Override
 	public void bookDel() {
-		System.out.print("»èÁ¦ÇÒ Ã¥ÀÇ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+		System.out.print("ì‚­ì œí•  ì±…ì˜ ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 		int code = Console.codeInput();
-		if(Stock.stockList.containsKey(code)) {	// ÄÚµå¿¡ ¸Â´Â Ã¥ÀÌ Àç°í¸ñ·Ï¿¡ ÀÖ´ÂÁö È®ÀÎ
+		if(Stock.stockList.containsKey(code)) {	// ì½”ë“œì— ë§ëŠ” ì±…ì´ ì¬ê³ ëª©ë¡ì— ìˆëŠ”ì§€ í™•ì¸
 			Stock.stockList.remove(code);
 			System.out.println("===========================");
-			System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­°¡ »èÁ¦µÇ¾ú½À´Ï´Ù.");
+			System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œê°€ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			System.out.println("===========================");
 		} else if(code == 0) {
-			return ;		// Á¾·á
+			return ;		// ì¢…ë£Œ
 		} else {
 			System.out.println("===========================");
-			System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­°¡ ¸ñ·Ï¿¡ ÀÖÁö ¾Ê½À´Ï´Ù. ¸ñ·ÏÀ» ´Ù½Ã È®ÀÎÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+			System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œê°€ ëª©ë¡ì— ìˆì§€ ì•ŠìŠµë‹ˆë‹¤. ëª©ë¡ì„ ë‹¤ì‹œ í™•ì¸í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 			System.out.println("===========================");
 		}
 	}
 
-	// ÁÖ¹®¸ñ·Ï
+	// ì£¼ë¬¸ëª©ë¡
 	@Override
 	public void orderList() {
-		System.out.println("********** ±¸¸Å ¿äÃ» ¸ñ·Ï *********");
-		System.out.println("ID\t¹øÈ£\tµµ¼­¸í\tÀúÀÚ\t°¡°İ\t¼ö·®");
+		System.out.println("********** êµ¬ë§¤ ìš”ì²­ ëª©ë¡ *********");
+		System.out.println("ID\të²ˆí˜¸\të„ì„œëª…\tì €ì\tê°€ê²©\tìˆ˜ëŸ‰");
 		System.out.println("*************************");
 		Iterator<String> ir = Order.idOrderList.keySet().iterator();
-		while (ir.hasNext()) {			// IDº° ÁÖ¹®ÇÑ µµ¼­ ¸ñ·Ïµé °¡Á®¿À±â
+		while (ir.hasNext()) {			// IDë³„ ì£¼ë¬¸í•œ ë„ì„œ ëª©ë¡ë“¤ ê°€ì ¸ì˜¤ê¸°
 			String key = ir.next();
 			Iterator<Integer> ir2 = Order.idOrderList.get(key).keySet().iterator();
-			while (ir2.hasNext()) {		// codeº° µµ¼­ °´Ã¼ °¡Á®¿À±â
+			while (ir2.hasNext()) {		// codeë³„ ë„ì„œ ê°ì²´ ê°€ì ¸ì˜¤ê¸°
 				int code = ir2.next();
 				System.out.println(key + "\t" + Order.idOrderList.get(key).get(code));
 			}
@@ -217,52 +217,52 @@ public class HostImpl implements Host{
 		}
 	}
 
-	// °áÁ¦½ÂÀÎ
+	// ê²°ì œìŠ¹ì¸
 	@Override
 	public void orderConfirm() {
-		System.out.print("±¸¸Å ½ÂÀÎÇÒ ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+		System.out.print("êµ¬ë§¤ ìŠ¹ì¸í•  IDë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 		String id = Console.strInput();
-		System.out.print("±¸¸Å ½ÂÀÎÇÒ Ã¥ÀÇ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+		System.out.print("êµ¬ë§¤ ìŠ¹ì¸í•  ì±…ì˜ ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 		int code = Console.codeInput();
-		if(Order.idOrderList.containsKey(id)) {			// ÇØ´ç ¾ÆÀÌµğ ÀÖ´ÂÁö È®ÀÎ
-			// °í°´ÀÌ ·Î±×¾Æ¿ô ½Ã ±¸¸Å¿Ï·á ¸ñ·ÏÀÌ ÆÄÀÏÈ­°¡ µÇ¾î¼­ ¿©±â¼­ ½ÂÀÎÀ» ÇØÁÖ¸é ±× ÆÄÀÏ¿¡ Ãß°¡°¡ µÇ¾î¾ßÇÔ
-			// ±¸¸Å¿Ï·á, Àå¹Ù±¸´Ï¸¦ ÁÖ¹®Ã³·³ ID º° MapÀ» ¸¸µé¾îº¸´Â °ÍÀ» ¿Ï¼º ÈÄ »ı°¢ÇØ¼­ ¼öÁ¤ÇØº¸±â·Î ÇÔ
+		if(Order.idOrderList.containsKey(id)) {			// í•´ë‹¹ ì•„ì´ë”” ìˆëŠ”ì§€ í™•ì¸
+			// ê³ ê°ì´ ë¡œê·¸ì•„ì›ƒ ì‹œ êµ¬ë§¤ì™„ë£Œ ëª©ë¡ì´ íŒŒì¼í™”ê°€ ë˜ì–´ì„œ ì—¬ê¸°ì„œ ìŠ¹ì¸ì„ í•´ì£¼ë©´ ê·¸ íŒŒì¼ì— ì¶”ê°€ê°€ ë˜ì–´ì•¼í•¨
+			// êµ¬ë§¤ì™„ë£Œ, ì¥ë°”êµ¬ë‹ˆë¥¼ ì£¼ë¬¸ì²˜ëŸ¼ ID ë³„ Mapì„ ë§Œë“¤ì–´ë³´ëŠ” ê²ƒì„ ì™„ì„± í›„ ìƒê°í•´ì„œ ìˆ˜ì •í•´ë³´ê¸°ë¡œ í•¨
 			try {
 				FileInputStream listIn = new FileInputStream("C:\\Users\\Happy\\Downloads\\" + id + "buyList.out");
 				ObjectInputStream buyList = new ObjectInputStream(listIn);
 				Buy.buyList = (HashMap<Integer, Book>) buyList.readObject();
 			} catch (FileNotFoundException e) {
-				System.out.println(id + "ÀÇ BuyList ÆÄÀÏÀÌ ¾ø½À´Ï´Ù.");
+				System.out.println(id + "ì˜ BuyList íŒŒì¼ì´ ì—†ìŠµë‹ˆë‹¤.");
 			} catch (IOException e) {
 				e.printStackTrace();
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
 			
-			// ±¸¸Å ¿äÃ» ¸ñ·Ï¿¡ ÀÔ·ÂÇÑ ÄÚµå¿¡ ¸Â´Â Ã¥ÀÌ ÀÖ´ÂÁö È®ÀÎ
+			// êµ¬ë§¤ ìš”ì²­ ëª©ë¡ì— ì…ë ¥í•œ ì½”ë“œì— ë§ëŠ” ì±…ì´ ìˆëŠ”ì§€ í™•ì¸
 			if(Order.idOrderList.get(id).containsKey(code)) {
-				// °á»ê °´Ã¼¿¡ ±İ¾× +
+				// ê²°ì‚° ê°ì²´ì— ê¸ˆì•¡ +
 				int totalPrice = Order.idOrderList.get(id).get(code).getBookTotalPrice();
-				if(!Settlement.totalList.containsKey(id)) {				// °á»ê ¸ñ·Ï¿¡ µî·ÏµÈ ¾ÆÀÌµğÀÎÁö È®ÀÎ
+				if(!Settlement.totalList.containsKey(id)) {				// ê²°ì‚° ëª©ë¡ì— ë“±ë¡ëœ ì•„ì´ë””ì¸ì§€ í™•ì¸
 					Settlement.totalList.put(id, totalPrice);
 				} else {
 					Settlement.totalList.put(id, Settlement.totalList.get(id) + totalPrice);
 				}
 				
-				// ±¸¸Å ¿Ï·á ¸ñ·Ï¿¡ Ãß°¡ ¹× ±¸¸Å¿äÃ» ¸ñ·Ï¿¡¼­ »èÁ¦
+				// êµ¬ë§¤ ì™„ë£Œ ëª©ë¡ì— ì¶”ê°€ ë° êµ¬ë§¤ìš”ì²­ ëª©ë¡ì—ì„œ ì‚­ì œ
 				Buy.buyList.put(code , Order.idOrderList.get(id).get(code));
 				Order.idOrderList.get(id).remove(code);
 				System.out.println("================================");
-				System.out.println("°áÁ¦ ½ÂÀÎ µÇ¾ú½À´Ï´Ù.");
+				System.out.println("ê²°ì œ ìŠ¹ì¸ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				System.out.println("================================");
 			} else if(code == 0) {
 				
 			} else {
 				System.out.println("================================");
-				System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­¸¦ ±¸¸ÅÇÑ »ç¶÷ÀÌ ¾ø½À´Ï´Ù. ¸ñ·ÏÀ» ´Ù½Ã È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+				System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œë¥¼ êµ¬ë§¤í•œ ì‚¬ëŒì´ ì—†ìŠµë‹ˆë‹¤. ëª©ë¡ì„ ë‹¤ì‹œ í™•ì¸í•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 			}
 			
-			// ±¸¸Å ¿Ï·á ¸ñ·Ï ´Ù½Ã ÆÄÀÏ¿¡ ÀúÀå
+			// êµ¬ë§¤ ì™„ë£Œ ëª©ë¡ ë‹¤ì‹œ íŒŒì¼ì— ì €ì¥
 			try {
 				FileOutputStream listOut = new FileOutputStream("C:\\Users\\Happy\\Downloads\\" + id + "buyList.out");
 				ObjectOutputStream buyList = new ObjectOutputStream(listOut);
@@ -276,17 +276,17 @@ public class HostImpl implements Host{
 				e.printStackTrace();
 			}
 		} else {
-			System.out.println("ÀÔ·ÂÇÏ½Å ¾ÆÀÌµğ¸¦ °¡Áø °í°´ÀÌ ±¸¸Å¿äÃ»À» ÇÑ ÀûÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ì…ë ¥í•˜ì‹  ì•„ì´ë””ë¥¼ ê°€ì§„ ê³ ê°ì´ êµ¬ë§¤ìš”ì²­ì„ í•œ ì ì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
 
-	// È¯ºÒ½ÂÀÎ
+	// í™˜ë¶ˆìŠ¹ì¸
 	@Override
 	public void orderCancel() {
-		System.out.println("********* È¯ºÒ ¿äÃ» ¸ñ·Ï **********");
-		System.out.println("ID\t¹øÈ£\tµµ¼­¸í\tÀúÀÚ\t°¡°İ\t¼ö·®");
+		System.out.println("********* í™˜ë¶ˆ ìš”ì²­ ëª©ë¡ **********");
+		System.out.println("ID\të²ˆí˜¸\të„ì„œëª…\tì €ì\tê°€ê²©\tìˆ˜ëŸ‰");
 		System.out.println("**************************");
-		// ¾ÆÀÌµğ º° ¸ñ·Ï Ãâ·Â
+		// ì•„ì´ë”” ë³„ ëª©ë¡ ì¶œë ¥
 		Iterator<String> ir = Refund.idRefundList.keySet().iterator();
 		while (ir.hasNext()) {
 			String key = ir.next();
@@ -297,15 +297,15 @@ public class HostImpl implements Host{
 			}
 		}
 		
-		// ½ÂÀÎ Ã³¸® ½ÃÀÛ
-		System.out.println("È¯ºÒ ½ÂÀÎÇÒ ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0]");
+		// ìŠ¹ì¸ ì²˜ë¦¬ ì‹œì‘
+		System.out.println("í™˜ë¶ˆ ìŠ¹ì¸í•  IDë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0]");
 		String id = Console.strInput();
-		System.out.print("È¯ºÒ ½ÂÀÎÇÒ Ã¥ÀÇ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+		System.out.print("í™˜ë¶ˆ ìŠ¹ì¸í•  ì±…ì˜ ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 		int code = Console.codeInput();
-		if(Refund.idRefundList.containsKey(id)) {					// ÇØ´ç ¾ÆÀÌµğ°¡ È¯ºÒÇß´ÂÁö È®ÀÎ
-			// È¯ºÒ ¿äÃ» ¸ñ·Ï¿¡ ÀÔ·ÂÇÑ ÄÚµå¿¡ ¸Â´Â Ã¥ÀÌ ÀÖ´ÂÁö È®ÀÎ
+		if(Refund.idRefundList.containsKey(id)) {					// í•´ë‹¹ ì•„ì´ë””ê°€ í™˜ë¶ˆí–ˆëŠ”ì§€ í™•ì¸
+			// í™˜ë¶ˆ ìš”ì²­ ëª©ë¡ì— ì…ë ¥í•œ ì½”ë“œì— ë§ëŠ” ì±…ì´ ìˆëŠ”ì§€ í™•ì¸
 			if(Refund.idRefundList.get(id).containsKey(code)) {
-				if(Stock.stockList.containsKey(code)) {			// È¯ºÒÇÏ·Á´Â Ã¥ÀÌ Àç°í¿¡ ÀÖÀ¸¸é ¼ö¸¸ Ãß°¡
+				if(Stock.stockList.containsKey(code)) {			// í™˜ë¶ˆí•˜ë ¤ëŠ” ì±…ì´ ì¬ê³ ì— ìˆìœ¼ë©´ ìˆ˜ë§Œ ì¶”ê°€
 					Stock.stockList.get(code).setBookCount(
 							Stock.stockList.get(code).getBookCount() + 
 							Refund.idRefundList.get(id).get(code).getBookCount());
@@ -313,37 +313,37 @@ public class HostImpl implements Host{
 					Stock.stockList.put(code, new Book(Refund.idRefundList.get(id).get(code)));
 				}
 				
-				// °á»ê °´Ã¼ ¼öÁ¤ ÈÄ ÇØ´ç ¸ñ·Ï È¯ºÒ °´Ã¼¿¡¼­ »èÁ¦
+				// ê²°ì‚° ê°ì²´ ìˆ˜ì • í›„ í•´ë‹¹ ëª©ë¡ í™˜ë¶ˆ ê°ì²´ì—ì„œ ì‚­ì œ
 				Settlement.totalList.put(id, Settlement.totalList.get(id) - 
 															Refund.idRefundList.get(id).get(code).getBookTotalPrice());
 				Refund.idRefundList.get(id).remove(code);
 				System.out.println("================================");
-				System.out.println("È¯ºÒ Ã³¸® µÇ¾ú½À´Ï´Ù.");
+				System.out.println("í™˜ë¶ˆ ì²˜ë¦¬ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				System.out.println("================================");
 			} else if(code == 0) {
 				
 			} else {
 				System.out.println("================================");
-				System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­¸¦ È¯ºÒ ¿äÃ»ÇÑ »ç¶÷ÀÌ ¾ø½À´Ï´Ù. ¸ñ·ÏÀ» ´Ù½Ã È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+				System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œë¥¼ í™˜ë¶ˆ ìš”ì²­í•œ ì‚¬ëŒì´ ì—†ìŠµë‹ˆë‹¤. ëª©ë¡ì„ ë‹¤ì‹œ í™•ì¸í•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 			}
 		} else {
-			System.out.println("ÀÔ·ÂÇÏ½Å ¾ÆÀÌµğ°¡ È¯ºÒ¿äÃ» ¸ñ·Ï¿¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ì…ë ¥í•˜ì‹  ì•„ì´ë””ê°€ í™˜ë¶ˆìš”ì²­ ëª©ë¡ì— ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
 
-	// °á»ê
+	// ê²°ì‚°
 	@Override
 	public void saleTotal() {
-		// ¾ÆÀÌµğº° °á»ê Ãâ·Â
+		// ì•„ì´ë””ë³„ ê²°ì‚° ì¶œë ¥
 		if(!Settlement.totalList.isEmpty()) {
 			Iterator<String> ir = Settlement.totalList.keySet().iterator();
 			while (ir.hasNext()) {
 				String id = ir.next();
-				System.out.print(id + "ÀÇ ÃÑ ±¸¸Å¾×Àº : ");
-				System.out.printf("%,d¿ø ÀÔ´Ï´Ù.\n", Settlement.totalList.get(id));
+				System.out.print(id + "ì˜ ì´ êµ¬ë§¤ì•¡ì€ : ");
+				System.out.printf("%,dì› ì…ë‹ˆë‹¤.\n", Settlement.totalList.get(id));
 			}
 		} else {
-			System.out.println("¾ÆÁ÷ Ã¥À» ±¸¸ÅÇÑ ¾ÆÀÌµğ°¡ ¾ø°Å³ª °áÁ¦½ÂÀÎÀ» ÇÏÁö ¾Ê¾Ò½À´Ï´Ù.");
+			System.out.println("ì•„ì§ ì±…ì„ êµ¬ë§¤í•œ ì•„ì´ë””ê°€ ì—†ê±°ë‚˜ ê²°ì œìŠ¹ì¸ì„ í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
 		}
 	}
 }

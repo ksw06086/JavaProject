@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class DrawingLineEx extends JFrame {
 	public DrawingLineEx() {
-		setTitle("Á÷¼± ±×¸®±â");
+		setTitle("ì§ì„  ê·¸ë¦¬ê¸°");
 		
 		MyPan pan = new MyPan();
 		add("Center",pan);
@@ -19,7 +19,7 @@ public class DrawingLineEx extends JFrame {
 		public void paint(Graphics g) {
 			super.paint(g);
 			// drawLine(x1,y1,x2,y2);		
-			// x1, y1 : Ã¹ ¹øÂ° Á¡ÀÇ x, y ÁÂÇ¥ | x2, y2 : µÎ ¹øÂ° Á¡ÀÇ x, y ÁÂÇ¥
+			// x1, y1 : ì²« ë²ˆì§¸ ì ì˜ x, y ì¢Œí‘œ | x2, y2 : ë‘ ë²ˆì§¸ ì ì˜ x, y ì¢Œí‘œ
 			g.drawLine(50, 30, 250, 150);
 			g.drawLine(50, 120, 270, 60);
 		}

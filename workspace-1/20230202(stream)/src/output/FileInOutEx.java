@@ -7,12 +7,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * <Å¬·¡½º>
- * FileOutputStream : ¿µ¹®ÀÌ ÀÔ·ÂµÇ¾î ÀÖ´Â ÆÄÀÏ¿¡ ³»¿ëÀ» Ãâ·ÂÇÏ´Â ½ºÆ®¸² Å¬·¡½º
- * <»ı¼ºÀÚ>
+ * <í´ë˜ìŠ¤>
+ * FileOutputStream : ì˜ë¬¸ì´ ì…ë ¥ë˜ì–´ ìˆëŠ” íŒŒì¼ì— ë‚´ìš©ì„ ì¶œë ¥í•˜ëŠ” ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * <ìƒì„±ì>
  * - FileOutputStream
- * + FileOutputStream(String name)					- ÆÄÀÏ¸íÀÌ nameÀÎ ÆÄÀÏ¿¡ Ãâ·ÂÇÏ´Â FileOutputStream
- * + FileOutputStream(File file)						- file °´Ã¼°¡ °¡¸®Å°´Â ÆÄÀÏ¿¡ Ãâ·ÂÇÏ´Â FileOutputStream
+ * + FileOutputStream(String name)	- íŒŒì¼ëª…ì´ nameì¸ íŒŒì¼ì— ì¶œë ¥í•˜ëŠ” FileOutputStream
+ * + FileOutputStream(File file)	- file ê°ì²´ê°€ ê°€ë¦¬í‚¤ëŠ” íŒŒì¼ì— ì¶œë ¥í•˜ëŠ” FileOutputStream
  * 
  * **/
 public class FileInOutEx {

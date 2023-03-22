@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트 입력상자와 리스트 박스</title>
+<style type="text/css">
+	fieldset{
+		width: 400px;
+	}
+</style>
+<script type="text/javascript">
+	function fruitChk(){
+		var frt = document.myForm.fruit.value;
+		if(frt){
+			alert(frt);
+		}
+	}
+</script>
+</head>
+<body>
+<form action="" method = "post" name = "myForm">
+	<fieldset>
+		<legend>Select 객체 예제</legend>
+		<select name = "fruit" onchange="return fruitChk();">
+			<option value = "">과일을 선택하세요.</option>
+			<option value = "수박">수박</option>
+			<option value = "귤">귤</option>
+			<option value = "천혜향">천혜향</option>
+			<option value = "한라봉">한라봉</option>
+			<option value = "망고">망고</option>
+			<option value = "람부탄">람부탄</option>
+			<option value = "패션후르츠">패션후르츠</option>
+			<option value = "망고스틴">망고스틴</option>
+			<option value = "리치">리치</option>
+			<option value = "포도">포도</option>
+			<option value = "복숭아">복숭아</option>
+		</select>
+	</fieldset>
+</form>
+</body>
+</html>

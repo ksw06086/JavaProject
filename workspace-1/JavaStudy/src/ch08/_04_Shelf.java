@@ -3,7 +3,7 @@ package ch08;
 import java.util.ArrayList;
 
 public class _04_Shelf {
-	protected ArrayList<String> shelf;		// ÀÚ·á¸®½ºÆ® : ÀÚ·á¸¦ ¼ø¼­´ë·Î ÀúÀåÇÒ ArrayList ¼±¾ğ
+	protected ArrayList<String> shelf;	// ìë£Œë¦¬ìŠ¤íŠ¸ : ìë£Œë¥¼ ìˆœì„œëŒ€ë¡œ ì €ì¥í•  ArrayList ì„ ì–¸
 	
 	public _04_Shelf() {
 		shelf = new ArrayList<String>();

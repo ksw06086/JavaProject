@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class DrawingOvalEx extends JFrame {
 	public DrawingOvalEx() {
-		setTitle("Å¸¿ø ±×¸®±â");
+		setTitle("íƒ€ì› ê·¸ë¦¬ê¸°");
 		
 		MyPan pan = new MyPan();
 		add("Center",pan);
@@ -19,8 +19,8 @@ public class DrawingOvalEx extends JFrame {
 		public void paint(Graphics g) {
 			super.paint(g);
 			// drawOval(x, y, w, h);
-			// x, y : ¿ŞÂÊ À§ ¸ğ¼­¸® Á¡ÀÇ x, y ÁÂÇ¥
-			// w : ¿øÀÇ ³Êºñ(ÇÈ¼¿) | h : ¿øÀÇ ³ôÀÌ(ÇÈ¼¿)
+			// x, y : ì™¼ìª½ ìœ„ ëª¨ì„œë¦¬ ì ì˜ x, y ì¢Œí‘œ
+			// w : ì›ì˜ ë„ˆë¹„(í”½ì…€) | h : ì›ì˜ ë†’ì´(í”½ì…€)
 			g.drawOval(50,90,300,120);
 			g.drawOval(80,40,140,230);
 		}

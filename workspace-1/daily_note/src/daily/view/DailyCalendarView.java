@@ -20,11 +20,11 @@ import javax.swing.UIManager;
 import daily.vo.CellFace;
 
 public class DailyCalendarView extends JPanel {
-	public static final int NUM_CELL = 37;	//³¯Â¥ ¹öÆ°ÀÇ ÃÑ °¹¼ö
-	private CellFace[] cell; // È­¸é¿¡ º¸ÀÌ´Â Ä¶¸°´õ
+	public static final int NUM_CELL = 37;	//ë‚ ì§œ ë²„íŠ¼ì˜ ì´ ê°¯ìˆ˜
+	private CellFace[] cell; // í™”ë©´ì— ë³´ì´ëŠ” ìº˜ë¦°ë”
 	
-	private GregorianCalendar today;	//¿À´Ã ´Ş·Â
-	private GregorianCalendar calendar;	//È­¸é¿¡ º¸¿©ÁÙ ´Ş·Â
+	private GregorianCalendar today;	//ì˜¤ëŠ˜ ë‹¬ë ¥
+	private GregorianCalendar calendar;	//í™”ë©´ì— ë³´ì—¬ì¤„ ë‹¬ë ¥
 	
 	private JLabel titleLabel;
 	private JTextField yearField;
@@ -40,20 +40,20 @@ public class DailyCalendarView extends JPanel {
 			cell = new CellFace[NUM_CELL];
 			goMonth(today.get(today.YEAR), today.get(today.MONTH));
 			
-			//»ó´ÜÀÇ ³âµµ¿Í ´Ş ÀÌµ¿ ¹öÆ° ÆĞ³Î°ú ¿äÀÏ ·¹ÀÌºí ÆĞ³Î
+			//ìƒë‹¨ì˜ ë…„ë„ì™€ ë‹¬ ì´ë™ ë²„íŠ¼ íŒ¨ë„ê³¼ ìš”ì¼ ë ˆì´ë¸” íŒ¨ë„
 			JPanel upperPanel = new JPanel();	
-			upperPanel.setBorder(BorderFactory.createRaisedBevelBorder()); //Å×µÎ¸®
-			upperPanel.setOpaque(true); // ¹è°æ Åõ¸íÇÏ°Ô
-			upperPanel.setBackground(new Color(255, 242, 245)); // ¹è°æ ÇÎÄí
-			//»ó´ÜÀÇ ³âµµ¿Í ´Ş ÀÌµ¿ ¹öÆ° ÆĞ³Î
+			upperPanel.setBorder(BorderFactory.createRaisedBevelBorder()); //í…Œë‘ë¦¬
+			upperPanel.setOpaque(true); // ë°°ê²½ íˆ¬ëª…í•˜ê²Œ
+			upperPanel.setBackground(new Color(255, 242, 245)); // ë°°ê²½ í•‘ì¿ 
+			//ìƒë‹¨ì˜ ë…„ë„ì™€ ë‹¬ ì´ë™ ë²„íŠ¼ íŒ¨ë„
 			JPanel titlePanel = new JPanel(new FlowLayout());
-			titlePanel.setBorder(BorderFactory.createLoweredBevelBorder()); //Å×µÎ¸®
-			titlePanel.setOpaque(true); // ¹è°æ Åõ¸íÇÏ°Ô
-			titlePanel.setBackground(Color.white); // ¹è°æ ÇÏ¾á»ö
+			titlePanel.setBorder(BorderFactory.createLoweredBevelBorder()); //í…Œë‘ë¦¬
+			titlePanel.setOpaque(true); // ë°°ê²½ íˆ¬ëª…í•˜ê²Œ
+			titlePanel.setBackground(Color.white); // ë°°ê²½ í•˜ì–€ìƒ‰
 			
 			prevBtn = new JButton("<");
-			setForeground(Color.black);	//±ÛÀÚ»ö ÁöÁ¤
-			setBorder(BorderFactory.createRaisedBevelBorder()); //¹öÆ° Å×µÎ¸® Ãß°¡
+			setForeground(Color.black);	//ê¸€ììƒ‰ ì§€ì •
+			setBorder(BorderFactory.createRaisedBevelBorder()); //ë²„íŠ¼ í…Œë‘ë¦¬ ì¶”ê°€
 			
 			titlePanel.add(prevBtn); 
 			titleLabel = new JLabel();
@@ -61,29 +61,29 @@ public class DailyCalendarView extends JPanel {
 			titlePanel.add(titleLabel);
 			
 			nextBtn = new JButton(">");
-			setForeground(Color.black);	//±ÛÀÚ»ö ÁöÁ¤
-			setBorder(BorderFactory.createRaisedBevelBorder()); //¹öÆ° Å×µÎ¸® Ãß°¡
+			setForeground(Color.black);	//ê¸€ììƒ‰ ì§€ì •
+			setBorder(BorderFactory.createRaisedBevelBorder()); //ë²„íŠ¼ í…Œë‘ë¦¬ ì¶”ê°€
 			titlePanel.add(nextBtn);
 			
 			upperPanel.add(titlePanel, BorderLayout.NORTH);
 
 
 			
-			//	//»ó´ÜÀÇ ¿äÀÏ ¶óº§ ÆĞ³Î, °¡¿îµ¥ ³¯Â¥ ¹öÆ° ÆĞ³Î
+			//	//ìƒë‹¨ì˜ ìš”ì¼ ë¼ë²¨ íŒ¨ë„, ê°€ìš´ë° ë‚ ì§œ ë²„íŠ¼ íŒ¨ë„
 			JPanel datePanel = new JPanel(new GridLayout(7, 7));
-			datePanel.setBorder(BorderFactory.createRaisedBevelBorder()); //Å×µÎ¸®
-			datePanel.setOpaque(true); // ¹è°æ Åõ¸íÇÏ°Ô
-			datePanel.setBackground(new Color(255, 242, 245)); // ¹è°æ ÇÎÄí
+			datePanel.setBorder(BorderFactory.createRaisedBevelBorder()); //í…Œë‘ë¦¬
+			datePanel.setOpaque(true); // ë°°ê²½ íˆ¬ëª…í•˜ê²Œ
+			datePanel.setBackground(new Color(255, 242, 245)); // ë°°ê²½ í•‘ì¿ 
 			JLabel label;
-			datePanel.add(label = new JLabel("         ÀÏ¿äÀÏ"));
-			// label.setFont(new Font("a¿¾³¯»çÁø°ü2", Font.PLAIN, 13));
+			datePanel.add(label = new JLabel("         ì¼ìš”ì¼"));
+			// label.setFont(new Font("aì˜›ë‚ ì‚¬ì§„ê´€2", Font.PLAIN, 13));
 			label.setForeground(Color.red);
-			datePanel.add(label = new JLabel("         ¿ù¿äÀÏ"));
-			datePanel.add(label = new JLabel("         È­¿äÀÏ"));
-			datePanel.add(label = new JLabel("         ¼ö¿äÀÏ"));
-			datePanel.add(label = new JLabel("         ¸ñ¿äÀÏ"));
-			datePanel.add(label = new JLabel("         ±İ¿äÀÏ"));
-			datePanel.add(label = new JLabel("        Åä¿äÀÏ")); 
+			datePanel.add(label = new JLabel("         ì›”ìš”ì¼"));
+			datePanel.add(label = new JLabel("         í™”ìš”ì¼"));
+			datePanel.add(label = new JLabel("         ìˆ˜ìš”ì¼"));
+			datePanel.add(label = new JLabel("         ëª©ìš”ì¼"));
+			datePanel.add(label = new JLabel("         ê¸ˆìš”ì¼"));
+			datePanel.add(label = new JLabel("        í† ìš”ì¼")); 
 			label.setForeground(Color.blue);
 			button = new JButton[NUM_CELL];
 			for( int i = 0; i < button.length; i++ )
@@ -93,12 +93,12 @@ public class DailyCalendarView extends JPanel {
 			}
 
 			
-			//¾Æ·¡ÂÊ ¿øÇÏ´Â ³âµµ¿Í ´Ş·Î Á÷Á¢ ÀÌµ¿ ÆĞ³Î
+			//ì•„ë˜ìª½ ì›í•˜ëŠ” ë…„ë„ì™€ ë‹¬ë¡œ ì§ì ‘ ì´ë™ íŒ¨ë„
 			JPanel bottomPanel = new JPanel(new FlowLayout());
-			bottomPanel.setOpaque(true); // ¹è°æ Åõ¸íÇÏ°Ô
-			bottomPanel.setBackground(new Color(255, 242, 245)); // ¹è°æ ÇÎÄí
-			JLabel nameLabel = new JLabel("¼±¿ìÀÇ ÀÏ±âÀå     ");
-			nameLabel.setFont(new Font("a¿¾³¯»çÁø°ü3", Font.ITALIC, 14));
+			bottomPanel.setOpaque(true); // ë°°ê²½ íˆ¬ëª…í•˜ê²Œ
+			bottomPanel.setBackground(new Color(255, 242, 245)); // ë°°ê²½ í•‘ì¿ 
+			JLabel nameLabel = new JLabel("ì„ ìš°ì˜ ì¼ê¸°ì¥     ");
+			nameLabel.setFont(new Font("aì˜›ë‚ ì‚¬ì§„ê´€3", Font.ITALIC, 14));
 			bottomPanel.add(nameLabel);
 			yearField = new JTextField("", 5);
 			yearField.setBorder(BorderFactory.createLoweredBevelBorder());
@@ -106,12 +106,12 @@ public class DailyCalendarView extends JPanel {
 			bottomPanel.add(new JLabel(" / "));
 			monthChoice = new Choice();
 			for(int i = 1; i <= 12; i++) 
-				monthChoice.addItem(String.valueOf(i)+" "); //¿øÇÏ´Â ´Ş·Î Á÷Á¢°¡±â
+				monthChoice.addItem(String.valueOf(i)+" "); //ì›í•˜ëŠ” ë‹¬ë¡œ ì§ì ‘ê°€ê¸°
 			bottomPanel.add(monthChoice);
 			bottomPanel.add(new JLabel("   "));
 			
 			goBtn = new JButton(" Go ");
-			goBtn.setBorder(BorderFactory.createRaisedBevelBorder()); //¹öÆ° Å×µÎ¸® Ãß°¡
+			goBtn.setBorder(BorderFactory.createRaisedBevelBorder()); //ë²„íŠ¼ í…Œë‘ë¦¬ ì¶”ê°€
 			bottomPanel.add(goBtn);
 
 			//Add top, center and bottom panel to content pane
@@ -127,68 +127,68 @@ public class DailyCalendarView extends JPanel {
 	{
 	  	for(int i = 0; i < button.length; i++)
 	  	{ 
-			button[i].setText(cell[i].getValue());		//³¯Â¥¹öÆ°ÀÇ ³»¿ë ÁöÁ¤
-			button[i].setForeground(cell[i].getColor());//³¯Â¥¹öÆ°ÀÇ »ö ÁöÁ¤
+			button[i].setText(cell[i].getValue());		//ë‚ ì§œë²„íŠ¼ì˜ ë‚´ìš© ì§€ì •
+			button[i].setForeground(cell[i].getColor());//ë‚ ì§œë²„íŠ¼ì˜ ìƒ‰ ì§€ì •
 			button[i].setBackground(new Color(240,240,240));
 			if (button[i].getText().equals(""))
-				button[i].setVisible(false);	//°ø¹é ³¯Â¥ ¹öÆ° ¾Èº¸ÀÌ°Ô
+				button[i].setVisible(false);	//ê³µë°± ë‚ ì§œ ë²„íŠ¼ ì•ˆë³´ì´ê²Œ
 			else
-				button[i].setVisible(true);		//°ø¹éÀÌ ¾Æ´Ñ ³¯Â¥ ¹öÆ° º¸ÀÌ°Ô
+				button[i].setVisible(true);		//ê³µë°±ì´ ì•„ë‹Œ ë‚ ì§œ ë²„íŠ¼ ë³´ì´ê²Œ
 	  	}
 		
 		int year = calendar.get(Calendar.YEAR);
 		int month = calendar.get(Calendar.MONTH);
 
-		//»ó´ÜÆĞ³ÎÀÇ ³âµµ¿Í ´Ş °»½Å
+		//ìƒë‹¨íŒ¨ë„ì˜ ë…„ë„ì™€ ë‹¬ ê°±ì‹ 
 		titleLabel.setText("     " + year + "  /  " + (month + 1) + "     ");
-		yearField.setText(year + "");	// ³âµµ ÇÊµå °»½Å
-		monthChoice.select(month);	// ´ŞÀÌµ¿ ÃİÀÌ½º °»½Å
+		yearField.setText(year + "");	// ë…„ë„ í•„ë“œ ê°±ì‹ 
+		monthChoice.select(month);	// ë‹¬ì´ë™ ìµ¸ì´ìŠ¤ ê°±ì‹ 
 	
 	}
 	
 	public void goMonth(int year, int month) 
 	{
-		// ÇØ´ç ³â,¿ùÀÇ 1ÀÏ·Î ¼¼ÆÃ
+		// í•´ë‹¹ ë…„,ì›”ì˜ 1ì¼ë¡œ ì„¸íŒ…
 		calendar.set(year, month, 1);
 		
 		int day = 1;
 		for ( int i = 0; i < NUM_CELL; i++ )
 	    { 
-			// 1ÀÏ Àü ¿äÀÏÀÌ ¾Æ´Ï°í, ÇØ´ç ¿ùÀÇ dayº¸´Ù Å©Áö ¾Ê¾Æ¾ß ÇÔ
+			// 1ì¼ ì „ ìš”ì¼ì´ ì•„ë‹ˆê³ , í•´ë‹¹ ì›”ì˜ dayë³´ë‹¤ í¬ì§€ ì•Šì•„ì•¼ í•¨
 			if (i >= calendar.get(calendar.DAY_OF_WEEK)-1 && day <= calendar.getActualMaximum(calendar.DAY_OF_MONTH))
 			{
 				if(	today.get(today.MONTH) == calendar.get(calendar.MONTH) &&
 					today.get(today.YEAR) == calendar.get(calendar.YEAR) &&
 					today.get(today.DATE) == day )
-				{	cell[i] = new CellFace(String.valueOf(day), Color.cyan); } //¿À´Ã
+				{	cell[i] = new CellFace(String.valueOf(day), Color.cyan); } //ì˜¤ëŠ˜
 				else if (i % 7 == 0)
-				{	cell[i] = new CellFace(String.valueOf(day).toString(), Color.red); }//ÀÏ¿äÀÏ
+				{	cell[i] = new CellFace(String.valueOf(day).toString(), Color.red); }//ì¼ìš”ì¼
 					else if (i % 7 == 6)
-					{	cell[i] = new CellFace(String.valueOf(day).toString(), Color.blue); }//Åä¿äÀÏ
+					{	cell[i] = new CellFace(String.valueOf(day).toString(), Color.blue); }//í† ìš”ì¼
 						else 
-						{	cell[i] = new CellFace(String.valueOf(day).toString(), Color.black); }//ÆòÀÏ
+						{	cell[i] = new CellFace(String.valueOf(day).toString(), Color.black); }//í‰ì¼
 				day++;
 	
 			}
 			else {
-				cell[i] = new CellFace("", Color.black); //³¯Â¥°¡ ¾ø´Â cell
+				cell[i] = new CellFace("", Color.black); //ë‚ ì§œê°€ ì—†ëŠ” cell
 			}
 	    }
 	}
 
-    // ÀüÀ¸·Î ¹öÆ° Å¬¸¯½Ã Ä¶¸°´õ ÃÊ±âÈ­
+    // ì „ìœ¼ë¡œ ë²„íŠ¼ í´ë¦­ì‹œ ìº˜ë¦°ë” ì´ˆê¸°í™”
 	public void prevMonth()
 	{
 		goMonth(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) - 1);
 	}
 
-    // ´ÙÀ½À¸·Î ¹öÆ° Å¬¸¯½Ã Ä¶¸°´õ ÃÊ±âÈ­
+    // ë‹¤ìŒìœ¼ë¡œ ë²„íŠ¼ í´ë¦­ì‹œ ìº˜ë¦°ë” ì´ˆê¸°í™”
 	public void nextMonth()
 	{
 		goMonth(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1);
 	}
 	
-	// ³¯Â¥ °¡Á®¿À±â(2022-10-13)
+	// ë‚ ì§œ ê°€ì ¸ì˜¤ê¸°(2022-10-13)
 	public Date getDate(int date)
 	{
 		Date click_date = new Date(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), date); 

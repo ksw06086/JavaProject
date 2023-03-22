@@ -12,6 +12,6 @@ public class _17_TreeSetTest {
 		for (String str : treeSet) {
 			System.out.println(str);
 		}
-		// ¿À¸§Â÷¼ø Á¤·Ä - String Å¬·¡½º ¾È¿¡ Á¤·Ä¹æ½ÄÀÌ ÀÌ¹Ì ±¸ÇöµÇ¾î ÀÖÀ½
+		// ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ - String í´ë˜ìŠ¤ ì•ˆì— ì •ë ¬ë°©ì‹ì´ ì´ë¯¸ êµ¬í˜„ë˜ì–´ ìˆìŒ
 	}
 }

@@ -4,7 +4,7 @@ public class _03_Main {
 	public static void main(String[] args) {
 		_03_MyClass mClass = new _03_MyClass();
 		
-		//  ´ÙÇü¼º
+		//  ë‹¤í˜•ì„±
 		_03_XImpl x = mClass;
 		x.x();
 		
@@ -15,7 +15,7 @@ public class _03_Main {
 		
 		System.out.println("-----------------------------");
 		
-		// ±¸ÇöÇÑ ÀÎÅÍÆäÀÌ½ºÇü º¯¼ö¿¡ ´ëÀÔÇÏ¸é ÀÎÅÍÆäÀÌ½º°¡ »ó¼ÓÇÑ ¸ğµç µ¥¼Òµå È£Ãâ °¡´É
+		// êµ¬í˜„í•œ ì¸í„°í˜ì´ìŠ¤í˜• ë³€ìˆ˜ì— ëŒ€ì…í•˜ë©´ ì¸í„°í˜ì´ìŠ¤ê°€ ìƒì†í•œ ëª¨ë“  ë°ì†Œë“œ í˜¸ì¶œ ê°€ëŠ¥
 		_03_MyImpl my = mClass;
 		my.myMethod();
 		my.x();

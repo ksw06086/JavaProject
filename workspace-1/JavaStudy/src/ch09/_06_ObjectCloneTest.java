@@ -3,16 +3,16 @@ package ch09;
 public class _06_ObjectCloneTest {
 	public static void main(String[] args) throws CloneNotSupportedException {
 		/*
-		 * ObjectÀÇ clone() ¸Þ¼Òµå´Â Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ »õ·Î º¹Á¦ÇÏ¿© »ý¼ºÇØ ÁÜ
-		 * ¸â¹öº¯¼ö°¡ µ¿ÀÏÇÑ ÀÎ½ºÅÏ½º°¡ ´Ù¸¥ ¸Þ¸ð¸®¿¡ »õ·Î »ý¼ºµÊ
-		 * Ãâ·Â°á°ú ÀÎ½ºÅÏ½ºÀÇ ¸â¹öº¯¼ö °ªÀº °°°í, ÁÖ¼Ò°ªÀº ´Ù¸¥ copyCircleÀÌ »ý¼ºµÊ
+		 * Objectì˜ clone() ë©”ì†Œë“œëŠ” í´ëž˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒˆë¡œ ë³µì œí•˜ì—¬ ìƒì„±í•´ ì¤Œ
+		 * ë©¤ë²„ë³€ìˆ˜ê°€ ë™ì¼í•œ ì¸ìŠ¤í„´ìŠ¤ê°€ ë‹¤ë¥¸ ë©”ëª¨ë¦¬ì— ìƒˆë¡œ ìƒì„±ë¨
+		 * ì¶œë ¥ê²°ê³¼ ì¸ìŠ¤í„´ìŠ¤ì˜ ë©¤ë²„ë³€ìˆ˜ ê°’ì€ ê°™ê³ , ì£¼ì†Œê°’ì€ ë‹¤ë¥¸ copyCircleì´ ìƒì„±ë¨
 		 * **/
 		_06_Circle circle = new _06_Circle(10, 20, 30);
 		
-		// clone() ¸Þ¼Òµå¸¦ »ç¿ëÇØ circle ÀÎ½ºÅÏ½º¸¦ copyCircle¿¡ º¹Á¦ÇÔ
+		// clone() ë©”ì†Œë“œë¥¼ ì‚¬ìš©í•´ circle ì¸ìŠ¤í„´ìŠ¤ë¥¼ copyCircleì— ë³µì œí•¨
 		_06_Circle copyCircle = (_06_Circle)circle.clone();
 		
-		// ¿øÁ¡Àº x = 10, y = 20ÀÌ°í, ¹ÝÁö¸§Àº 30ÀÔ´Ï´Ù.
+		// ì›ì ì€ x = 10, y = 20ì´ê³ , ë°˜ì§€ë¦„ì€ 30ìž…ë‹ˆë‹¤.
 		System.out.println(circle);
 		System.out.println(copyCircle);
 		System.out.println(System.identityHashCode(circle));

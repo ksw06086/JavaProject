@@ -9,13 +9,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class DrawingEvent extends JFrame implements ActionListener {
-	JButton btnRect = new JButton("»ç°¢Çü");
-	JButton btnOval = new JButton("¿ø");
+	JButton btnRect = new JButton("ì‚¬ê°í˜•");
+	JButton btnOval = new JButton("ì›");
 	int wRect = 0, hRect = 0;
 	int wOval = 0, hOval = 0;
 	
 	public DrawingEvent() {
-		setTitle("ÀÌº¥Æ®·Î µµÇü ±×¸®±â");
+		setTitle("ì´ë²¤íŠ¸ë¡œ ë„í˜• ê·¸ë¦¬ê¸°");
 		
 		MyPan pan = new MyPan();
 		JPanel pan2 = new JPanel();

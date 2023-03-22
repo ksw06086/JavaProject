@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>동적으로 변하는 리스트박스 만들기</title>
+<style>
+	fieldset{
+		width : 400px;
+	}
+</style>
+<script type="text/javascript">
+	function select_city(){
+		var seoul = new Array("금천구", "서초구", "강남구", "관악구", "영등포구", "강서구", "구로구", "노원구", "종로구", "송파구");
+		var inchon = new Array("소래포구", "부평구", "계양구", "남동구", "중구", "서구", "연수구", "미추홀구");
+		
+		/*
+			document.myForm.gu.options[] = new Option(seoul[인덱스], seoul[인덱스]);
+			-- new Option(text, value);
+		*/
+		// gu에 있는 내용 제거 / 길이,내용을 1개만 고정함
+		document.myForm.gu.options.length = 1;
+		
+		if(document.myForm.city.value == "서울"){
+			for(var i in seoul){
+				document.myForm.gu.options[document.myForm.gu.options.length] = new Option(seoul[i], seoul[i]);
+			}
+			return false;
+		} else if(document.myForm.city.value == "인천"){
+			for(var i in inchon){
+				document.myForm.gu.options[document.myForm.gu.options.length] = new Option(inchon[i], inchon[i]);
+			}
+			return false;
+		}
+	}
+	
+	function select_gu(){
+		var gugu = document.myForm.gu.value;
+		var cici = document.myForm.city.value;
+		if(cici && gugu){
+			alert(cici + "의 " + gugu);
+		}
+	}
+</script>
+</head>
+<body>
+	<h3>동적으로 변하는 리스트박스 만들기</h3>
+	<form name = "myForm">
+		<fieldset>
+			<legend> Select 객체 에제 </legend>
+			<select name = "city" onchange = "select_city();">
+				<option value = "">도시명을 선택하세요.</option>
+				<option value = "서울">서울</option>
+				<option value = "인천">인천</option>
+			</select>
+			
+			<select name = "gu" onchange="select_gu();">
+				<option value = "">구를 선택하세요</option>
+			</select>
+		</fieldset>
+	</form>
+</body>
+</html>

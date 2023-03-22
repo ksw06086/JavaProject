@@ -8,7 +8,7 @@ public class _04_Customer {
 	protected double bonusRatio;
 	protected int price;
 	
-	// µğÆúÆ® »ı¼ºÀÚ.. ÃÊ±âÈ­
+	// ë””í´íŠ¸ ìƒì„±ì.. ì´ˆê¸°í™”
 	public _04_Customer() {
 		customerGrade = "SILVER";
 		bonusRatio = 0.01;
@@ -61,8 +61,8 @@ public class _04_Customer {
 	}
 	
 	public String showCustomerInfo() {
-		return customerName + "(" + customerID + ")" + " ´ÔÀÇ µî±ŞÀº " + customerGrade + 
-				"ÀÌ¸ç, º¸³Ê½º Æ÷ÀÎÆ®´Â " + bonusPoint + ", °¡°İ : " + price + "ÀÔ´Ï´Ù.";
+		return customerName + "(" + customerID + ")" + " ë‹˜ì˜ ë“±ê¸‰ì€ " + customerGrade + 
+				"ì´ë©°, ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ëŠ” " + bonusPoint + ", ê°€ê²© : " + price + "ì…ë‹ˆë‹¤.";
 	}
 	
 	

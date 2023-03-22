@@ -28,37 +28,37 @@ public class DailyController extends JFrame {
 	Connection con;
 	DailyDAO dao;
 	
-	Date now; // Å¬¸¯µÈ ³¯Â¥
+	Date now; // í´ë¦­ëœ ë‚ ì§œ
 	DailyCalendarView calendarPan;
 	DailyEditView editPan;
 	DailyDefaultView defaultPan;
 	DailyEmotionView emotionPan;
 	DailyTodolistView todolistPan;
 
-	// °¢ Ã¢ VOµé
+	// ê° ì°½ VOë“¤
 	DailyDefaultVO defaultVO = null;
 	ArrayList<DailyEmotionVO> emotionList = new ArrayList<DailyEmotionVO>();
 	ArrayList<DailyTodoVO> todoList = new ArrayList<DailyTodoVO>();
 	
-	// Ä¶¸°´õ ºä ¹öÆ°µé
+	// ìº˜ë¦°ë” ë·° ë²„íŠ¼ë“¤
 	JButton[] calendarBtns;  // the buttons on the face of the view
 	JButton prevBtn, nextBtn, goBtn;
 	
-	// ÀÛ¼º Ã¢ ¹öÆ°
+	// ì‘ì„± ì°½ ë²„íŠ¼
 	JButton defaultSaveBtn, emotionSaveBtn, todoSaveBtn;
 	
 	public DailyController() {
-		Toolkit theKit = getToolkit();				//À©µµ¿ì ÅøÅ¶ ±¸ÇÏ±â
-		Dimension wndSize = theKit.getScreenSize();	//È­ÄÒ Å©±â ±¸ÇÏ±â
+		Toolkit theKit = getToolkit();				//ìœˆë„ìš° íˆ´í‚· êµ¬í•˜ê¸°
+		Dimension wndSize = theKit.getScreenSize();	//í™”ì¼  í¬ê¸° êµ¬í•˜ê¸°
 
-		//À§Ä¡´Â È­¸é °¡¿îµ¥, Å©±â´Â È­¸é Å©±âÀÇ 1/2 X 3/5
-		setBounds(wndSize.width/4, wndSize.height/4,		//À§Ä¡
-						wndSize.width/2, (wndSize.height/5) * 3);	//Å©±â
+		//ìœ„ì¹˜ëŠ” í™”ë©´ ê°€ìš´ë°, í¬ê¸°ëŠ” í™”ë©´ í¬ê¸°ì˜ 1/2 X 3/5
+		setBounds(wndSize.width/4, wndSize.height/4,		//ìœ„ì¹˜
+						wndSize.width/2, (wndSize.height/5) * 3);	//í¬ê¸°
 		
 		con = JDBCConnector.getCon();
 		dao = new DailyDAO();
 		
-		// Ä¶¸°´õ ºä (Ã¹ È­¸é)
+		// ìº˜ë¦°ë” ë·° (ì²« í™”ë©´)
 		calendarPan = new DailyCalendarView();
 		calendarBtns = calendarPan.getButton();
 		prevBtn = calendarPan.getPrevBtn();
@@ -78,7 +78,7 @@ public class DailyController extends JFrame {
 		setVisible(true);
 	}
 	
-	// Ä¶¸°´õºä ³¯Â¥ ¹öÆ° Å¬¸¯ ½Ã ¾×¼Ç¿¡ ´ëÇÑ ¸®½º³Ê ±¸Çö
+	// ìº˜ë¦°ë”ë·° ë‚ ì§œ ë²„íŠ¼ í´ë¦­ ì‹œ ì•¡ì…˜ì— ëŒ€í•œ ë¦¬ìŠ¤ë„ˆ êµ¬í˜„
 	ActionListener calendarBtnL = new ActionListener() {
 		
 		@SuppressWarnings("deprecation")
@@ -86,17 +86,17 @@ public class DailyController extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			if (!((JButton)e.getSource()).getText().equals(""))   // it's not the blank space, is it?
 			{ 
-				//´­·ÁÁø ¹öÆ°ÀÇ ³¯Â¥ ±¸ÇÏ±â
+				//ëˆŒë ¤ì§„ ë²„íŠ¼ì˜ ë‚ ì§œ êµ¬í•˜ê¸°
 				now = calendarPan.getDate(Integer.parseInt(((JButton)e.getSource()).getText()));
 				now.setYear(now.getYear()-1900);
 				
-				// ÀÏ¹İ ÀÏ±â
+				// ì¼ë°˜ ì¼ê¸°
 				defaultPan = new DailyDefaultView(now);
 				defaultVO = dao.defaultSelect(now);
 				defaultPan.setDailyDefaulyVO(defaultVO);
 				defaultPan.initView();
 				
-				// °¨Á¤ ÀÏ±â
+				// ê°ì • ì¼ê¸°
 				emotionPan = new DailyEmotionView(now);
 				emotionList = dao.emotionSelect(now);
 				emotionPan.setDailyEmotionList(emotionList);
@@ -108,17 +108,17 @@ public class DailyController extends JFrame {
 				todolistPan.setDailyTodoList(todoList);
 				todolistPan.initView();
 
-				// ÀÏ±â ¹öÆ° ÃÊ±âÈ­
+				// ì¼ê¸° ë²„íŠ¼ ì´ˆê¸°í™”
 				defaultSaveBtn = defaultPan.getBtnSave();
 				emotionSaveBtn = emotionPan.getBtnSave();
 				todoSaveBtn = todolistPan.getBtnSave();
 				
-				// Save ¹öÆ° ¸®½º³Ê
+				// Save ë²„íŠ¼ ë¦¬ìŠ¤ë„ˆ
 				defaultSaveBtn.addActionListener(SaveL);
 				emotionSaveBtn.addActionListener(SaveL);
 				todoSaveBtn.addActionListener(SaveL);
 				
-				//¸Ş¸ğÀå ¿­±â
+				//ë©”ëª¨ì¥ ì—´ê¸°
 				editPan = new DailyEditView(now, defaultPan, emotionPan, todolistPan);
 			}
 			
@@ -135,37 +135,37 @@ public class DailyController extends JFrame {
 				defaultVO = dao.defaultSelect(now);
 				if(defaultVO == null) {
 					dao.defaultInsert(defaultPan.neededData());
-					JOptionPane.showMessageDialog(editPan, "Ãß°¡µÇ¾ú½À´Ï´Ù", "ÀÏ±â Ãß°¡", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(editPan, "ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤", "ì¼ê¸° ì¶”ê°€", JOptionPane.PLAIN_MESSAGE);
 				} else {
 					defaultVO = defaultPan.neededData();
 					dao.defaultUpdate(defaultVO);
-					JOptionPane.showMessageDialog(editPan, "ÀúÀåµÇ¾ú½À´Ï´Ù", "ÀÏ±â ÀúÀå", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(editPan, "ì €ì¥ë˜ì—ˆìŠµë‹ˆë‹¤", "ì¼ê¸° ì €ì¥", JOptionPane.PLAIN_MESSAGE);
 				}
 			} else if(btn == emotionSaveBtn) {
 				emotionList = dao.emotionSelect(now);
 				if(emotionList.size() == 0) {
 					dao.emotionInsert(emotionPan.neededEmotionData());
-					JOptionPane.showMessageDialog(editPan, "Ãß°¡µÇ¾ú½À´Ï´Ù", "°¨Á¤ Ãß°¡", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(editPan, "ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤", "ê°ì • ì¶”ê°€", JOptionPane.PLAIN_MESSAGE);
 				} else {
 					emotionList = emotionPan.neededEmotionData();
 					dao.emotionUpdate(emotionList);
-					JOptionPane.showMessageDialog(editPan, "ÀúÀåµÇ¾ú½À´Ï´Ù", "°¨Á¤ ÀúÀå", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(editPan, "ì €ì¥ë˜ì—ˆìŠµë‹ˆë‹¤", "ê°ì • ì €ì¥", JOptionPane.PLAIN_MESSAGE);
 				}
 			} else if(btn == todoSaveBtn) {
 				todoList = dao.todolistSelect(now);
 				if(todoList.size() == 0) {
 					dao.todolistInsert(todolistPan.neededTodoData());
-					JOptionPane.showMessageDialog(editPan, "Ãß°¡µÇ¾ú½À´Ï´Ù", "Todo Ãß°¡", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(editPan, "ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤", "Todo ì¶”ê°€", JOptionPane.PLAIN_MESSAGE);
 				} else {
 					todoList = todolistPan.neededTodoData();
 					dao.todolistUpdate(todoList);
-					JOptionPane.showMessageDialog(editPan, "ÀúÀåµÇ¾ú½À´Ï´Ù", "Todo ÀúÀå", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(editPan, "ì €ì¥ë˜ì—ˆìŠµë‹ˆë‹¤", "Todo ì €ì¥", JOptionPane.PLAIN_MESSAGE);
 				}
 			}
 		}
 	};
 	
-	// Ä¶¸°´õ ºä Ã¢ °¢ ¹öÆ°¿¡ ´ëÇÑ ¸®½º³Ê ±¸Çö
+	// ìº˜ë¦°ë” ë·° ì°½ ê° ë²„íŠ¼ì— ëŒ€í•œ ë¦¬ìŠ¤ë„ˆ êµ¬í˜„
 	ActionListener BtnL = new ActionListener() {
 		
 		@Override
@@ -184,9 +184,9 @@ public class DailyController extends JFrame {
 					calendarPan.goMonth(year, month - 1);
 					calendarPan.update();
 				}
-				catch (NumberFormatException ex)		//³âµµ ÀÔ·ÂÇÊµå¿¡ ¼ıÀÚ°¡ ¾Æ´Ñ °ÍÀÌ ÀÔ·ÂµÉ °æ¿ì
+				catch (NumberFormatException ex)		//ë…„ë„ ì…ë ¥í•„ë“œì— ìˆ«ìê°€ ì•„ë‹Œ ê²ƒì´ ì…ë ¥ë  ê²½ìš°
 				{
-					JOptionPane.showMessageDialog(null,		//¿¡·¯ ¸Ş½ÃÁö¸¦ Ãâ·Â
+					JOptionPane.showMessageDialog(null,		//ì—ëŸ¬ ë©”ì‹œì§€ë¥¼ ì¶œë ¥
 						"Error: Bad input year on the text field.");
 				}
 			}

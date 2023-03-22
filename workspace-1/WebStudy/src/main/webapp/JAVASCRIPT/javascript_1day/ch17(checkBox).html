@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>체크박스 버튼 클릭 이벤트</title>
+<style>
+	fieldset{
+		width: 250px;
+	}
+</style>
+<script type = "text/javascript">
+	function hobbyChk(){
+		/* ~을 선택하셨습니다. */
+		var hobbycopy = "";
+		for(var i = 0; i<document.hobbyForm.hobby.length; i++){
+			if(document.hobbyForm.hobby[i].checked){
+				// hobbycopy.push(document.hobbyForm.hobby[i].value);
+				(hobbycopy.length == 0) ? hobbycopy = document.hobbyForm.hobby[i].value :
+					hobbycopy += (", " + document.hobbyForm.hobby[i].value);
+			}
+		}
+		if(hobbycopy.length == 0){
+			alert("하나 이상 선택해주시기 바랍니다.");
+			return false;
+		}
+		alert(hobbycopy + "를 선택하셨습니다.");
+	}
+</script>
+</head>
+<body>
+<form name = "hobbyForm" action = "" method = "post">
+	<fieldset>
+		<legend> 좋아하는 취미 </legend>
+		<table>
+			<tr>
+				<td><input type = "checkbox" name = "hobby" id = "check_1" value = "독서" checked></td>
+				<td><label for = "check_1">독서</label></td>
+			</tr>
+			
+			<tr>
+				<td><input type = "checkbox" name = "hobby" id = "check_2" value = "코딩"></td>
+				<td><label for = "check_2">코딩</label></td>
+			</tr>
+			
+			<tr>
+				<td><input type = "checkbox" name = "hobby" id = "check_3" value = "클라이밍"></td>
+				<td><label for = "check_3">클라이밍</label></td>
+			</tr>
+			
+			<tr>
+				<td><input type = "checkbox" name = "hobby" id = "check_4" value = "테니스"></td>
+				<td><label for = "check_4">테니스</label></td>
+			</tr>
+			
+			<tr>
+				<td><input type = "checkbox" name = "hobby" id = "check_5" value = "실내양궁"></td>
+				<td><label for = "check_5">실내양궁</label></td>
+			</tr>
+			
+			<tr>
+				<td><input type = "checkbox" name = "hobby" id = "check_6" value = "클레이사격"></td>
+				<td><label for = "check_6">클레이사격</label></td>
+			</tr>
+			
+			<tr>
+				<td colspan = "2">
+				<br>
+				<div align = "center">
+					<input type = "button" value = "확인" onclick = "hobbyChk();">
+					<input type = "reset" value = "취소">
+				</div>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+</body>
+</html>

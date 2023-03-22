@@ -11,7 +11,7 @@ public class _04_BytesInputTest {
 			while(true) {
 				int i = in.read();
 				if(i == -1) {
-					System.out.println("��¿Ϸ�");
+					System.out.println("출력완료");
 					break;
 				}
 				System.out.println((char)i);

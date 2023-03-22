@@ -12,14 +12,14 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 public class ColorDrawingEvent extends JFrame implements ActionListener {
-	JRadioButton btnRed = new JRadioButton("»¡°­");
-	JRadioButton btnBlue = new JRadioButton("ÆÄ¶û");
-	JRadioButton btnYellow = new JRadioButton("³ë¶û");
+	JRadioButton btnRed = new JRadioButton("ë¹¨ê°•");
+	JRadioButton btnBlue = new JRadioButton("íŒŒë‘");
+	JRadioButton btnYellow = new JRadioButton("ë…¸ë‘");
 	ButtonGroup rg = new ButtonGroup();
 	Color color = new Color(0, 0, 0); 
 	
 	public ColorDrawingEvent() {
-		setTitle("ÀÌº¥Æ®·Î µµÇü ±×¸®±â");
+		setTitle("ì´ë²¤íŠ¸ë¡œ ë„í˜• ê·¸ë¦¬ê¸°");
 		
 		MyPan pan = new MyPan();
 		JPanel pan2 = new JPanel();

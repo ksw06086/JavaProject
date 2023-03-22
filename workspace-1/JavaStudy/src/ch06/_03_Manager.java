@@ -1,7 +1,7 @@
 package ch06;
 
 public class _03_Manager extends _03_Employee {
-	private int bonus; 	// º¸³Ê½º
+	private int bonus; 	// ë³´ë„ˆìŠ¤
 
 	public int getBonus() {
 		return bonus;
@@ -14,6 +14,6 @@ public class _03_Manager extends _03_Employee {
 	@Override
 	public void printInfo() {
 		super.printInfo();
-		System.out.println("º¸³Ê½º : " + bonus);
+		System.out.println("ë³´ë„ˆìŠ¤ : " + bonus);
 	}
 }

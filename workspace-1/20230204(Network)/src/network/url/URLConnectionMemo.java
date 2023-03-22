@@ -3,33 +3,33 @@ package network.url;
 public class URLConnectionMemo {
 
 	/**
-	 * <Å¬·¡½º>
-	 * - URLConnection : ÁöÁ¤ÇÑ ¿ø°İÁöÀÇ URL¿¡ Á¢¼ÓÇÏ¿© µ¥ÀÌÅÍ¸¦ Àü¼Û, ¼ö½ÅÇÒ ¼ö ÀÖµµ·Ï ÇØÁÜ(URLÅ¬·¡½º¿Í ºñ½ÁÇÏ³ª ´õ¿í È¿°úÀûÀÓ)
+	 * <í´ë˜ìŠ¤>
+	 * - URLConnection : ì§€ì •í•œ ì›ê²©ì§€ì˜ URLì— ì ‘ì†í•˜ì—¬ ë°ì´í„°ë¥¼ ì „ì†¡, ìˆ˜ì‹ í•  ìˆ˜ ìˆë„ë¡ í•´ì¤Œ(URLí´ë˜ìŠ¤ì™€ ë¹„ìŠ·í•˜ë‚˜ ë”ìš± íš¨ê³¼ì ì„)
 	 * 
-	 * <°´Ã¼ »ı¼º ¹æ¹ı>
-	 * - URL.openConnection() ÀÌ¿ë
-	 * + URL SiteName = new URL("http://ÀÎÅÍ³İ »çÀÌÆ® ÁÖ¼Ò");
+	 * <ê°ì²´ ìƒì„± ë°©ë²•>
+	 * - URL.openConnection() ì´ìš©
+	 * + URL SiteName = new URL("http://ì¸í„°ë„· ì‚¬ì´íŠ¸ ì£¼ì†Œ");
 	 * + URLConnection Ucn = SiteName.openConnection();
-	 * - URLConnection »ı¼ºÀÚ ÀÌ¿ë
-	 * + URL SiteName = new URL("http://ÀÎÅÍ³İ »çÀÌÆ® ÁÖ¼Ò");
+	 * - URLConnection ìƒì„±ì ì´ìš©
+	 * + URL SiteName = new URL("http://ì¸í„°ë„· ì‚¬ì´íŠ¸ ì£¼ì†Œ");
 	 * + URLConnection Ucn = new URLConnection(SiteName);
 	 * + Ucn.connect();
 	 * 
-	 * <¸Ş¼Òµå>
-	 * - abstract void connect()								- URL¿¡ ÀÇÇØ ÂüÁ¶µÇ´Â ¿ÜºÎ ¸®¼Ò½º¿Í Åë½Å ¿¬°á ¼³Á¤
-	 * - Object getContent()										- URL ¿¬°á¿¡¼­ ÄÁÅÙÆ®¸¦ °¡Á®¿È
-	 * - String getContentEncoding()						- ÄÁÅÙÆ® ÀÎÄÚµù ÇÊµå¸¦ ¹İÈ¯
-	 * - int getContentLength()								- ÄÁÅÙÆ® ±æÀÌ ÇÊµå ¹İÈ¯
-	 * - String getContentType()								- ÄÁÅÙÆ® Å¸ÀÔ ÇÊµå ¹İÈ¯
-	 * - boolean getDoInput()									- URLConnection °´Ã¼ÀÇ doInput ÇÊµå °ª ¹İÈ¯
-	 * - boolean getDoOutput()									- URLConnection °´Ã¼ÀÇ doOutput ÇÊµå °ª ¹İÈ¯
-	 * - InputStream getInputStream()						- ¼³Á¤µÈ ¿¬°á¿¡¼­ µ¥ÀÌÅÍ¸¦ ÀĞÀ» ÀÔ·Â ½ºÆ®¸² ¹İÈ¯
-	 * - OutputStream getOutputStream()					- ¼³Á¤µÈ ¿¬°á·Î µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÒ Ãâ·Â ½ºÆ®¸² ¹İÈ¯
-	 * - URL getURL()												- URLConnection °´Ã¼ÀÇ URL ÇÊµå °ª ¹İÈ¯
-	 * - void setDoInput(boolean doIn)						- URLConnection °´Ã¼ÀÇ doInput ÇÊµå °ª ¼³Á¤
-	 * - void setDoOutput(boolean doOut)					- URLConnection °´Ã¼ÀÇ doOutput ÇÊµå °ª ¼³Á¤
+	 * <ë©”ì†Œë“œ>
+	 * - abstract void connect()		- URLì— ì˜í•´ ì°¸ì¡°ë˜ëŠ” ì™¸ë¶€ ë¦¬ì†ŒìŠ¤ì™€ í†µì‹  ì—°ê²° ì„¤ì •
+	 * - Object getContent()			- URL ì—°ê²°ì—ì„œ ì»¨í…íŠ¸ë¥¼ ê°€ì ¸ì˜´
+	 * - String getContentEncoding()	- ì»¨í…íŠ¸ ì¸ì½”ë”© í•„ë“œë¥¼ ë°˜í™˜
+	 * - int getContentLength()			- ì»¨í…íŠ¸ ê¸¸ì´ í•„ë“œ ë°˜í™˜
+	 * - String getContentType()		- ì»¨í…íŠ¸ íƒ€ì… í•„ë“œ ë°˜í™˜
+	 * - boolean getDoInput()			- URLConnection ê°ì²´ì˜ doInput í•„ë“œ ê°’ ë°˜í™˜
+	 * - boolean getDoOutput()			- URLConnection ê°ì²´ì˜ doOutput í•„ë“œ ê°’ ë°˜í™˜
+	 * - InputStream getInputStream()	- ì„¤ì •ëœ ì—°ê²°ì—ì„œ ë°ì´í„°ë¥¼ ì½ì„ ì…ë ¥ ìŠ¤íŠ¸ë¦¼ ë°˜í™˜
+	 * - OutputStream getOutputStream()	- ì„¤ì •ëœ ì—°ê²°ë¡œ ë°ì´í„°ë¥¼ ì¶œë ¥í•  ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ë°˜í™˜
+	 * - URL getURL()					- URLConnection ê°ì²´ì˜ URL í•„ë“œ ê°’ ë°˜í™˜
+	 * - void setDoInput(boolean doIn)	- URLConnection ê°ì²´ì˜ doInput í•„ë“œ ê°’ ì„¤ì •
+	 * - void setDoOutput(boolean doOut)- URLConnection ê°ì²´ì˜ doOutput í•„ë“œ ê°’ ì„¤ì •
 	 * 
-	 * +++ doIn/doOut ÇÊµå·Î ÀÔ·Â/Ãâ·ÂÀ» À§ÇÏ¿© »ç¿ëÇÏ°í ½ÍÀ» ¶§ ½ºÀ§Ä¡ ¿ªÇÒÀ» ÇÑ´Ù. +++
+	 * +++ doIn/doOut í•„ë“œë¡œ ì…ë ¥/ì¶œë ¥ì„ ìœ„í•˜ì—¬ ì‚¬ìš©í•˜ê³  ì‹¶ì„ ë•Œ ìŠ¤ìœ„ì¹˜ ì—­í• ì„ í•œë‹¤. +++
 	 * ***/
 	
 }

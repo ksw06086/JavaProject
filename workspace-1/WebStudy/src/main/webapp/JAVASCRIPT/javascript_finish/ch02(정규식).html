@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정규식</title>
+<style type="text/css">
+	fieldset{
+		width: 250px;
+	}
+</style>
+<script type = "text/javascript">
+	function submit_check(){
+		// 정규식 사이에 공백이 있으면 에러도 안뜨는데 오류가 뭔지 알지도 못해서 그냥 엄청 찾기 어려움
+		
+		// 이름 : 입력시작부터 입력끝까지 한글 2~5글자까지 일치하는 패턴으로 정규표현 객체생성
+		var reg1 = /^[가-힣]{2,5}$/;
+		
+		// 핸드폰 : 첫숫자는 010,011,017,018,070중 하나로 시작하고, 다음 숫자는 3~4개까지 오고,
+		//		  마지막 숫자는 숫자 4개가 일치하는 패턴으로 정규표현 객체를 생성
+		var reg2 = /^(010|011|017|018|070)(|-)\d{3,4}(|-)\d{4}$/;
+		
+		var name = document.signIn.username;
+		var phone = document.signIn.userphone;
+		
+		// 방문자가 입력한 이름, 핸드폰번호가 정규식 표현에 어긋나면 false를 반환한다.
+		// test() : 정규식 표현시 제공하는 메소드
+		var result1 = reg1.test(name.value);
+		var result2 = reg2.test(phone.value);
+		
+		if(!result1){
+			alert("이름 입력이 잘못되었습니다. 확인하세요!");
+			name.value = null;
+			name.focus();
+			return false;
+		}
+		
+		if(!result2){
+			alert("핸드폰 입력이 잘못되었습니다. 확인하세요!");
+			phone.value = null;
+			phone.focus();
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+<form name="signIn" action = "ch02_next.html" method = "post"
+		onsubmit = "return submit_check();"
+		onreset = "if(!confirm('정말 취소?')){
+			document.signIn.username.focus();
+			return false;
+		}"
+>
+		<fieldset>
+			<legend>회원가입</legend>
+			<table>
+				<tr>
+					<td align = "right"><label for = "nameChk">이름 : </label></td>
+					<td><input type = "text" id = "nameChk" name = "username" size = "10"></td>
+				</tr>
+				
+				<tr>
+					<td align = "right"><label for = "phoneChk">핸드폰번호 : </label></td>
+					<td><input type = "text" id = "phoneChk" name = "userphone" size = "13"></td>
+				</tr>
+				
+				<tr>
+					<td colspan = "2">
+					<br>
+					<div align = "center">
+					<input type = "submit" value = "회원가입">
+					<input type = "reset" value = "가입취소">
+					</div>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+</form>
+</body>
+</html>

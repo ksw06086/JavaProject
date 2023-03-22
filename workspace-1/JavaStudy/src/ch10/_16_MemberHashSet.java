@@ -10,12 +10,12 @@ public class _16_MemberHashSet {
 		hashSet = new HashSet<_16_MemberId>();
 	}
 	
-	// È¸¿ø Ãß°¡
+	// íšŒì› ì¶”ê°€
 	public void addMember(_16_MemberId member) {
 		hashSet.add(member);
 	}
 	
-	// È¸¿ø »èÁ¦
+	// íšŒì› ì‚­ì œ
 	public boolean removeMember(int memberId) {
 		Iterator<_16_MemberId> ir = hashSet.iterator();
 		while (ir.hasNext()) {
@@ -26,11 +26,11 @@ public class _16_MemberHashSet {
 				return true;
 			}
 		}
-		System.out.println("Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+		System.out.println("ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		return false;
 	}
 	
-	// È¸¿ø Á¶È¸
+	// íšŒì› ì¡°íšŒ
 	public void showAllMember() {
 		for (_16_MemberId member : hashSet) {
 			System.out.println(member);

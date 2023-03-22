@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fadeIn() / fadeOut() / fadeToggle() </title>
+<style>
+	#fade{
+		background: lightgreen;
+	}
+</style>
+<script type="text/javascript" src = "../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#fade > input:eq(0)").click(function(){	// 0번째[보이기 버튼]
+			$("#fade > div").fadeIn(1000);	/* 1초에 이미지를 서서히 보여주어라 */
+		});
+		
+		$("#fade > input:eq(1)").click(function(){	// 0번째[숨기기 버튼]
+			$("#fade > div").fadeOut(1000);	/* 1초에 이미지를 서서히 숨기기 */
+		});
+		
+		$("#fade > input:eq(2)").click(function(){	// 0번째[페이드 토글 버튼]
+			$("#fade > div").fadeToggle(1000);	/* 1초에 이미지를 서서히 보이거나 숨기기 */
+		});
+	});
+</script>
+</head>
+<body>
+	<h3>fadeIn() / fadeOut() / fadeToggle()</h3>
+	
+	<div id = "fade">
+		<input type = "button" value = "보이기">
+		<input type = "button" value = "숨기기">
+		<input type = "button" value = "페이드 토글">
+		
+		<br>
+		<br>
+		<div>
+			<img src = "../img/people3.png">
+		</div>
+	</div>
+</body>
+</html>

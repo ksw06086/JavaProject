@@ -1,48 +1,48 @@
 package domain;
 
 /*
- * ÀÛ¼ºÀÏ : 2023.02.04.-2023.02.05.
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : Àç±ÍÇÔ¼ö È£Ãâ ½Ã »ó¼ö ÄÚµå·Î »ç¿ë ¿ëµµ
+ * ì‘ì„±ì¼ : 2023.02.04.-2023.02.05.
+ * ì‘ì„±ì : ê¹€ì„ ìš°
+ * ê°œìš” : ì¬ê·€í•¨ìˆ˜ í˜¸ì¶œ ì‹œ ìƒìˆ˜ ì½”ë“œë¡œ ì‚¬ìš© ìš©ë„
  * **/
 public interface Code {
-	// »ó¼ö
-	static final int SHOP_LOGIN = 999;							//  ·Î±×ÀÎ
+	// ìƒìˆ˜
+	static final int SHOP_LOGIN = 999;			//  ë¡œê·¸ì¸
 	
-	// °ü¸®ÀÚ
-	static final int HOST_MENU = 100;							// °ü¸®ÀÚ
+	// ê´€ë¦¬ì
+	static final int HOST_MENU = 100;			// ê´€ë¦¬ì
 	
-	// °ü¸®ÀÚ - Àç°í°ü¸®
-	static final int HOST_STOCK_MENU = 110;				// Àç°í°ü¸®
-	static final int HOST_BOOK_LIST = 111;					// Ã¥¸ñ·Ï
-	static final int HOST_BOOK_ADD = 112;					// Ã¥Ãß°¡
-	static final int HOST_BOOK_UPDATE = 113;				// Ã¥¼öÁ¤
-	static final int HOST_BOOK_DEL = 114;						// Ã¥»èÁ¦
+	// ê´€ë¦¬ì - ì¬ê³ ê´€ë¦¬
+	static final int HOST_STOCK_MENU = 110;		// ì¬ê³ ê´€ë¦¬
+	static final int HOST_BOOK_LIST = 111;		// ì±…ëª©ë¡
+	static final int HOST_BOOK_ADD = 112;		// ì±…ì¶”ê°€
+	static final int HOST_BOOK_UPDATE = 113;	// ì±…ìˆ˜ì •
+	static final int HOST_BOOK_DEL = 114;		// ì±…ì‚­ì œ
 	
-	// °ü¸®ÀÚ - ÁÖ¹®°ü¸®
-	static final int HOST_ORDER_MENU = 120;				// ÁÖ¹®°ü¸®
-	static final int HOST_ORDER_LIST = 121;					// ÁÖ¹®¸ñ·Ï
-	// °ü¸®ÀÚ - °áÁ¦±â´É
-	static final int HOST_ORDER_CONFIRM = 122;			// °áÁ¦½ÂÀÎ
-	static final int HOST_ORDER_CANCEL = 123;			// °áÁ¦Ãë¼Ò
-	// °ü¸®ÀÚ - °á»ê
-	static final int HOST_SALE_TOTAL = 124;					// °á»ê
+	// ê´€ë¦¬ì - ì£¼ë¬¸ê´€ë¦¬
+	static final int HOST_ORDER_MENU = 120;		// ì£¼ë¬¸ê´€ë¦¬
+	static final int HOST_ORDER_LIST = 121;		// ì£¼ë¬¸ëª©ë¡
+	// ê´€ë¦¬ì - ê²°ì œê¸°ëŠ¥
+	static final int HOST_ORDER_CONFIRM = 122;	// ê²°ì œìŠ¹ì¸
+	static final int HOST_ORDER_CANCEL = 123;	// ê²°ì œì·¨ì†Œ
+	// ê´€ë¦¬ì - ê²°ì‚°
+	static final int HOST_SALE_TOTAL = 124;		// ê²°ì‚°
 	
-	// ¼Õ´Ô
-	static final int GUEST_MENU = 200;							// ¼Õ´Ô
+	// ì†ë‹˜
+	static final int GUEST_MENU = 200;			// ì†ë‹˜
 	
-	// ¼Õ´Ô - »óÇ°¸ñ·Ï
-	static final int GUEST_GOODS_LIST = 210;				// »óÇ°¸ğ·Ï
-	static final int GUEST_NOWBUY = 211;						// ¹Ù·Î±¸¸Å
-	static final int GUEST_CART_ADD = 212;					// Àå¹Ù±¸´Ï ´ã±â
+	// ì†ë‹˜ - ìƒí’ˆëª©ë¡
+	static final int GUEST_GOODS_LIST = 210;	// ìƒí’ˆëª¨ë¡
+	static final int GUEST_NOWBUY = 211;		// ë°”ë¡œêµ¬ë§¤
+	static final int GUEST_CART_ADD = 212;		// ì¥ë°”êµ¬ë‹ˆ ë‹´ê¸°
 	
-	// ¼Õ´Ô - Àå¹Ù±¸´Ï
-	static final int GUEST_CART_LIST = 220;					// Àå¹Ù±¸´Ï
-	static final int GUEST_CART_DEL = 221;					// Àå¹Ù±¸´Ï »èÁ¦
-	static final int GUEST_CART_BUY = 222; 					// Àå¹Ù±¸´Ï ±¸¸Å
+	// ì†ë‹˜ - ì¥ë°”êµ¬ë‹ˆ
+	static final int GUEST_CART_LIST = 220;		// ì¥ë°”êµ¬ë‹ˆ
+	static final int GUEST_CART_DEL = 221;		// ì¥ë°”êµ¬ë‹ˆ ì‚­ì œ
+	static final int GUEST_CART_BUY = 222; 		// ì¥ë°”êµ¬ë‹ˆ êµ¬ë§¤
 			
-	static final int GUEST_REFUND = 230;						// È¯ºÒ
+	static final int GUEST_REFUND = 230;		// í™˜ë¶ˆ
 	
-	// È¸¿ø°¡ÀÔ
-	static final int GUEST_JOIN = 300;							// È¸¿ø°¡ÀÔ
+	// íšŒì›ê°€ì…
+	static final int GUEST_JOIN = 300;			// íšŒì›ê°€ì…
 }

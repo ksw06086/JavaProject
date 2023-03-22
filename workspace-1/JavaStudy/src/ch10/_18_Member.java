@@ -2,8 +2,8 @@ package ch10;
 
 public class _18_Member implements Comparable<_18_Member>{
 
-	private int memberId;					// È¸¿ø ¾ÆÀÌµğ
-	private String memberName;		// È¸¿ø ÀÌ¸§
+	private int memberId;			// íšŒì› ì•„ì´ë””
+	private String memberName;		// íšŒì› ì´ë¦„
 	
 	public _18_Member(int memberId, String memberName) {
 		this.memberId = memberId;
@@ -28,14 +28,14 @@ public class _18_Member implements Comparable<_18_Member>{
 
 	@Override
 	public String toString() {
-		return memberName + "È¸¿ø´ÔÀÇ ¾ÆÀÌµğ´Â " + memberId + "ÀÔ´Ï´Ù.";
+		return memberName + "íšŒì›ë‹˜ì˜ ì•„ì´ë””ëŠ” " + memberId + "ì…ë‹ˆë‹¤.";
 	}
 
 	/*
-	 * Ãß°¡ÇÑ È¸¿ø ¾ÆÀÌµğ¿Í ¸Å°³º¯¼ö·Î ¹ŞÀº È¸¿ø ¾ÆÀÌµğ¸¦ ºñ±³ÇÔ
-	 * ºñ±³´ë»óÀº this.memberId´Â »õ·Î Ãß°¡ÇÑ È¸¿ø¾ÆÀÌµğ¿Í compareTo() ¸Ş¼ÒµåÀÇ ¸Å°³º¯¼ö·Î Àü´ŞµÈ È¸¿ø¾ÆÀÌµğ
-	 * »õ·Î Ãß°¡ÇÑ È¸¿ø ¾ÆÀÌµğ°¡ ´õ Å©¸é ¾ç¼ö, ±×·¸Áö ¾ÊÀ¸¸é À½¼ö, °°À¸¸é 0À» ¹İÈ¯
-	 * Ãâ·Â °á°ú°ªÀº ¿À¸§Â÷¼ø Á¤·ÄÀÌ´Ù. -1À» °öÇÏ¸é ³»¸²Â÷¼ø Á¤·Ä
+	 * ì¶”ê°€í•œ íšŒì› ì•„ì´ë””ì™€ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ íšŒì› ì•„ì´ë””ë¥¼ ë¹„êµí•¨
+	 * ë¹„êµëŒ€ìƒì€ this.memberIdëŠ” ìƒˆë¡œ ì¶”ê°€í•œ íšŒì›ì•„ì´ë””ì™€ compareTo() ë©”ì†Œë“œì˜ ë§¤ê°œë³€ìˆ˜ë¡œ ì „ë‹¬ëœ íšŒì›ì•„ì´ë””
+	 * ìƒˆë¡œ ì¶”ê°€í•œ íšŒì› ì•„ì´ë””ê°€ ë” í¬ë©´ ì–‘ìˆ˜, ê·¸ë ‡ì§€ ì•Šìœ¼ë©´ ìŒìˆ˜, ê°™ìœ¼ë©´ 0ì„ ë°˜í™˜
+	 * ì¶œë ¥ ê²°ê³¼ê°’ì€ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ì´ë‹¤. -1ì„ ê³±í•˜ë©´ ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
 	 * **/
 	@Override
 	public int compareTo(_18_Member o) {

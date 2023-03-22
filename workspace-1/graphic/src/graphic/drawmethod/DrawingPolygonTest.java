@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class DrawingPolygonTest extends JFrame {
 	public DrawingPolygonTest() {
-		setTitle("´Ù°¢Çü ±×¸®±â ¿¬½À¹®Á¦");
+		setTitle("ë‹¤ê°í˜• ê·¸ë¦¬ê¸° ì—°ìŠµë¬¸ì œ");
 		
 		MyPan pan = new MyPan();
 		add("Center",pan);
@@ -22,8 +22,8 @@ public class DrawingPolygonTest extends JFrame {
 			int[] point_y = {50,140,140};
 			
 			// drawPolygon(int x[], int y[], int n);
-			// x[] : °¢ ²ÀÁöÁ¡ÀÇ x ÁÂÇ¥  |  y[] : °¢ ²ÀÁöÁ¡ÀÇ y ÁÂÇ¥
-			// n : n°¢Çü ÁöÁ¤
+			// x[] : ê° ê¼­ì§€ì ì˜ x ì¢Œí‘œ  |  y[] : ê° ê¼­ì§€ì ì˜ y ì¢Œí‘œ
+			// n : nê°í˜• ì§€ì •
 			g.drawPolygon(point_x, point_y, 3);
 
 			int[] point_x1 = {330,240,430};

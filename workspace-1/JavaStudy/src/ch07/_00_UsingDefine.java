@@ -3,9 +3,9 @@ package ch07;
 public class _00_UsingDefine {
 	public static void main(String[] args) {
 		System.out.println(_00_Define.GOOD_MORNING);
-		System.out.println("ÃÖ¼Ú°ªÀº " + _00_Define.MIN + "ÀÔ´Ï´Ù.");
-		System.out.println("ÃÖ´ë°ªÀº " + _00_Define.MAX + "ÀÔ´Ï´Ù.");
-		System.out.println("¼öÇĞ °ú¸ñ ÄÚµå °ªÀº " + _00_Define.MATH + "ÀÔ´Ï´Ù.");
-		System.out.println("¿µ¾î °ú¸ñ ÄÚµå °ªÀº " + _00_Define.ENG + "ÀÔ´Ï´Ù.");
+		System.out.println("ìµœì†Ÿê°’ì€ " + _00_Define.MIN + "ì…ë‹ˆë‹¤.");
+		System.out.println("ìµœëŒ€ê°’ì€ " + _00_Define.MAX + "ì…ë‹ˆë‹¤.");
+		System.out.println("ìˆ˜í•™ ê³¼ëª© ì½”ë“œ ê°’ì€ " + _00_Define.MATH + "ì…ë‹ˆë‹¤.");
+		System.out.println("ì˜ì–´ ê³¼ëª© ì½”ë“œ ê°’ì€ " + _00_Define.ENG + "ì…ë‹ˆë‹¤.");
 	}
 }

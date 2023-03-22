@@ -1,10 +1,10 @@
 package ch06;
 
 public class _03_Employee {
-	private int sabun;					// »ç¹ø
-	private String name;				// ÀÌ¸§
-	private String deptName;			// ºÎ¼­
-	private int salary;					// ±Ş¿©
+	private int sabun;					// ì‚¬ë²ˆ
+	private String name;				// ì´ë¦„
+	private String deptName;			// ë¶€ì„œ
+	private int salary;					// ê¸‰ì—¬
 	
 	public int getSabun() {
 		return sabun;
@@ -35,6 +35,6 @@ public class _03_Employee {
 	}
 	
 	public void printInfo() {
-		System.out.println("»ç¹ø : " + sabun + ", ÀÌ¸§ : " + name + ", ºÎ¼­ : " + deptName + ", ±Ş¿© : " + salary);
+		System.out.println("ì‚¬ë²ˆ : " + sabun + ", ì´ë¦„ : " + name + ", ë¶€ì„œ : " + deptName + ", ê¸‰ì—¬ : " + salary);
 	}
 }

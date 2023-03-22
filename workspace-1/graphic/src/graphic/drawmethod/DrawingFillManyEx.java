@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class DrawingFillManyEx extends JFrame {
 	public DrawingFillManyEx() {
-		setTitle("Ã¤¿öÁø µµÇü ±×¸®±â");
+		setTitle("ì±„ì›Œì§„ ë„í˜• ê·¸ë¦¬ê¸°");
 		
 		MyPan pan = new MyPan();
 		add("Center",pan);
@@ -19,10 +19,10 @@ public class DrawingFillManyEx extends JFrame {
 	class MyPan extends JPanel {
 		public void paint(Graphics g) {
 			super.paint(g);
-			// g.fillRect - Ã¤¿öÁø Á÷»ç°¢Çü ±×¸®±â
-			// g.fillOval - Ã¤¿öÁø Å¸¿ø ±×¸®±â
-			// g.fillRoundRect - Ã¤¿öÁø µÕ±Ù »ç°¢Çü ±×¸®±â
-			// g.fillPolygon - Ã¤¿öÁø ´Ù°¢Çü ±×¸®±â
+			// g.fillRect - ì±„ì›Œì§„ ì§ì‚¬ê°í˜• ê·¸ë¦¬ê¸°
+			// g.fillOval - ì±„ì›Œì§„ íƒ€ì› ê·¸ë¦¬ê¸°
+			// g.fillRoundRect - ì±„ì›Œì§„ ë‘¥ê·¼ ì‚¬ê°í˜• ê·¸ë¦¬ê¸°
+			// g.fillPolygon - ì±„ì›Œì§„ ë‹¤ê°í˜• ê·¸ë¦¬ê¸°
 			g.setColor(Color.green);
 			g.fillRect(100,40,80,50);
 			g.setColor(Color.orange);

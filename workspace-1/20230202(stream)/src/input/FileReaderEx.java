@@ -4,16 +4,16 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * <Å¬·¡½º>
- * FileInputStream : ¿µ¹®ÀÌ ÀÔ·ÂµÇ¾î ÀÖ´Â ÆÄÀÏÀ» ÀĞ´Â ½ºÆ®¸² Å¬·¡½º
- * FileReader : ¿µ¹® Æ÷ÇÔ ´Ù¸¥ ³ª¶ó ¾ğ¾î±îÁö ÀÔ·ÂµÇ¾î ÀÖ´Â ÆÄÀÏÀ» ÀĞ´Â ½ºÆ®¸² Å¬·¡½º
- * <»ı¼ºÀÚ>
+ * <í´ë˜ìŠ¤>
+ * FileInputStream : ì˜ë¬¸ì´ ì…ë ¥ë˜ì–´ ìˆëŠ” íŒŒì¼ì„ ì½ëŠ” ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * FileReader : ì˜ë¬¸ í¬í•¨ ë‹¤ë¥¸ ë‚˜ë¼ ì–¸ì–´ê¹Œì§€ ì…ë ¥ë˜ì–´ ìˆëŠ” íŒŒì¼ì„ ì½ëŠ” ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * <ìƒì„±ì>
  * - FileInputStream
- * + FileInputStream(String name)	- ÆÄÀÏ¸íÀÌ nameÀÎ ÆÄÀÏ¿¡¼­ ÀÔ·Â ¹Ş´Â FileInputStream
- * + FileInputStream(File file)			- file °´Ã¼°¡ °¡¸®Å°´Â ÆÄÀÏ¿¡¼­ ÀÔ·Â ¹Ş´Â FileInputStream
+ * + FileInputStream(String name)	- íŒŒì¼ëª…ì´ nameì¸ íŒŒì¼ì—ì„œ ì…ë ¥ ë°›ëŠ” FileInputStream
+ * + FileInputStream(File file)		- file ê°ì²´ê°€ ê°€ë¦¬í‚¤ëŠ” íŒŒì¼ì—ì„œ ì…ë ¥ ë°›ëŠ” FileInputStream
  * - FileReader 
- * + FileReader(String name)	- ÆÄÀÏ¸íÀÌ nameÀÎ ÆÄÀÏ¿¡¼­ ÀÔ·Â ¹Ş´Â FileReader
- * + FileReader(File file)			- file °´Ã¼°¡ °¡¸®Å°´Â ÆÄÀÏ¿¡¼­ ÀÔ·Â ¹Ş´Â FileReader
+ * + FileReader(String name)		- íŒŒì¼ëª…ì´ nameì¸ íŒŒì¼ì—ì„œ ì…ë ¥ ë°›ëŠ” FileReader
+ * + FileReader(File file)			- file ê°ì²´ê°€ ê°€ë¦¬í‚¤ëŠ” íŒŒì¼ì—ì„œ ì…ë ¥ ë°›ëŠ” FileReader
  * 
  * **/
 public class FileReaderEx {

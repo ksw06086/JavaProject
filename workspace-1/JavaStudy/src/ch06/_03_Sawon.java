@@ -1,7 +1,7 @@
 package ch06;
 
 public class _03_Sawon extends _03_Employee{
-	private int sudang; // ¼ö´ç
+	private int sudang; // ìˆ˜ë‹¹
 
 	public int getSudang() {
 		return sudang;
@@ -12,13 +12,13 @@ public class _03_Sawon extends _03_Employee{
 	}
 	
 	/*
-	 * ¿À¹ö¶óÀÌµù : ÀÚ½ÄÅ¬·¡½ºÀÇ ¸Ş¼Òµå°¡ ºÎ¸ğÅ¬·¡½ºÀÇ ¸Ş¼Òµå¸¦ ¿À¹ö¶óÀÌµå(ÀçÁ¤ÀÇ)ÇÑ´Ù¶ó°í ¸»ÇÔ
-	 * 					¤¤ ºÎ¸ğ ±â´É ¹«½ÃÇÔ
+	 * ì˜¤ë²„ë¼ì´ë”© : ìì‹í´ë˜ìŠ¤ì˜ ë©”ì†Œë“œê°€ ë¶€ëª¨í´ë˜ìŠ¤ì˜ ë©”ì†Œë“œë¥¼ ì˜¤ë²„ë¼ì´ë“œ(ì¬ì •ì˜)í•œë‹¤ë¼ê³  ë§í•¨
+	 * 					ã„´ ë¶€ëª¨ ê¸°ëŠ¥ ë¬´ì‹œí•¨
 	 * **/
 	@Override
 	public void printInfo() {
 		super.printInfo();
-		System.out.println("¼ö´ç : " + sudang);
+		System.out.println("ìˆ˜ë‹¹ : " + sudang);
 	}
 	
 }

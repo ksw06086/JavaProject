@@ -12,7 +12,7 @@ public class GrImg2 extends JFrame {
 	String s = "C:\\Users\\Happy\\Downloads\\images.jpg";
 	
 	public GrImg2() {
-		setTitle("ÀÌ¹ÌÁö ÆÄÀÏ");
+		setTitle("ì´ë¯¸ì§€ íŒŒì¼");
 		
 		add("Center", new MyPanel());
 		img = Toolkit.getDefaultToolkit().getImage(s);
@@ -24,10 +24,10 @@ public class GrImg2 extends JFrame {
 		@Override
 		public void paint(Graphics g) {
 			super.paint(g);
-			// Image img = Toolkit.getDefaultToolkit().getImage(String ÀÌ¹ÌÁö ÆÄÀÏ ¸í);
+			// Image img = Toolkit.getDefaultToolkit().getImage(String ì´ë¯¸ì§€ íŒŒì¼ ëª…);
 			// g.drawImage(img, int x, int y, this);    or  g.drawImage(img, int x, int y, int width, int height, this);
-			// x, y : ÀÌ¹ÌÁö°¡ Ç¥½ÃµÉ x, y ÁÂÇ¥
-			// width, height : ÀÌ¹ÌÁöÀÇ °¡·Î, ¼¼·Î Å©±â
+			// x, y : ì´ë¯¸ì§€ê°€ í‘œì‹œë  x, y ì¢Œí‘œ
+			// width, height : ì´ë¯¸ì§€ì˜ ê°€ë¡œ, ì„¸ë¡œ í¬ê¸°
 			g.drawImage(img, 70, 20, 200, 270, this);
 		}
 	}

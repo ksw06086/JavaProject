@@ -3,15 +3,15 @@ package ch04;
 public class _01_StudentMainEx {
 	public static void main(String[] args) {
 		/**
-		 * ÂüÁ¶º¯¼ö¸í¿¡´Â »ı¼ºÇÑ °´Ã¼ÀÇ Èü¸Ş¸ğ¸®°ø°£ ÁÖ¼Ò°ªÀÌ µé¾îÀÖ´Ù.
-		 * ¾ÕÀÇ Å¬·¡½º¸íÀº µ¥ÀÌÅÍÅ¸ÀÔÀÌ°í, ÂüÁ¶º¯¼ö·Î Á¢±ÙÇÒ ¶§ »ç¿ëÇÑ´Ù.
-		 * µÚÀÇ Å¬·¡½º¸íÀº *¸Ş¸ğ¸®¿¡ °´Ã¼»ı¼º½Ã »ç¿ëµÇ´Â »ı¼ºÀÚÀÌ´Ù.
+		 * ì°¸ì¡°ë³€ìˆ˜ëª…ì—ëŠ” ìƒì„±í•œ ê°ì²´ì˜ í™ë©”ëª¨ë¦¬ê³µê°„ ì£¼ì†Œê°’ì´ ë“¤ì–´ìˆë‹¤.
+		 * ì•ì˜ í´ë˜ìŠ¤ëª…ì€ ë°ì´í„°íƒ€ì…ì´ê³ , ì°¸ì¡°ë³€ìˆ˜ë¡œ ì ‘ê·¼í•  ë•Œ ì‚¬ìš©í•œë‹¤.
+		 * ë’¤ì˜ í´ë˜ìŠ¤ëª…ì€ *ë©”ëª¨ë¦¬ì— ê°ì²´ìƒì„±ì‹œ ì‚¬ìš©ë˜ëŠ” ìƒì„±ìì´ë‹¤.
 		 * */
 		_01_Student st = new _01_Student();
 		st.studentID = 1001;
-		st.studentName = "±è¼±¿ì";
+		st.studentName = "ê¹€ì„ ìš°";
 		st.grade = 1;
-		st.address = "¼­¿ï½Ã ¸¶Æ÷±¸";
+		st.address = "ì„œìš¸ì‹œ ë§ˆí¬êµ¬";
 		st.e_mail = "k-sunwo@naver.com";
 		st.score = 100;
 		st.showStudentInfo();
@@ -20,9 +20,9 @@ public class _01_StudentMainEx {
 		
 		_01_Student st2 = new _01_Student();
 		st2.studentID = 1002;
-		st2.studentName = "±è¼±¿ìB";
+		st2.studentName = "ê¹€ì„ ìš°B";
 		st2.grade = 2;
-		st2.address = "¼­¿ï½Ã °­¼­±¸";
+		st2.address = "ì„œìš¸ì‹œ ê°•ì„œêµ¬";
 		st2.e_mail = "k-sunwo@naver.com";
 		st2.score = 99;
 		st2.showStudentInfo();

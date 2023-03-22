@@ -2,44 +2,44 @@ package ch10;
 
 public class _05_Member {
 	/**
-	 * <ÄÃ·º¼Ç ÇÁ·¹ÀÓ¿öÅ©>
+	 * <ì»¬ë ‰ì…˜ í”„ë ˆì„ì›Œí¬>
 	 * 
-	 * Collection - List ÀÎÅÍÆäÀÌ½º - Å¬·¡½º´Â ArrayList, Vector, LinkedList
-	 * 				- Set ÀÎÅÍÆäÀÌ½º - Å¬·¡½º´Â HashSet, TreeSet
+	 * Collection - List ì¸í„°í˜ì´ìŠ¤ - í´ë˜ìŠ¤ëŠ” ArrayList, Vector, LinkedList
+	 * 				- Set ì¸í„°í˜ì´ìŠ¤ - í´ë˜ìŠ¤ëŠ” HashSet, TreeSet
 	 * 
-	 * Map ÀÎÅÍÆäÀÌ½º <- HashMap, TreeMap
+	 * Map ì¸í„°í˜ì´ìŠ¤ <- HashMap, TreeMap
 	 * 						<- HashTable <- Properties
 	 * 
-	 * 1. Æ¯Â¡
-	 * List ÀÎÅÍÆäÀÌ½º : ¼ø¼­°¡ ÀÖ´Â ÀÚ·á°ü¸®, Áßº¹Çã¿ë
-	 * 						index¸¦ »ç¿ëÇÏ¿© ¿ä¼Ò¿¡ Á¢±ÙÇÑ´Ù.
-	 * 						¸®½ºÆ®¿¡ µé¾îÀÕ´Â ¿ä¼ÒµéÀÇ ÀÎµ¦½º´Â 0ºÎÅÍ ½ÃÀÛÇÑ´Ù.
-	 * 						Å¬·¡½º Á¾·ù´Â ArrayList, Vector, LinkedList
+	 * 1. íŠ¹ì§•
+	 * List ì¸í„°í˜ì´ìŠ¤ : ìˆœì„œê°€ ìˆëŠ” ìë£Œê´€ë¦¬, ì¤‘ë³µí—ˆìš©
+	 * 						indexë¥¼ ì‚¬ìš©í•˜ì—¬ ìš”ì†Œì— ì ‘ê·¼í•œë‹¤.
+	 * 						ë¦¬ìŠ¤íŠ¸ì— ë“¤ì–´ì‡ëŠ” ìš”ì†Œë“¤ì˜ ì¸ë±ìŠ¤ëŠ” 0ë¶€í„° ì‹œì‘í•œë‹¤.
+	 * 						í´ë˜ìŠ¤ ì¢…ë¥˜ëŠ” ArrayList, Vector, LinkedList
 	 * 
-	 * Set ÀÎÅÍÆäÀÌ½º : ¼ø¼­°¡ ¾ø´Â ÀÚ·á°ü¸®, Áßº¹Çã¿ë ¾ÈÇÔ
-	 * 						Å¬·¡½º´Â HashSet, TreeSet
+	 * Set ì¸í„°í˜ì´ìŠ¤ : ìˆœì„œê°€ ì—†ëŠ” ìë£Œê´€ë¦¬, ì¤‘ë³µí—ˆìš© ì•ˆí•¨
+	 * 						í´ë˜ìŠ¤ëŠ” HashSet, TreeSet
 	 * 
-	 * 2, ¼±¾ğ :
-	 * ArrayList<Å×ÀÌÅÍ Å¸ÀÔÅ¬·¡½º> list = new ArrayList<µ¥ÀÌÅÍÅ¸ÀÔÅ¬·¡½º>();
+	 * 2, ì„ ì–¸ :
+	 * ArrayList<í…Œì´í„° íƒ€ì…í´ë˜ìŠ¤> list = new ArrayList<ë°ì´í„°íƒ€ì…í´ë˜ìŠ¤>();
 	 * 
-	 * ´ÙÇü¼º Àû¿ë
-	 * List<µ¥ÀÌÅÍÅ¸ÀÔÅ¬·¡½º> list = new ArrayList<µ¥ÀÌÅÍÅ¸ÀÔÅ¬·¡½º>();
+	 * ë‹¤í˜•ì„± ì ìš©
+	 * List<ë°ì´í„°íƒ€ì…í´ë˜ìŠ¤> list = new ArrayList<ë°ì´í„°íƒ€ì…í´ë˜ìŠ¤>();
 	 * 
-	 * 3. Æ¯Â¡ : µ¥ÀÌÅÍ ¼ø¼­°¡ ÀÖ°í, Áßº¹ Çã¿ë
-	 * 4. Ãß°¡ : list.add(Ãß°¡ÇÒ À§Ä¡ index, °ª);  / list.add(°ª);
-	 * 5. ±³Ã¼ : list.set(±³Ã¼ÇÒ À§Ä¡ index, °ª);
-	 * 6. »èÁ¦ : list.remove(»èÁ¦ÇÒ À§Ä¡ index);
-	 * 7. °ª °¡Á®¿À±â : list.get(°¡Á®¿Ã index);
-	 * 8. °Ë»ö : list.indexOf(°Ë»öÇÒ °ª);
-	 * ¤¤ Áßº¹ÀÌ Çã¿ëµÇ±â¿¡ °Ë»öÇÒ ¶§ Ã³À½À¸·Î ¿À´Â °ªÀÇ À§Ä¡¸¦ Ã£À½
-	 * 9. ÀüÃ¼ »èÁ¦ : list.clear();
-	 * 10. ¹İº¹ÀÚ : Iterator<E> iterator : while(hashNext) { next() }
+	 * 3. íŠ¹ì§• : ë°ì´í„° ìˆœì„œê°€ ìˆê³ , ì¤‘ë³µ í—ˆìš©
+	 * 4. ì¶”ê°€ : list.add(ì¶”ê°€í•  ìœ„ì¹˜ index, ê°’);  / list.add(ê°’);
+	 * 5. êµì²´ : list.set(êµì²´í•  ìœ„ì¹˜ index, ê°’);
+	 * 6. ì‚­ì œ : list.remove(ì‚­ì œí•  ìœ„ì¹˜ index);
+	 * 7. ê°’ ê°€ì ¸ì˜¤ê¸° : list.get(ê°€ì ¸ì˜¬ index);
+	 * 8. ê²€ìƒ‰ : list.indexOf(ê²€ìƒ‰í•  ê°’);
+	 * ã„´ ì¤‘ë³µì´ í—ˆìš©ë˜ê¸°ì— ê²€ìƒ‰í•  ë•Œ ì²˜ìŒìœ¼ë¡œ ì˜¤ëŠ” ê°’ì˜ ìœ„ì¹˜ë¥¼ ì°¾ìŒ
+	 * 9. ì „ì²´ ì‚­ì œ : list.clear();
+	 * 10. ë°˜ë³µì : Iterator<E> iterator : while(hashNext) { next() }
 	 * **/
-	// ¸â¹öº¯¼ö
-	private int memberId;					// È¸¿ø ¾ÆÀÌµğ
-	private String memberName;		// È¸¿øÀÌ¸§
+	// ë©¤ë²„ë³€ìˆ˜
+	private int memberId;					// íšŒì› ì•„ì´ë””
+	private String memberName;		// íšŒì›ì´ë¦„
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public	_05_Member(int memberId, String memerName) {
 		this.memberId = memberId;
 		this.memberName = memerName;
@@ -64,6 +64,6 @@ public class _05_Member {
 	
 	@Override
 	public String toString() {
-		return memberName + " È¸¿ø´ÔÀÇ ¾ÆÀÌµğ´Â " + memberId + "ÀÔ´Ï´Ù.";
+		return memberName + " íšŒì›ë‹˜ì˜ ì•„ì´ë””ëŠ” " + memberId + "ì…ë‹ˆë‹¤.";
 	}
 }

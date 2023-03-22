@@ -2,11 +2,11 @@ package ch;
 
 public class Main {
 	public static void main(String[] args) {
-		// Ώψ±έ : 10000°΅Α¤
-		// ΊΈ³Κ½ΊΖχΐΞΖ® 1% ΄©ΐϋ
+		// μ›κΈ : 10000κ°€μ •
+		// λ³΄λ„μ¤ν¬μΈνΈ 1% λ„μ 
 		
 		Tv tv = new Tv(1000, "tv");
-		NoteBook nb = new NoteBook(2000, "³λΖ®ΊΟ");
+		NoteBook nb = new NoteBook(2000, "λ…ΈνΈλ¶");
 		
 		Buyer buyer = new Buyer();
 		buyer.buy(tv);

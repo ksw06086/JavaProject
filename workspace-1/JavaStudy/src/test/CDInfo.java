@@ -1,8 +1,8 @@
 package test;
 
 public class CDInfo {
-	private int registerNo;			// CD¹øÈ£
-	private String title;				// CDÀÌ¸§
+	private int registerNo;			// CDë²ˆí˜¸
+	private String title;			// CDì´ë¦„
 	
 	public CDInfo(int registerNo, String title) {
 		this.registerNo = registerNo;

@@ -5,15 +5,15 @@ public abstract class _04_Car {
 	public abstract void stop();
 	
 	public void startCar() {
-		System.out.println("½Ãµ¿À» ÄÕ´Ï´Ù.");
+		System.out.println("ì‹œë™ì„ ì¼­ë‹ˆë‹¤.");
 	}
 	
 	public void turnOff() {
-		System.out.println("½Ãµ¿À» ²ü´Ï´Ù.");
+		System.out.println("ì‹œë™ì„ ë•ë‹ˆë‹¤.");
 	}
 	
-	// ÅÛÇÃ¸´ ¸Ş¼Òµå : Æ²ÀÌ ÀÖ´Â ¸Ş¼ÒµåÀÌ¸ç, ÀçÁ¤ÀÇ µÇÁö ¾Êµµ·Ï final·Î ¼±¾ğ
-	// ÀÚµ¿Â÷°¡ ´Ş¸®´Â ¹æ¹ıÀ» ¼ø¼­´ë·Î ±¸Çö
+	// í…œí”Œë¦¿ ë©”ì†Œë“œ : í‹€ì´ ìˆëŠ” ë©”ì†Œë“œì´ë©°, ì¬ì •ì˜ ë˜ì§€ ì•Šë„ë¡ finalë¡œ ì„ ì–¸
+	// ìë™ì°¨ê°€ ë‹¬ë¦¬ëŠ” ë°©ë²•ì„ ìˆœì„œëŒ€ë¡œ êµ¬í˜„
 	public void run() {
 		startCar();
 		drive();

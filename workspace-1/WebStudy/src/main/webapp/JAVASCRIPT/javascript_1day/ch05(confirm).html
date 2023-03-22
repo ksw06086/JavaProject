@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 탈퇴 여부</title>
+<script type="text/javascript">
+/*
+ * 중요!
+ confirm("메시지") : 확인/취소 버튼을 만들어주면서
+ 				   확인 버튼을 클릭하면 true를 반환하고,
+ 				   취소 버튼을 클릭하면 false를 반환하는 윈도우 객체의 메소드
+ 				   
+ 회원탈퇴 여부 :
+	 [확인] 버튼을 누른 경우 : result에 true가 저장되므로 "탈퇴처리" 출력하고,
+	 [취소] 버튼을 누른 경우 : result에 false가 저장되므로 "취소처리" 출력한다.
+	 cf) prompt() : 질의 응답창으로 값을 입력하고, 확인/취소 버튼을 만들어준다.
+ */
+ 	var result = confirm("회원탈퇴를 하시겠습니까?");
+	if(result){
+		alert("탈퇴처리 되셨습니다.");
+	} else {
+		alert("탈퇴처리 취소되었습니다.");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

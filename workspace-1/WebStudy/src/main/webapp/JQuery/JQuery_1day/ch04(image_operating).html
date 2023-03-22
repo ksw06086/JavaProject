@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 활용</title>
+<style type="text/css">
+	#thumb{
+		padding : 0px;
+		margin : 0px;
+		list-style-type: none;
+		float: left;
+	}
+	
+	#thumb li {/* 부모 thumb의 모든 하위의 li */
+		padding: 5px 10px;
+	}
+	
+	#thumb li img {
+		width:80px;
+		height:80px;
+	}
+	
+	#view {
+		padding : 5px 0px;
+		width: 360px;
+		height: 270px;
+		float: left;
+	}
+	
+	#view img{
+		width: 100%;
+		height: 100%;
+	}
+</style>
+<script type="text/javascript" src = "../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 1. hide() / show(): 숨겼다가 다시 보여주기
+		$(".item:eq(0)").click(function() { 
+			// attr() : 속성값을 가져오거나 추가하는 함수
+			var image = $(this).attr("href"); /* href에 지정한 이미지 링크 image 변수에 저장 */
+			
+			$("#view > img").hide(1000, function(){
+				$("#view > img").attr("src", image); /* 속성값 추가 */
+				$(this).show(1000);
+			});
+
+			return false;
+		});
+		
+		// 2. fadeIn() / fadeOut()
+		$(".item:eq(1)").click(function(){
+			var image = $(this).attr("href");
+			$("#view > img").fadeOut(1000, function() {
+				$("#view > img").attr("src",image);
+				$(this).fadeIn(1000);
+			});
+			return false;
+		});
+		
+		// 3. slideUp() / slideDown()
+		$(".item:eq(2)").click(function(){
+			var image = $(this).attr("href");
+			$("#view > img").slideUp(1000, function() {
+				$("#view > img").attr("src",image);
+				$(this).slideDown(1000);
+			});
+			return false;
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<h3> 이미지 활용 </h3>
+	<ul id = "thumb">
+		<li><a href = "../img/people5.png" class = "item">
+		<img src = "../img/people5.png" width = "300px" height = "300px"></a></li>
+		<li><a href = "../img/people6.png" class = "item">
+		<img src = "../img/people6.png" ></a></li>
+		<li><a href = "../img/people2.png" class = "item">
+		<img src = "../img/people2.png" ></a></li>
+	</ul>
+	
+	<div id = "view"> <!-- 이미지 영역 -->
+		<img src = "../img/people5.png">
+	</div>
+</body>
+</html>

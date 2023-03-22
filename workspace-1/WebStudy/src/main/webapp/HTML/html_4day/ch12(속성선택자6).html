@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성 선택자</title>
+<style type="text/css">
+	/*
+		속성 선택자
+		6. [속성$=값] 선택자 - 특정 값으로 끝나는 속성에 스타일 적용
+	*/
+	a[href $= "hwp"] { /* hwp 파일 */
+		background: url(../image/12장/hwp.png) no-repeat left center;
+		padding: 5px 25px;
+	}
+	
+	a[href $= "xls"] { /* excel 파일 */
+		background: url(../image/12장/xls.png) no-repeat left center;
+		padding: 5px 25px;
+	}
+	
+</style>
+</head>
+<body>
+	<h3>6. [속성$=값] 선택자 - 특정값으로 끝나는 속성에 스타일 적용하기 </h3>
+	<h4>회사 소개 파일 다운받기</h4>
+		
+	<ul>
+		<li><a href="intro.hwp">hwp 파일</a></li>
+		<li><a href="intro.xls">excel 파일</a></li>
+	</ul>
+
+</body>
+</html>

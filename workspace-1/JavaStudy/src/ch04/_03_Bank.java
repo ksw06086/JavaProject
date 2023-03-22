@@ -1,23 +1,23 @@
 package ch04;
 
 public class _03_Bank {
-	private String bankName;					// ÀºÇà¸í
-	private String accountNumber;			// °èÁÂ¹øÈ£
-	private int deposit;							// ÀÔ±İ
-	private int withdraw;						// Ãâ±İ
+	private String bankName;					// ì€í–‰ëª…
+	private String accountNumber;			// ê³„ì¢Œë²ˆí˜¸
+	private int deposit;							// ì…ê¸ˆ
+	private int withdraw;						// ì¶œê¸ˆ
 	
-	// »ı¼ºÀÚ
-	// µğÆúÆ® »ı¼ºÀÚ´Â ÄÄÆÄÀÏ·¯°¡ ÀÚµ¿ »ı¼ºÇØÁÖ¹Ç·Î »ı·«ÇØµµ µÈ´Ù.
-	// ´Ü ÇÁ·Î±×·¡¸Ó°¡ »ı¼ºÀÚ¸¦ Á÷Á¢ Ãß°¡ÇÏ¸é µğÆúÆ® »ı¼ºÀÚ´Â ¸¸µé¾îÁöÁö ¾Ê´Â´Ù.
+	// ìƒì„±ì
+	// ë””í´íŠ¸ ìƒì„±ìëŠ” ì»´íŒŒì¼ëŸ¬ê°€ ìë™ ìƒì„±í•´ì£¼ë¯€ë¡œ ìƒëµí•´ë„ ëœë‹¤.
+	// ë‹¨ í”„ë¡œê·¸ë˜ë¨¸ê°€ ìƒì„±ìë¥¼ ì§ì ‘ ì¶”ê°€í•˜ë©´ ë””í´íŠ¸ ìƒì„±ìëŠ” ë§Œë“¤ì–´ì§€ì§€ ì•ŠëŠ”ë‹¤.
 	public _03_Bank() {
-		System.out.println("µğÆúÆ® »ı¼ºÀÚ È£Ãâ~~");
-		bankName = "³ªÀºÇà";
+		System.out.println("ë””í´íŠ¸ ìƒì„±ì í˜¸ì¶œ~~");
+		bankName = "ë‚˜ì€í–‰";
 		accountNumber = "1616-16161-15151-16";
 		deposit = 5000;
 		withdraw = 2000;
 	}
 	
-	// ¸Å°³º¯¼ö »ı¼ºÀÚ
+	// ë§¤ê°œë³€ìˆ˜ ìƒì„±ì
 	public _03_Bank(String bankName, String accountNumber, int deposit, int withdraw) {
 		this.bankName = bankName;
 		this.accountNumber = accountNumber;
@@ -57,11 +57,11 @@ public class _03_Bank {
 		this.withdraw = withdraw;
 	}
 	
-	// Ãâ·Â Á¤º¸
+	// ì¶œë ¥ ì •ë³´
 	public void printBankInfo() {
-		System.out.println("ÀºÇà¸í : " + bankName);
-		System.out.println("°èÁÂ¹øÈ£ : " + accountNumber);
-		System.out.println("ÀÔ±İ¾× : " + deposit);
-		System.out.println("Ãâ±İ¾× : " + withdraw);
+		System.out.println("ì€í–‰ëª… : " + bankName);
+		System.out.println("ê³„ì¢Œë²ˆí˜¸ : " + accountNumber);
+		System.out.println("ì…ê¸ˆì•¡ : " + deposit);
+		System.out.println("ì¶œê¸ˆì•¡ : " + withdraw);
 	}
 }

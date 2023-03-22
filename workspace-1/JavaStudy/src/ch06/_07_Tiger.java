@@ -3,10 +3,10 @@ package ch06;
 public class _07_Tiger extends _07_Animal{
 	@Override
 	public void move() {
-		System.out.println("È£¶ûÀÌ°¡ ³× ¹ß·Î ¶İ´Ï´Ù.");
+		System.out.println("í˜¸ë‘ì´ê°€ ë„¤ ë°œë¡œ ëœë‹ˆë‹¤.");
 	}
 	
 	public void hunting() {
-		System.out.println("È£¶ûÀÌ°¡ »ç³ÉÀ» ÇÕ´Ï´Ù.");
+		System.out.println("í˜¸ë‘ì´ê°€ ì‚¬ëƒ¥ì„ í•©ë‹ˆë‹¤.");
 	}
 }

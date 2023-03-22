@@ -17,17 +17,17 @@ import javax.swing.JTextField;
 
 
 /**
- * <Å¬·¡½º>
- * - URL :  ÀÎÅÍ³İ»óÀÇ ÀÚ¿øÀ» Ç¥ÇöÇÏ´Â URL Á¤º¸¸¦ ³ªÅ¸³¿(Àı´ë °æ·Î, »ó´ë °æ·Î¸¦ ÀÌ¿ëÇÏ´Â ¹æ¹ıÀÌ ÀÖÀ½)
- * <¸Ş¼Òµå>
- * - Object getContent()								- ÇØ´ç URLÀÇ ÄÁÅÙÆ®¸¦ ¹İÈ¯
- * - String getFile()										- ÇØ´ç URLÀÇ ÆÄÀÏ ÀÌ¸§ ¹İÈ¯
- * - String getHost()									- ÇØ´ç URLÀÇ È£½ºÆ® ÀÌ¸§ ¹İÈ¯
- * - String getPath()									- ÇØ´ç URLÀÇ °æ·Î ºÎºĞ ¹İÈ¯
- * - Int getPort()											- ÇØ´ç URLÀÇ Æ÷Æ® ¹øÈ£ ¹İÈ¯
- * - String getProtocol()								- ÇØ´ç URLÀÇ ÇÁ·ÎÅäÄİ ÀÌ¸§ ¹İÈ¯ 
- * - InputStream openStream()					- URL ÁÖ¼Ò¿Í ¿¬°áÇÑ µÚ ÇØ´ç ¿¬°á·ÎºÎÅÍ ÀÔ·Â¹ŞÀ» ¼ö ÀÖ´Â InputStream °´Ã¼ ¹İÈ¯
- * - URLConnection openConnection()			- URL ÁÖ¼Ò¿Í ¿ø°İ °´Ã¼¿¡ Á¢¼ÓÇÑ µÚ Åë½ÅÇÒ ¼ö ÀÖ´Â URLConnection °´Ã¼ ¹İÈ¯
+ * <í´ë˜ìŠ¤>
+ * - URL :  ì¸í„°ë„·ìƒì˜ ìì›ì„ í‘œí˜„í•˜ëŠ” URL ì •ë³´ë¥¼ ë‚˜íƒ€ëƒ„(ì ˆëŒ€ ê²½ë¡œ, ìƒëŒ€ ê²½ë¡œë¥¼ ì´ìš©í•˜ëŠ” ë°©ë²•ì´ ìˆìŒ)
+ * <ë©”ì†Œë“œ>
+ * - Object getContent()				- í•´ë‹¹ URLì˜ ì»¨í…íŠ¸ë¥¼ ë°˜í™˜
+ * - String getFile()					- í•´ë‹¹ URLì˜ íŒŒì¼ ì´ë¦„ ë°˜í™˜
+ * - String getHost()					- í•´ë‹¹ URLì˜ í˜¸ìŠ¤íŠ¸ ì´ë¦„ ë°˜í™˜
+ * - String getPath()					- í•´ë‹¹ URLì˜ ê²½ë¡œ ë¶€ë¶„ ë°˜í™˜
+ * - Int getPort()						- í•´ë‹¹ URLì˜ í¬íŠ¸ ë²ˆí˜¸ ë°˜í™˜
+ * - String getProtocol()				- í•´ë‹¹ URLì˜ í”„ë¡œí† ì½œ ì´ë¦„ ë°˜í™˜ 
+ * - InputStream openStream()			- URL ì£¼ì†Œì™€ ì—°ê²°í•œ ë’¤ í•´ë‹¹ ì—°ê²°ë¡œë¶€í„° ì…ë ¥ë°›ì„ ìˆ˜ ìˆëŠ” InputStream ê°ì²´ ë°˜í™˜
+ * - URLConnection openConnection()		- URL ì£¼ì†Œì™€ ì›ê²© ê°ì²´ì— ì ‘ì†í•œ ë’¤ í†µì‹ í•  ìˆ˜ ìˆëŠ” URLConnection ê°ì²´ ë°˜í™˜
  * 
  * **/
 public class URLReadEx extends JFrame implements ActionListener{
@@ -39,14 +39,14 @@ public class URLReadEx extends JFrame implements ActionListener{
 	JButton btn;
 	
 	public URLReadEx() {
-		setTitle("URL Å¬·¡½º");
-		lbl1 = new JLabel(" Á¤º¸¸¦ ÀĞÀ» È£½ºÆ® URL ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-		lbl2 = new JLabel("È£½ºÆ® URL ÀÌ¸§ : ");
+		setTitle("URL í´ë˜ìŠ¤");
+		lbl1 = new JLabel(" ì •ë³´ë¥¼ ì½ì„ í˜¸ìŠ¤íŠ¸ URL ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
+		lbl2 = new JLabel("í˜¸ìŠ¤íŠ¸ URL ì´ë¦„ : ");
 		area = new JTextArea();
 		area.setLineWrap(true);
 		scroller = new JScrollPane(area);
 		tf = new JTextField(25);
-		btn = new JButton("Á¤º¸¼öÁı");
+		btn = new JButton("ì •ë³´ìˆ˜ì§‘");
 		btn.addActionListener(this);
 		
 		pan1 = new JPanel();
@@ -56,7 +56,7 @@ public class URLReadEx extends JFrame implements ActionListener{
 		
 		add("North", pan1);
 		add("Center", scroller);
-		add("South", lbl1);		// ¶È°°Àº °´Ã¼´Â 2¹ø È­¸é¿¡ µé¾î°¥ ¼ö ¾ø´Ù.
+		add("South", lbl1);		// ë˜‘ê°™ì€ ê°ì²´ëŠ” 2ë²ˆ í™”ë©´ì— ë“¤ì–´ê°ˆ ìˆ˜ ì—†ë‹¤.
 		
 		setSize(500, 250);
 		setVisible(true);
@@ -83,7 +83,7 @@ public class URLReadEx extends JFrame implements ActionListener{
 				in.close();
 				
 			} catch (Exception e2) {
-				System.out.println("µ¥ÀÌÅÍ¸¦ ÀĞ´Â µµÁß¿¡ ¿¡·¯°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+				System.out.println("ë°ì´í„°ë¥¼ ì½ëŠ” ë„ì¤‘ì— ì—ëŸ¬ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 			}
 		}
 	}

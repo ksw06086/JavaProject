@@ -15,18 +15,18 @@ import javax.swing.JTextField;
 
 /**
  * 
- * <Å¬·¡½º>
- * - InetAddress : ÀÚ¹Ù ¾ğ¾î¿¡¼­ IPÁÖ¼Ò¸¦ È°¿ëÇÏ±â À§ÇÑ Å¬·¡½º
- * <¸Ş¼Òµå>
- * - byte[] getAddress()														- IPÁÖ¼Ò¸¦ byte ¹è¿­·Î ¹İÈ¯
- * - static InetAddress[] getAllByName(String host)			- µµ¸ŞÀÎ¸í(host)¿¡ ÁöÁ¤µÈ ¸ğµç È£½ºÆ®ÀÇ IPÁÖ¼Ò¸¦ ¹è¿­·Î ¹İÈ¯
- * - static InetAddress getByName(String host)					- µµ¸ŞÀÎ¸í(host)¸¦ ÅëÇØ IPÁÖ¼Ò¸¦ ¾òÀ½
- * - static InetAddress getByAddress(byte[] addr)				- byte ¹è¿­À» ÅëÇØ IPÁÖ¼Ò¸¦ ¾òÀ½
- * - String getHostAddress()												- È£½ºÆ®ÀÇ IPÁÖ¼Ò¸¦ ¹İÈ¯(µé¾î°£ »çÀÌÆ® ¶Ç´Â ÇÁ·Î±×·¥ÀÇ È£½ºÆ® IPÁÖ¼Ò)
- * - String getHostName()													- È£½ºÆ®ÀÇ ÀÌ¸§À» ¹İÈ¯
- * - static InetAddress getLocalHost()								- Áö¿ª È£½ºÆ®ÀÇ IPÁÖ¼Ò ¹İÈ¯(³ª¿Í ¿¬°áµÈ ¿ÍÀÌÆÄÀÌ IPÁÖ¼Ò)
- * - boolean isLoopbackAddress()										- loopbackÁÖ¼ÒÀÎÁö È®ÀÎ
- * - boolean isMulticastAddress()										- ¸ÖÆ¼Ä³½ºÆ®ÁÖ¼ÒÀÎÁö È®ÀÎ
+ * <í´ë˜ìŠ¤>
+ * - InetAddress : ìë°” ì–¸ì–´ì—ì„œ IPì£¼ì†Œë¥¼ í™œìš©í•˜ê¸° ìœ„í•œ í´ë˜ìŠ¤
+ * <ë©”ì†Œë“œ>
+ * - byte[] getAddress()														- IPì£¼ì†Œë¥¼ byte ë°°ì—´ë¡œ ë°˜í™˜
+ * - static InetAddress[] getAllByName(String host)	- ë„ë©”ì¸ëª…(host)ì— ì§€ì •ëœ ëª¨ë“  í˜¸ìŠ¤íŠ¸ì˜ IPì£¼ì†Œë¥¼ ë°°ì—´ë¡œ ë°˜í™˜
+ * - static InetAddress getByName(String host)		- ë„ë©”ì¸ëª…(host)ë¥¼ í†µí•´ IPì£¼ì†Œë¥¼ ì–»ìŒ
+ * - static InetAddress getByAddress(byte[] addr)	- byte ë°°ì—´ì„ í†µí•´ IPì£¼ì†Œë¥¼ ì–»ìŒ
+ * - String getHostAddress()						- í˜¸ìŠ¤íŠ¸ì˜ IPì£¼ì†Œë¥¼ ë°˜í™˜(ë“¤ì–´ê°„ ì‚¬ì´íŠ¸ ë˜ëŠ” í”„ë¡œê·¸ë¨ì˜ í˜¸ìŠ¤íŠ¸ IPì£¼ì†Œ)
+ * - String getHostName()							- í˜¸ìŠ¤íŠ¸ì˜ ì´ë¦„ì„ ë°˜í™˜
+ * - static InetAddress getLocalHost()				- ì§€ì—­ í˜¸ìŠ¤íŠ¸ì˜ IPì£¼ì†Œ ë°˜í™˜(ë‚˜ì™€ ì—°ê²°ëœ ì™€ì´íŒŒì´ IPì£¼ì†Œ)
+ * - boolean isLoopbackAddress()					- loopbackì£¼ì†Œì¸ì§€ í™•ì¸
+ * - boolean isMulticastAddress()					- ë©€í‹°ìºìŠ¤íŠ¸ì£¼ì†Œì¸ì§€ í™•ì¸
  * 
  * */
 public class TcpipEx1 extends JFrame implements ActionListener{
@@ -37,12 +37,12 @@ public class TcpipEx1 extends JFrame implements ActionListener{
 	JButton btn;
 	
 	public TcpipEx1() {
-		setTitle("InetAddress Å¬·¡½º");
-		lbl1 = new JLabel(" °Ë»çÇÒ È£½ºÆ® ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-		lbl2 = new JLabel("È£½ºÆ® ÀÌ¸§ : ");
+		setTitle("InetAddress í´ë˜ìŠ¤");
+		lbl1 = new JLabel(" ê²€ì‚¬í•  í˜¸ìŠ¤íŠ¸ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
+		lbl2 = new JLabel("í˜¸ìŠ¤íŠ¸ ì´ë¦„ : ");
 		area = new JTextArea();
 		tf = new JTextField(25);
-		btn = new JButton("°Ë»ç½ÇÇà");
+		btn = new JButton("ê²€ì‚¬ì‹¤í–‰");
 		btn.addActionListener(this);
 		
 		pan1 = new JPanel();

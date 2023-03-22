@@ -17,6 +17,6 @@ public class _01_SubCalc extends _01_Calc{
 	}
 	
 	public void showInfo() {
-		System.out.println("Calc ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇß½À´Ï´Ù.");
+		System.out.println("Calc ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í–ˆìŠµë‹ˆë‹¤.");
 	}
 }

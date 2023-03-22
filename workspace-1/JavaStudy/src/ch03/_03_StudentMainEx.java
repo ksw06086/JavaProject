@@ -4,21 +4,21 @@ public class _03_StudentMainEx {
 	public static void main(String[] args) {
 		_03_Student st = new _03_Student();
 		
-		// ¹æ¹ı 1. set¸Ş¼Òµå¸¦ ÅëÇØ¼­ ÇĞ»ıÁ¤º¸ ¼³Á¤
+		// ë°©ë²• 1. setë©”ì†Œë“œë¥¼ í†µí•´ì„œ í•™ìƒì •ë³´ ì„¤ì •
 		st.setStudentID(25);
-		st.setStudentName("»çÀÌÅ¸¸¶");
+		st.setStudentName("ì‚¬ì´íƒ€ë§ˆ");
 		st.setGrade(232);
-		st.setAddress("F½Ã ±¸¿ª");
+		st.setAddress("Fì‹œ êµ¬ì—­");
 		
-		// Ãâ·Â¸Ş¼Òµå È£Ãâ
-		System.out.println("setter ¸Ş¼Òµå¸¦ ÀÌ¿ëÇÑ Ãâ·Â");
+		// ì¶œë ¥ë©”ì†Œë“œ í˜¸ì¶œ
+		System.out.println("setter ë©”ì†Œë“œë¥¼ ì´ìš©í•œ ì¶œë ¥");
 		st.printInfo();
 		
 		System.out.println();
 		
-		// ¹æ¹ı 2. ¸Å°³º¯¼ö »ı¼ºÀÚ¸¦ ÅëÇØ¼­ ÇĞ»ıÁ¤º¸ ¼³Á¤
-		_03_Student st2 = new _03_Student(2000, "±è¼±¿ì", 3, "¼­¿ï½Ã ¸¶Æ÷±¸");
-		System.out.println("¸Å°³º¯¼ö »ı¼ºÀÚ¸¦ ÀÌ¿ëÇØ¼­ Ãâ·Â");
+		// ë°©ë²• 2. ë§¤ê°œë³€ìˆ˜ ìƒì„±ìë¥¼ í†µí•´ì„œ í•™ìƒì •ë³´ ì„¤ì •
+		_03_Student st2 = new _03_Student(2000, "ê¹€ì„ ìš°", 3, "ì„œìš¸ì‹œ ë§ˆí¬êµ¬");
+		System.out.println("ë§¤ê°œë³€ìˆ˜ ìƒì„±ìë¥¼ ì´ìš©í•´ì„œ ì¶œë ¥");
 		st2.printInfo();
 		
 	}

@@ -3,13 +3,13 @@ package ch05;
 public class _12_StudentTest {
 	public static void main(String[] args) {
 		_12_Student studentLee = new _12_Student(1001, "Lee");
-		studentLee.addSubject("±¹¾î", 100);
-		studentLee.addSubject("¼öÇĞ", 50);
+		studentLee.addSubject("ì´ì§€ë¯¼", 100);
+		studentLee.addSubject("ì´ì§€ë¯¼", 50);
 		
 		_12_Student studentKim = new _12_Student(1002, "Kim");
-		studentKim.addSubject("±¹¾î", 70);
-		studentKim.addSubject("¼öÇĞ", 85);
-		studentKim.addSubject("¿µ¾î", 100);
+		studentKim.addSubject("ê¹€ì§€ì›", 70);
+		studentKim.addSubject("ê¹€ì§€ì›", 85);
+		studentKim.addSubject("ê¹€ì§€ì›", 100);
 		
 		studentLee.showStudentInfo();
 		System.out.println("==============================");

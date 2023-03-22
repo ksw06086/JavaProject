@@ -3,17 +3,17 @@ package ch02;
 import java.util.Scanner;
 
 /*
- * ¿ùÀ» ¸ÕÀú ÀÔ·ÂÇÏ°í ÇØ´ç ¿ùÀÌ Àß¸ø ÀÔ·ÂµÇ¾úÀ¸¸é ¿À·ù Ãâ·Â ¾Æ´Ï¸é °è¼Ó ÁøÇà
+ * ì›”ì„ ë¨¼ì € ì…ë ¥í•˜ê³  í•´ë‹¹ ì›”ì´ ì˜ëª» ì…ë ¥ë˜ì—ˆìœ¼ë©´ ì˜¤ë¥˜ ì¶œë ¥ ì•„ë‹ˆë©´ ê³„ì† ì§„í–‰
  * */
 public class _17_DoWhileEx {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int month = 0;
 		do {
-			System.out.print("ÀÔ·ÂÇÏ¼¼¿ä[1~12] : ");
+			System.out.print("ì…ë ¥í•˜ì„¸ìš”[1~12] : ");
 			month = sc.nextInt();
-			System.out.println("ÀÔ·Â°ª : " + month);
+			System.out.println("ì…ë ¥ê°’ : " + month);
 		} while((month < 13) && (month > 0));
-		System.out.println(month + "¿ùÀº Àß¸øµÈ ¿ùÀÔ´Ï´Ù.");
+		System.out.println(month + "ì›”ì€ ì˜ëª»ëœ ì›”ì…ë‹ˆë‹¤.");
 	}
 }

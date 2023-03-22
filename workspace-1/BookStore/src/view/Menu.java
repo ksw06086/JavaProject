@@ -3,19 +3,19 @@ package view;
 import domain.MenuList;
 
 /*
- * ÀÛ¼ºÀÏ : 2023.02.04.
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : ¸Ş´º °ü·Ã ±â´É ¸í¼¼¼­ ¿ëµµ
+ * ì‘ì„±ì¼ : 2023.02.04.
+ * ì‘ì„±ì : ê¹€ì„ ìš°
+ * ê°œìš” : ë©”ë‰´ ê´€ë ¨ ê¸°ëŠ¥ ëª…ì„¸ì„œ ìš©ë„
  * **/
 public interface Menu {
-	void commonMenu(MenuList code);		// °øÅë¸Ş´º
-	void loginMenu();									// ·Î±×ÀÎ¸Ş´º
-	void hostMenu();									// °ü¸®ÀÚ¸Ş´º
-	void stockMenu();									// °ü¸®ÀÚ Àç°í°ü¸®¸Ş´º
-	void orderMenu();									// °ü¸®ÀÚ ÁÖ¹®°ü¸®¸Ş´º
+	void commonMenu(MenuList code);		// ê³µí†µë©”ë‰´
+	void loginMenu();					// ë¡œê·¸ì¸ë©”ë‰´
+	void hostMenu();					// ê´€ë¦¬ìë©”ë‰´
+	void stockMenu();					// ê´€ë¦¬ì ì¬ê³ ê´€ë¦¬ë©”ë‰´
+	void orderMenu();					// ê´€ë¦¬ì ì£¼ë¬¸ê´€ë¦¬ë©”ë‰´
 	
-	void guestMenu();									// °í°´¸Ş´º
-	void goodsMenu();									// »óÇ°¸ñ·Ï¸Ş´º
-	void cartMenu();										// °í°´ Àå¹Ù±¸´Ï ¸Ş´º
-	void inputError();									// ÀÔ·Â ¿À·ù
+	void guestMenu();					// ê³ ê°ë©”ë‰´
+	void goodsMenu();					// ìƒí’ˆëª©ë¡ë©”ë‰´
+	void cartMenu();					// ê³ ê° ì¥ë°”êµ¬ë‹ˆ ë©”ë‰´
+	void inputError();					// ì…ë ¥ ì˜¤ë¥˜
 }

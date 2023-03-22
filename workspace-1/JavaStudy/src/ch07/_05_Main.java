@@ -5,12 +5,12 @@ public class _05_Main {
 		_05_Player player = new _05_Player();
 		player.play(1);
 		
-		// Áß±ŞÀÚ ·¹º§¾÷
+		// ì¤‘ê¸‰ì ë ˆë²¨ì—…
 		_05_AdvancedLevel alevel = new _05_AdvancedLevel();
 		player.upgradeLevel(alevel);
 		player.play(2);
 		
-		//°í±ŞÀÚ ·¹º§¾÷
+		//ê³ ê¸‰ì ë ˆë²¨ì—…
 		_05_SuperLevel slevel = new _05_SuperLevel();
 		player.upgradeLevel(slevel);
 		player.play(3);

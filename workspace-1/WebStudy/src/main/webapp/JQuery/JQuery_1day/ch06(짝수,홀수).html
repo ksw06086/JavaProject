@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조건에 만족하는 짝수와 홀수에 위치한 엘리먼트에 스타일 적용하기</title>
+<script type="text/javascript" src = "../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// even : 짝수 / odd : 홀수
+		$("tr:nth-child(even)").css("background", "lightgreen");
+		$("tr:nth-child(odd)").css("background", "pink");
+	});
+</script>
+</head>
+<body>
+	<h3>조건에 만족하는 짝수와 홀수에 위치한 엘리먼트에 스타일 적용하기</h3>
+	<table>
+		<tr>
+			<td>one</td>
+		</tr>
+		<tr>
+			<td>two</td>
+		</tr>
+		<tr>
+			<td>three</td>
+		</tr>
+		<tr>
+			<td>four</td>
+		</tr>
+		<tr>
+			<td>five</td>
+		</tr>
+		<tr>
+			<td>six</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -4,27 +4,27 @@ public class _15_MemberHashMapTest {
 	public static void main(String[] args) {
 		_15_MemberHashMap memHashMap = new _15_MemberHashMap();
 		
-		// member Á¤º¸ »ı¼º
-		_05_Member memberLee = new _05_Member(1001, "ÀÌÁö¿ø");
-		_05_Member memberSon = new _05_Member(1002, "¼ÕÈï¹Î");
-		_05_Member memberPark = new _05_Member(1003, "¹Ú¹ÎÁö");
-		_05_Member memberHong = new _05_Member(1004, "±è¿ìÀ¯");
+		// member ì •ë³´ ìƒì„±
+		_05_Member memberLee = new _05_Member(1001, "ì´ì§€ì›");
+		_05_Member memberSon = new _05_Member(1002, "ì†í¥ë¯¼");
+		_05_Member memberPark = new _05_Member(1003, "ë°•ë¯¼ì§€");
+		_05_Member memberHong = new _05_Member(1004, "ê¹€ìš°ìœ ");
 		
-		// Á¤º¸ Ãß°¡
+		// ì •ë³´ ì¶”ê°€
 		memHashMap.addMember(memberLee);
 		memHashMap.addMember(memberSon);
 		memHashMap.addMember(memberPark);
 		memHashMap.addMember(memberHong);
 		
-		System.out.println("-------- Ãß°¡ ÈÄ Á¶È¸ --------");
-		// ¸ğµç È¸¿øÁ¤º¸ Á¶È¸
+		System.out.println("-------- ì¶”ê°€ í›„ ì¡°íšŒ --------");
+		// ëª¨ë“  íšŒì›ì •ë³´ ì¡°íšŒ
 		memHashMap.showAllMember();
 		
-		System.out.println("--------»èÁ¦ ÈÄ Á¶È¸---------");
-		// È¸¿ø¾ÆÀÌµğ(key°ª)°¡ 1004ÀÎ È¸¿øÁ¤º¸ »èÁ¦
+		System.out.println("--------ì‚­ì œ í›„ ì¡°íšŒ---------");
+		// íšŒì›ì•„ì´ë””(keyê°’)ê°€ 1004ì¸ íšŒì›ì •ë³´ ì‚­ì œ
 		memHashMap.removeMember(1004);
 		
-		// »èÁ¦ ÈÄ Á¤º¸ Á¶È¸
+		// ì‚­ì œ í›„ ì •ë³´ ì¡°íšŒ
 		memHashMap.showAllMember();
 	}
 }

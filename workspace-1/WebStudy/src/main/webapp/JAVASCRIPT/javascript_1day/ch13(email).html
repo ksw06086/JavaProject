@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이메일 형식</title>
+<script type="text/javascript">
+	let email = prompt("이메일을 입력하세요!", "id@gmail.com");
+	let email_type = [".go.kr", ".or.kr", ".net", ".com", ".co.kr",".ac.kr", ".org"];
+	/*
+		방문자가 입력한 이메일 주소에 "@"가 포함되어 있으면 check1에 "true"를 할당한다.
+		indexOf() : 문자열에서 찾을 문자와 일치하는 문자를 왼쪽부터 찾아 최초로 일지하는 문자의 인덱스를 반환한다.
+					만일 찾는 문자열이 없으면 -1을 반환한다.
+	*/
+	// 이메일 형식 불일치시 : "이메일 형식 불일치, @가 없다.!!"는 경고장 출력
+	
+	// 이메일의 배열데이터 포함 검사
+	// 배열에 저장된 데이터가 입력한 이메일 문자열에 포함되어 있으면 check2에 "true"를 할당
+	// 없으면 -1 반환
+	
+	// 3. 이메일 형식과 이메일 주소 뒷부분이 유효하면, 이메일 주소를 출력하고,
+	// 틀리면 "이메일 형식이 잘못되었습니다."를 출력
+	let check1 = false;
+	let check2 = false;
+	if(email.indexOf("@") != -1){
+		check1 = true;
+		for(var a in email_type){
+			if(email.indexOf(email_type[a]) != -1){
+				check2 = true;
+				break;
+			}		
+		}
+		if(check2){
+			alert(email);
+		} else {
+			alert("이메일 형식이 잘못되었습니다.");
+		}
+	} else {
+		alert("이메일 형식 불일치, @가 없다.");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

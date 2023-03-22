@@ -3,18 +3,18 @@ package ch10;
 import java.util.ArrayList;
 
 public class _05_MemberArrayList {
-	private ArrayList<_05_Member> arrayList;		// arrayList ¼±¾ğ
+	private ArrayList<_05_Member> arrayList;		// arrayList ì„ ì–¸
 	
 	public _05_MemberArrayList() {
-		arrayList = new ArrayList<_05_Member>();		// _05_MemberÇüÀ¸·ÎµÈ ¹è¿­ »ı¼º
+		arrayList = new ArrayList<_05_Member>();		// _05_Memberí˜•ìœ¼ë¡œëœ ë°°ì—´ ìƒì„±
 	}
 	
-	// È¸¿øÃß°¡
+	// íšŒì›ì¶”ê°€
 	public void addMember(_05_Member member) {
 		arrayList.add(member);
 	}
 	
-	// È¸¿ø»èÁ¦
+	// íšŒì›ì‚­ì œ
 	public boolean removeMember(int memberId) {
 		for (int i = 0; i < arrayList.size(); i++) {
 			_05_Member member = arrayList.get(i);
@@ -24,13 +24,13 @@ public class _05_MemberArrayList {
 				return true;
 			}
 		}
-		System.out.println(memberId + "°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+		System.out.println(memberId + "ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		return false;
 	}
 	
-	// ÀüÃ¼È¸¿ø Ãâ·Â
+	// ì „ì²´íšŒì› ì¶œë ¥
 	public void showAllMember() {
-		// Çâ»óµÈ for¹® : for(ÀÚ·áÇü º¯¼ö ¤Ó ¹è¿­¸í) {} ==> ¹è¿­¾ÈÀÇ ÀÚ·á¸¦ º¯¼ö¿¡ ÀúÀåÇÏ¸ç ¼ø¼­´ë·Î Ãâ·ÂµÊ
+		// í–¥ìƒëœ forë¬¸ : for(ìë£Œí˜• ë³€ìˆ˜ ã…£ ë°°ì—´ëª…) {} ==> ë°°ì—´ì•ˆì˜ ìë£Œë¥¼ ë³€ìˆ˜ì— ì €ì¥í•˜ë©° ìˆœì„œëŒ€ë¡œ ì¶œë ¥ë¨
 		for(_05_Member member : arrayList) {
 			System.out.println(member);
 		}

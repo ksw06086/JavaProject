@@ -5,14 +5,14 @@ public class _04_AICar extends _04_Car{
 	@Override
 	public void drive() {
 		// TODO Auto-generated method stub
-		System.out.println("ÀÚÀ² ÁÖÇàÇÕ´Ï´Ù.");
-		System.out.println("ÀÚµ¿Â÷°¡ ¾Ë¾Æ¼­ ¹æÇâÀ» ÀüÈ¯ÇÕ´Ï´Ù.");
+		System.out.println("ììœ¨ ì£¼í–‰í•©ë‹ˆë‹¤.");
+		System.out.println("ìë™ì°¨ê°€ ì•Œì•„ì„œ ë°©í–¥ì„ ì „í™˜í•©ë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void stop() {
 		// TODO Auto-generated method stub
-		System.out.println("½º½º·Î ¸ØÃä´Ï´Ù.");
+		System.out.println("ìŠ¤ìŠ¤ë¡œ ë©ˆì¶¥ë‹ˆë‹¤.");
 	}
 	
 }

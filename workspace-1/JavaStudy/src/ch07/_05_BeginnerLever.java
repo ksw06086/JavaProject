@@ -5,25 +5,25 @@ public class _05_BeginnerLever extends _05_PlayerLevel{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		System.out.println("ÃµÃµÈ÷ ´Ş¸³´Ï´Ù.");
+		System.out.println("ì²œì²œíˆ ë‹¬ë¦½ë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void jump() {
 		// TODO Auto-generated method stub
-		System.out.println("jump ¸øÇÔ");
+		System.out.println("jump ëª»í•¨");
 	}
 
 	@Override
 	public void turn() {
 		// TODO Auto-generated method stub
-		System.out.println("turn ¸øÇÕ´Ï´Ù.");
+		System.out.println("turn ëª»í•©ë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void showLevelMessage() {
 		// TODO Auto-generated method stub
-		System.out.println("*** ÃÊ±ŞÀÚ ·¹º§ÀÔ´Ï´Ù. ***");
+		System.out.println("*** ì´ˆê¸‰ì ë ˆë²¨ì…ë‹ˆë‹¤. ***");
 	}
 	
 }

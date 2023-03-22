@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class DrawingRectEx extends JFrame {
 	public DrawingRectEx() {
-		setTitle("Á÷»ç°¢Çü ±×¸®±â");
+		setTitle("ì§ì‚¬ê°í˜• ê·¸ë¦¬ê¸°");
 		
 		MyPan pan = new MyPan();
 		add("Center",pan);
@@ -19,9 +19,9 @@ public class DrawingRectEx extends JFrame {
 		public void paint(Graphics g) {
 			super.paint(g);
 			// drawRect(x, y, w, h);
-			// x, y : ¿ŞÂÊ À§ ¸ğ¼­¸® Á¡ÀÇ x, y ÁÂÇ¥
-			// w : Á÷»ç°¢ÇüÀÇ ³Êºñ(ÇÈ¼¿)
-			// h : Á÷»ç°¢ÇüÀÇ ³ôÀÌ(ÇÈ¼¿)
+			// x, y : ì™¼ìª½ ìœ„ ëª¨ì„œë¦¬ ì ì˜ x, y ì¢Œí‘œ
+			// w : ì§ì‚¬ê°í˜•ì˜ ë„ˆë¹„(í”½ì…€)
+			// h : ì§ì‚¬ê°í˜•ì˜ ë†’ì´(í”½ì…€)
 			g.drawRect(50,120,300,120);
 			g.drawRect(80,40,140,220);
 		}

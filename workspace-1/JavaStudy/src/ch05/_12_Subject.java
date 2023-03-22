@@ -1,8 +1,8 @@
 package ch05;
 
 public class _12_Subject {
-	private String name;			// °ú¸ñ¸í
-	private int scorePoint;		// °ú¸ñÁ¡¼ö
+	private String name;			// ì´ë¦„
+	private int scorePoint;			// ì ìˆ˜
 	
 	public String getName() {
 		return name;

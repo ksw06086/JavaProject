@@ -4,14 +4,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * <Å¬·¡½º>
- * InputStream : ¿µ¹®À» »ç¿ëÇÒ ¶§ ÀÔ·Â ½ºÆ®¸² Å¬·¡½º
- * InputStreamReader : ¿µ¹® Æ÷ÇÔ ´Ù¸¥ ³ª¶ó ¾ğ¾î±îÁö »ç¿ëÇÒ ¶§ ÀÔ·Â ½ºÆ®¸² Å¬·¡½º
- * <¸Ş¼Òµå>
- * int read(byte [] b) 		- b ¹è¿­¸¸Å­ µ¥ÀÌÅÍ¸¦ ÀÔ·Â
- * int read(char [] cb) 	- cb ¹è¿­¸¸Å­ µ¥ÀÌÅÍ¸¦ ÀÔ·Â
- * long skip(long n)			- n°³ ¸¸Å­ ÀĞ¾î µéÀÏ µ¥ÀÌÅÍ¸¦ °Ç³Ê ¶Ü
- * void close()					- ½ºÆ®¸²À» ´İÀ½(Á¾·á)
+ * <í´ë˜ìŠ¤>
+ * InputStream : ì˜ë¬¸ì„ ì‚¬ìš©í•  ë•Œ ì…ë ¥ ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * InputStreamReader : ì˜ë¬¸ í¬í•¨ ë‹¤ë¥¸ ë‚˜ë¼ ì–¸ì–´ê¹Œì§€ ì‚¬ìš©í•  ë•Œ ì…ë ¥ ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * <ë©”ì†Œë“œ>
+ * int read(byte [] b) 		- b ë°°ì—´ë§Œí¼ ë°ì´í„°ë¥¼ ì…ë ¥
+ * int read(char [] cb) 	- cb ë°°ì—´ë§Œí¼ ë°ì´í„°ë¥¼ ì…ë ¥
+ * long skip(long n)		- nê°œ ë§Œí¼ ì½ì–´ ë“¤ì¼ ë°ì´í„°ë¥¼ ê±´ë„ˆ ëœ€
+ * void close()				- ìŠ¤íŠ¸ë¦¼ì„ ë‹«ìŒ(ì¢…ë£Œ)
  * 
  * **/
 public class InStrRd {

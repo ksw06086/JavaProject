@@ -17,12 +17,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /*
- * <±¸ÇöÇÒ ±â´É>
- * 1. ÇÁ·Î±×·¥ÀÇ È­¸éÀ» ±¸¼ºÇÏ´Â ±â´É
- * 2. ¼­¹ö·ÎÀÇ ¼ÒÄÏ ¿¬°áÀ» ½ÃµµÇÏ´Â ±â´É
- * 3. »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¸Ş½ÃÁö¸¦ ¼­¹ö·Î Àü¼ÛÇÏ´Â ±â´É
- * 4. ´Ù¸¥ Å¬¶óÀÌ¾ğÆ®°¡ º¸³½ ¸Ş½ÃÁö¸¦ ¼­¹ö·ÎºÎÅÍ ¼ö½ÅÇÏ´Â ±â´É
- * 5. ¸Ş½ÃÁöÀÇ Àü¼Û ±â´É°ú ¼ö½Å ±â´ÉÀ» µ¿½Ã¿¡ ±¸ÇöÇÏ±â À§ÇÑ ¾²·¹µå ±â´É
+ * <êµ¬í˜„í•  ê¸°ëŠ¥>
+ * 1. í”„ë¡œê·¸ë¨ì˜ í™”ë©´ì„ êµ¬ì„±í•˜ëŠ” ê¸°ëŠ¥
+ * 2. ì„œë²„ë¡œì˜ ì†Œì¼“ ì—°ê²°ì„ ì‹œë„í•˜ëŠ” ê¸°ëŠ¥
+ * 3. ì‚¬ìš©ìê°€ ì…ë ¥í•œ ë©”ì‹œì§€ë¥¼ ì„œë²„ë¡œ ì „ì†¡í•˜ëŠ” ê¸°ëŠ¥
+ * 4. ë‹¤ë¥¸ í´ë¼ì´ì–¸íŠ¸ê°€ ë³´ë‚¸ ë©”ì‹œì§€ë¥¼ ì„œë²„ë¡œë¶€í„° ìˆ˜ì‹ í•˜ëŠ” ê¸°ëŠ¥
+ * 5. ë©”ì‹œì§€ì˜ ì „ì†¡ ê¸°ëŠ¥ê³¼ ìˆ˜ì‹  ê¸°ëŠ¥ì„ ë™ì‹œì— êµ¬í˜„í•˜ê¸° ìœ„í•œ ì“°ë ˆë“œ ê¸°ëŠ¥
  * **/
 public class ClientGui extends JPanel implements ActionListener, Runnable{
 	JFrame mainf;
@@ -39,17 +39,17 @@ public class ClientGui extends JPanel implements ActionListener, Runnable{
 	public ClientGui(JFrame mainf, String ip, int port) {
 		this.mainf = mainf;
 		System.out.println(this.getClass().getName() + "1. Start-->");
-		inits();															// È­¸é ±¸¼º
+		inits();															// í™”ë©´ êµ¬ì„±
 		try {
-			s = new Socket(ip, port);							// ¼ÒÄÏ ¿¬°á
+			s = new Socket(ip, port);							// ì†Œì¼“ ì—°ê²°
 		} catch (Exception e) {
-			System.out.println("¼ÒÄÏ »ı¼º ½ÇÆĞ");
+			System.out.println("ì†Œì¼“ ìƒì„± ì‹¤íŒ¨");
 		}
 		System.out.println(this.getClass().getName() + "2. Socket-->");
 	}
 	
 	/**Component initialization*/
-	// ÇÁ·Î±×·¥ È­¸é ±¸¼º
+	// í”„ë¡œê·¸ë¨ í™”ë©´ êµ¬ì„±
 	private void inits() {
 		mainf.setTitle(this.getClass().getName());
 		this.setSize(new Dimension(400, 300));
@@ -57,7 +57,7 @@ public class ClientGui extends JPanel implements ActionListener, Runnable{
 		pan1.setLayout(new BorderLayout());
 		pan2.setLayout(new BorderLayout());
 		
-		tf1.setText("¸ÕÀú ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		tf1.setText("ë¨¼ì € ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		this.add(pan1, BorderLayout.CENTER);
 		this.add(pan2, BorderLayout.SOUTH);
 		pan1.add(area1, BorderLayout.CENTER);
@@ -68,7 +68,7 @@ public class ClientGui extends JPanel implements ActionListener, Runnable{
 		this.tf1.requestFocus();
 	}
 	
-	// ¸Ş½ÃÁö¸¦ º¸³»¸é »õ·Î°íÄ§
+	// ë©”ì‹œì§€ë¥¼ ë³´ë‚´ë©´ ìƒˆë¡œê³ ì¹¨
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
@@ -78,7 +78,7 @@ public class ClientGui extends JPanel implements ActionListener, Runnable{
 		this.tf1.setText("");
 	}
 	
-	// ¸Ş½ÃÁö ÀĞ°í ¾²´Â °´Ã¼ »ı¼ºÇØ¼­ ¼Û¼ö½Å
+	// ë©”ì‹œì§€ ì½ê³  ì“°ëŠ” ê°ì²´ ìƒì„±í•´ì„œ ì†¡ìˆ˜ì‹ 
 	public void giveAndTake() {
 		try {
 			System.out.println(this.getClass().getName() + "3. inputOutput-->");
@@ -91,7 +91,7 @@ public class ClientGui extends JPanel implements ActionListener, Runnable{
 		}
 	}
 	
-	// ÀÔ·ÂµÈ ¸Ş½ÃÁö È­¸é¿¡ Ãâ·ÂÇÏ±â
+	// ì…ë ¥ëœ ë©”ì‹œì§€ í™”ë©´ì— ì¶œë ¥í•˜ê¸°
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub

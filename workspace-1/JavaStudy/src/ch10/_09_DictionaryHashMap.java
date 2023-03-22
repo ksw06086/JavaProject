@@ -6,43 +6,43 @@ import java.util.Scanner;
 
 public class _09_DictionaryHashMap {
 	public static void main(String[] args) {
-		// ¿µ¾î»çÀü ÀÛ¼ºÇÏ±â
+		// ì˜ì–´ì‚¬ì „ ì‘ì„±í•˜ê¸°
 		/**
-		 * ÀÔ·Â : word
-		 * ÇĞ±³ : school
-		 * ±âÀû : miracle
-		 * ´Ş·Â : calendar
-		 * ¹° : water
-		 * ²É : flower
+		 * ì…ë ¥ : word
+		 * í•™êµ : school
+		 * ê¸°ì  : miracle
+		 * ë‹¬ë ¥ : calendar
+		 * ë¬¼ : water
+		 * ê½ƒ : flower
 		 * */
 		HashMap<String, String> dictionary = new HashMap<String, String>();
-		dictionary.put("school", "ÇĞ±³");
-		dictionary.put("miracle", "±âÀû");
-		dictionary.put("calendar", "´Ş·Â");
-		dictionary.put("water", "¹°");
-		dictionary.put("flower", "²É");
+		dictionary.put("school", "í•™êµ");
+		dictionary.put("miracle", "ê¸°ì ");
+		dictionary.put("calendar", "ë‹¬ë ¥");
+		dictionary.put("water", "ë¬¼");
+		dictionary.put("flower", "ê½ƒ");
 		Scanner sc = new Scanner(System.in);
 		while(true) {
-			System.out.println("== ´Ü¾î °Ë»ö : S, Á¾·á : Q, »çÀü¿¡ ÀÖ´Â ´Ü¾î¿Í ¶æ ¸ñ·Ïº¸±â : A, ´Ü¾î µî·Ï : I ===");
+			System.out.println("== ë‹¨ì–´ ê²€ìƒ‰ : S, ì¢…ë£Œ : Q, ì‚¬ì „ì— ìˆëŠ” ë‹¨ì–´ì™€ ëœ» ëª©ë¡ë³´ê¸° : A, ë‹¨ì–´ ë“±ë¡ : I ===");
 			String swit = sc.next();
 			if(swit.equals("Q") || swit.equals("q")) {
 				return ;
 			} else if(swit.equals("S") || swit.equals("s")) {
-				System.out.print("Ã£°í ½ÍÀº ´Ü¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä. Á¾·á´Â QÀÔ´Ï´Ù. : ");
+				System.out.print("ì°¾ê³  ì‹¶ì€ ë‹¨ì–´ë¥¼ ì…ë ¥í•˜ì„¸ìš”. ì¢…ë£ŒëŠ” Qì…ë‹ˆë‹¤. : ");
 				String word = sc.next();
 				if(word.equals("Q") || word.equals("q")) {
 					return ;
 				}
 				if(dictionary.containsKey(word)) {
-					System.out.println(word + "ÀÇ ÀÇ¹Ì´Â " + dictionary.get(word) + "ÀÔ´Ï´Ù.");
+					System.out.println(word + "ì˜ ì˜ë¯¸ëŠ” " + dictionary.get(word) + "ì…ë‹ˆë‹¤.");
 				} else {
-					System.out.println("»çÀü¿¡ " + word + "ÀÇ ÀÇ¹Ì°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+					System.out.println("ì‚¬ì „ì— " + word + "ì˜ ì˜ë¯¸ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 				}
 			} else if(swit.equals("A") || swit.equals("a")) {
 				if(dictionary.isEmpty()) {
-					System.out.println("¿µ¾î»çÀü¿¡ ´Ü¾î°¡ µî·ÏµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù.");
+					System.out.println("ì˜ì–´ì‚¬ì „ì— ë‹¨ì–´ê°€ ë“±ë¡ë˜ì–´ ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
 				} else {
-					System.out.println("===== ¿µ¾î ´Ü¾î ¸ñ·Ï ===");
+					System.out.println("===== ì˜ì–´ ë‹¨ì–´ ëª©ë¡ ===");
 					Iterator<String> ir = dictionary.keySet().iterator();
 					while (ir.hasNext()) {
 						String key = ir.next();
@@ -50,19 +50,19 @@ public class _09_DictionaryHashMap {
 					}
 				}
 			} else if(swit.equals("I") || swit.equals("i")) {
-				System.out.println("µî·ÏÇÏ°í ½ÍÀº ´Ü¾î¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+				System.out.println("ë“±ë¡í•˜ê³  ì‹¶ì€ ë‹¨ì–´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 				String eng = sc.next();
 				if(dictionary.containsKey(eng)) {
-					System.out.println("¶È°°Àº ´Ü¾î°¡ ÀÌ¹Ì µî·ÏµÇ¾î ÀÖ½À´Ï´Ù.");
+					System.out.println("ë˜‘ê°™ì€ ë‹¨ì–´ê°€ ì´ë¯¸ ë“±ë¡ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
 					continue;
 				} else {
-					System.out.println("µî·ÏÇÒ ´Ü¾îÀÇ ¶æÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+					System.out.println("ë“±ë¡í•  ë‹¨ì–´ì˜ ëœ»ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 					String value = sc.next();
 					dictionary.put(eng, value);
-					System.out.println(eng + "°¡ ¿µ¾î»çÀü¿¡ µî·ÏµÇ¾ú½À´Ï´Ù.");
+					System.out.println(eng + "ê°€ ì˜ì–´ì‚¬ì „ì— ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				}
 			} else {
-				System.out.println("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			}
 			 
 		}

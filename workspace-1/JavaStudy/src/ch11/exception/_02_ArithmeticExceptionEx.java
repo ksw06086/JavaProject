@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class _02_ArithmeticExceptionEx {
 	public static void main(String[] args) {
-		System.out.println("=== µÎ°³ÀÇ Á¤¼ö¸¦ ÀÔ·Â ===");
+		System.out.println("=== ë‘ê°œì˜ ì •ìˆ˜ë¥¼ ì…ë ¥ ===");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Ã¹¹øÂ° °ª ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì§¸ ê°’ ì…ë ¥ : ");
 		int num1 = sc.nextInt();
-		System.out.print("µÎ¹øÂ° °ª ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì§¸ ê°’ ì…ë ¥ : ");
 		int num2 = sc.nextInt();
 		try {
-			System.out.println("¸ò : " + (num1/num2));
-			System.out.println("³ª¸ÓÁö : " + (num1%num2));
+			System.out.println("ëª« : " + (num1/num2));
+			System.out.println("ë‚˜ë¨¸ì§€ : " + (num1%num2));
 		} catch (Exception e) {
-			System.out.println("Àå¿ø¿µ Â¯ ¿¹»Ú´Ù!!!!!!!!!!!!");
+			System.out.println("ì¥ì›ì˜ ì§± ì˜ˆì˜ë‹¤!!!!!!!!!!!!");
 			System.out.println(e.getMessage());
 		}
-		System.out.println("Á¤»óÁ¾·á");
+		System.out.println("ì •ìƒì¢…ë£Œ");
 	}
 }

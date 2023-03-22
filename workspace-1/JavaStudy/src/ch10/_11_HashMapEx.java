@@ -7,24 +7,24 @@ public class _11_HashMapEx {
 	public static void main(String[] args) {
 		Map<String, _05_Member> map = new HashMap<>();
 		
-		// hashMap Ãß°¡
-		map.put("M001", new _05_Member(1, "È«±æµ¿"));
-		map.put("M002", new _05_Member(2, "ÀÌÁö¹Î"));
-		map.put("M003", new _05_Member(3, "»ç¶ûµÕÀÌ"));
+		// hashMap ì¶”ê°€
+		map.put("M001", new _05_Member(1, "í™ê¸¸ë™"));
+		map.put("M002", new _05_Member(2, "ì´ì§€ë¯¼"));
+		map.put("M003", new _05_Member(3, "ì‚¬ë‘ë‘¥ì´"));
 		
 		System.out.println(map);
 		
-		// ¸â¹ö»èÁ¦
+		// ë©¤ë²„ì‚­ì œ
 		map.remove("M002");
 		System.out.println(map);
 		
-		//¸â¹öÃß°¡
-		map.put("M003", new _05_Member(3, "¸¶ÀÌÅ¬"));
+		//ë©¤ë²„ì¶”ê°€
+		map.put("M003", new _05_Member(3, "ë§ˆì´í´"));
 		System.out.println(map);
 		
-		//Á¶È¸
-		// Map.Entry<String, _05_Member> str => ÀÎÅÍÆäÀÌ½º<key Å¸ÀÔ, value Å¸ÀÔ> º¯¼ö¸í
-		// entrySet() ¸Ş¼Òµå : mapÀ» ±¸¼ºÇÏ´Â ±âº»´ÜÀ§ÀÎ entry¸¦ ÀÚ¹Ù À¯Æ¿ ¼ÂÀÇ ÇüÅÂ·Î º¯È¯
+		//ì¡°íšŒ
+		// Map.Entry<String, _05_Member> str => ì¸í„°í˜ì´ìŠ¤<key íƒ€ì…, value íƒ€ì…> ë³€ìˆ˜ëª…
+		// entrySet() ë©”ì†Œë“œ : mapì„ êµ¬ì„±í•˜ëŠ” ê¸°ë³¸ë‹¨ìœ„ì¸ entryë¥¼ ìë°” ìœ í‹¸ ì…‹ì˜ í˜•íƒœë¡œ ë³€í™˜
 		for (Map.Entry<String, _05_Member> str : map.entrySet()) {
 			String key = str.getKey();
 			_05_Member value = str.getValue();

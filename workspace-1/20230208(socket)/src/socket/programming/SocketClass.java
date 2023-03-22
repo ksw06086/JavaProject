@@ -2,37 +2,37 @@ package socket.programming;
 
 public class SocketClass {
 /**
- * <Å¬·¡½º>
- * - Socket : ¼­¹ö¿Í Åë½ÅÇÏ±â À§ÇÑ Å¬¶óÀÌ¾ğÆ® ÇÁ·Î±×·¥¿¡¼­ »ç¿ëÇÏ´Â ¼ÒÄÏ(¼­¹öÀÇ IPÁÖ¼Ò, Æ÷Æ®¹øÈ£¸¦ ÀÎ¼ö·Î ¹ŞÀ½)
- * <»ı¼ºÀÚ>
- * - Socket(InetAddress address, int port)							- ¼ÒÄÏÀ» »ı¼ºÇÏ¿© ÁöÁ¤µÈ IPÁÖ¼Ò¿Í Æ÷Æ®¹øÈ£¿¡ ¿¬°áÇÑ´Ù.
- * - Socket(String host, int port)										- ¼ÒÄÏÀ» »ı¼ºÇÏ¿© ÁöÁ¤µÈ È£½ºÆ®¿Í Æ÷Æ®¹øÈ£¿¡ ¿¬°áÇÑ´Ù.				
- * <¸Ş¼Òµå>
- * - void close()																	- ¼ÒÄÏÀ» ´İ´Â´Ù.
- * - void connect(SocketAddress endpoint)							- ¼­¹ö¿¡ ¿¬°áÇÑ´Ù.
- * - InetAddress getInetAddress()										- ¿¬°áÇÑ ¼­¹öÀÇ ÁÖ¼Ò ¹İÈ¯
- * - InputStream getInputStream()										- ¼ÒÄÏ¿¡ ´ëÇÑ ÀÔ·Â ½ºÆ®¸² ¹İÈ¯
- * - InetAddress getLocalAddress()										- ¼ÒÄÏÀÌ ¿¬°áµÈ ·ÎÄÃ ÁÖ¼Ò ¹İÈ¯
- * - int getLocalPort()															- ¼ÒÄÏÀÌ ¿¬°áµÈ ·ÎÄÃ Æ÷Æ® ¹øÈ£ ¹İÈ¯
- * - int getPort()																	- ¼ÒÄÏÀÌ ¿¬°áµÈ ¼­¹öÀÇ Æ÷Æ® ¹øÈ£ ¹İÈ¯
- * - OutputStream getOutputStream()									- ¼ÒÄÏ¿¡ ´ëÇÑ Ãâ·Â ½ºÆ®¸² ¹İÈ¯
- * - boolean isBound()														- ¼ÒÄÏÀÌ ·ÎÄÃ ÁÖ¼Ò¿¡ ¿¬°áµÇ¾î ÀÖÀ¸¸é true ¹İÈ¯
- * - boolean isConnected()													- ¼ÒÄÏÀÌ ¼­¹ö¿¡ ¿¬°áµÇ¾î ÀÖÀ¸¸é true ¹İÈ¯
- * - boolean isClosed()														- ¼ÒÄÏÀÌ ´İÇô ÀÖÀ¸¸é true ¹İÈ¯
- * - void setSoTimeout(int timeout)									- µ¥ÀÌÅÍ ÀĞ±â Å¸ÀÓ¾Æ¿ô ½Ã°£ ÁöÁ¤. 0ÀÌ¸é Å¸ÀÓ¾Æ¿ô ÇØÁ¦
- * <¹æ¹ı>
- * - (Å¬¶óÀÌ¾ğÆ® ¼ÒÄÏ »ı¼º)
+ * <í´ë˜ìŠ¤>
+ * - Socket : ì„œë²„ì™€ í†µì‹ í•˜ê¸° ìœ„í•œ í´ë¼ì´ì–¸íŠ¸ í”„ë¡œê·¸ë¨ì—ì„œ ì‚¬ìš©í•˜ëŠ” ì†Œì¼“(ì„œë²„ì˜ IPì£¼ì†Œ, í¬íŠ¸ë²ˆí˜¸ë¥¼ ì¸ìˆ˜ë¡œ ë°›ìŒ)
+ * <ìƒì„±ì>
+ * - Socket(InetAddress address, int port)							- ì†Œì¼“ì„ ìƒì„±í•˜ì—¬ ì§€ì •ëœ IPì£¼ì†Œì™€ í¬íŠ¸ë²ˆí˜¸ì— ì—°ê²°í•œë‹¤.
+ * - Socket(String host, int port)										- ì†Œì¼“ì„ ìƒì„±í•˜ì—¬ ì§€ì •ëœ í˜¸ìŠ¤íŠ¸ì™€ í¬íŠ¸ë²ˆí˜¸ì— ì—°ê²°í•œë‹¤.				
+ * <ë©”ì†Œë“œ>
+ * - void close()																	- ì†Œì¼“ì„ ë‹«ëŠ”ë‹¤.
+ * - void connect(SocketAddress endpoint)							- ì„œë²„ì— ì—°ê²°í•œë‹¤.
+ * - InetAddress getInetAddress()										- ì—°ê²°í•œ ì„œë²„ì˜ ì£¼ì†Œ ë°˜í™˜
+ * - InputStream getInputStream()										- ì†Œì¼“ì— ëŒ€í•œ ì…ë ¥ ìŠ¤íŠ¸ë¦¼ ë°˜í™˜
+ * - InetAddress getLocalAddress()										- ì†Œì¼“ì´ ì—°ê²°ëœ ë¡œì»¬ ì£¼ì†Œ ë°˜í™˜
+ * - int getLocalPort()															- ì†Œì¼“ì´ ì—°ê²°ëœ ë¡œì»¬ í¬íŠ¸ ë²ˆí˜¸ ë°˜í™˜
+ * - int getPort()																	- ì†Œì¼“ì´ ì—°ê²°ëœ ì„œë²„ì˜ í¬íŠ¸ ë²ˆí˜¸ ë°˜í™˜
+ * - OutputStream getOutputStream()									- ì†Œì¼“ì— ëŒ€í•œ ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ë°˜í™˜
+ * - boolean isBound()														- ì†Œì¼“ì´ ë¡œì»¬ ì£¼ì†Œì— ì—°ê²°ë˜ì–´ ìˆìœ¼ë©´ true ë°˜í™˜
+ * - boolean isConnected()													- ì†Œì¼“ì´ ì„œë²„ì— ì—°ê²°ë˜ì–´ ìˆìœ¼ë©´ true ë°˜í™˜
+ * - boolean isClosed()														- ì†Œì¼“ì´ ë‹«í˜€ ìˆìœ¼ë©´ true ë°˜í™˜
+ * - void setSoTimeout(int timeout)									- ë°ì´í„° ì½ê¸° íƒ€ì„ì•„ì›ƒ ì‹œê°„ ì§€ì •. 0ì´ë©´ íƒ€ì„ì•„ì›ƒ í•´ì œ
+ * <ë°©ë²•>
+ * - (í´ë¼ì´ì–¸íŠ¸ ì†Œì¼“ ìƒì„±)
  * + Socket CilentSocket = new Socket("150.150.1.1", "8080");
- * - (³×Æ®¿öÅ©¸¦ ÅëÇÑ µ¥ÀÌÅÍ ÀÔÃâ·Â ½ºÆ®¸² »ı¼º)
+ * - (ë„¤íŠ¸ì›Œí¬ë¥¼ í†µí•œ ë°ì´í„° ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±)
  * + BufferedReader In = new  BufferedReader(new InputStreamReader(ClientSocket.getInputStream()));
  * + BufferedWriter Out = new BufferedWriter(new OutputStreamWriter(CilentSocket.getOutputStream()));
- * - (Å¬¶óÀÌ¾ğÆ®¿¡¼­ ¼­¹ö·Î µ¥ÀÌÅÍ Ãâ·Â)
+ * - (í´ë¼ì´ì–¸íŠ¸ì—ì„œ ì„œë²„ë¡œ ë°ì´í„° ì¶œë ¥)
  * + Out.write("Good Morning!");
- * + Out.flush();									// ½ºÆ®¸²¿¡ ³²¾ÆÀÖÀ» ¼ö ÀÖ´Â µ¥ÀÌÅÍ¸¦ ¸ğµÎ ³²±âÁö ¾Ê°í Ãâ·Â
- * - (¼­¹ö·ÎºÎÅÍÀÇ µ¥ÀÌÅÍ ÀÔ·Â)
+ * + Out.flush();									// ìŠ¤íŠ¸ë¦¼ì— ë‚¨ì•„ìˆì„ ìˆ˜ ìˆëŠ” ë°ì´í„°ë¥¼ ëª¨ë‘ ë‚¨ê¸°ì§€ ì•Šê³  ì¶œë ¥
+ * - (ì„œë²„ë¡œë¶€í„°ì˜ ë°ì´í„° ì…ë ¥)
  * + int a = In.read();
  * + String line = In.readLine();
- * - (¼­¹ö¿ÍÀÇ ¿¬°á Á¾·á)
+ * - (ì„œë²„ì™€ì˜ ì—°ê²° ì¢…ë£Œ)
  * + ClientSocket.close();
  * 
  * 

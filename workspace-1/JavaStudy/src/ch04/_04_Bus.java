@@ -1,25 +1,25 @@
 package ch04;
 
 public class _04_Bus {
-	// ¸â¹öº¯¼ö
-	int busNumber;				// ¹ö½º ¹øÈ£
-	int passengerCount;		// ½Â°´ ¼ö
-	int money;					// ¹ö½º ¼öÀÔ
+	// ë©¤ë²„ë³€ìˆ˜
+	int busNumber;				// ë²„ìŠ¤ ë²ˆí˜¸
+	int passengerCount;		// ìŠ¹ê° ìˆ˜
+	int money;					// ë²„ìŠ¤ ìˆ˜ì…
 	
 	public _04_Bus() {}
 	public _04_Bus(int busNumber) {
 		this.busNumber = busNumber;
 	}
 	
-	// ¸â¹ö¸Ş¼Òµå
-	// ¹ö½º¸¦ Å¸¸é ¹ö½º ¼öÀÔ Áõ°¡, ½Â°´ ¼ö Áõ°¡
+	// ë©¤ë²„ë©”ì†Œë“œ
+	// ë²„ìŠ¤ë¥¼ íƒ€ë©´ ë²„ìŠ¤ ìˆ˜ì… ì¦ê°€, ìŠ¹ê° ìˆ˜ ì¦ê°€
 	public void take(int money) {
-		this.money += money;				// ¹ö½º¼öÀÔ Áõ°¡
-		this.passengerCount++;			// ½Â°´ ¼ö Áõ°¡
+		this.money += money;				// ë²„ìŠ¤ìˆ˜ì… ì¦ê°€
+		this.passengerCount++;			// ìŠ¹ê° ìˆ˜ ì¦ê°€
 	}
-	// Ãâ·Â Á¤º¸
+	// ì¶œë ¥ ì •ë³´
 	public void showInfo() {
-		System.out.println(busNumber + "¹øÀÇ ½Â°´Àº " + passengerCount + "¸í");
-		System.out.println("¼öÀÔÀº " + money + "¿øÀÔ´Ï´Ù.");
+		System.out.println(busNumber + "ë²ˆì˜ ìŠ¹ê°ì€ " + passengerCount + "ëª…");
+		System.out.println("ìˆ˜ì…ì€ " + money + "ì›ì…ë‹ˆë‹¤.");
 	}
 }

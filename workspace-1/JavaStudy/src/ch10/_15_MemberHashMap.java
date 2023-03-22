@@ -5,30 +5,30 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class _15_MemberHashMap {
-	// HashMap ¼±¾ğ
-	// Map<key µ¥ÀÌÅÍÅ¸ÀÔ, value µ¥ÀÌÅÍÅ¸ÀÔ> hashmap;
+	// HashMap ì„ ì–¸
+	// Map<key ë°ì´í„°íƒ€ì…, value ë°ì´í„°íƒ€ì…> hashmap;
 	private Map<Integer, _05_Member> hashmap;
 	
 	public _15_MemberHashMap() {
 		hashmap = new HashMap<Integer, _05_Member>();
 	}
 	
-	// È¸¿øÁ¤º¸ Ãß°¡
+	// íšŒì›ì •ë³´ ì¶”ê°€
 	public void addMember(_05_Member member) {
 		hashmap.put(member.getMemberId(), member);
 	}
 	
-	// È¸¿øÁ¤º¸ »èÁ¦
+	// íšŒì›ì •ë³´ ì‚­ì œ
 	public boolean removeMember(int memberID) {
 		if(hashmap.containsKey(memberID)) {
 			hashmap.remove(memberID);
 			return true;
 		}
-		System.out.println(memberID + "°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+		System.out.println(memberID + "ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		return false;
 	}
 	
-	// ÀüÃ¼ È¸¿øÁ¤º¸ Ãâ·Â
+	// ì „ì²´ íšŒì›ì •ë³´ ì¶œë ¥
 	public void showAllMember() {
 		Iterator<Integer> iterator = hashmap.keySet().iterator();
 		while (iterator.hasNext()) {

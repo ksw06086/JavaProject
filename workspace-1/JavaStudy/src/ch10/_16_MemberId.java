@@ -1,8 +1,8 @@
 package ch10;
 
 public class _16_MemberId {
-	private int memberId;						// È¸¿ø ¾ÆÀÌµğ
-	private String memberName;			// È¸¿øÀÌ¸§
+	private int memberId;				// íšŒì› ì•„ì´ë””
+	private String memberName;			// íšŒì›ì´ë¦„
 	
 	public _16_MemberId(int memberId, String memberName) {
 		this.memberId = memberId;
@@ -27,7 +27,7 @@ public class _16_MemberId {
 	
 	@Override
 	public String toString() {
-		return memberName + " È¸¿ø´ÔÀÇ ¾ÆÀÌµğ´Â " + memberId + "ÀÔ´Ï´Ù.";
+		return memberName + " íšŒì›ë‹˜ì˜ ì•„ì´ë””ëŠ” " + memberId + "ì…ë‹ˆë‹¤.";
 	}
 	
 }

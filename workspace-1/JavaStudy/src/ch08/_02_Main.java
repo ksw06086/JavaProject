@@ -4,23 +4,23 @@ import java.io.IOException;
 
 public class _02_Main {
 	public static void main(String[] args) throws IOException{
-		System.out.println("ÀüÈ­ »ó´ã ÇÒ´ç ¹æ½ÄÀ» ¼±ÅÃÇÏ¼¼¿ä.");
-		System.out.println("R : ÇÑ¸í¾¿ Â÷·Ê·Î ÇÒ´ç");
-		System.out.println("L : ½¬°í ÀÖ°Å³ª ´ë±â°¡ °¡Àå ÀûÀº »ó´ã¿ø¿¡°Ô ÇÒ´ç");
-		System.out.println("P : ¿ì¼±¼øÀ§°¡ ³ôÀº °í°´ ¸ÕÀú ÇÒ´ç");
+		System.out.println("ì „í™” ìƒë‹´ í• ë‹¹ ë°©ì‹ì„ ì„ íƒí•˜ì„¸ìš”.");
+		System.out.println("R : í•œëª…ì”© ì°¨ë¡€ë¡œ í• ë‹¹");
+		System.out.println("L : ì‰¬ê³  ìˆê±°ë‚˜ ëŒ€ê¸°ê°€ ê°€ì¥ ì ì€ ìƒë‹´ì›ì—ê²Œ í• ë‹¹");
+		System.out.println("P : ìš°ì„ ìˆœìœ„ê°€ ë†’ì€ ê³ ê° ë¨¼ì € í• ë‹¹");
 		
-		// ÇÒ´ç ¹æ½ÄÀ» ÀÔ·Â¹Ş¾Æ ch º¯¼ö¿¡ ´ëÀÔ
-		int ch = System.in.read();	// ¹İº¹¹®À» »ç¿ëÇÏ¸é ÀÚµ¿ ÀÔ·ÂÀÌ µÇ°í ÇÑÀÚ¸®¸¸ ÀÔ·ÂÀ» ¹ŞÀ½
+		// í• ë‹¹ ë°©ì‹ì„ ì…ë ¥ë°›ì•„ ch ë³€ìˆ˜ì— ëŒ€ì…
+		int ch = System.in.read();	// ë°˜ë³µë¬¸ì„ ì‚¬ìš©í•˜ë©´ ìë™ ì…ë ¥ì´ ë˜ê³  í•œìë¦¬ë§Œ ì…ë ¥ì„ ë°›ìŒ
 		_02_SchedulerImpl scheduler = null;
 		System.out.println(ch);
 		if(ch == 'R' || ch == 'r') {
-			scheduler = new _02_RoundRobin();		// ´ÙÇü¼º Àû¿ë
+			scheduler = new _02_RoundRobin();		// ë‹¤í˜•ì„± ì ìš©
 		} else if(ch == 'L' || ch == 'l') {
-			scheduler = new _02_LeastJob();		// ´ÙÇü¼º Àû¿ë
+			scheduler = new _02_LeastJob();		// ë‹¤í˜•ì„± ì ìš©
 		} else if(ch == 'P' || ch == 'p') {
-			scheduler = new _02_PriorityAllocation();		// ´ÙÇü¼º Àû¿ë
+			scheduler = new _02_PriorityAllocation();		// ë‹¤í˜•ì„± ì ìš©
 		} else {
-			System.out.println("Áö¿øµÇÁö ¾Ê´Â ±â´ÉÀÔ´Ï´Ù.");
+			System.out.println("ì§€ì›ë˜ì§€ ì•ŠëŠ” ê¸°ëŠ¥ì…ë‹ˆë‹¤.");
 			return ;
 		}
 		

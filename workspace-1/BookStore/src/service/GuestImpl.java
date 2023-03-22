@@ -20,12 +20,12 @@ import domain.Stock;
 import view.Console;
 
 /**
- * @date				: 2023.02.16.-2023.03.10
- * @author			: ±è¼±¿ì
- * @summary		: °í°´ °ü·Ã ±â´É È£Ãâ ¿ëµµ
+ * @date		: 2023.02.16.-2023.03.10
+ * @author		: ê¹€ì„ ìš°
+ * @summary		: ê³ ê° ê´€ë ¨ ê¸°ëŠ¥ í˜¸ì¶œ ìš©ë„
  */
 public class GuestImpl implements Guest{
-	// ½Ì±ÛÅæ
+	// ì‹±ê¸€í†¤
 	// private static GuestImpl guest = new GuestImpl();
 	
 	public GuestImpl() {}
@@ -34,33 +34,33 @@ public class GuestImpl implements Guest{
 	//	return guest;
 	// }
 	
-	// ListµéÀÇ key¸¦ id·Î Á¦°ø
+	// Listë“¤ì˜ keyë¥¼ idë¡œ ì œê³µ
 	public static String Id;
 	
-	// È¸¿ø ·Î±×ÀÎ
-	@SuppressWarnings("unchecked")					// Å¸ÀÔ Ä³½ºÆÃÀ» ÇÒ ¶§ ¿À·ù°¡ ³¯ ¼ö ÀÖ´Âµ¥ ±×°Å Ã¼Å© ¾ÈÇÏ°Ú´Ù.
+	// íšŒì› ë¡œê·¸ì¸
+	@SuppressWarnings("unchecked")					// íƒ€ì… ìºìŠ¤íŒ…ì„ í•  ë•Œ ì˜¤ë¥˜ê°€ ë‚  ìˆ˜ ìˆëŠ”ë° ê·¸ê±° ì²´í¬ ì•ˆí•˜ê² ë‹¤.
 	@Override
 	public boolean guestLogin() {
-		System.out.print("¼Õ´Ô ID : ");
+		System.out.print("ì†ë‹˜ ID : ");
 		String id = Console.strInput();
-		System.out.print("¼Õ´Ô PW : ");
+		System.out.print("ì†ë‹˜ PW : ");
 		String pw = Console.strInput();
 		try {
-			// È¸¿ø°¡ÀÔÀ» ÅëÇØ »ı¼ºµÈ ÆÄÀÏÀ» ÀĞ¾îµå¸²(¿ªÁ÷·ÄÈ­)
+			// íšŒì›ê°€ì…ì„ í†µí•´ ìƒì„±ëœ íŒŒì¼ì„ ì½ì–´ë“œë¦¼(ì—­ì§ë ¬í™”)
 			FileInputStream fileMemberIn = new FileInputStream("C:\\Users\\Happy\\Downloads\\" + id + ".txt");
 			DataInputStream memberIn = new DataInputStream(fileMemberIn);
 			
-			// ID¶û PASSWORD°¡ ¸Â´ÂÁö È®ÀÎ
+			// IDë‘ PASSWORDê°€ ë§ëŠ”ì§€ í™•ì¸
 			if(id.equals(memberIn.readUTF())) {
 				if(pw.equals(memberIn.readUTF())) {
 					Id = id;
 					System.out.println("=============================");
-					System.out.println("·Î±×ÀÎ µÇ¾ú½À´Ï´Ù.");
+					System.out.println("ë¡œê·¸ì¸ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 					System.out.println("=============================");
 					
-					//È¸¿øÀÌ ±âÁ¸ »ç¿ëÇÑ Àå¹Ù±¸´Ï, ±¸¸Å³»¿ªÀÌ ÀÖ´ÂÁö È®ÀÎÇÔ
-					// listIn : °¢ ¸®½ºÆ® ÆÄÀÏÀ» ÀĞ¾î¿È
-					// cartListin, buyListin : °¢ °´Ã¼¸¦ ºÒ·¯¿È
+					//íšŒì›ì´ ê¸°ì¡´ ì‚¬ìš©í•œ ì¥ë°”êµ¬ë‹ˆ, êµ¬ë§¤ë‚´ì—­ì´ ìˆëŠ”ì§€ í™•ì¸í•¨
+					// listIn : ê° ë¦¬ìŠ¤íŠ¸ íŒŒì¼ì„ ì½ì–´ì˜´
+					// cartListin, buyListin : ê° ê°ì²´ë¥¼ ë¶ˆëŸ¬ì˜´
 					FileInputStream listIn;			
 					try {
 						listIn = new FileInputStream("C:\\Users\\Happy\\Downloads\\" + id + "cartList.out");
@@ -71,7 +71,7 @@ public class GuestImpl implements Guest{
 						Buy.buyList = (HashMap<Integer, Book>) buyListIn.readObject();
 					
 					} catch (FileNotFoundException e) {
-						System.out.println(id+"´ÔÀÇ Ã¹¹æ¹®À» È¯¿µÇÕ´Ï´Ù~!");
+						System.out.println(id+"ë‹˜ì˜ ì²«ë°©ë¬¸ì„ í™˜ì˜í•©ë‹ˆë‹¤~!");
 					} catch (ClassNotFoundException e) {
 						e.printStackTrace();
 					} catch (IOException e) {
@@ -79,78 +79,78 @@ public class GuestImpl implements Guest{
 					}
 					return true;
 				} else {
-					// ºñ¹Ğ¹øÈ£°¡ ¸ÂÁö ¾ÊÀ½
-					System.out.println("ºñ¹Ğ¹øÈ£°¡ ¸ÂÁö ¾Ê½À´Ï´Ù.");
+					// ë¹„ë°€ë²ˆí˜¸ê°€ ë§ì§€ ì•ŠìŒ
+					System.out.println("ë¹„ë°€ë²ˆí˜¸ê°€ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 					return false;
 				}
 			}
-		} catch (FileNotFoundException e) {			// ¾ÆÀÌµğ ÆÄÀÏÀÌ ¾È¸¸µé¾îÁ®ÀÖÀ½
-			System.out.println("Á¸ÀçÇÏ´Â ¾ÆÀÌµğ°¡ ¾Æ´Õ´Ï´Ù.");
+		} catch (FileNotFoundException e) {			// ì•„ì´ë”” íŒŒì¼ì´ ì•ˆë§Œë“¤ì–´ì ¸ìˆìŒ
+			System.out.println("ì¡´ì¬í•˜ëŠ” ì•„ì´ë””ê°€ ì•„ë‹™ë‹ˆë‹¤.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return false;
 	}
 
-	// Àå¹Ù±¸´Ï »èÁ¦
+	// ì¥ë°”êµ¬ë‹ˆ ì‚­ì œ
 	@Override
 	public void cartDel() {
-		// »èÁ¦ÇÒ Ã¥ ÄÚµå ÀÔ·Â
-		System.out.print("»èÁ¦ÇÏ·Á´Â Ã¥ÀÇ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ ÀÌÀü : 0 ] : ");
+		// ì‚­ì œí•  ì±… ì½”ë“œ ì…ë ¥
+		System.out.print("ì‚­ì œí•˜ë ¤ëŠ” ì±…ì˜ ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ ì´ì „ : 0 ] : ");
 		int code = Console.codeInput();
 		
-		// Àå¹Ù±¸´Ï ¾È¿¡ ÀÔ·ÂÇÑ ÄÚµå Ã¥ÀÌ ÀÖ´ÂÁö È®ÀÎ
+		// ì¥ë°”êµ¬ë‹ˆ ì•ˆì— ì…ë ¥í•œ ì½”ë“œ ì±…ì´ ìˆëŠ”ì§€ í™•ì¸
 		if(Cart.cartList.containsKey(code)) {
 			System.out.println("=================================");
-			System.out.println("¸ñ·Ï¿¡¼­ »èÁ¦µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ëª©ë¡ì—ì„œ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			System.out.println("=================================");
 			Cart.cartList.remove(code);
 		} else if(code == 0) {
 			
 		} else {
 			System.out.println("=================================");
-			System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­°¡ Àå¹Ù±¸´Ï¿¡ ÀÖÁö ¾Ê½À´Ï´Ù. ¸ñ·ÏÀ» ´Ù½Ã È®ÀÎÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+			System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œê°€ ì¥ë°”êµ¬ë‹ˆì— ìˆì§€ ì•ŠìŠµë‹ˆë‹¤. ëª©ë¡ì„ ë‹¤ì‹œ í™•ì¸í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 		}
 	}
 
-	// Àå¹Ù±¸´Ï ±¸¸Å
+	// ì¥ë°”êµ¬ë‹ˆ êµ¬ë§¤
 	@Override
 	public void cartBuy() {
-		// Àå¹Ù±¸´Ï ¾È¿¡¼­ ±¸¸ÅÇÒ Ç×¸ñ ÀÔ·Â
-		System.out.print("±¸¸ÅÇÒ Ã¥ÀÇ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+		// ì¥ë°”êµ¬ë‹ˆ ì•ˆì—ì„œ êµ¬ë§¤í•  í•­ëª© ì…ë ¥
+		System.out.print("êµ¬ë§¤í•  ì±…ì˜ ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 		int code = Console.codeInput();
 		
-		// ÀÔ·ÂÇÑ ÄÚµå¿Í ¸Â´Â Ã¥ÀÌ Àå¹Ù±¸´Ï¿¡ ÀÖ´ÂÁö È®ÀÎ
+		// ì…ë ¥í•œ ì½”ë“œì™€ ë§ëŠ” ì±…ì´ ì¥ë°”êµ¬ë‹ˆì— ìˆëŠ”ì§€ í™•ì¸
 		if(Cart.cartList.containsKey(code)) {
-			// ±¸¸ÅÇÒ °³¼ö ÀÔ·Â
-			System.out.println("±¸¸ÅÇÒ Ã¥ÀÇ °³¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+			// êµ¬ë§¤í•  ê°œìˆ˜ ì…ë ¥
+			System.out.println("êµ¬ë§¤í•  ì±…ì˜ ê°œìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 			int count = Console.codeInput();
 			
-			// count°¡ Àå¹Ù±¸´Ï ¼Ó ¼ö·®º¸´Ù ¸¹°Å³ª Àç°í ¼ö·®º¸´Ù ¸¹À» ¶§
+			// countê°€ ì¥ë°”êµ¬ë‹ˆ ì† ìˆ˜ëŸ‰ë³´ë‹¤ ë§ê±°ë‚˜ ì¬ê³  ìˆ˜ëŸ‰ë³´ë‹¤ ë§ì„ ë•Œ
 			if(count > Cart.cartList.get(code).getBookCount()) {
-				System.out.println("ÀÔ·ÂÇÏ½Å ¼ö·®ÀÌ Àå¹Ù±¸´Ï¿¡ ÀÖ´Â ¼ö·®º¸´Ù ¸¹½À´Ï´Ù. ¸ñ·ÏÀ» ´Ù½Ã È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+				System.out.println("ì…ë ¥í•˜ì‹  ìˆ˜ëŸ‰ì´ ì¥ë°”êµ¬ë‹ˆì— ìˆëŠ” ìˆ˜ëŸ‰ë³´ë‹¤ ë§ìŠµë‹ˆë‹¤. ëª©ë¡ì„ ë‹¤ì‹œ í™•ì¸í•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 			} else if(	count > Stock.stockList.get(code).getBookCount()) {
-				System.out.println("ÀÔ·ÂÇÏ½Å ¼ö·®ÀÌ Àç°í¼ö·®º¸´Ù ¸¹½À´Ï´Ù. " + Stock.stockList.get(code).getBookCount() + 
-						"ÀÌÇÏÀÇ ¼ö·®À» ÀÔ·ÂÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+				System.out.println("ì…ë ¥í•˜ì‹  ìˆ˜ëŸ‰ì´ ì¬ê³ ìˆ˜ëŸ‰ë³´ë‹¤ ë§ìŠµë‹ˆë‹¤. " + Stock.stockList.get(code).getBookCount() + 
+						"ì´í•˜ì˜ ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 			} else {
 				System.out.println("=================================");
-				System.out.println("±¸¸Å¿äÃ» µÇ¾ú½À´Ï´Ù.");
+				System.out.println("êµ¬ë§¤ìš”ì²­ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				System.out.println("=================================");
 				
-				// ±¸¸Å ¿äÃ» ¸ñ·Ï Ãß°¡ 
-				// ÇÑ¹øÀÌ¶óµµ ±¸¸Å¸¦ ¾ÈÇß¾ú´Ù¸é ÇØ´ç IDÀÇ ¸®½ºÆ® °ø°£ »ı¼ºÇÏ±â
+				// êµ¬ë§¤ ìš”ì²­ ëª©ë¡ ì¶”ê°€ 
+				// í•œë²ˆì´ë¼ë„ êµ¬ë§¤ë¥¼ ì•ˆí–ˆì—ˆë‹¤ë©´ í•´ë‹¹ IDì˜ ë¦¬ìŠ¤íŠ¸ ê³µê°„ ìƒì„±í•˜ê¸°
 				if(!Order.idOrderList.containsKey(Id)) {
 					Order.idOrderList.put(Id, Order.getOrderList());
 				}
 				
-				// ÇØ´ç Ã¥À» ÀÌÀü¿¡ ±¸¸Å ¿äÃ»Çß´ø ÀÌ·ÂÀÌ ÀÖÀ¸¸é count++ / ¾øÀ¸¸é new add 
+				// í•´ë‹¹ ì±…ì„ ì´ì „ì— êµ¬ë§¤ ìš”ì²­í–ˆë˜ ì´ë ¥ì´ ìˆìœ¼ë©´ count++ / ì—†ìœ¼ë©´ new add 
 				if(Order.idOrderList.get(Id).containsKey(code)) {
 					Order.idOrderList.get(Id).get(code).addBookCount(count);
 				} else {
 					Order.idOrderList.get(Id).put(code, new Book(Stock.stockList.get(code)));
 				}
 				
-				// Àå¹Ù±¸´Ï/Àç°í¿¡¼­ »èÁ¦
+				// ì¥ë°”êµ¬ë‹ˆ/ì¬ê³ ì—ì„œ ì‚­ì œ
 				// Buy count == Cart count => remove / != => count--
 				if(Cart.cartList.get(code).getBookCount() - count == 0) {
 					Cart.cartList.remove(code);
@@ -168,47 +168,47 @@ public class GuestImpl implements Guest{
 			return ;
 		} else {
 			System.out.println("==============================");
-			System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­°¡ Àå¹Ù±¸´Ï¿¡ ÀÖÁö ¾Ê½À´Ï´Ù. ¸ñ·ÏÀ» ´Ù½Ã È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+			System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œê°€ ì¥ë°”êµ¬ë‹ˆì— ìˆì§€ ì•ŠìŠµë‹ˆë‹¤. ëª©ë¡ì„ ë‹¤ì‹œ í™•ì¸í•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 		}
 	}
 
-	// ¹Ù·Î ±¸¸Å
+	// ë°”ë¡œ êµ¬ë§¤
 	@Override
 	public void nowBuy() {
-		// ±¸¸ÅÇÒ Ã¥ ÄÚµå ÀÔ·Â
-		System.out.print("±¸¸ÅÇÒ Ã¥ÀÇ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+		// êµ¬ë§¤í•  ì±… ì½”ë“œ ì…ë ¥
+		System.out.print("êµ¬ë§¤í•  ì±…ì˜ ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 		int code = Console.codeInput();
 		
-		// Àç°í¿¡ ³²¾ÆÀÖ´Â Ã¥ÀÎÁö È®ÀÎ
+		// ì¬ê³ ì— ë‚¨ì•„ìˆëŠ” ì±…ì¸ì§€ í™•ì¸
 		if(Stock.stockList.containsKey(code)) {
-			// ±¸¸Å ¼ö·® ÀÔ·Â
-			System.out.print("±¸ÇÜÇÒ Ã¥ÀÇ °³¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+			// êµ¬ë§¤ ìˆ˜ëŸ‰ ì…ë ¥
+			System.out.print("êµ¬í–„í•  ì±…ì˜ ê°œìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 			int count = Console.codeInput();
 			
-			// ÀÔ·ÂÇÑ ¼ö·®ÀÌ Àç°í ¼ö·®º¸´Ù Å«Áö È®ÀÎ
+			// ì…ë ¥í•œ ìˆ˜ëŸ‰ì´ ì¬ê³  ìˆ˜ëŸ‰ë³´ë‹¤ í°ì§€ í™•ì¸
 			if(count > Stock.stockList.get(code).getBookCount()) {
-				System.out.println("ÀÔ·ÂÇÏ½Å ¼ö·®ÀÌ Àç°í ¼ö·®º¸´Ù ¸¹½À´Ï´Ù. " 
+				System.out.println("ì…ë ¥í•˜ì‹  ìˆ˜ëŸ‰ì´ ì¬ê³  ìˆ˜ëŸ‰ë³´ë‹¤ ë§ìŠµë‹ˆë‹¤. " 
 						+ Stock.stockList.get(code).getBookCount()
-						+ "ÀÌÇÏÀÇ ¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+						+ "ì´í•˜ì˜ ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			} else {
 				System.out.println("==================================");
-				System.out.println("±¸¸Å¿äÃ» µÇ¾ú½À´Ï´Ù.");
+				System.out.println("êµ¬ë§¤ìš”ì²­ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				System.out.println("==================================");
 				
-				// ±¸¸Å ¿äÃ» ¸ñ·Ï Ãß°¡ 
-				// ÇÑ¹øÀÌ¶óµµ ±¸¸Å¸¦ ¾ÈÇß¾ú´Ù¸é ÇØ´ç IDÀÇ ¸®½ºÆ® °ø°£ »ı¼ºÇÏ±â
+				// êµ¬ë§¤ ìš”ì²­ ëª©ë¡ ì¶”ê°€ 
+				// í•œë²ˆì´ë¼ë„ êµ¬ë§¤ë¥¼ ì•ˆí–ˆì—ˆë‹¤ë©´ í•´ë‹¹ IDì˜ ë¦¬ìŠ¤íŠ¸ ê³µê°„ ìƒì„±í•˜ê¸°
 				if(!Order.idOrderList.containsKey(Id)) {
 					Order.idOrderList.put(Id, Order.getOrderList());
 				}
 				
-				// ÇØ´ç Ã¥À» ÀÌÀü¿¡ ±¸¸Å ¿äÃ»Çß´ø ÀÌ·ÂÀÌ ÀÖÀ¸¸é count++ / ¾øÀ¸¸é new add 
+				// í•´ë‹¹ ì±…ì„ ì´ì „ì— êµ¬ë§¤ ìš”ì²­í–ˆë˜ ì´ë ¥ì´ ìˆìœ¼ë©´ count++ / ì—†ìœ¼ë©´ new add 
 				if(Order.idOrderList.get(Id).containsKey(code)) {
 					Order.idOrderList.get(Id).get(code).addBookCount(count);
 				} else {
 					Order.idOrderList.get(Id).put(code, new Book(Stock.stockList.get(code)));
 				}
 				
-				// Àç°í¿¡¼­ »èÁ¦
+				// ì¬ê³ ì—ì„œ ì‚­ì œ
 				// Buy count == Stock count => remove / != => count--
 				if(Stock.stockList.get(code).getBookCount() == count) {
 					Stock.stockList.remove(code);
@@ -216,57 +216,57 @@ public class GuestImpl implements Guest{
 					Stock.stockList.get(code).subBookCount(count);
 				}
 			}
-		} else if(code == 0) {		// Á¾·á
+		} else if(code == 0) {		// ì¢…ë£Œ
 			return ;
-		} else {							// ÄÚµå Àß¸ø ÀÔ·Â
+		} else {							// ì½”ë“œ ì˜ëª» ì…ë ¥
 			System.out.println("==============================");
-			System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­°¡ Àç°í¿¡ ÀÖÁö ¾Ê½À´Ï´Ù. ¸ñ·ÏÀ» ´Ù½Ã È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+			System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œê°€ ì¬ê³ ì— ìˆì§€ ì•ŠìŠµë‹ˆë‹¤. ëª©ë¡ì„ ë‹¤ì‹œ í™•ì¸í•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 		}
 	}
 
-	// Àå¹Ù±¸´Ï Ãß°¡
+	// ì¥ë°”êµ¬ë‹ˆ ì¶”ê°€
 	@Override
 	public void cartAdd() {
-		// Ãß°¡ÇÒ µµ¼­ ÄÚµå ÀÔ·Â
-		System.out.println("Àå¹Ù±¸´Ï¿¡ Ãß°¡ÇÒ Ã¥ÀÇ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+		// ì¶”ê°€í•  ë„ì„œ ì½”ë“œ ì…ë ¥
+		System.out.println("ì¥ë°”êµ¬ë‹ˆì— ì¶”ê°€í•  ì±…ì˜ ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 		int code = Console.codeInput();
 		
-		// Àç°í¿¡ ÀÖ´Â Ã¥ÀÎÁö È®ÀÎ
+		// ì¬ê³ ì— ìˆëŠ” ì±…ì¸ì§€ í™•ì¸
 		if(Stock.stockList.containsKey(code)) {
-			// Ãß°¡ÇÒ °³¼ö ÀÔ·Â
-			System.out.print("±¸¸ÅÇÒ Ã¥ÀÇ °³¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+			// ì¶”ê°€í•  ê°œìˆ˜ ì…ë ¥
+			System.out.print("êµ¬ë§¤í•  ì±…ì˜ ê°œìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 			int count = Console.codeInput();
 			
-			// ÀÔ·ÂÇÑ ¼ö·®ÀÌ Àç°í ¼ö·®º¸´Ù Å«Áö È®ÀÎ
+			// ì…ë ¥í•œ ìˆ˜ëŸ‰ì´ ì¬ê³  ìˆ˜ëŸ‰ë³´ë‹¤ í°ì§€ í™•ì¸
 			if(count > Stock.stockList.get(code).getBookCount()) {
-				System.out.println("ÀÔ·ÂÇÏ½Å ¼ö·®ÀÌ Àç°í ¼ö·®º¸´Ù ¸¹½À´Ï´Ù. " 
+				System.out.println("ì…ë ¥í•˜ì‹  ìˆ˜ëŸ‰ì´ ì¬ê³  ìˆ˜ëŸ‰ë³´ë‹¤ ë§ìŠµë‹ˆë‹¤. " 
 						+ Stock.stockList.get(code).getBookCount()
-						+ "ÀÌÇÏÀÇ ¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+						+ "ì´í•˜ì˜ ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			} else {
 				System.out.println("==================================");
-				System.out.println("Àå¹Ù±¸´Ï¿¡ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+				System.out.println("ì¥ë°”êµ¬ë‹ˆì— ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				System.out.println("==================================");
 				
-				// Àå¹Ù±¸´Ï ¸ñ·Ï Ãß°¡ 
-				// ÇØ´ç Ã¥À» ÀÌÀü¿¡ Àå¹Ù±¸´Ï¿¡ Ãß°¡ÇÑ ÀÌ·ÂÀÌ ÀÖÀ¸¸é count++ / ¾øÀ¸¸é new add 
+				// ì¥ë°”êµ¬ë‹ˆ ëª©ë¡ ì¶”ê°€ 
+				// í•´ë‹¹ ì±…ì„ ì´ì „ì— ì¥ë°”êµ¬ë‹ˆì— ì¶”ê°€í•œ ì´ë ¥ì´ ìˆìœ¼ë©´ count++ / ì—†ìœ¼ë©´ new add 
 				if(Cart.cartList.containsKey(code)) {
 					Cart.cartList.get(code).addBookCount(count);
 				} else {
 					Cart.cartList.put(code, new Book(Stock.stockList.get(code)));
 				}
 			}
-		} else if(code == 0) {		// Á¾·á
+		} else if(code == 0) {		// ì¢…ë£Œ
 			return ;
-		} else {							// ÄÚµå Àß¸ø ÀÔ·Â
+		} else {							// ì½”ë“œ ì˜ëª» ì…ë ¥
 			System.out.println("==============================");
-			System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­°¡ Àç°í¿¡ ÀÖÁö ¾Ê½À´Ï´Ù. ¸ñ·ÏÀ» ´Ù½Ã È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+			System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œê°€ ì¬ê³ ì— ìˆì§€ ì•ŠìŠµë‹ˆë‹¤. ëª©ë¡ì„ ë‹¤ì‹œ í™•ì¸í•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 		}
 	}
 
-	// ±¸¸Å ¿Ï·á ¸ñ·Ï ¸®½ºÆ®
+	// êµ¬ë§¤ ì™„ë£Œ ëª©ë¡ ë¦¬ìŠ¤íŠ¸
 	public void buyBookList() {
-		System.out.println("*********** ±¸¸Å ¿Ï·á ¸ñ·Ï *********");
-		System.out.println("¹øÈ£\tµµ¼­¸í\tÀúÀÚ\t°¡°İ\t¼ö·®");
+		System.out.println("*********** êµ¬ë§¤ ì™„ë£Œ ëª©ë¡ *********");
+		System.out.println("ë²ˆí˜¸\të„ì„œëª…\tì €ì\tê°€ê²©\tìˆ˜ëŸ‰");
 		System.out.println("**************************");
 		Iterator<Integer> ir = Buy.buyList.keySet().iterator();
 		while (ir.hasNext()) {
@@ -275,45 +275,45 @@ public class GuestImpl implements Guest{
 		}
 	}
 	
-	// È¯ºÒ ¿äÃ»
+	// í™˜ë¶ˆ ìš”ì²­
 	@Override
 	public void refund() {
-		// ±¸¸ÅÇÑ µµ¼­ ¸ñ·Ï Ãâ·Â
+		// êµ¬ë§¤í•œ ë„ì„œ ëª©ë¡ ì¶œë ¥
 		buyBookList();
 		
-		// È¯ºÒÇÒ Ã¥ ÄÚµå ÀÔ·Â
-		System.out.print("È¯ºÒÇÒ Ã¥ÀÇ °³¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+		// í™˜ë¶ˆí•  ì±… ì½”ë“œ ì…ë ¥
+		System.out.print("í™˜ë¶ˆí•  ì±…ì˜ ê°œìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 		int code = Console.codeInput();
 		
-		// Ã¥À» ±¸¸Å Çß¾ú´ÂÁö È®ÀÎ
+		// ì±…ì„ êµ¬ë§¤ í–ˆì—ˆëŠ”ì§€ í™•ì¸
 		if(Buy.buyList.containsKey(code)) {
-			// È¯ºÒÇÒ °³¼ö ÀÔ·Â
-			System.out.print("È¯ºÒÇÒ Ã¥ÀÇ °³¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. [ÀÌÀü : 0] : ");
+			// í™˜ë¶ˆí•  ê°œìˆ˜ ì…ë ¥
+			System.out.print("í™˜ë¶ˆí•  ì±…ì˜ ê°œìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. [ì´ì „ : 0] : ");
 			int count = Console.codeInput();
 			
-			// ÀÔ·ÂÇÑ ¼ö·®ÀÌ ±¸¸ÅÇÑ ¼ö·®º¸´Ù Å«Áö È®ÀÎ
+			// ì…ë ¥í•œ ìˆ˜ëŸ‰ì´ êµ¬ë§¤í•œ ìˆ˜ëŸ‰ë³´ë‹¤ í°ì§€ í™•ì¸
 			if(count > Buy.buyList.get(code).getBookCount()) {
-				System.out.println("ÀÔ·ÂÇÏ½Å ¼ö·®ÀÌ ±¸¸ÅÇß´ø Ã¥ÀÇ ¼ö·®º¸´Ù ¸¹½À´Ï´Ù. " 
+				System.out.println("ì…ë ¥í•˜ì‹  ìˆ˜ëŸ‰ì´ êµ¬ë§¤í–ˆë˜ ì±…ì˜ ìˆ˜ëŸ‰ë³´ë‹¤ ë§ìŠµë‹ˆë‹¤. " 
 						+ Buy.buyList.get(code).getBookCount()
-						+ "ÀÌÇÏÀÇ ¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+						+ "ì´í•˜ì˜ ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			} else {
 				System.out.println("==================================");
-				System.out.println(count + "°³ÀÇ Ã¥À» È¯ºÒ ¿äÃ»ÇÏ¿´½À´Ï´Ù.");
+				System.out.println(count + "ê°œì˜ ì±…ì„ í™˜ë¶ˆ ìš”ì²­í•˜ì˜€ìŠµë‹ˆë‹¤.");
 				System.out.println("==================================");
 				
-				// È¯ºÒ ¿äÃ»¸ñ·Ï Ãß°¡ 
-				// ÇÑ¹øÀÌ¶óµµ È¯ºÒ ¿äÃ»À» ¾ÈÇß¾ú´Ù¸é ÇØ´ç IDÀÇ ¸®½ºÆ® °ø°£ »ı¼ºÇÏ±â
+				// í™˜ë¶ˆ ìš”ì²­ëª©ë¡ ì¶”ê°€ 
+				// í•œë²ˆì´ë¼ë„ í™˜ë¶ˆ ìš”ì²­ì„ ì•ˆí–ˆì—ˆë‹¤ë©´ í•´ë‹¹ IDì˜ ë¦¬ìŠ¤íŠ¸ ê³µê°„ ìƒì„±í•˜ê¸°
 				if(!Refund.idRefundList.containsKey(Id)) {
 					Refund.idRefundList.put(Id, Refund.getRefundList());
 				} 
-				// ÇØ´ç Ã¥À» ÀÌÀü¿¡ È¯ºÒ¿äÃ»ÇÑ ÀÌ·ÂÀÌ ÀÖÀ¸¸é count++ / ¾øÀ¸¸é new add 
+				// í•´ë‹¹ ì±…ì„ ì´ì „ì— í™˜ë¶ˆìš”ì²­í•œ ì´ë ¥ì´ ìˆìœ¼ë©´ count++ / ì—†ìœ¼ë©´ new add 
 				if(Refund.idRefundList.get(Id).containsKey(code)) {
 					Refund.idRefundList.get(Id).get(code).addBookCount(count);
 				} else {
 					Refund.idRefundList.get(Id).put(code, new Book(Buy.buyList.get(code)));
 				}
 				
-				// ±¸¸Å ¸ñ·Ï »èÁ¦
+				// êµ¬ë§¤ ëª©ë¡ ì‚­ì œ
 				// Buy count == Refund count => remove / != => count--
 				if(Buy.buyList.get(code).getBookCount() == count) {
 					Buy.buyList.remove(code);
@@ -321,19 +321,19 @@ public class GuestImpl implements Guest{
 					Buy.buyList.get(code).subBookCount(count);
 				}
 			}
-		} else if(code == 0) {		// Á¾·á
+		} else if(code == 0) {		// ì¢…ë£Œ
 			return ;
-		} else {							// ÄÚµå Àß¸ø ÀÔ·Â
+		} else {							// ì½”ë“œ ì˜ëª» ì…ë ¥
 			System.out.println("==============================");
-			System.out.println(code + "ÀÇ ÄÚµå¸¦ °¡Áø µµ¼­¸¦ ±¸¸ÅÇÏÁö ¾Ê¾Ò½À´Ï´Ù. ¸ñ·ÏÀ» ´Ù½Ã È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+			System.out.println(code + "ì˜ ì½”ë“œë¥¼ ê°€ì§„ ë„ì„œë¥¼ êµ¬ë§¤í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤. ëª©ë¡ì„ ë‹¤ì‹œ í™•ì¸í•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 		}
 	}
 
-	// È¸¿ø°¡ÀÔ
+	// íšŒì›ê°€ì…
 	@Override
 	public void guestJoin() {
 		System.out.println("=============================");
-		System.out.println("È¸¿ø°¡ÀÔ");
+		System.out.println("íšŒì›ê°€ì…");
 		System.out.println("=============================");
 		
 		System.out.print("ID : ");
@@ -341,52 +341,52 @@ public class GuestImpl implements Guest{
 		System.out.print("PW : ");
 		String pw = Console.strInput();
 		try {
-			// ÀÌ¹Ì È¸¿ø°¡ÀÔÇØ¼­ »ı¼ºµÈ ¾ÆÀÌµğ ÆÄÀÏÀÌ ÀÖ´ÂÁö È®ÀÎ
+			// ì´ë¯¸ íšŒì›ê°€ì…í•´ì„œ ìƒì„±ëœ ì•„ì´ë”” íŒŒì¼ì´ ìˆëŠ”ì§€ í™•ì¸
 			FileInputStream fileMemberIn = new FileInputStream("C:\\Users\\Happy\\Downloads\\" + id + ".txt");
-			System.out.println("ÀÌ¹Ì »ç¿ëÇÏ°í ÀÖ´Â ¾ÆÀÌµğ ÀÔ´Ï´Ù.");
+			System.out.println("ì´ë¯¸ ì‚¬ìš©í•˜ê³  ìˆëŠ” ì•„ì´ë”” ì…ë‹ˆë‹¤.");
 			return;
 		} catch (FileNotFoundException e) {
-			// ¾øÀ¸¸é »õ·Ó°Ô È¸¿øÆÄÀÏ »ı¼º(Á÷·ÄÈ­)
+			// ì—†ìœ¼ë©´ ìƒˆë¡­ê²Œ íšŒì›íŒŒì¼ ìƒì„±(ì§ë ¬í™”)
 			try {
-				// FileOutputStream : ¿µ¹®ÀÌ ÀÔ·ÂµÇ¾î ÀÖ´Â ÆÄÀÏ¿¡ ³»¿ëÀ» Ãâ·ÂÇÏ´Â ½ºÆ®¸² Å¬·¡½º
-				// DataOutputStream : ¹®ÀÚ,¹®ÀÚ¿­ÀÌ ¾Æ´Ñ ÀÏ¹İ µ¥ÀÌÅÍ(¼ıÀÚ, Bool, ½Ç¼ö µî)¸¦ Ãâ·ÂÇÒ ¶§ »ç¿ëÇÏ´Â ½ºÆ®¸² Å¬·¡½º
+				// FileOutputStream : ì˜ë¬¸ì´ ì…ë ¥ë˜ì–´ ìˆëŠ” íŒŒì¼ì— ë‚´ìš©ì„ ì¶œë ¥í•˜ëŠ” ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+				// DataOutputStream : ë¬¸ì,ë¬¸ìì—´ì´ ì•„ë‹Œ ì¼ë°˜ ë°ì´í„°(ìˆ«ì, Bool, ì‹¤ìˆ˜ ë“±)ë¥¼ ì¶œë ¥í•  ë•Œ ì‚¬ìš©í•˜ëŠ” ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
 				/*
-				 * ¼ıÀÚÇü ¸Ş¼Òµå : Short, Byte, int, double, float, long
-				 * ¹®ÀÚÇü ¸Ş¼Òµå : UTF, Char
-				 * Á¤ÀÇÇü ¸Ş¼Òµå : Boolean
+				 * ìˆ«ìí˜• ë©”ì†Œë“œ : Short, Byte, int, double, float, long
+				 * ë¬¸ìí˜• ë©”ì†Œë“œ : UTF, Char
+				 * ì •ì˜í˜• ë©”ì†Œë“œ : Boolean
 				 */
 				FileOutputStream fileMemberOut = new FileOutputStream("C:\\Users\\Happy\\Downloads\\" + id + ".txt");
 				DataOutputStream memberOut = new DataOutputStream(fileMemberOut);
 				memberOut.writeUTF(id);
 				memberOut.writeUTF(pw);
 				System.out.println("=============================");
-				System.out.println("È¸¿ø°¡ÀÔ ¿Ï·á");
+				System.out.println("íšŒì›ê°€ì… ì™„ë£Œ");
 				System.out.println("=============================");
-			} catch (FileNotFoundException e1) {			// ÆÄÀÏÀ» Ã£À» ¼ö ¾øÀ» ¶§ ¿¡·¯³­ »óÈ²
+			} catch (FileNotFoundException e1) {			// íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ì„ ë•Œ ì—ëŸ¬ë‚œ ìƒí™©
 				e1.printStackTrace();
-			} catch (IOException e1) {							// ÀÔÃâ·ÂÇÒ ¶§ ¿¡·¯³­ »óÈ²
+			} catch (IOException e1) {							// ì…ì¶œë ¥í•  ë•Œ ì—ëŸ¬ë‚œ ìƒí™©
 				e1.printStackTrace();
 			}
 		}
 	}
 
-	// ·Î±×¾Æ¿ô : Àå¹Ù±¸´Ï¿Í ±¸¸Å¿Ï·á ¸ñ·Ï ÆÄÀÏ¿¡ ÀúÀå
+	// ë¡œê·¸ì•„ì›ƒ : ì¥ë°”êµ¬ë‹ˆì™€ êµ¬ë§¤ì™„ë£Œ ëª©ë¡ íŒŒì¼ì— ì €ì¥
 	@Override
 	public void guestLogOut() {
 		try {
-			// Àå¹Ù±¸´Ï ³»¿ª ÆÄÀÏ¿¡ Ãâ·Â
+			// ì¥ë°”êµ¬ë‹ˆ ë‚´ì—­ íŒŒì¼ì— ì¶œë ¥
 			FileOutputStream fileCart = new FileOutputStream("C:\\Users\\Happy\\Downloads\\" + Id + "cartList.out");
 			ObjectOutputStream cartList = new ObjectOutputStream(fileCart);
-			// ³»¿ªÀÌ ÀÖ´Ù¸é ³Ö±â
+			// ë‚´ì—­ì´ ìˆë‹¤ë©´ ë„£ê¸°
 			if(Cart.cartList != null) {
 				cartList.writeObject(Cart.cartList);
 				Cart.cartList.clear();
 			}
 			
-			// ±¸¸Å ³»¿ª ÆÄÀÏ¿¡ Ãâ·Â
+			// êµ¬ë§¤ ë‚´ì—­ íŒŒì¼ì— ì¶œë ¥
 			FileOutputStream fileBuy = new FileOutputStream("C:\\Users\\Happy\\Downloads\\" + Id + "buyList.out");
 			ObjectOutputStream buyList = new ObjectOutputStream(fileBuy);
-			// ³»¿ªÀÌ ÀÖ´Ù¸é ³Ö±â
+			// ë‚´ì—­ì´ ìˆë‹¤ë©´ ë„£ê¸°
 			if(Buy.buyList != null) {
 				cartList.writeObject(Buy.buyList);
 				Buy.buyList.clear();

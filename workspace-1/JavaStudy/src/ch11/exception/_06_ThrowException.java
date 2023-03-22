@@ -7,7 +7,7 @@ public class _06_ThrowException {
 	public static void main(String[] args) {
 		try {
 			int age = readAge();
-			System.out.println("¶±±¹ ¸ÔÀº È½¼ö : " + age + "¹ø ¸Ô¾úÀ½.");
+			System.out.println("ë–¡êµ­ ë¨¹ì€ íšŸìˆ˜ : " + age + "ë²ˆ ë¨¹ì—ˆìŒ.");
 		} catch (ArithmeticException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
@@ -18,10 +18,10 @@ public class _06_ThrowException {
 	}
 	
 	public static int readAge() throws ArithmeticException {
-		System.out.println("¶±±¹ ¸î¹ø µå¼Ì½À´Ï±î? ");
+		System.out.println("ë–¡êµ­ ëª‡ë²ˆ ë“œì…¨ìŠµë‹ˆê¹Œ? ");
 		int age = sc.nextInt();
 		if(age < 0) {
-			throw new ArithmeticException("³ªÀÌ´Â 0¼¼ ÀÌ»óÀÔ´Ï´Ù.");
+			throw new ArithmeticException("ë‚˜ì´ëŠ” 0ì„¸ ì´ìƒì…ë‹ˆë‹¤.");
 		} else {
 			return age;
 		}

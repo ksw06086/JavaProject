@@ -1,65 +1,65 @@
 package domain;
 
 /*
- * <¿­°ÅÇü>
- * *** »ó¼ö¼±¾ðÀ» ÇÏ´Â °Í°ú ¿­°ÅÇü Å¬·¡½º ÇÏ´Â °Í¿¡ Â÷ÀÌÁ¡ ***
- * - DAY ÀÎÅÍÆäÀÌ½º¿¡ monday = 1
- * - MONTH ÀÎÅÍÆäÀÌ½º¿¡ january = 1
- * ¤± »ó½Ä : ¼­·Î ´Ù¸¥ ÁýÇÕÀÇ »ó¼ö´Â ºñ±³ÇÏ¸é ¾ÈµÊ 
- * ¤¤ ÇÏÁö¸¸ ÀÌ µÑÀ» ºñ±³ÇßÀ» ¶§ ¿¡·¯°¡ ³ªÁö ¾ÊÀ½ -> °´Ã¼¸¦ ÀÎÁöÇÏ°Ô ÇØÁÖ¾î¼­ ÇÏ¸é switch¿¡ Àû¿ëÀ» ¸øÇÔ
- * (ÀåÁ¡)
- * 1) ÄÚµå°¡ ´Ü¼øÇØÁö¸ç °¡µ¶¼ºÀÌ ÁÁÀ½
- * 2) ÀÎ½ºÅÏ½º »ý¼º°ú »ó¼ÓÀ» ¹æÁöÇÔ
- * 3) Å°¿öµå enumÀ» »ç¿ëÇÏ±â ¶§¹®¿¡ ±¸ÇöÀÇ ÀÇµµ°¡ ¿­°ÅÀÓÀ» ºÐ¸íÇÏ°Ô ³ªÅ¸³¾ ¼ö ÀÖÀ½
+ * <ì—´ê±°í˜•>
+ * *** ìƒìˆ˜ì„ ì–¸ì„ í•˜ëŠ” ê²ƒê³¼ ì—´ê±°í˜• í´ëž˜ìŠ¤ í•˜ëŠ” ê²ƒì— ì°¨ì´ì  ***
+ * - DAY ì¸í„°íŽ˜ì´ìŠ¤ì— monday = 1
+ * - MONTH ì¸í„°íŽ˜ì´ìŠ¤ì— january = 1
+ * ã… ìƒì‹ : ì„œë¡œ ë‹¤ë¥¸ ì§‘í•©ì˜ ìƒìˆ˜ëŠ” ë¹„êµí•˜ë©´ ì•ˆë¨ 
+ * ã„´ í•˜ì§€ë§Œ ì´ ë‘˜ì„ ë¹„êµí–ˆì„ ë•Œ ì—ëŸ¬ê°€ ë‚˜ì§€ ì•ŠìŒ -> ê°ì²´ë¥¼ ì¸ì§€í•˜ê²Œ í•´ì£¼ì–´ì„œ í•˜ë©´ switchì— ì ìš©ì„ ëª»í•¨
+ * (ìž¥ì )
+ * 1) ì½”ë“œê°€ ë‹¨ìˆœí•´ì§€ë©° ê°€ë…ì„±ì´ ì¢‹ìŒ
+ * 2) ì¸ìŠ¤í„´ìŠ¤ ìƒì„±ê³¼ ìƒì†ì„ ë°©ì§€í•¨
+ * 3) í‚¤ì›Œë“œ enumì„ ì‚¬ìš©í•˜ê¸° ë•Œë¬¸ì— êµ¬í˜„ì˜ ì˜ë„ê°€ ì—´ê±°ìž„ì„ ë¶„ëª…í•˜ê²Œ ë‚˜íƒ€ë‚¼ ìˆ˜ ìžˆìŒ
  * 
  * **/
 /*
- * ÀÛ¼ºÀÏ : 2023.02.06.
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : Àç±ÍÇÔ¼ö È£Ãâ ½Ã »ó¼ö ÄÚµå·Î »ç¿ë ¿ëµµ
+ * ìž‘ì„±ì¼ : 2023.02.06.
+ * ìž‘ì„±ìž : ê¹€ì„ ìš°
+ * ê°œìš” : ìž¬ê·€í•¨ìˆ˜ í˜¸ì¶œ ì‹œ ìƒìˆ˜ ì½”ë“œë¡œ ì‚¬ìš© ìš©ë„
  * **/
 public enum MenuList {
 	
-	SHOP_LOGIN, 									// ¸ÞÀÎÈ­¸é(·Î±×ÀÎ)
+	SHOP_LOGIN, 			// ë©”ì¸í™”ë©´(ë¡œê·¸ì¸)
 	
-	// °ü¸®ÀÚ 
-	HOST_MENU,									// °ü¸®ÀÚ ¸ÞÀÎ¸Þ´º
+	// ê´€ë¦¬ìž 
+	HOST_MENU,				// ê´€ë¦¬ìž ë©”ì¸ë©”ë‰´
 
-	HOST_STOCK_MENU, 						// Àç°í°ü¸®
-	HOST_BOOK_LIST,							// Ã¥¸ñ·Ï
-	HOST_BOOK_ADD,							// Ã¥Ãß°¡
-	HOST_BOOK_UPDATE,						// Ã¥¼öÁ¤
-	HOST_BOOK_DEL,							// Ã¥»èÁ¦
+	HOST_STOCK_MENU, 		// ìž¬ê³ ê´€ë¦¬
+	HOST_BOOK_LIST,			// ì±…ëª©ë¡
+	HOST_BOOK_ADD,			// ì±…ì¶”ê°€
+	HOST_BOOK_UPDATE,		// ì±…ìˆ˜ì •
+	HOST_BOOK_DEL,			// ì±…ì‚­ì œ
 	
-	HOST_ORDER_MENU,						// ÁÖ¹®°ü¸®
-	HOST_ORDER_LIST,							// ÁÖ¹®¸ñ·Ï
+	HOST_ORDER_MENU,		// ì£¼ë¬¸ê´€ë¦¬
+	HOST_ORDER_LIST,		// ì£¼ë¬¸ëª©ë¡
 
-	HOST_ORDER_CONFIRM,					// °áÁ¦½ÂÀÎ
-	HOST_ORDER_CANCEL,					// °áÁ¦Ãë¼Ò
+	HOST_ORDER_CONFIRM,		// ê²°ì œìŠ¹ì¸
+	HOST_ORDER_CANCEL,		// ê²°ì œì·¨ì†Œ
 
-	HOST_SALE_TOTAL,							// °á»ê
+	HOST_SALE_TOTAL,		// ê²°ì‚°
 	
-	// °í°´
-	GUEST_MENU,									// °í°´ ¸ÞÀÎ¸Þ´º
+	// ê³ ê°
+	GUEST_MENU,				// ê³ ê° ë©”ì¸ë©”ë‰´
 
-	GUEST_GOODS_LIST,						// »óÇ°¸ñ·Ï
-	GUEST_NOWBUY,							// ¹Ù·Î±¸¸Å
-	GUEST_CART_ADD,							// Àå¹Ù±¸´Ï ´ã±â
+	GUEST_GOODS_LIST,		// ìƒí’ˆëª©ë¡
+	GUEST_NOWBUY,			// ë°”ë¡œêµ¬ë§¤
+	GUEST_CART_ADD,			// ìž¥ë°”êµ¬ë‹ˆ ë‹´ê¸°
 
-	GUEST_CART_LIST,							// Àå¹Ù±¸´Ï 
-	GUEST_CART_DEL,							// Àå¹Ù±¸´Ï »èÁ¦
-	GUEST_CART_BUY,							// Àå¹Ù±¸´Ï ±¸¸Å
+	GUEST_CART_LIST,		// ìž¥ë°”êµ¬ë‹ˆ 
+	GUEST_CART_DEL,			// ìž¥ë°”êµ¬ë‹ˆ ì‚­ì œ
+	GUEST_CART_BUY,			// ìž¥ë°”êµ¬ë‹ˆ êµ¬ë§¤
 	
-	GUEST_REFUND,								// È¯ºÒ
+	GUEST_REFUND,			// í™˜ë¶ˆ
 	
-	// È¸¿ø°¡ÀÔ
-	GUEST_JOIN									// È¸¿ø°¡ÀÔ
+	// íšŒì›ê°€ìž…
+	GUEST_JOIN				// íšŒì›ê°€ìž…
 	;
 	
 	
 	/*
-	 * <¿­°ÅÇü¿¡ °ªÀ» ³Ö¾îÁÙ ¶§>
-	 * SHOP_LOGIN("¸ÞÀÎÈ­¸é");
+	 * <ì—´ê±°í˜•ì— ê°’ì„ ë„£ì–´ì¤„ ë•Œ>
+	 * SHOP_LOGIN("ë©”ì¸í™”ë©´");
 	 * 
 	 * private final String value;
 	 * 

@@ -4,16 +4,16 @@ public class _03_EmployeeMain {
 	public static void main(String[] args) {
 		_03_Sawon saw = new _03_Sawon();
 		saw.setSabun(1001);
-		saw.setName("È«±æµ¿");
-		saw.setDeptName("È­Àå½Ç Ã»¼Ò");
+		saw.setName("í™ê¸¸ë™");
+		saw.setDeptName("í™”ì¥ì‹¤ ì²­ì†Œ");
 		saw.setSalary(3000000);
 		saw.setSudang(300000);
 		saw.printInfo();
 		
 		_03_Manager man = new _03_Manager();
 		man.setSabun(101);
-		man.setName("±è¼±¿ì");
-		man.setDeptName("°³¹ßºÎ");
+		man.setName("ê¹€ì„ ìš°");
+		man.setDeptName("ê°œë°œë¶€");
 		man.setSalary(5000000);
 		man.setBonus(900000);
 		man.printInfo();

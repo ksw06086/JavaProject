@@ -2,29 +2,29 @@ package test;
 
 public class Bank {
 	/*
-	 * ÇÔ¼ö : ÇÏ³ªÀÇ ±â´ÉÀ» ¼öÇàÇÏ´Â ÀÏ·ÃÀÇ ÄÚµå
-	 * ¸Ş¼Òµå : Å¬·¡½º ¾È¿¡ Á¤ÀÇµÈ ÇÔ¼ö
-	 * 	ÀÔ·ÂÀ» ¹Ş¾Æ¼­ Ã³¸®°á°ú¸¦ ¹İÈ¯ÇÏ´Â ±â´É
-	 * 	** ¸Ş¼Òµå¸¦ È£ÃâÇÒ ¶§ ¸Ş¼Òµå¸íÀÌ ÀÏÄ¡ÇØ¾ß ÇÏ¸ç, ¸Å°³º¯¼öÀÇ °¹¼ö¿Í typeÀÌ ÀÏÄ¡ÇØ¾ßÇÑ´Ù.
-	 * public ¹İÈ¯ÀÚ·áÇü ¸Ş¼Òµå¸í(¸Å°³º¯¼ö1, ¸Å°³º¯¼ö 2, ..){
-	 * 	¼öÇà¹® 
+	 * í•¨ìˆ˜ : í•˜ë‚˜ì˜ ê¸°ëŠ¥ì„ ìˆ˜í–‰í•˜ëŠ” ì¼ë ¨ì˜ ì½”ë“œ
+	 * ë©”ì†Œë“œ : í´ë˜ìŠ¤ ì•ˆì— ì •ì˜ëœ í•¨ìˆ˜
+	 * 	ì…ë ¥ì„ ë°›ì•„ì„œ ì²˜ë¦¬ê²°ê³¼ë¥¼ ë°˜í™˜í•˜ëŠ” ê¸°ëŠ¥
+	 * 	** ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•  ë•Œ ë©”ì†Œë“œëª…ì´ ì¼ì¹˜í•´ì•¼ í•˜ë©°, ë§¤ê°œë³€ìˆ˜ì˜ ê°¯ìˆ˜ì™€ typeì´ ì¼ì¹˜í•´ì•¼í•œë‹¤.
+	 * public ë°˜í™˜ìë£Œí˜• ë©”ì†Œë“œëª…(ë§¤ê°œë³€ìˆ˜1, ë§¤ê°œë³€ìˆ˜ 2, ..){
+	 * 	ìˆ˜í–‰ë¬¸ 
 	 * }
-	 * ¹İÈ¯ÀÚ·áÇüÀÌ voidÀÏ ¶§¿¡´Â °á°ú°ªÀ» ¹İÈ£³ªÇÏÁö ¾Ê´Â´Ù.
+	 * ë°˜í™˜ìë£Œí˜•ì´ voidì¼ ë•Œì—ëŠ” ê²°ê³¼ê°’ì„ ë°˜í˜¸ë‚˜í•˜ì§€ ì•ŠëŠ”ë‹¤.
 	 * */
 	
-	private String name;									// ÀÌ¸§
-	private String bankName;								// ÀºÇàÀÌ¸§
-	private String accountNumber;						// °èÁÂ¹øÈ£
-	//private int capital;									// ÀÚº»
-	//private int fan;											// ºÎÃ¤
+	private String name;									// ì´ë¦„
+	private String bankName;								// ì€í–‰ì´ë¦„
+	private String accountNumber;						// ê³„ì¢Œë²ˆí˜¸
+	//private int capital;									// ìë³¸
+	//private int fan;											// ë¶€ì±„
 	//private int assets = capital + fan;
-	private int assets;										// ÀÚ»ê
-	private int deposit;										// Ãâ±İ
-	private int withdraw;									// ¿¹±İ
-	private boolean wdValid = true;					// Ã¼Å©Æ÷ÀÎÆ®(checkPoint)
+	private int assets;										// ìì‚°
+	private int deposit;										// ì¶œê¸ˆ
+	private int withdraw;									// ì˜ˆê¸ˆ
+	private boolean wdValid = true;					// ì²´í¬í¬ì¸íŠ¸(checkPoint)
 	
 	public Bank() {
-		System.out.println("±âº»»ı¼ºÀÚ È£Ãâ");
+		System.out.println("ê¸°ë³¸ìƒì„±ì í˜¸ì¶œ");
 	}
 	
 	public Bank(String name, String bankName, String accountNumber, int assets, int deposit, int withdraw) {
@@ -89,10 +89,10 @@ public class Bank {
 		this.withdraw = withdraw;
 	}
 
-	// ±İ¾× check_point
+	// ê¸ˆì•¡ check_point
 	public void inValidCheck(int money) {
 		if(money < 0) {
-			System.out.println("Á¤È®ÇÑ ±İ¾× Á¤º¸°¡ ¾Æ´Õ´Ï´Ù.");
+			System.out.println("ì •í™•í•œ ê¸ˆì•¡ ì •ë³´ê°€ ì•„ë‹™ë‹ˆë‹¤.");
 		} else {
 			System.out.println(money);
 		}
@@ -107,20 +107,20 @@ public class Bank {
 	}
 	
 	public void printBankInfo() {
-		System.out.println("ÀÌ¸§ : " + getName());
-		System.out.println("ÀºÇà¸í : " + getBankName());
-		System.out.println("°èÁÂ¹øÈ£ : " + getAccountNumber());
-		System.out.println("ÀÚ»ê : "); inValidCheck(assets);
-		System.out.println("ÀÔ±İ : "); inValidCheck(deposit);
+		System.out.println("ì´ë¦„ : " + getName());
+		System.out.println("ì€í–‰ëª… : " + getBankName());
+		System.out.println("ê³„ì¢Œë²ˆí˜¸ : " + getAccountNumber());
+		System.out.println("ìì‚° : "); inValidCheck(assets);
+		System.out.println("ì…ê¸ˆ : "); inValidCheck(deposit);
 		if(wdValid) {
-		System.out.print("Ãâ±İ : "); inValidCheck(withdraw);
+		System.out.print("ì¶œê¸ˆ : "); inValidCheck(withdraw);
 		} else {
-			System.out.println("Ãâ±İÇÒ µ·ÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ì¶œê¸ˆí•  ëˆì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
-		System.out.print("³ªÀÇ ÀÜ°í : " ); inValidCheck(assets + deposit - withdraw);
-		System.out.println("ÀÌÀ² : " + calInterest());
-		System.out.println("ÀÌÀ² »êÃâ ±İ¾× : " + (assets + deposit - withdraw) * (calInterest()/100));
-		System.out.print("ÀÌÀ² ÇÕ»ê ÀÜ°í : "); inValidCheck(assets+deposit-withdraw + (int)((assets + deposit - withdraw) * (calInterest()/100)));
+		System.out.print("ë‚˜ì˜ ì”ê³  : " ); inValidCheck(assets + deposit - withdraw);
+		System.out.println("ì´ìœ¨ : " + calInterest());
+		System.out.println("ì´ìœ¨ ì‚°ì¶œ ê¸ˆì•¡ : " + (assets + deposit - withdraw) * (calInterest()/100));
+		System.out.print("ì´ìœ¨ í•©ì‚° ì”ê³  : "); inValidCheck(assets+deposit-withdraw + (int)((assets + deposit - withdraw) * (calInterest()/100)));
 		
 	}
 	

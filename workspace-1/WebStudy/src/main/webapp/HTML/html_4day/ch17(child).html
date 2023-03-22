@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>:first-child, last-child</title>
+<style type="text/css">
+	ul.navi li {
+		list-style-type: none;			/* 불릿 없앰 */
+		display:block;					/* 세로로 영역 만듦 */
+		width:120px;					/* 폭 너비 */
+		height:50px;					/* 높이 */
+		float:left;						/* 왼쪽으로 배치 */
+		text-align:center;				/* 문자 가운데 정렬 */
+		border: 1px solid #0000ff;		/* 테두리 */
+		box-shadow: 1px 1px 1px #bbb;	/* 박스 그림자 */
+	}
+	
+	ul.navi li:first-child{
+		border-top-left-radius: 1em;	/* 모서리 테두리를 둥글게 */
+		border-bottom-left-radius: 1em;
+	}
+	
+	ul.navi li:last-child{
+		border-top-right-radius: 1em;
+		border-bottom-right-radius: 1em;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<ul class = "navi">
+			<li class = "home"><a href="#">HOME</a></li>
+			<li class = "html"><a href="#">HTML</a></li>
+			<li class = "css"><a href="#">CSS</a></li>
+			<li class = "jquery"><a href="#">JQuery</a></li>
+		</ul>
+	</div>
+</body>
+</html>

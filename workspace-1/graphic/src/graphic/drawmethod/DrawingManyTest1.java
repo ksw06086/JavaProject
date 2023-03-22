@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class DrawingManyTest1 extends JFrame {
 	public DrawingManyTest1() {
-		setTitle("µµÇü ±×¸®±â");
+		setTitle("ë‹¤ì–‘í•œ ë„í˜• ê·¸ë¦¬ê¸°");
 		
 		MyPan pan = new MyPan();
 		add("Center",pan);

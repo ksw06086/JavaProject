@@ -1,0 +1,6 @@
+1. JSP 플젝
+
+1) 중복 코드 적용 -> include 처리
+2) 에러페이지 처리 -> web.xml 적용
+3) 폴더 > guest / host / common(공통메뉴)
+4) css, javascript 별도 작성.. 주석 처리

@@ -1,51 +1,51 @@
 package ch08;
 
 /**
- * <ÀÎÅÍÆäÀÌ½º>
- * - ±â´ÉÁ¤ÀÇ¼­(Ç¥ÁØ ÀÛ¾÷ ¸í¼¼¼­)ÀÌ´Ù. - °­Á¦¼º°ú ÅëÀÏ¼º
- * - ¼³°è(¼±¾ð)¿Í ±¸ÇöÀ» ºÐ¸®½ÃÅ°´Â °ÍÀ» °¡´ÉÇÏ°Ô ÇÑ´Ù.(¼³°è : ÀÎÅÍÆäÀÌ½º¿¡¼­ ÇÏ°í, ±¸Çö : ÀÚ½ÄÅ¬·¡½º¿¡¼­ ÇÑ´Ù.)
- * - °´Ã¼»ý¼º ºÒ°¡ÇÏ¸ç, °´Ã¼ TypeÀ¸·Î »ç¿ë°¡´ÉÇÏ´Ù.(´ÙÇü¼º Àû¿ë)
- * - ÀÎÅÍÆäÀÌ½ºÀÇ ¸â¹ö´Â »ó¼ö, Ãß»ó¸Þ¼Òµå¸¸ ¿Ã ¼ö ÀÕ´Ù.(abstract »ý·« °¡´É)
- * - ´Ü static ¸Þ¼Òµå¿Í µðÆúÆ® ¸Þ¼Òµå´Â ¿¹¿Ü(JDK 1.8ºÎÅÍ)
- * - ÀÎÅÍÆäÀÌ½º¸¦ inplements(=±¸Çö)ÇÑ ÀÚ½ÄÅ¬·¡½º¿¡¼­ Ãß»ó¸Þ¼Òµå¸¦ ÀçÁ¤ÀÇÇÑ´Ù.
+ * <ì¸í„°íŽ˜ì´ìŠ¤>
+ * - ê¸°ëŠ¥ì •ì˜ì„œ(í‘œì¤€ ìž‘ì—… ëª…ì„¸ì„œ)ì´ë‹¤. - ê°•ì œì„±ê³¼ í†µì¼ì„±
+ * - ì„¤ê³„(ì„ ì–¸)ì™€ êµ¬í˜„ì„ ë¶„ë¦¬ì‹œí‚¤ëŠ” ê²ƒì„ ê°€ëŠ¥í•˜ê²Œ í•œë‹¤.(ì„¤ê³„ : ì¸í„°íŽ˜ì´ìŠ¤ì—ì„œ í•˜ê³ , êµ¬í˜„ : ìžì‹í´ëž˜ìŠ¤ì—ì„œ í•œë‹¤.)
+ * - ê°ì²´ìƒì„± ë¶ˆê°€í•˜ë©°, ê°ì²´ Typeìœ¼ë¡œ ì‚¬ìš©ê°€ëŠ¥í•˜ë‹¤.(ë‹¤í˜•ì„± ì ìš©)
+ * - ì¸í„°íŽ˜ì´ìŠ¤ì˜ ë©¤ë²„ëŠ” ìƒìˆ˜, ì¶”ìƒë©”ì†Œë“œë§Œ ì˜¬ ìˆ˜ ìž‡ë‹¤.(abstract ìƒëžµ ê°€ëŠ¥)
+ * - ë‹¨ static ë©”ì†Œë“œì™€ ë””í´íŠ¸ ë©”ì†Œë“œëŠ” ì˜ˆì™¸(JDK 1.8ë¶€í„°)
+ * - ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ inplements(=êµ¬í˜„)í•œ ìžì‹í´ëž˜ìŠ¤ì—ì„œ ì¶”ìƒë©”ì†Œë“œë¥¼ ìž¬ì •ì˜í•œë‹¤.
  * 
- * 1. ÀÎÅÍÆäÀÌ½º ÀÛ¼º
- * interface ÀÎÅÍÆäÀÌ½º¸í {
- * 		// »ó¼ö
- * 	public static final µ¥ÀÌÅÍÅ¸ÀÔ ´ë¹®ÀÚ»ó¼ö = °ª;
+ * 1. ì¸í„°íŽ˜ì´ìŠ¤ ìž‘ì„±
+ * interface ì¸í„°íŽ˜ì´ìŠ¤ëª… {
+ * 		// ìƒìˆ˜
+ * 	public static final ë°ì´í„°íƒ€ìž… ëŒ€ë¬¸ìžìƒìˆ˜ = ê°’;
  * 
- * 	// ¹ÝÈ¯Çü Ãß»ó¸Þ¼Òµå¸í();
- * 	public ¹ÝÈ¯Çü ¸Þ¼Òµå¸í(¸Å°³º¯¼ö1, ¸Å°³º¯¼ö2, ...);
+ * 	// ë°˜í™˜í˜• ì¶”ìƒë©”ì†Œë“œëª…();
+ * 	public ë°˜í™˜í˜• ë©”ì†Œë“œëª…(ë§¤ê°œë³€ìˆ˜1, ë§¤ê°œë³€ìˆ˜2, ...);
  * }
  * 
- * 2. ÀÎÅÍÆäÀÌ½º ±¸Çö : ÀÎÅÍÆäÀÌ½º¿¡ Á¤ÀÇµÈ Ãß»ó¸Þ¼ÒµåÀÇ ¸öÃ¼¸¦ Á¤ÀÇÇÑ´Ù´Â ÀÇ¹Ì
- * class Å¬·¡½º¸í implements ÀÎÅÍÆäÀÌ½º¸í {
+ * 2. ì¸í„°íŽ˜ì´ìŠ¤ êµ¬í˜„ : ì¸í„°íŽ˜ì´ìŠ¤ì— ì •ì˜ëœ ì¶”ìƒë©”ì†Œë“œì˜ ëª¸ì²´ë¥¼ ì •ì˜í•œë‹¤ëŠ” ì˜ë¯¸
+ * class í´ëž˜ìŠ¤ëª… implements ì¸í„°íŽ˜ì´ìŠ¤ëª… {
  * 	@Override
- * 	public ¹ÝÈ¯Çü ¸Þ¼Òµå¸í (¸Å°³º¯¼ö1, ¸Å°³º¯¼ö2, ..) {
- * 		// ÀÎÅÍÆäÀÌ½º¿¡ Á¤ÀÇµÈ Ãß»ó¸Þ¼Òµå¸¦ ±¸ÇöÇØ¾ßÇÑ´Ù.
+ * 	public ë°˜í™˜í˜• ë©”ì†Œë“œëª… (ë§¤ê°œë³€ìˆ˜1, ë§¤ê°œë³€ìˆ˜2, ..) {
+ * 		// ì¸í„°íŽ˜ì´ìŠ¤ì— ì •ì˜ëœ ì¶”ìƒë©”ì†Œë“œë¥¼ êµ¬í˜„í•´ì•¼í•œë‹¤.
  * 	}
  * }
  * 
- * 3. ÀÎÅÍÆäÀÌ½º´Â ´ÙÁß»ó¼Ó°¡´É cf) Å¬·¡½º´Â ´ÜÀÏ»ó¼Ó¸¸ °¡´É
- * interface ÀÎÅÍÆäÀÌ½º¸í extends ÀÎÅÍÆäÀÌ½º¸í1, ÀÎÅÍÆäÀÌ½º¸í2,.. {
+ * 3. ì¸í„°íŽ˜ì´ìŠ¤ëŠ” ë‹¤ì¤‘ìƒì†ê°€ëŠ¥ cf) í´ëž˜ìŠ¤ëŠ” ë‹¨ì¼ìƒì†ë§Œ ê°€ëŠ¥
+ * interface ì¸í„°íŽ˜ì´ìŠ¤ëª… extends ì¸í„°íŽ˜ì´ìŠ¤ëª…1, ì¸í„°íŽ˜ì´ìŠ¤ëª…2,.. {
  * 
  * }
  * 
- * 4. »ó¼Ó°ú ±¸ÇöÀ» µ¿½Ã
- * class Å¬·¡½º¸í extends ºÎ¸ðÅ¬·¡½º¸í implements ÀÎÅÍÆäÀÌ½º1, ÀÎÅÍÆäÀÌ½º¸í2, .. {
- * 	// ÀÎÅÍÆäÀÌ½º¿¡ Á¤ÀÇµÈ Ãß»ó¸Þ¼Òµå¸¦ ±¸ÇöÇØ¾ßÇÑ´Ù.
+ * 4. ìƒì†ê³¼ êµ¬í˜„ì„ ë™ì‹œ
+ * class í´ëž˜ìŠ¤ëª… extends ë¶€ëª¨í´ëž˜ìŠ¤ëª… implements ì¸í„°íŽ˜ì´ìŠ¤1, ì¸í„°íŽ˜ì´ìŠ¤ëª…2, .. {
+ * 	// ì¸í„°íŽ˜ì´ìŠ¤ì— ì •ì˜ëœ ì¶”ìƒë©”ì†Œë“œë¥¼ êµ¬í˜„í•´ì•¼í•œë‹¤.
  * }
  * */
 public interface _01_CalcImpl {
-	// ÀÎÅÍÆäÀÌ½º´Â »ó¼ö¿Í Ãß»ó¸Þ¼Òµå·Î ±¸¼º
-	// JDK 1.8¹öÀüºÎÅÍ static ¸Þ¼Òµå, default ¸Þ¼Òµå°¡ ¿Ã ¼ö ÀÕ´Ù.
-	// »ó¼ö
-	// ÄÄÆÄÀÏ °úÁ¤¿¡¼­ °ªÀÌ º¯ÇÏÁö ¾Ê´Â º¯¼ö·Î ÀÚµ¿ º¯È¯µÈ´Ù. public static finalÀº »ý·«°¡´É
+	// ì¸í„°íŽ˜ì´ìŠ¤ëŠ” ìƒìˆ˜ì™€ ì¶”ìƒë©”ì†Œë“œë¡œ êµ¬ì„±
+	// JDK 1.8ë²„ì „ë¶€í„° static ë©”ì†Œë“œ, default ë©”ì†Œë“œê°€ ì˜¬ ìˆ˜ ìž‡ë‹¤.
+	// ìƒìˆ˜
+	// ì»´íŒŒì¼ ê³¼ì •ì—ì„œ ê°’ì´ ë³€í•˜ì§€ ì•ŠëŠ” ë³€ìˆ˜ë¡œ ìžë™ ë³€í™˜ëœë‹¤. public static finalì€ ìƒëžµê°€ëŠ¥
 	double PI = 3.14;
 	int ERROR = -999999999;
 	
-	// Ãß»ó¸Þ¼­µå
-	// ÄÄÆÄÀÏ °úÁ¤¿¡¼­ ÀÚµ¿À¸·Î Ãß»ó¸Þ¼Òµå·Î º¯È¯ public abstract´Â »ý·« °¡´É
+	// ì¶”ìƒë©”ì„œë“œ
+	// ì»´íŒŒì¼ ê³¼ì •ì—ì„œ ìžë™ìœ¼ë¡œ ì¶”ìƒë©”ì†Œë“œë¡œ ë³€í™˜ public abstractëŠ” ìƒëžµ ê°€ëŠ¥
 	int add(int num1, int num2);
 	int substract(int num1, int num2);
 	int times(int num1, int num2);

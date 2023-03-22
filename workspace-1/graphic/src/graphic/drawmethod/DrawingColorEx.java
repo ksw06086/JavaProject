@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class DrawingColorEx extends JFrame {
 	public DrawingColorEx() {
-		setTitle("»ö±ò ÀÖ´Â µµÇü ±×¸®±â");
+		setTitle("ìƒ‰ê¹” ìˆëŠ” ë„í˜• ê·¸ë¦¬ê¸°");
 		
 		MyPan pan = new MyPan();
 		add("Center",pan);
@@ -19,9 +19,9 @@ public class DrawingColorEx extends JFrame {
 	class MyPan extends JPanel {
 		public void paint(Graphics g) {
 			super.paint(g);
-			// g.setColor(new Color(int R, int G, int B) or Color.»ö»óÀÌ¸§);
+			// g.setColor(new Color(int R, int G, int B) or Color.ìƒ‰ìƒì´ë¦„);
 			// drawXXX();
-			// R : »¡°£»öÀÇ ³óµµ(0~255) | G : ÃÊ·Ï»öÀÇ ³óµµ(0~255) | B : ÆÄ¶õ»öÀÇ ³óµµ(0~255)
+			// R : ë¹¨ê°„ìƒ‰ì˜ ë†ë„(0~255) | G : ì´ˆë¡ìƒ‰ì˜ ë†ë„(0~255) | B : íŒŒë€ìƒ‰ì˜ ë†ë„(0~255)
 			g.setColor(Color.green);
 			g.drawRect(100,40,80,50);
 			g.setColor(Color.orange);

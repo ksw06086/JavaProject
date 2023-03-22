@@ -3,33 +3,33 @@ package ch10;
 public class _18_MemberTreeSetTest {
 	public static void main(String[] args) {
 		_18_MemberTreeSet memberTreeSet = new _18_MemberTreeSet();
-		_18_Member memberLee = new _18_Member(1001, "ÀÌÁö¹Î");
-		_18_Member memberSon = new _18_Member(1002, "¼ÕÈï¹Î");
-		_18_Member memberHong = new _18_Member(1001, "È«±æµ¿");
+		_18_Member memberLee = new _18_Member(1001, "ì´ì§€ë¯¼");
+		_18_Member memberSon = new _18_Member(1002, "ì†í¥ë¯¼");
+		_18_Member memberHong = new _18_Member(1001, "í™ê¸¸ë™");
 		
-		// HashSet¿¡ È¸¿øÁ¤º¸ Ãß°¡
+		// HashSetì— íšŒì›ì •ë³´ ì¶”ê°€
 		memberTreeSet.addMember(memberHong);
 		memberTreeSet.addMember(memberSon);
 		memberTreeSet.addMember(memberLee);
 		
-		// È¸¿ø Á¤º¸ Á¶È¸
+		// íšŒì› ì •ë³´ ì¡°íšŒ
 		memberTreeSet.showAllMember();
 		
-		// 1¸í Ãß°¡(Áßº¹ id);
-		_18_Member memberPark = new _18_Member(1003, "¹Ú¹ÎÁö");
+		// 1ëª… ì¶”ê°€(ì¤‘ë³µ id);
+		_18_Member memberPark = new _18_Member(1003, "ë°•ë¯¼ì§€");
 		memberTreeSet.addMember(memberPark);
 		
-		// È¸¿øÁ¤º¸ Á¶È¸
+		// íšŒì›ì •ë³´ ì¡°íšŒ
 		memberTreeSet.showAllMember();
 		
 		/**
-		 * Comparable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏÁö ¾Ê¾Ò´Ù´Â ¿À·ù ¹ß»ý
-		 * -> ¾î¶² ±âÁØÀ¸·Î ³ëµå¸¦ ºñ±³ÇÏ¿© Æ®¸®¸¦ Çü¼ºÇØ¾ß ÇÏ´ÂÁö¸¦ ±¸ÇöÇÏÁö ¾Ê¾Ò´Ù´Â ¶æÀÌ´Ù.
-		 *      µû¶ó¼­ È¸¿øÀ» TreeSet¿¡ Ãß°¡ÇÒ ¶§ ¾î¶² ±âÁØÀ¸·Î ºñ±³ÇÒ °ÍÀÎÁö¸¦ ±¸ÇöÇØÁà¾ßÇÑ´Ù.
+		 * Comparable ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ì§€ ì•Šì•˜ë‹¤ëŠ” ì˜¤ë¥˜ ë°œìƒ
+		 * -> ì–´ë–¤ ê¸°ì¤€ìœ¼ë¡œ ë…¸ë“œë¥¼ ë¹„êµí•˜ì—¬ íŠ¸ë¦¬ë¥¼ í˜•ì„±í•´ì•¼ í•˜ëŠ”ì§€ë¥¼ êµ¬í˜„í•˜ì§€ ì•Šì•˜ë‹¤ëŠ” ëœ»ì´ë‹¤.
+		 *      ë”°ë¼ì„œ íšŒì›ì„ TreeSetì— ì¶”ê°€í•  ë•Œ ì–´ë–¤ ê¸°ì¤€ìœ¼ë¡œ ë¹„êµí•  ê²ƒì¸ì§€ë¥¼ êµ¬í˜„í•´ì¤˜ì•¼í•œë‹¤.
 		 *      
-		 * -> _18_Member Å¬·¡½º°¡ °¡Áø È¸¿ø¾ÆÀÌµð¸¦ ±âÁÖ´É·Î ¿À¸§Â÷¼ø Á¤·ÄÇÏ±â À§ÇØ
-		 * -> Comparable ÀÎÅÍÆäÀÌ½º : ÀÚ±â ÀÚ½Å°ú Àü´Þ¹ÞÀº ¸Å°³º¯¼ö¸¦ ºñ±³ÇÏ´Â ÀÎÅÍÆäÀÌ½º
-		 * 										compateTo() Ãß»ó¸Þ¼Òµå¸¦ ¿À¹ö¶óÀÌµå ÇØ¾ßÇÑ´Ù.
+		 * -> _18_Member í´ëž˜ìŠ¤ê°€ ê°€ì§„ íšŒì›ì•„ì´ë””ë¥¼ ê¸°ì£¼ëŠ¥ë¡œ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬í•˜ê¸° ìœ„í•´
+		 * -> Comparable ì¸í„°íŽ˜ì´ìŠ¤ : ìžê¸° ìžì‹ ê³¼ ì „ë‹¬ë°›ì€ ë§¤ê°œë³€ìˆ˜ë¥¼ ë¹„êµí•˜ëŠ” ì¸í„°íŽ˜ì´ìŠ¤
+		 * 										compateTo() ì¶”ìƒë©”ì†Œë“œë¥¼ ì˜¤ë²„ë¼ì´ë“œ í•´ì•¼í•œë‹¤.
 		 * **/
 		
 	}
