@@ -2,7 +2,7 @@ package daily.vo;
 
 import java.awt.Color;
 
-/* ±¸Á¶Ã¼¶ó ÇÒ ¼ö ÀÖ´Â °¢ ¼¿¿¡ ÇØ´çÇÏ´Â ³»¿ë¹°(³¯Â¥ ¹öÆ°¿¡ ÇÊ¿äÇÑ °Í) */
+/* êµ¬ì¡°ì²´ë¼ í•  ìˆ˜ ìˆëŠ” ê° ì…€ì— í•´ë‹¹í•˜ëŠ” ë‚´ìš©ë¬¼(ë‚ ì§œ ë²„íŠ¼ì— í•„ìš”í•œ ê²ƒ) */
 public class CellFace
 { 
 	private String face_value;  // the value written on the cell's face

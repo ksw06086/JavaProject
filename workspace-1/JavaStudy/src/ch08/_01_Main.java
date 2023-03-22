@@ -11,13 +11,13 @@ public class _01_Main {
 		
 		System.out.println();
 		
-		// ´ÙÇü¼º Àû¿ë : ºÎ¸ğÅ¸ÀÔ ÂüÁ¶º¯¼ö = new ÀÚ½ÄÅ¬·¡½º();
+		// ë‹¤í˜•ì„± ì ìš© : ë¶€ëª¨íƒ€ì… ì°¸ì¡°ë³€ìˆ˜ = new ìì‹í´ë˜ìŠ¤();
 		_01_CalcImpl calc = new _01_SubCalc();
 		System.out.println(calc.add(10, 2));
 		System.out.println(calc.substract(10, 2));
 		System.out.println(calc.times(10, 2));
 		System.out.println(calc.divide(10, 2));
-		// ´Ù¿îÄ³½ºÆÃ
+		// ë‹¤ìš´ìºìŠ¤íŒ…
 		_01_SubCalc s = (_01_SubCalc)calc;
 		s.showInfo();
 	}

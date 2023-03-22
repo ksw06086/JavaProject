@@ -2,6 +2,6 @@ package ch10;
 
 public class _01_Meterial {
 	public void doPrinting() {
-		System.out.println("Meterial Àç·á·Î Ãâ·ÂÇÕ´Ï´Ù.");
+		System.out.println("Meterial ìž¬ë£Œë¡œ ì¶œë ¥í•©ë‹ˆë‹¤.");
 	}
 }

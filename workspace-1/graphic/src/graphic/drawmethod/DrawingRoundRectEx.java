@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class DrawingRoundRectEx extends JFrame {
 	public DrawingRoundRectEx() {
-		setTitle("µÕ±ÙÁ÷»ç°¢Çü ±×¸®±â");
+		setTitle("ë‘¥ê·¼ì§ì‚¬ê°í˜• ê·¸ë¦¬ê¸°");
 		
 		MyPan pan = new MyPan();
 		add("Center",pan);
@@ -19,9 +19,9 @@ public class DrawingRoundRectEx extends JFrame {
 		public void paint(Graphics g) {
 			super.paint(g);
 			// drawRoundRect(x, y, w, h, c_width, c_height);
-			// x, y : ¿ŞÂÊ À§ ¸ğ¼­¸® Á¡ÀÇ x,y ÁÂÇ¥
-			// w : Á÷»ç°¢ÇüÀÇ ³Êºñ(ÇÈ¼¿)  |  h : Á÷»ç°¢ÇüÀÇ ³ôÀÌ(ÇÈ¼¿)
-			// c_width : ¸ğ¼­¸®ÀÇ ³Êºñ(ÇÈ¼¿)  |  c_height : ¸ğ¼­¸®ÀÇ ³ôÀÌ(ÇÈ¼¿)
+			// x, y : ì™¼ìª½ ìœ„ ëª¨ì„œë¦¬ ì ì˜ x,y ì¢Œí‘œ
+			// w : ì§ì‚¬ê°í˜•ì˜ ë„ˆë¹„(í”½ì…€)  |  h : ì§ì‚¬ê°í˜•ì˜ ë†’ì´(í”½ì…€)
+			// c_width : ëª¨ì„œë¦¬ì˜ ë„ˆë¹„(í”½ì…€)  |  c_height : ëª¨ì„œë¦¬ì˜ ë†’ì´(í”½ì…€)
 			g.drawRoundRect(50,90,300,120,30,30);
 			g.drawRoundRect(80,10,140,220,70,70);
 		}

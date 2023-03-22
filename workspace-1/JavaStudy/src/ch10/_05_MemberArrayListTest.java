@@ -4,22 +4,22 @@ public class _05_MemberArrayListTest {
 	public static void main(String[] args) {
 		_05_MemberArrayList memberArrayList = new _05_MemberArrayList();
 		
-		// ¸Å°³º¯¼ö »ı¼ºÀÚ È£Ãâ
-		_05_Member memberLee = new _05_Member(1001, "ÀÌÁö¹Î");
-		_05_Member memberSon = new _05_Member(1002, "¼ÕÈï¹Î");
-		_05_Member memberPark = new _05_Member(1003, "¹Ú¹ÎÁö");
-		_05_Member memberHong = new _05_Member(1004, "È«¼­À±");
+		// ë§¤ê°œë³€ìˆ˜ ìƒì„±ì í˜¸ì¶œ
+		_05_Member memberLee = new _05_Member(1001, "ì´ì§€ë¯¼");
+		_05_Member memberSon = new _05_Member(1002, "ì†í¥ë¯¼");
+		_05_Member memberPark = new _05_Member(1003, "ë°•ë¯¼ì§€");
+		_05_Member memberHong = new _05_Member(1004, "í™ì„œìœ¤");
 		
-		// È¸¿øÃß°¡
+		// íšŒì›ì¶”ê°€
 		memberArrayList.addMember(memberLee);
 		memberArrayList.addMember(memberSon);
 		memberArrayList.addMember(memberPark);
 		memberArrayList.addMember(memberHong);
 		
-		// ÀüÃ¼È¸¿ø Ãâ·Â
+		// ì „ì²´íšŒì› ì¶œë ¥
 		memberArrayList.showAllMember();
 		
-		// È¸¿ø »èÁ¦
+		// íšŒì› ì‚­ì œ
 		memberArrayList.removeMember(memberHong.getMemberId());
 		memberArrayList.showAllMember();
 	}

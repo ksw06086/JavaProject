@@ -5,14 +5,14 @@ public class _26_ForEx {
 		String str = "no pain no gain";
 		int count = 0;
 		
-		// str ¹®ÀÚ¿­ Áß¿¡¼­ 'o'°¡ ³ª¿À¸é count¸¦ Áõ°¡½ÃÅ²´Ù.
-		// str ±æÀÌ, ¹®Àå¿¡¼­ ¹ß°ßµÈ 'o'ÀÇ °¹¼ö
+		// str ë¬¸ìì—´ ì¤‘ì—ì„œ 'o'ê°€ ë‚˜ì˜¤ë©´ countë¥¼ ì¦ê°€ì‹œí‚¨ë‹¤.
+		// str ê¸¸ì´, ë¬¸ì¥ì—ì„œ ë°œê²¬ëœ 'o'ì˜ ê°¯ìˆ˜
 		for(int i = 0; i < str.length(); i++) {
 			if(str.charAt(i) != 'o') {
 				continue;
 			}
 			count++;
 		}
-		System.out.println("str ±æÀÌ : " + str.length() + ", ¹®ÀÚ¿­ Áß¿¡¼­ ¾ËÆÄºª o°¡ ¹ß°ßµÈ È½¼ö : " + count);
+		System.out.println("str ê¸¸ì´ : " + str.length() + ", ë¬¸ìì—´ ì¤‘ì—ì„œ ì•ŒíŒŒë²³ oê°€ ë°œê²¬ëœ íšŸìˆ˜ : " + count);
 	}
 }

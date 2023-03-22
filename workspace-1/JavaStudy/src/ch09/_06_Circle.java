@@ -1,5 +1,5 @@
 package ch09;
-														// ¸¶Ä¿ ÀÎÅÍÆäÀÌ½º ±¸ÇöÇÒ ¸Ş¼Òµå°¡ ¾ø´Ù.
+														// ë§ˆì»¤ ì¸í„°í˜ì´ìŠ¤ êµ¬í˜„í•  ë©”ì†Œë“œê°€ ì—†ë‹¤.
 public class _06_Circle implements Cloneable{
 	_06_Point point;
 	int radius;
@@ -11,14 +11,14 @@ public class _06_Circle implements Cloneable{
 	
 	@Override
 	public String toString() {
-		return "¿øÁ¡Àº " + point + "ÀÌ°í, ¹İÁö¸§Àº " + radius + "ÀÔ´Ï´Ù."; 
+		return "ì›ì ì€ " + point + "ì´ê³ , ë°˜ì§€ë¦„ì€ " + radius + "ì…ë‹ˆë‹¤."; 
 	}
 	
-												// clone() È£Ãâ ½Ã Cloneable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇØÁÖÁö ¾ÊÀ¸¸é ¿¹¿Ü ¹ß»ı
-	@Override								// Å¬·ĞÀÌ Áö¿øÀÌ µÇÁö ¾Ê¾ÒÀ» ¶§ ¿¡¿Ü
+												// clone() í˜¸ì¶œ ì‹œ Cloneable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•´ì£¼ì§€ ì•Šìœ¼ë©´ ì˜ˆì™¸ ë°œìƒ
+	@Override								// í´ë¡ ì´ ì§€ì›ì´ ë˜ì§€ ì•Šì•˜ì„ ë•Œ ì—ì™¸
 	public Object clone() throws CloneNotSupportedException {
-		// ObjectÀÇ clone() ¸Ş¼Òµå°¡ protected Á¢±ÙÁ¦¾îÀÚ·Î ÀÕ¾î¼­ ´Ù¸¥ Å¬·¡½º¿¡¼­ ¹Ù·Î »ç¿ë ¸øÇÔ
-		// Object Å¬·¡½ºÀÇ clone() ¸Ş¼Òµå¸¦ È£ÃâÇÔ
+		// Objectì˜ clone() ë©”ì†Œë“œê°€ protected ì ‘ê·¼ì œì–´ìë¡œ ì‡ì–´ì„œ ë‹¤ë¥¸ í´ë˜ìŠ¤ì—ì„œ ë°”ë¡œ ì‚¬ìš© ëª»í•¨
+		// Object í´ë˜ìŠ¤ì˜ clone() ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•¨
 		return super.clone();
 	}
 }

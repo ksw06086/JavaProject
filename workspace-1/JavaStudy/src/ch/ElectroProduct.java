@@ -1,8 +1,8 @@
 package ch;
 
 public class ElectroProduct {
-	private int price;					// °΅°έ
-	private int bonusPoint;		// ΊΈ³Κ½ΊΖχΐΞΖ®
+	private int price;					// κ°€κ²©
+	private int bonusPoint;		// λ³΄λ„μ¤ν¬μΈνΈ
 	
 	public ElectroProduct() {}
 	
@@ -11,7 +11,7 @@ public class ElectroProduct {
 		bonusPoint = (int)(price * 0.01);
 	}
 
-	// °΅°έ
+	// κ°€κ²©
 	public int getPrice() {
 		return price;
 	}
@@ -20,7 +20,7 @@ public class ElectroProduct {
 		this.price = price;
 	}
 	
-	// ΊΈ³Κ½Ί ΖχΐΞΖ®
+	// λ³΄λ„μ¤ ν¬μΈνΈ
 	public int getBonusPoint() {
 		return bonusPoint;
 	}

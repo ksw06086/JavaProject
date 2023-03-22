@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class _18_DoWhileEx {
 	public static void main(String[] args) {
-		// ¸Ş´º ¼±ÅÃ : 'q'³ª 'Q'¸¦ ¸¸³ª¸é 'Á¾·á' Ãâ·Â
+		// ë©”ë‰´ ì„ íƒ : 'q'ë‚˜ 'Q'ë¥¼ ë§Œë‚˜ë©´ 'ì¢…ë£Œ' ì¶œë ¥
 		Scanner sc = new Scanner(System.in);
 		String num;
 		do {
-			System.out.println("¸Ş´º ¼±ÅÃ : ");
+			System.out.println("ë©”ë‰´ ì„ íƒ : ");
 			num = sc.next();
 			System.out.println(num.length());
 		} while((num.toUpperCase().charAt(0) != 'Q'));
-		System.out.println("Á¾·á!");
+		System.out.println("ì¢…ë£Œ!");
 	}
 }

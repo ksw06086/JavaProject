@@ -4,21 +4,21 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 /*
- * ÀÛ¼ºÀÏ : 2023.02.06.
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : È¯ºÒ¿äÃ» ¸ñ·ÏÀ» ¾ÆÀÌµğº°·Î µ¥ÀÌÅÍ È£ÃâÇÏ´Â ¿ëµµ
+ * ì‘ì„±ì¼ : 2023.02.06.
+ * ì‘ì„±ì : ê¹€ì„ ìš°
+ * ê°œìš” : í™˜ë¶ˆìš”ì²­ ëª©ë¡ì„ ì•„ì´ë””ë³„ë¡œ ë°ì´í„° í˜¸ì¶œí•˜ëŠ” ìš©ë„
  * **/
 public class Refund implements Serializable{
-	// Á÷·ÄÈ­ °´Ã¼ ¹øÈ£
+	// ì§ë ¬í™” ê°ì²´ ë²ˆí˜¸
 	private static final long serialVersionUID = 500L;
 	
-	// idº° È¯ºÒ ¿äÃ» ¸®½ºÆ® // ??? ¿Ö ÀÌ·¸°Ô ¸¸µé¾úÁö? ¸®½ºÆ®¸¦ ¸ÕÀú ¸¸µé°í Id º°·Î ÇÏ¸é µÇÁö ¾Ê³ª?
+	// idë³„ í™˜ë¶ˆ ìš”ì²­ ë¦¬ìŠ¤íŠ¸ // ??? ì™œ ì´ë ‡ê²Œ ë§Œë“¤ì—ˆì§€? ë¦¬ìŠ¤íŠ¸ë¥¼ ë¨¼ì € ë§Œë“¤ê³  Id ë³„ë¡œ í•˜ë©´ ë˜ì§€ ì•Šë‚˜?
 	public static HashMap<String, HashMap<Integer, Book>> idRefundList = new HashMap<String, HashMap<Integer,Book>>();
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public Refund() {}
 	
-	// ID°¡ »õ·Î µé¾î¿À¸é ÇØ´ç IDÀÇ È¯ºÒ³»¿ª¹Ù±¸´Ï »ı¼º
+	// IDê°€ ìƒˆë¡œ ë“¤ì–´ì˜¤ë©´ í•´ë‹¹ IDì˜ í™˜ë¶ˆë‚´ì—­ë°”êµ¬ë‹ˆ ìƒì„±
 	public static HashMap<Integer, Book> getRefundList(){
 		return new HashMap<Integer, Book>();
 	}

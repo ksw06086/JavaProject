@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class _05_InOutEx {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.print("ÀÌ¸§ÀÔ·Â : ");
+		System.out.print("ì´ë¦„ì…ë ¥ : ");
 		String name = scan.next();
 		
-		System.out.print("ÇÚµåÆù ¹øÈ£ ÀÔ·Â : ");
+		System.out.print("í•¸ë“œí° ë²ˆí˜¸ ì…ë ¥ : ");
 		String phoNo = scan.next();
 		
-		System.out.println("´ç½ÅÀÇ ÀÌ¸§Àº " + name + "ÀÌ°í, ÇÚµåÆù ¹øÈ£´Â " + phoNo + "ÀÔ´Ï´Ù.");
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á~~~~");
+		System.out.println("ë‹¹ì‹ ì˜ ì´ë¦„ì€ " + name + "ì´ê³ , í•¸ë“œí° ë²ˆí˜¸ëŠ” " + phoNo + "ì…ë‹ˆë‹¤.");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ~~~~");
 		scan.close();
 		
 	}

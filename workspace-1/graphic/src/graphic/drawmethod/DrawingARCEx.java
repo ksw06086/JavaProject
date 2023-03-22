@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class DrawingARCEx extends JFrame {
 	public DrawingARCEx() {
-		setTitle("È£ ±×¸®±â");
+		setTitle("í˜¸ ê·¸ë¦¬ê¸°");
 		
 		MyPan pan = new MyPan();
 		add("Center",pan);
@@ -19,9 +19,9 @@ public class DrawingARCEx extends JFrame {
 		public void paint(Graphics g) {
 			super.paint(g);
 			// drawArc(x, y, w, h, s, e);
-			// x, y : ¿ŞÂÊ À§ ¸ğ¼­¸® Á¡ÀÇ x, y ÁÂÇ¥
-			// w : È£ÀÇ ³Êºñ(ÇÈ¼¿) | h : È£ÀÇ ³ôÀÌ(ÇÈ¼¿)
-			// s : È£ÀÇ ½ÃÀÛ °¢µµ | e : È£ÀÇ ³¡ °¢µµ
+			// x, y : ì™¼ìª½ ìœ„ ëª¨ì„œë¦¬ ì ì˜ x, y ì¢Œí‘œ
+			// w : í˜¸ì˜ ë„ˆë¹„(í”½ì…€) | h : í˜¸ì˜ ë†’ì´(í”½ì…€)
+			// s : í˜¸ì˜ ì‹œì‘ ê°ë„ | e : í˜¸ì˜ ë ê°ë„
 			g.drawArc(50,90,300,120,0,270);
 			g.drawArc(80,40,140,230,90,180);
 		}

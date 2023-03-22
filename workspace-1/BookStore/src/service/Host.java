@@ -1,27 +1,27 @@
 package service;
 
 /*
- * ÀÛ¼ºÀÏ : 2023.02.10.
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : °ü¸®ÀÚ °ü·Ã ±â´É¸í¼¼¼­
+ * ìž‘ì„±ì¼ : 2023.02.10.
+ * ìž‘ì„±ìž : ê¹€ì„ ìš°
+ * ê°œìš” : ê´€ë¦¬ìž ê´€ë ¨ ê¸°ëŠ¥ëª…ì„¸ì„œ
  * **/
 public interface Host {
-	// ±â´É Å×½ºÆ®¿ë °ü¸®ÀÚ ·Î±×ÀÎ µ¥ÀÌÅÍ
-	static String ID = "host";								// °ü¸®ÀÚ °íÀ¯ID »ý¼º
-	static String PASSWORD = "host";				// °ü¸®ÀÚ °íÀ¯PW »ý¼º
+	// ê¸°ëŠ¥ í…ŒìŠ¤íŠ¸ìš© ê´€ë¦¬ìž ë¡œê·¸ì¸ ë°ì´í„°
+	static String ID = "host";			// ê´€ë¦¬ìž ê³ ìœ ID ìƒì„±
+	static String PASSWORD = "host";	// ê´€ë¦¬ìž ê³ ìœ PW ìƒì„±
 	
-	// ·Î±×ÀÎ
+	// ë¡œê·¸ì¸
 	boolean hostLogin();
 	
-	// °ü¸®ÀÚ - Àç°í°ü¸®
-	void bookList();											// Ã¥¸ñ·Ï
-	void bookAdd();											// Ã¥Ãß°¡
-	void bookUpdate();										// Ã¥¼öÁ¤
-	void bookDel();											// Ã¥»èÁ¦
+	// ê´€ë¦¬ìž - ìž¬ê³ ê´€ë¦¬
+	void bookList();					// ì±…ëª©ë¡
+	void bookAdd();						// ì±…ì¶”ê°€
+	void bookUpdate();					// ì±…ìˆ˜ì •
+	void bookDel();						// ì±…ì‚­ì œ
 	
-	// °ü¸®ÀÚ - ÁÖ¹®°ü¸®
-	void orderList();												// ÁÖ¹®¸ñ·Ï
-	void orderConfirm();										// °áÁ¦½ÂÀÎ
-	void orderCancel();											// °áÁ¦Ãë¼Ò
-	void saleTotal();												// °á»ê
+	// ê´€ë¦¬ìž - ì£¼ë¬¸ê´€ë¦¬
+	void orderList();					// ì£¼ë¬¸ëª©ë¡
+	void orderConfirm();				// ê²°ì œìŠ¹ì¸
+	void orderCancel();					// ê²°ì œì·¨ì†Œ
+	void saleTotal();					// ê²°ì‚°
 }

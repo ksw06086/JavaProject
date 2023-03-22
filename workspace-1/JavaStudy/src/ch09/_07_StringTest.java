@@ -3,10 +3,10 @@ package ch09;
 public class _07_StringTest {
 	public static void main(String[] args) {
 		/*
-		 * »ó¼öÇ®
-		 * ¸®ÅÍ·²Àº *(ÇÁ·Î±×·¥ÀÌ ½ÃÀÛÇÒ ¶§ ½Ã½ºÅÛ¿¡ °°ÀÌ ·Îµù)µÇ¾î¼­ Æ¯Á¤ ¸Ş¸ğ¸® °ø°£ÀÎ »ó¼öÇ®¿¡ µé¾î°£´Ù.
-		 * ¸®ÅÍ·² -> ·Îµù -> »ó¼öÇ® -> ´ëÀÔ/º¹»ç -> º¯¼önum
-		 * ¼ıÀÚ, ¹®ÀÚ, ³í¸®°ª			3,abc,boolean			3. int num = 3;
+		 * ìƒìˆ˜í’€
+		 * ë¦¬í„°ëŸ´ì€ *(í”„ë¡œê·¸ë¨ì´ ì‹œì‘í•  ë•Œ ì‹œìŠ¤í…œì— ê°™ì´ ë¡œë”©)ë˜ì–´ì„œ íŠ¹ì • ë©”ëª¨ë¦¬ ê³µê°„ì¸ ìƒìˆ˜í’€ì— ë“¤ì–´ê°„ë‹¤.
+		 * ë¦¬í„°ëŸ´ -> ë¡œë”© -> ìƒìˆ˜í’€ -> ëŒ€ì…/ë³µì‚¬ -> ë³€ìˆ˜num
+		 * ìˆ«ì, ë¬¸ì, ë…¼ë¦¬ê°’			3,abc,boolean			3. int num = 3;
 		 * 
 		 * */
 		
@@ -18,18 +18,18 @@ public class _07_StringTest {
 		String str3 = "asdf";
 		String str4 = "asdf";
 		
-		// °ª±îÁö °°¾Æ¾ß true°¡ ³ª¿È
+		// ê°’ê¹Œì§€ ê°™ì•„ì•¼ trueê°€ ë‚˜ì˜´
 		System.out.println(str3 == str4);
 		
-		// »õ·Î¿î ¹®ÀÚ°¡ µÇ¸é ÁÖ¼Ò°¡ ´Ş¶óÁø´Ù.
+		// ìƒˆë¡œìš´ ë¬¸ìê°€ ë˜ë©´ ì£¼ì†Œê°€ ë‹¬ë¼ì§„ë‹¤.
 		String javaStr = new String("java");
 		String androidStr = new String("android");
 		System.out.println(javaStr);
-		System.out.println("Ã³À½ ¹®ÀÚ¿­ ÁÖ¼Ò °ª : " + System.identityHashCode(javaStr));
+		System.out.println("ì²˜ìŒ ë¬¸ìì—´ ì£¼ì†Œ ê°’ : " + System.identityHashCode(javaStr));
 		
 		javaStr = javaStr.concat(androidStr);
 		System.out.println(javaStr);
-		System.out.println("¿¬°áµÈ ¹®ÀÚ¿­ ÁÖ¼Ò °ª : " + System.identityHashCode(javaStr));
+		System.out.println("ì—°ê²°ëœ ë¬¸ìì—´ ì£¼ì†Œ ê°’ : " + System.identityHashCode(javaStr));
 	}
 	
 }

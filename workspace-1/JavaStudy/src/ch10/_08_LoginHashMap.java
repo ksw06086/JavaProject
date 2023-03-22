@@ -6,51 +6,51 @@ import java.util.Scanner;
 
 public class _08_LoginHashMap {
 	public static void main(String[] args) {
-		// Áß¿ä
+		// ì¤‘ìš”
 		/*
-		 * 1. id pwd 5°ÇÀ» hashtable¿¡ ÀúÀå(HashMap¿¡ ÀúÀå)
-		 * 2. ÄÜ¼Ö·ÎºÎÅÍ id, pwd¸¦ ÀÔ·Â¹Ş´Â´Ù.
-		 * 	1°ú 2¸¦ ºñ±³ÇØ¼­
-		 * 3. ¾ÆÀÌµğ°¡ ¾øÀ¸¸é "ÀÔ·ÂÇÏ½Å ¾ÆÀÌµğ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù." Ãâ·Â
-		 * 4. ¾ÆÀÌµğ°¡ ÀÖÀ¸¸é ºñ¹Ğ¹øÈ£¿Í ºñ±³ÇØ¼­ ÀÏÄ¡½Ã " ·Î±×ÀÎ µÇ¾ú½À´Ï´Ù. " Ãâ·Â
-		 * 														ºÒÀÏÄ¡½Ã "ºñ¹Ğ¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù." Ãâ·Â
+		 * 1. id pwd 5ê±´ì„ hashtableì— ì €ì¥(HashMapì— ì €ì¥)
+		 * 2. ì½˜ì†”ë¡œë¶€í„° id, pwdë¥¼ ì…ë ¥ë°›ëŠ”ë‹¤.
+		 * 	1ê³¼ 2ë¥¼ ë¹„êµí•´ì„œ
+		 * 3. ì•„ì´ë””ê°€ ì—†ìœ¼ë©´ "ì…ë ¥í•˜ì‹  ì•„ì´ë””ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤." ì¶œë ¥
+		 * 4. ì•„ì´ë””ê°€ ìˆìœ¼ë©´ ë¹„ë°€ë²ˆí˜¸ì™€ ë¹„êµí•´ì„œ ì¼ì¹˜ì‹œ " ë¡œê·¸ì¸ ë˜ì—ˆìŠµë‹ˆë‹¤. " ì¶œë ¥
+		 * 														ë¶ˆì¼ì¹˜ì‹œ "ë¹„ë°€ë²ˆí˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤." ì¶œë ¥
 		 * **/
 		HashMap<String, String> login = new HashMap<String, String>();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("=== Á¾·á : E, °¡ÀÔ : P, ·Î±×ÀÎ : L, ÇöÀç ÀÌ¿ëÇÏ°í °è½Å °í°´Á¤º¸ : A, È¸¿ø»èÁ¦ : D ===");
+		System.out.println("=== ì¢…ë£Œ : E, ê°€ì… : P, ë¡œê·¸ì¸ : L, í˜„ì¬ ì´ìš©í•˜ê³  ê³„ì‹  ê³ ê°ì •ë³´ : A, íšŒì›ì‚­ì œ : D ===");
 		String num = sc.next();
 		while(!num.equals("E") && !num.equals("e")) {
 			if(num.equals("P") || num.equals("p")) {
-				System.out.print("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+				System.out.print("ì•„ì´ë””ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 				String id = sc.next();
 				while(login.containsKey(id)) {
-					System.out.println("¾ÆÀÌµğ°¡ Áßº¹µÇ¾ú½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
-					System.out.print("´Ù½Ã ¾ÆÀÌµğ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. Á¾·á´Â EÅ°ÀÔ´Ï´Ù. : ");
+					System.out.println("ì•„ì´ë””ê°€ ì¤‘ë³µë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
+					System.out.print("ë‹¤ì‹œ ì•„ì´ë””ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. ì¢…ë£ŒëŠ” Eí‚¤ì…ë‹ˆë‹¤. : ");
 					id = sc.next();
 					if(id.equals("E") || id.equals("e")) {
 						return ;
 					}
 				}
-				System.out.println("»ç¿ë°¡´ÉÇÑ ¾ÆÀÌµğ ÀÔ´Ï´Ù.");
-				System.out.print("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+				System.out.println("ì‚¬ìš©ê°€ëŠ¥í•œ ì•„ì´ë”” ì…ë‹ˆë‹¤.");
+				System.out.print("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 				String pwd = sc.next();
-				System.out.print("´Ù½ÃÇÑ¹ø ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+				System.out.print("ë‹¤ì‹œí•œë²ˆ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 				String copypwd = sc.next();
 				while(!pwd.equals(copypwd)) {
-					System.out.println("´Ù½Ã ÀÔ·ÂÇÏ½Å ºñ¹Ğ¹øÈ£¿Í ¸ÂÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä. Á¾·á´Â EÅ°ÀÔ´Ï´Ù. : ");
+					System.out.println("ë‹¤ì‹œ ì…ë ¥í•˜ì‹  ë¹„ë°€ë²ˆí˜¸ì™€ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”. ì¢…ë£ŒëŠ” Eí‚¤ì…ë‹ˆë‹¤. : ");
 					copypwd = sc.next();
 					if(copypwd.equals("E") || copypwd.equals("e")) {
 						return ;
 					}
 				}
 				login.put(id, pwd);
-				System.out.println("°¡ÀÔµÇ¼Ì½À´Ï´Ù. ÀÌ¿ëÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù.");
+				System.out.println("ê°€ì…ë˜ì…¨ìŠµë‹ˆë‹¤. ì´ìš©í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤.");
 			} else if(num.equals("L") || num.equals("l")) {
-				// ½ÃÇè¹®Á¦
+				// ì‹œí—˜ë¬¸ì œ
 				System.out.print("id : ");
 				String id = sc.next();
 				while(!login.containsKey(id)) {
-					System.out.println("ÀÔ·ÂÇÏ½Å ¾ÆÀÌµğ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä. Á¾·á´Â EÅ°ÀÔ´Ï´Ù.");
+					System.out.println("ì…ë ¥í•˜ì‹  ì•„ì´ë””ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”. ì¢…ë£ŒëŠ” Eí‚¤ì…ë‹ˆë‹¤.");
 					System.out.print("id : ");
 					id = sc.next();
 					if(id.equals("E") || id.equals("e")) {
@@ -60,30 +60,30 @@ public class _08_LoginHashMap {
 				System.out.print("pwd : ");
 				String pwd = sc.next();
 				while(!pwd.equals(login.get(id))) {
-					System.out.println("ºñ¹Ğ¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä. Á¾·á´Â EÅ°ÀÔ´Ï´Ù.");
+					System.out.println("ë¹„ë°€ë²ˆí˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”. ì¢…ë£ŒëŠ” Eí‚¤ì…ë‹ˆë‹¤.");
 					System.out.print("pwd : ");
 					pwd = sc.next();
 					if(pwd.equals("E") || pwd.equals("e")) {
 						return ;
 					}
 				}
-				System.out.println("·Î±×ÀÎ µÇ¼Ì½À´Ï´Ù.");
-				return ; // ³ª°¡¸® ÀÌÁ¦ º¼ÀÏ ´Ù ºÃ´Ù.
+				System.out.println("ë¡œê·¸ì¸ ë˜ì…¨ìŠµë‹ˆë‹¤.");
+				return ; // ë‚˜ê°€ë¦¬ ì´ì œ ë³¼ì¼ ë‹¤ ë´¤ë‹¤.
 			} else if(num.equals("A") || num.equals("a")) {
 				if(login.isEmpty()) {
-					System.out.println("ÀÌ¿ëÇÏ½Ã´Â °í°´´ÔÀÌ ¾ø½À´Ï´Ù.");
+					System.out.println("ì´ìš©í•˜ì‹œëŠ” ê³ ê°ë‹˜ì´ ì—†ìŠµë‹ˆë‹¤.");
 				} else {
 					Iterator<String> ir = login.keySet().iterator();
-					System.out.println("=== ÇöÀç ÀÌ¿ëÇÏ°í °è½Å °í°´´ÔµéÀÇ ID ===");
+					System.out.println("=== í˜„ì¬ ì´ìš©í•˜ê³  ê³„ì‹  ê³ ê°ë‹˜ë“¤ì˜ ID ===");
 					while(ir.hasNext()) {
 						System.out.println(ir.next());
 					}
 				}
 			} else if(num.equals("D") || num.equals("d")) {
-				System.out.print("»èÁ¦ÇÒ ¾ÆÀÌµğ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+				System.out.print("ì‚­ì œí•  ì•„ì´ë””ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 				String id = sc.next();
 				while(!login.containsKey(id)) {
-					System.out.println("ÀÔ·ÂÇÏ½Å ¾ÆÀÌµğ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä. Á¾·á´Â EÅ°ÀÔ´Ï´Ù.");
+					System.out.println("ì…ë ¥í•˜ì‹  ì•„ì´ë””ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”. ì¢…ë£ŒëŠ” Eí‚¤ì…ë‹ˆë‹¤.");
 					System.out.print("id : ");
 					id = sc.next();
 					if(id.equals("E") || id.equals("e")) {
@@ -91,13 +91,13 @@ public class _08_LoginHashMap {
 					}
 				}
 				login.remove(id);
-				System.out.println("»èÁ¦µÇ¾ú½À´Ï´Ù. ´Ù½Ã »ç¿ëÇÏ½Ã±â À§ÇØ¼­´Â Àç°¡ÀÔÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+				System.out.println("ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì‚¬ìš©í•˜ì‹œê¸° ìœ„í•´ì„œëŠ” ì¬ê°€ì…í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
 			} else {
-				System.out.println("¾Ë¸Â´Â ÀÔ·ÂÀÌ ¾Æ´Õ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
+				System.out.println("ì•Œë§ëŠ” ì…ë ¥ì´ ì•„ë‹™ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			}
-			System.out.println("=== Á¾·á : E, °¡ÀÔ : P, ·Î±×ÀÎ : L, ÇöÀç ÀÌ¿ëÇÏ°í °è½Å °í°´Á¤º¸ : A, È¸¿ø»èÁ¦ : D ===");
+			System.out.println("=== ì¢…ë£Œ : E, ê°€ì… : P, ë¡œê·¸ì¸ : L, í˜„ì¬ ì´ìš©í•˜ê³  ê³„ì‹  ê³ ê°ì •ë³´ : A, íšŒì›ì‚­ì œ : D ===");
 			num = sc.next();
 		}
-		System.out.println("END~! °¡Áö¸¶~!!");
+		System.out.println("END~! ê°€ì§€ë§ˆ~!!");
 	}
 }

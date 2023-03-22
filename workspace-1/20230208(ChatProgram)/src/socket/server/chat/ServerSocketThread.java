@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-// ´Ù¼ö °³ÀÇ ¿¬°á ¿äÃ»À» ¹Ş¾ÆµéÀÏ ¼ö ÀÖ´Â ±â´É
+// ë‹¤ìˆ˜ ê°œì˜ ì—°ê²° ìš”ì²­ì„ ë°›ì•„ë“¤ì¼ ìˆ˜ ìˆëŠ” ê¸°ëŠ¥
 public class ServerSocketThread extends Thread{
 	Socket s1;
 	ChatServer st;
@@ -16,10 +16,10 @@ public class ServerSocketThread extends Thread{
 	String threadName = "Thread";
 	
 	public ServerSocketThread(ChatServer st, Socket s1) {
-		this.s1 = s1;																								// Å¬¶óÀÌ¾ğÆ®
-		this.st = st;																									// Á¢¼ÓÇÒ ¼­¹ö
-		threadName = getName();																			// Å¬¶óÀÌ¾ğÆ® ÀÌ¸§
-		System.out.println(s1.getInetAddress() + "¿¡¼­ Á¢¼ÓÇß½À´Ï´Ù.");
+		this.s1 = s1;																								// í´ë¼ì´ì–¸íŠ¸
+		this.st = st;																									// ì ‘ì†í•  ì„œë²„
+		threadName = getName();																			// í´ë¼ì´ì–¸íŠ¸ ì´ë¦„
+		System.out.println(s1.getInetAddress() + "ì—ì„œ ì ‘ì†í–ˆìŠµë‹ˆë‹¤.");
 		System.out.println("Thread Name: " + threadName);
 	}
 	
@@ -31,16 +31,16 @@ public class ServerSocketThread extends Thread{
 		try {
 			br = new BufferedReader(new InputStreamReader(s1.getInputStream()));
 			pw = new PrintWriter(s1.getOutputStream(), true);
-			sendMessage("´ëÈ­¸íÀ» ³ÖÀ¸¼¼¿ä:");
+			sendMessage("ëŒ€í™”ëª…ì„ ë„£ìœ¼ì„¸ìš”:");
 			name = br.readLine();
-			st.broadCasting("[" + name + "]" + "´Ô ÀÔÀå.");
+			st.broadCasting("[" + name + "]" + "ë‹˜ ì…ì¥.");
 			
 			while(true) {
 				String strin = br.readLine();
 				st.broadCasting("[" + name + ": ]" + strin);
 			}
 		} catch (Exception e) {
-			System.out.println(threadName + " ´Ô ÅğÀå.");
+			System.out.println(threadName + " ë‹˜ í‡´ì¥.");
 			st.removeClient(this);
 		} finally {
 			try {

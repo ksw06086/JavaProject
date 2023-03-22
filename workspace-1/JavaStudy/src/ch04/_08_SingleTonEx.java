@@ -2,7 +2,7 @@ package ch04;
 
 public class _08_SingleTonEx {
 	public static void main(String[] args) {
-		// 4´Ü°è : ½ÇÁ¦·Î »ç¿ëÇÏ´Â ÄÚµå ¸¸µé±â
+		// 4ë‹¨ê³„ : ì‹¤ì œë¡œ ì‚¬ìš©í•˜ëŠ” ì½”ë“œ ë§Œë“¤ê¸°
 		_08_Company company = _08_Company.getInstance();
 		_08_Company company2 = _08_Company.getInstance();
 		System.out.println(company == company2);

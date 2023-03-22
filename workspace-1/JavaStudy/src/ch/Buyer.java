@@ -6,7 +6,7 @@ public class Buyer {
 	
 	public void buy(ElectroProduct product) {
 		if(myMoney - product.getPrice() < 0) {
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+			System.out.println("ìž”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		} else {
 			if(product instanceof Tv) {
 				Tv t = (Tv)product;
@@ -15,10 +15,10 @@ public class Buyer {
 				NoteBook n = (NoteBook)product;
 				n.print();
 			} else {
-				System.out.println("ÇöÀç ÆÇ¸Å ÁßÀÎ Á¦Ç°ÀÌ ¾Æ´Õ´Ï´Ù.");
+				System.out.println("í˜„ìž¬ íŒë§¤ ì¤‘ì¸ ì œí’ˆì´ ì•„ë‹™ë‹ˆë‹¤.");
 			}
-			System.out.println("Á¦Ç°±Ý¾× : " + product.getPrice() + " ÀÜ¾× : " + (myMoney -= product.getPrice()));
-			System.out.println("º¸³Ê½º Æ÷ÀÎÆ® : " + (bonusPoint += product.getBonusPoint()));
+			System.out.println("ì œí’ˆê¸ˆì•¡ : " + product.getPrice() + " ìž”ì•¡ : " + (myMoney -= product.getPrice()));
+			System.out.println("ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ : " + (bonusPoint += product.getBonusPoint()));
 		}
 	}
 }

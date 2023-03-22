@@ -7,11 +7,11 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 /**
- * <Å¬·¡½º>
- * BifferedOutputStream : InputStreamÀ¸·Î ÀĞÀº ³»¿ëÀ» ÀúÀåÇØµÎ°í ²¨³»½á¸Ô´Â ½ºÆ®¸² Å¬·¡½º
- * BufferedWriter : InputStreamReader·Î ÀĞÀº ³»¿ëÀ» ÀúÀåÇØµÎ°í ²¨³»½á¸Ô´Â ½ºÆ®¸² Å¬·¡½º
- * <ÁÖÀÇÁ¡>
- * - ÀÌ Å¬·¡½º´Â ÇÊÅÍÅ¬·¡½ºÀÌ±â ¶§¹®¿¡ È¥ÀÚ¼­ »ç¿ëÇÒ ¼ö ¾ø´Â Å¬·¡½ºÀÌ´Ù.
+ * <í´ë˜ìŠ¤>
+ * BifferedOutputStream : InputStreamìœ¼ë¡œ ì½ì€ ë‚´ìš©ì„ ì €ì¥í•´ë‘ê³  êº¼ë‚´ì¨ë¨¹ëŠ” ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * BufferedWriter : InputStreamReaderë¡œ ì½ì€ ë‚´ìš©ì„ ì €ì¥í•´ë‘ê³  êº¼ë‚´ì¨ë¨¹ëŠ” ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * <ì£¼ì˜ì >
+ * - ì´ í´ë˜ìŠ¤ëŠ” í•„í„°í´ë˜ìŠ¤ì´ê¸° ë•Œë¬¸ì— í˜¼ìì„œ ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” í´ë˜ìŠ¤ì´ë‹¤.
  * 
  * **/
 public class BfrdWrEx {
@@ -19,7 +19,7 @@ public class BfrdWrEx {
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		try {
-			out.write("¹öÆÛ¸¦ ÀÌ¿ëÇÑ ¹®ÀÚ¿­ Ãâ·Â");
+			out.write("ë²„í¼ë¥¼ ì´ìš©í•œ ë¬¸ìì—´ ì¶œë ¥");
 			out.flush();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

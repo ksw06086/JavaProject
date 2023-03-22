@@ -6,11 +6,11 @@ public class _11_ArrayListTest {
 	public static void main(String[] args) {
 		ArrayList<_11_Book> library = new ArrayList<_11_Book>();
 		
-		library.add(new _11_Book("ÅÂ¹é»ê¸Æ", "Á¶Á¤·¡"));
-		library.add(new _11_Book("µ¥¹Ì¾È", "Çì¸£¸¸ Çì¼¼"));
-		library.add(new _11_Book("¾î¶»°Ô »ì °ÍÀÎ°¡", "À¯½Ã¹Î"));
-		library.add(new _11_Book("ÅäÁö", "¹Ú°æ¸®"));
-		library.add(new _11_Book("¾î¸°¿ÕÀÚ", "»ıÅØÁãÆä¸®"));
+		library.add(new _11_Book("íƒœë°±ì‚°ë§¥", "ì¡°ì •ë˜"));
+		library.add(new _11_Book("ë°ë¯¸ì•ˆ", "í—¤ë¥´ë§Œ í—¤ì„¸"));
+		library.add(new _11_Book("ì–´ë–»ê²Œ ì‚´ ê²ƒì¸ê°€", "ìœ ì‹œë¯¼"));
+		library.add(new _11_Book("í† ì§€", "ë°•ê²½ë¦¬"));
+		library.add(new _11_Book("ì–´ë¦°ì™•ì", "ìƒí…ì¥í˜ë¦¬"));
 		
 		for (int i = 0; i < library.size(); i++) {
 			_11_Book book = library.get(i);
@@ -18,7 +18,7 @@ public class _11_ArrayListTest {
 		}
 		System.out.println();
 		
-		System.out.println("=== Çâ»óµÈ for¹® »ç¿ë ===");
+		System.out.println("=== í–¥ìƒëœ forë¬¸ ì‚¬ìš© ===");
 		for (_11_Book book : library) {
 			book.showBookInfo();
 		}

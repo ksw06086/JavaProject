@@ -3,11 +3,11 @@ package ch10;
 public class _01_Powder extends _01_Meterial{
 	@Override
 	public void doPrinting() {
-		System.out.println("Powder Àç·á·Î Ãâ·ÂÇÕ´Ï´Ù.");
+		System.out.println("Powder ìž¬ë£Œë¡œ ì¶œë ¥í•©ë‹ˆë‹¤.");
 	}
 	
 	@Override
 	public String toString() {
-		return "Àç·á´Â PowderÀÔ´Ï´Ù.";
+		return "ìž¬ë£ŒëŠ” Powderìž…ë‹ˆë‹¤.";
 	}
 }

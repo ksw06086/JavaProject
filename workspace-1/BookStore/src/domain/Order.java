@@ -3,21 +3,21 @@ package domain;
 import java.util.HashMap;
 
 /*
- * ÀÛ¼ºÀÏ : 2023.02.06.
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : ÁÖ¹®(±¸¸Å½ÂÀÎ¿äÃ») ¸ñ·Ï µ¥ÀÌÅÍ È£Ãâ ¿ëµµ
+ * ì‘ì„±ì¼ : 2023.02.06.
+ * ì‘ì„±ì : ê¹€ì„ ìš°
+ * ê°œìš” : ì£¼ë¬¸(êµ¬ë§¤ìŠ¹ì¸ìš”ì²­) ëª©ë¡ ë°ì´í„° í˜¸ì¶œ ìš©ë„
  * **/
 public class Order {
-	// Á÷·ÄÈ­ °´Ã¼ ¹øÈ£
+	// ì§ë ¬í™” ê°ì²´ ë²ˆí˜¸
 	private static final long serialVersionUID = 400L;
 	
-	// idº° ÁÖ¹®(±¸¸Å½ÂÀÎ¿äÃ»)ÇÑ Ã¥ ¸ñ·Ï 
+	// idë³„ ì£¼ë¬¸(êµ¬ë§¤ìŠ¹ì¸ìš”ì²­)í•œ ì±… ëª©ë¡ 
 	public static HashMap<String, HashMap<Integer, Book>> idOrderList = new HashMap<String, HashMap<Integer,Book>>();
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public Order() {}
 	
-	// ID°¡ »õ·Î µé¾î¿À¸é ÇØ´ç IDÀÇ ÁÖ¹®¹Ù±¸´Ï »ı¼º
+	// IDê°€ ìƒˆë¡œ ë“¤ì–´ì˜¤ë©´ í•´ë‹¹ IDì˜ ì£¼ë¬¸ë°”êµ¬ë‹ˆ ìƒì„±
 	public static HashMap<Integer, Book> getOrderList(){
 		return new HashMap<Integer, Book>();
 	}

@@ -5,7 +5,7 @@ import test.Bank;
 public class _03_BankMainEx {
 	public static void main(String[] args) {
 		_03_Bank bank = new _03_Bank();
-		bank.setBankName("µ·¸¹¾ÆÀºÇà");
+		bank.setBankName("ëŒ€í•œ");
 		bank.setAccountNumber("123-4567-89");
 		bank.setDeposit(300000);
 		bank.setWithdraw(2000000);
@@ -13,7 +13,7 @@ public class _03_BankMainEx {
 		bank.printBankInfo();
 		System.out.println();
 		
-		_03_Bank bank2 = new _03_Bank("µ·¾ø¾îÀºÇà", "123-456-789", 30000000, 50000000);
+		_03_Bank bank2 = new _03_Bank("ëŒ€í•œ", "123-456-789", 30000000, 50000000);
 		bank2.printBankInfo();
 	}
 }

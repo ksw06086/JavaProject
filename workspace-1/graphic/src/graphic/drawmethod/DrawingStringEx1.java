@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class DrawingStringEx1 extends JFrame {
 	public DrawingStringEx1() {
-		setTitle("¹®ÀÚ¿­ Ãâ·ÂÇÏ±â");
+		setTitle("ë¬¸ìì—´ ì¶œë ¥í•˜ê¸°");
 		
 		MyPan pan = new MyPan();
 		add("Center",pan);
@@ -18,7 +18,7 @@ public class DrawingStringEx1 extends JFrame {
 	class MyPan extends JPanel {
 		public void paint(Graphics g) {
 			super.paint(g);
-			g.drawString("drawStringÀ» ÀÌ¿ëÇÑ ¹®ÀÚ¿­ Ãâ·ÂÇÏ±â", 50, 100);
+			g.drawString("drawStringì„ ì´ìš©í•œ ë¬¸ìì—´ ì¶œë ¥í•˜ê¸°", 50, 100);
 		}
 	}
 	

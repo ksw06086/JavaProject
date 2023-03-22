@@ -26,19 +26,19 @@ public class DailyDefaultView  extends JPanel{
 	JLabel datelbl;
 	JTextArea area;
 	JPanel panS = new JPanel(new FlowLayout());
-	JButton btnSave = new JButton("ÀÏ±â ÀúÀå");
+	JButton btnSave = new JButton("ì¼ê¸° ì €ì¥");
 	
 	public DailyDefaultView(Date date) {
 		setLayout(new BorderLayout());
 		this.date = date;
-		datelbl = new JLabel((date.getYear()+1900)+"³â"+(date.getMonth() + 1)+"¿ù"+date.getDate()+"ÀÏ");
+		datelbl = new JLabel((date.getYear()+1900)+"ë…„"+(date.getMonth() + 1)+"ì›”"+date.getDate()+"ì¼");
 		
 		area = new JTextArea();
 		area.setLineWrap(true);
 
-		setBorder(BorderFactory.createRaisedBevelBorder()); //Å×µÎ¸®
-		setOpaque(true); // ¹è°æ Åõ¸íÇÏ°Ô
-		setBackground(new Color(255, 242, 245)); // ¹è°æ ÇÎÄí
+		setBorder(BorderFactory.createRaisedBevelBorder()); //í…Œë‘ë¦¬
+		setOpaque(true); // ë°°ê²½ íˆ¬ëª…í•˜ê²Œ
+		setBackground(new Color(255, 242, 245)); // ë°°ê²½ í•‘ì¿ 
 		
 		panS.add(btnSave);
 	}
@@ -47,9 +47,9 @@ public class DailyDefaultView  extends JPanel{
 		putDailyResult();
 		JScrollPane scroll = new JScrollPane(area);
 		
-		panS.setBorder(BorderFactory.createRaisedBevelBorder()); //Å×µÎ¸®
-		panS.setOpaque(true); // ¹è°æ Åõ¸íÇÏ°Ô
-		panS.setBackground(new Color(255, 242, 245)); // ¹è°æ ÇÎÄí
+		panS.setBorder(BorderFactory.createRaisedBevelBorder()); //í…Œë‘ë¦¬
+		panS.setOpaque(true); // ë°°ê²½ íˆ¬ëª…í•˜ê²Œ
+		panS.setBackground(new Color(255, 242, 245)); // ë°°ê²½ í•‘ì¿ 
 		
 		add("North", datelbl);
 		add("Center", scroll);

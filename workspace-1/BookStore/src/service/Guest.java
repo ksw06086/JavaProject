@@ -1,27 +1,27 @@
 package service;
 
 /*
- * ÀÛ¼ºÀÏ : 2023.02.10.
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : °í°´ °ü·Ã ±â´É¸í¼¼¼­
+ * ìž‘ì„±ì¼ : 2023.02.10.
+ * ìž‘ì„±ìž : ê¹€ì„ ìš°
+ * ê°œìš” : ê³ ê° ê´€ë ¨ ê¸°ëŠ¥ëª…ì„¸ì„œ
  * **/
 public interface Guest {
-	// ±â´É Å×½ºÆ®¿ë °í°´ ·Î±×ÀÎ µ¥ÀÌÅÍ
-	static String ID = "guest";					// ¼Õ´Ô °íÀ¯ ID »ý¼º
-	static String PASSWORD = "guest";		// ¼Õ³¿ °íÀ¯ PW »ý¼º
+	// ê¸°ëŠ¥ í…ŒìŠ¤íŠ¸ìš© ê³ ê° ë¡œê·¸ì¸ ë°ì´í„°
+	static String ID = "guest";				// ì†ë‹˜ ê³ ìœ  ID ìƒì„±
+	static String PASSWORD = "guest";		// ì†ë‹˜ ê³ ìœ  PW ìƒì„±
 	
-	// ¼Õ´Ô - Àå¹Ù±¸´Ï ¸ñ·Ï¿¡¼­ »ç¿ëÇÒ ±â´É
-	boolean guestLogin();							// ·Î±×ÀÎ
-	void cartDel();										// Àå¹Ù±¸´Ï »èÁ¦
-	void cartBuy();									// Àå¹Ù±¸´Ï ±¸¸Å
+	// ì†ë‹˜ - ìž¥ë°”êµ¬ë‹ˆ ëª©ë¡ì—ì„œ ì‚¬ìš©í•  ê¸°ëŠ¥
+	boolean guestLogin();					// ë¡œê·¸ì¸
+	void cartDel();							// ìž¥ë°”êµ¬ë‹ˆ ì‚­ì œ
+	void cartBuy();							// ìž¥ë°”êµ¬ë‹ˆ êµ¬ë§¤
 	
-	// ¼Õ´Ô - »óÇ°¸ñ·Ï¿¡¼­ »ç¿ëÇÒ ±â´É
-	void nowBuy();									// ¹Ù·Î±¸¸Å
-	void cartAdd();										// Àå¹Ù±¸´Ï Ãß°¡
+	// ì†ë‹˜ - ìƒí’ˆëª©ë¡ì—ì„œ ì‚¬ìš©í•  ê¸°ëŠ¥
+	void nowBuy();							// ë°”ë¡œêµ¬ë§¤
+	void cartAdd();							// ìž¥ë°”êµ¬ë‹ˆ ì¶”ê°€
 	
-	void refund();										// È¯ºÒ
+	void refund();							// í™˜ë¶ˆ
 	
-	// È¸¿ø°¡ÀÔ
-	void guestJoin();									// È¸¿ø°¡ÀÔ				
-	void guestLogOut();								// ·Î±×¾Æ¿ô
+	// íšŒì›ê°€ìž…
+	void guestJoin();						// íšŒì›ê°€ìž…				
+	void guestLogOut();						// ë¡œê·¸ì•„ì›ƒ
 }

@@ -5,25 +5,25 @@ public class _05_SuperLevel extends _05_PlayerLevel{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		System.out.println("¾ÆÁÖ »¡¸® ´Ş¸³´Ï´Ù.");
+		System.out.println("ì•„ì£¼ ë¹¨ë¦¬ ë‹¬ë¦½ë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void jump() {
 		// TODO Auto-generated method stub
-		System.out.println("¾ÆÁÖ ³ôÀÌ jumpÇÕ´Ï´Ù.");
+		System.out.println("ì•„ì£¼ ë†’ì´ jumpí•©ë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void turn() {
 		// TODO Auto-generated method stub
-		System.out.println("ÇÑ¹ÙÄû µ½´Ï´Ù.");
+		System.out.println("í•œë°”í€´ ë•ë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void showLevelMessage() {
 		// TODO Auto-generated method stub
-		System.out.println("*** °í±ŞÀÚ ·¹º§ÀÔ´Ï´Ù. ***");
+		System.out.println("*** ê³ ê¸‰ì ë ˆë²¨ì…ë‹ˆë‹¤. ***");
 	}
 	
 	

@@ -2,17 +2,17 @@ package ch06;
 
 public class _04_CustomerTest1 {
 	public static void main(String[] args) {
-		// ÀÏ¹İ°í°´
+		// ì¼ë°˜ê³ ê°
 		_04_Customer custLee = new _04_Customer();
 		custLee.setCustomerID(10010);
-		custLee.setCustomerName("ÀÌ¼ø½Å");
+		custLee.setCustomerName("ì´ìˆœì‹ ");
 		custLee.calcPrice(1000);
 		System.out.println(custLee.showCustomerInfo());
 		
-		// VIP°í°´
+		// VIPê³ ê°
 		_04_VIPCustomer custKim = new _04_VIPCustomer();
 		custKim.setCustomerID(10020);
-		custKim.setCustomerName("±èÀ¯½Å");
+		custKim.setCustomerName("ê¹€ìœ ì‹ ");
 		custKim.calcPrice(1000000);
 		System.out.println(custKim.showCustomerInfo());
 		

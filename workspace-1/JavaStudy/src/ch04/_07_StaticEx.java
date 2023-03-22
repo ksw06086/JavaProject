@@ -4,12 +4,12 @@ public class _07_StaticEx {
 	public static void main(String[] args) {
 		_07_Student lee = new _07_Student();
 		lee.setStudentID(1001);
-		lee.setStudentName("ÀÌÁö¹Î");
+		lee.setStudentName("ì´ì§€ë¯¼");
 		
-		System.out.println("ÇĞ¹ø : " + lee.getStudentID() + ", ÀÌ¸§ : " + lee.getStudentName());
-		// Å¬·¡½º¸í.static º¯¼ö ex) ÇÃÁ§½Ã ÄÜ¼Ö¿¡¼­ ÀÔ·Â¹ŞÀ» ¶§, ½ºÄ³³Ê Å¬·¡½º »ç¿ë½Ã
+		System.out.println("í•™ë²ˆ : " + lee.getStudentID() + ", ì´ë¦„ : " + lee.getStudentName());
+		// í´ë˜ìŠ¤ëª….static ë³€ìˆ˜ ex) í”Œì ì‹œ ì½˜ì†”ì—ì„œ ì…ë ¥ë°›ì„ ë•Œ, ìŠ¤ìºë„ˆ í´ë˜ìŠ¤ ì‚¬ìš©ì‹œ
 		// Scanner input = new Scanner(System.in);
-		// input.next() // °øÅëÀ¸·Î »ı¼ºÇØ¾ß ÇÒ ¶§
+		// input.next() // ê³µí†µìœ¼ë¡œ ìƒì„±í•´ì•¼ í•  ë•Œ
 		System.out.println("serialNum : " + _07_Student.serialNum);
 		System.out.println("serialNum : " + lee.serialNum);
 	}

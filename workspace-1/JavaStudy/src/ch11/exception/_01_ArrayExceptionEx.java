@@ -3,11 +3,11 @@ package ch11.exception;
 public class _01_ArrayExceptionEx {
 	public static void main(String[] args) {
 		/**
-		 * ¿¹¿ÜÃ³¸® ¸ñÀû : Á¤»óÁ¾·á
+		 * ì˜ˆì™¸ì²˜ë¦¬ ëª©ì  : ì •ìƒì¢…ë£Œ
 		 * try{
-		 * 	¿¹¿Ü°¡ ¹ß»ıÇÒ ¼ö ÀÖ´Â ÄÚµå ºÎºĞ
-		 * } catch(Ã³¸®ÇÒ ¿¹¿Ü Å¸ÀÔ e) {
-		 * 	try ºí·Ï ¾È¿¡¼­ ¿¹¿Ü°¡ ¹ß»ıÇßÀ» ¶§ ¿¹¿Ü¸¦ Ã³¸®ÇÏ´Â ºÎºĞ
+		 * 	ì˜ˆì™¸ê°€ ë°œìƒí•  ìˆ˜ ìˆëŠ” ì½”ë“œ ë¶€ë¶„
+		 * } catch(ì²˜ë¦¬í•  ì˜ˆì™¸ íƒ€ì… e) {
+		 * 	try ë¸”ë¡ ì•ˆì—ì„œ ì˜ˆì™¸ê°€ ë°œìƒí–ˆì„ ë•Œ ì˜ˆì™¸ë¥¼ ì²˜ë¦¬í•˜ëŠ” ë¶€ë¶„
 		 * } finally {
 		 * 
 		 * }
@@ -20,8 +20,8 @@ public class _01_ArrayExceptionEx {
 			}
 		} catch (Exception e) {
 			System.out.println(e);
-			System.out.println("¿¡·¯ ¹ß»ı");
+			System.out.println("ì—ëŸ¬ ë°œìƒ");
 		}
-		System.out.println("Á¾·á");
+		System.out.println("ì¢…ë£Œ");
 	}
 }

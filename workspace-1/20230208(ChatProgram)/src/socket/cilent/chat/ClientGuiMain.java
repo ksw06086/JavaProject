@@ -1,6 +1,6 @@
 package socket.cilent.chat;
 
-// ÇÁ·Î±×·¥ ±¸µ¿ ¸ŞÀÎ ÇÁ·Î±×·¥
+// í”„ë¡œê·¸ë¨ êµ¬ë™ ë©”ì¸ í”„ë¡œê·¸ë¨
 public class ClientGuiMain {
 	public static void main(String[] args) {
 		StartingJFrame frame = new StartingJFrame();

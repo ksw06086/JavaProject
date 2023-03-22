@@ -6,27 +6,27 @@ import ch10._16_MemberId;
 public class _16_MemberHashSetTest {
 	public static void main(String[] args) {
 		_16_MemberHashSet memberHashSet = new _16_MemberHashSet();
-		_16_MemberId memberLee = new _16_MemberId(1001, "ÀÌÁö¹Î");
-		_16_MemberId memberSon = new _16_MemberId(1002, "¼ÕÈï¹Î");
-		_16_MemberId memberPark = new _16_MemberId(1003, "¹Ú¹ÎÁö");
+		_16_MemberId memberLee = new _16_MemberId(1001, "ì´ì§€ë¯¼");
+		_16_MemberId memberSon = new _16_MemberId(1002, "ì†í¥ë¯¼");
+		_16_MemberId memberPark = new _16_MemberId(1003, "ë°•ë¯¼ì§€");
 		
-		// HashSet¿¡ È¸¿øÁ¤º¸ Ãß°¡
+		// HashSetì— íšŒì›ì •ë³´ ì¶”ê°€
 		memberHashSet.addMember(memberLee);
 		memberHashSet.addMember(memberSon);
 		memberHashSet.addMember(memberPark);
 		
-		// È¸¿øÁ¤º¸ Á¶È¸
+		// íšŒì›ì •ë³´ ì¡°íšŒ
 		memberHashSet.showAllMember();
 		
-		// 1¸í Ãß°¡(Áßº¹ id)
-		_16_MemberId memberHong = new _16_MemberId(1003, "È«±æµ¿");
+		// 1ëª… ì¶”ê°€(ì¤‘ë³µ id)
+		_16_MemberId memberHong = new _16_MemberId(1003, "í™ê¸¸ë™");
 		memberHashSet.addMember(memberHong);
 		
-		// È¸¿øÁ¤º¸ Á¶È¸
+		// íšŒì›ì •ë³´ ì¡°íšŒ
 		memberHashSet.showAllMember();
 		
-		// ÁÖ¼Òºñ±³.. ÁÖ¼Ò°¡ ´Ù¸£¹Ç·Î ´Ù¸¥ °´Ã¼·Î ÀÎ½Ä
-		// µû¶ó¼­ _16_MemberId Å¬·¡½º¿¡¼­ hashCode(), equals() ¸Ş¼Òµå¸¦ ¿À¹ö¶óÀÌµå ÇÏ¸é
-		// °ªºñ±³°¡ µÇ¾î, ÁÖ¼Ò°¡ ´Ù¸£´õ¶óµµ °ªÀ» ºñ±³ÇÏ¿©, °ªÀÌ °°À» °æ¿ì Áßº¹µÇÁö ¾Êµµ·Ï ¹İÈ¯
+		// ì£¼ì†Œë¹„êµ.. ì£¼ì†Œê°€ ë‹¤ë¥´ë¯€ë¡œ ë‹¤ë¥¸ ê°ì²´ë¡œ ì¸ì‹
+		// ë”°ë¼ì„œ _16_MemberId í´ë˜ìŠ¤ì—ì„œ hashCode(), equals() ë©”ì†Œë“œë¥¼ ì˜¤ë²„ë¼ì´ë“œ í•˜ë©´
+		// ê°’ë¹„êµê°€ ë˜ì–´, ì£¼ì†Œê°€ ë‹¤ë¥´ë”ë¼ë„ ê°’ì„ ë¹„êµí•˜ì—¬, ê°’ì´ ê°™ì„ ê²½ìš° ì¤‘ë³µë˜ì§€ ì•Šë„ë¡ ë°˜í™˜
 	}
 }

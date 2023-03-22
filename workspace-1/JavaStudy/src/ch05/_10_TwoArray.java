@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class _10_TwoArray {
 	public static void main(String[] args) {
 		/**
-		 * *** ¼ºÀûÇ¥ ***
+		 * *** ì„±ì í‘œ ***
 		 * ===================
-		 * ¹øÈ£ ±¹¾î ¿µ¾î ¼öÇĞ ÃÑÁ¡ Æò±Õ
+		 * ë²ˆí˜¸ êµ­ì–´ ì˜ì–´ ìˆ˜í•™ ì´ì  í‰ê· 
 		 * ===================
 		 * 1		100 100 100 300 100
 		 * 2        90   90   90
@@ -15,29 +15,29 @@ public class _10_TwoArray {
 		 * 4        70   70   70
 		 * 5        60   60   60
 		 * ===================
-		 * ÇÕ°è : 400  400  400
-		 * Æò±Õ : ¼Ò¼öÁ¡ ÀÌÇÏ µÑÂ°ÀÚ¸®
-		 * scores 2Â÷¿ø ¹è¿­ : ±¹, ¿µ, ¼ö
-		 * ÃÑÁ¡, Æò±Õ, °ú¸ñÇÕ°è´Â Á÷Á¢°è»ê
+		 * í•©ê³„ : 400  400  400
+		 * í‰ê·  : ì†Œìˆ˜ì  ì´í•˜ ë‘˜ì§¸ìë¦¬
+		 * scores 2ì°¨ì› ë°°ì—´ : êµ­, ì˜, ìˆ˜
+		 * ì´ì , í‰ê· , ê³¼ëª©í•©ê³„ëŠ” ì§ì ‘ê³„ì‚°
 		 * */
 		int[][] scores = new int[5][3];
 		int[] GwamokTotal = new int[3];
 		float[] GwamokAvg = new float[3];
 		Scanner sc = new Scanner(System.in);
 		for(int i = 0; i < scores.length; i++) {
-			System.out.print(i+1 + "¹øÀÇ ±¹¾îÁ¡¼ö : ");
+			System.out.print(i+1 + "ë²ˆì˜ êµ­ì–´ì ìˆ˜ : ");
 			scores[i][0] = sc.nextInt();
 			GwamokTotal[0] += scores[i][0];
-			System.out.print(i+1 + "¹øÀÇ ¿µ¾îÁ¡¼ö : ");
+			System.out.print(i+1 + "ë²ˆì˜ ì˜ì–´ì ìˆ˜ : ");
 			scores[i][1] = sc.nextInt();
 			GwamokTotal[1] += scores[i][1];
-			System.out.print(i+1 + "¹øÀÇ ¼öÇĞÁ¡¼ö : ");
+			System.out.print(i+1 + "ë²ˆì˜ ìˆ˜í•™ì ìˆ˜ : ");
 			scores[i][2] = sc.nextInt();
 			GwamokTotal[2] += scores[i][2];
 		}
-		System.out.println("*** ¼ºÀûÇ¥ ***");
+		System.out.println("*** ì„±ì í‘œ ***");
 		System.out.println("=====================");
-		System.out.println("¹øÈ£ ±¹¾î ¿µ¾î ¼öÇĞ ÃÑÁ¡ Æò±Õ");
+		System.out.println("ë²ˆí˜¸ êµ­ì–´ ì˜ì–´ ìˆ˜í•™ ì´ì  í‰ê· ");
 		System.out.println("=====================");
 		for(int i = 0; i < scores.length; i++) {
 			System.out.print(i + "   ");
@@ -48,8 +48,8 @@ public class _10_TwoArray {
 			System.out.println((scores[i][0]+scores[i][1]+scores[i][2])/scores[i].length);
 		}
 		System.out.println("=====================");
-		System.out.println("ÇÕ°è : " + GwamokTotal[0] + "  " + GwamokTotal[1] + "  " + GwamokTotal[2] + "  ");
-		System.out.print("Æò±Õ : ");
+		System.out.println("í•©ê³„ : " + GwamokTotal[0] + "  " + GwamokTotal[1] + "  " + GwamokTotal[2] + "  ");
+		System.out.print("í‰ê·  : ");
 		for(int i = 0; i<GwamokTotal.length; i++) {
 			System.out.printf("%.2f  ", GwamokTotal[i]/(scores.length * 1.0));
 		}

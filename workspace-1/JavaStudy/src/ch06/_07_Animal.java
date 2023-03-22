@@ -2,6 +2,6 @@ package ch06;
 
 public class _07_Animal {
 	public void move() {
-		System.out.println("µ¿¹°ÀÌ ¿òÁ÷ÀÎ´Ù.");
+		System.out.println("ë™ë¬¼ì´ ì›€ì§ì…ë‹ˆë‹¤.");
 	}
 }

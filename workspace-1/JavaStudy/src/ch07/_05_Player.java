@@ -1,10 +1,10 @@
 package ch07;
 
 public class _05_Player {
-	// ¸â¹öº¯¼ö
+	// ë©¤ë²„ë³€ìˆ˜
 	private _05_PlayerLevel level;
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public _05_Player() {
 		level = new _05_BeginnerLever();
 		level.showLevelMessage();

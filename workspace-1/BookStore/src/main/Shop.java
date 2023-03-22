@@ -3,13 +3,13 @@ package main;
 import view.Console;
 
 /*
- * ÀÛ¼ºÀÏ : 2023.02.04.
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : ¼­Á¡À» ½ÇÇàÇÏ±â À§ÇÑ main
+ * ì‘ì„±ì¼ : 2023.02.04.
+ * ì‘ì„±ì : ê¹€ì„ ìš°
+ * ê°œìš” : ì„œì ì„ ì‹¤í–‰í•˜ê¸° ìœ„í•œ main
  * **/
 public class Shop {
 	public static void main(String[] args) {
-		System.out.println("¼­Á¡ÀÌ ¹®À» ¿±´Ï´Ù µû¶ó¶ó¶ó~~~~~ follow follow me");;
+		System.out.println("ì„œì ì´ ë¬¸ì„ ì—½ë‹ˆë‹¤ ë”°ë¼ë¼ë¼~~~~~ follow follow me");;
 		Console con = new Console();
 	}
 }

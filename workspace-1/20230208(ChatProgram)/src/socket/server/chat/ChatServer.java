@@ -4,7 +4,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Vector;
 
-// Å¬¶óÀÌ¾ğÆ®·ÎºÎÅÍÀÇ ¿¬°á ¿äÃ»À» ´ë±âÇÏ°í ¼ö¶ô ¹× °ü¸®ÇÏ´Â ±â´ÉÀ» ±¸Çö
+// í´ë¼ì´ì–¸íŠ¸ë¡œë¶€í„°ì˜ ì—°ê²° ìš”ì²­ì„ ëŒ€ê¸°í•˜ê³  ìˆ˜ë½ ë° ê´€ë¦¬í•˜ëŠ” ê¸°ëŠ¥ì„ êµ¬í˜„
 public class ChatServer {
 	ServerSocket ss;
 	Socket s;
@@ -12,20 +12,20 @@ public class ChatServer {
 	
 	public ChatServer() {
 		v = new Vector<>(5,5);
-		System.out.println("Ã¤ÆÃ ¼­¹ö ½ÃÀÛ");
+		System.out.println("ì±„íŒ… ì„œë²„ ì‹œì‘");
 	}
 	
 	public void giveAndTake() {
 		try {
-			ss = new ServerSocket(9876);																				// ¼­¹ö ÁØºñ
+			ss = new ServerSocket(9876);																				// ì„œë²„ ì¤€ë¹„
 			
-			// TCP Á¢¼ÓÀ» ´İÀº µÚ ÇØ´ç Á¢¼ÓÀÌ ÀÏÁ¤½Ã°£ µ¿¾È Å¸ÀÓ¾Æ¿ô »óÅÂ·Î Áö¼ÓµÇ´Â °æ¿ì°¡ ÀÖÀ½.
-			// ÀÌ·¯ÇÑ °æ¿ì¿¡´Â µ¿ÀÏ Æ÷Æ®·Î ¹ÙÀÎµå¸¦ ÇÒ ¼ö ¾øÀ¸¹Ç·Î,
-			// true·Î ¼³Á¤ÇÏ¸é Á¢¼ÓÀÌ ´İÈù µÚ Å¸ÀÓ¾Æ¿ôÀÌ Áö¼ÓµÇ´õ¶óµµ µ¿ÀÏ Æ÷Æ®·Î ¹ÙÀÎµå°¡ °¡´ÉÇÔ.	*¹ÙÀÎµå : µÎ Á¤º¸¸¦ ¿¬°áÇØÁÖ´Â ÀÛ¾÷
+			// TCP ì ‘ì†ì„ ë‹«ì€ ë’¤ í•´ë‹¹ ì ‘ì†ì´ ì¼ì •ì‹œê°„ ë™ì•ˆ íƒ€ì„ì•„ì›ƒ ìƒíƒœë¡œ ì§€ì†ë˜ëŠ” ê²½ìš°ê°€ ìˆìŒ.
+			// ì´ëŸ¬í•œ ê²½ìš°ì—ëŠ” ë™ì¼ í¬íŠ¸ë¡œ ë°”ì¸ë“œë¥¼ í•  ìˆ˜ ì—†ìœ¼ë¯€ë¡œ,
+			// trueë¡œ ì„¤ì •í•˜ë©´ ì ‘ì†ì´ ë‹«íŒ ë’¤ íƒ€ì„ì•„ì›ƒì´ ì§€ì†ë˜ë”ë¼ë„ ë™ì¼ í¬íŠ¸ë¡œ ë°”ì¸ë“œê°€ ê°€ëŠ¥í•¨.	*ë°”ì¸ë“œ : ë‘ ì •ë³´ë¥¼ ì—°ê²°í•´ì£¼ëŠ” ì‘ì—…
 			ss.setReuseAddress(true);																					
 			while(true) {
-				s=ss.accept();																									// ¼­¹ö ÄÑ±â
-				ServerSocketThread svrth = new ServerSocketThread(this, s);						// ServerSocketThread °´Ã¼ »ı¼º
+				s=ss.accept();																									// ì„œë²„ ì¼œê¸°
+				ServerSocketThread svrth = new ServerSocketThread(this, s);						// ServerSocketThread ê°ì²´ ìƒì„±
 				addClient(svrth);
 				svrth.start();
 			}
@@ -34,16 +34,16 @@ public class ChatServer {
 		}
 	}
 	
-	// Å¬¶óÀÌ¾ğÆ® ÀÔÀå
+	// í´ë¼ì´ì–¸íŠ¸ ì…ì¥
 	public synchronized void addClient(Thread tr) {
 		v.add(tr);
-		System.out.println("Å¬¶óÀÌ¾ğÆ® 1¸í ÀÔÀå, ÃÑ " + v.size() + "¸í");
+		System.out.println("í´ë¼ì´ì–¸íŠ¸ 1ëª… ì…ì¥, ì´ " + v.size() + "ëª…");
 	}
 	
-	// Å¬¶óÀÌ¾ğÆ® ÅğÀå
+	// í´ë¼ì´ì–¸íŠ¸ í‡´ì¥
 	public synchronized void removeClient(Thread tr) {
 		v.add(tr);
-		System.out.println("Å¬¶óÀÌ¾ğÆ® 1¸í ÅğÀå, ÃÑ " + v.size() + "¸í");
+		System.out.println("í´ë¼ì´ì–¸íŠ¸ 1ëª… í‡´ì¥, ì´ " + v.size() + "ëª…");
 	}
 	
 	public synchronized void broadCasting(String sbc) {

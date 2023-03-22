@@ -3,11 +3,11 @@ package ch07;
 public class _04_Main {
 	public static void main(String[] args) {
 		_04_Car my = new _04_AICar();
-		System.out.println("=== ÀÚÀ²ÁÖÇà ÀÚµ¿Â÷ ===");
+		System.out.println("=== ììœ¨ì£¼í–‰ ìë™ì°¨ ===");
 		my.run();
 		
 		_04_Car his = new _04_ManualCar();
-		System.out.println("=== »ç¶÷ÀÌ ¿îÀüÇÏ´Â ÀÚµ¿Â÷ ===");
+		System.out.println("=== ì‚¬ëŒì´ ìš´ì „í•˜ëŠ” ìë™ì°¨ ===");
 		his.run();
 	}
 }

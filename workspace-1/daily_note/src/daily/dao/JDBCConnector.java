@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class JDBCConnector {
 	private static final String DRIVER_PATH = "com.mysql.cj.jdbc.Driver";
-	// localhostÀÇ ipÁÖ¼Ò - 127.0.0.1
+	// localhostì˜ ipì£¼ì†Œ - 127.0.0.1
 	private static final String URL = "jdbc:mysql://127.0.0.1:3306/daily_project?serverTimezone=UTC&useUnicode=yes&characterEncoding=UTF-8";
 	private static final String ID = "root";
 	private static final String PWD = "1234";	
@@ -17,9 +17,9 @@ public class JDBCConnector {
 	public static Connection getCon() {
 		try {
 			Class.forName(DRIVER_PATH);
-			System.out.println("Á¤»óÀûÀ¸·Î JDBC Driver°¡ LoadµÇ¾ú½À´Ï´Ù.");
+			System.out.println("ì •ìƒì ìœ¼ë¡œ JDBC Driverê°€ Loadë˜ì—ˆìŠµë‹ˆë‹¤.");
 			con = DriverManager.getConnection(URL, ID, PWD);
-			System.out.println("¿¬°áÀÌ Àß µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ì—°ê²°ì´ ì˜ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {

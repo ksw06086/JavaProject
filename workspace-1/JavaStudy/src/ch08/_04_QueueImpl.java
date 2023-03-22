@@ -1,7 +1,7 @@
 package ch08;
 
 public interface _04_QueueImpl {
-	void enQueue(String title);		// ¹è¿­ÀÇ ¸Ç ¸¶Áö¸·¿¡ Ãß°¡
-	String deQueue();						// ¹è¿­ÀÇ ¸Ç Ã³À½ Ç×¸ñ ¹İÈ¯
-	int getSize();							// ÇöÀç Queue¿¡ ÀÖ´Â °³¼ö ¹İÈ¯
+	void enQueue(String title);		// ë°°ì—´ì˜ ë§¨ ë§ˆì§€ë§‰ì— ì¶”ê°€
+	String deQueue();				// ë°°ì—´ì˜ ë§¨ ì²˜ìŒ í•­ëª© ë°˜í™˜
+	int getSize();					// í˜„ì¬ Queueì— ìˆëŠ” ê°œìˆ˜ ë°˜í™˜
 }

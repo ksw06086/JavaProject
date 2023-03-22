@@ -1,7 +1,7 @@
 package ch;
 
 public class Tv extends ElectroProduct{
-	private String name;		// ¿Ã∏ß
+	private String name;		// Ïù¥Î¶Ñ
 	
 	public Tv() {}
 	public Tv(int price, String name) {
@@ -17,7 +17,7 @@ public class Tv extends ElectroProduct{
 	}
 	
 	public void print() {
-		System.out.println("¡¶«∞∏Ì : " + name);
+		System.out.println("Ïù¥Î¶Ñ : " + name);
 	}
 	
 }

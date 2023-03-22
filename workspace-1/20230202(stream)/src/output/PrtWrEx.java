@@ -4,15 +4,15 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
 /**
- * <Å¬·¡½º>
- * PrintStream : OutputStream Å¬·¡½ºÀÇ º¹ÀâÇÑ ¸Ş¼Òµå¸¦ print(), println()¸Ş¼Òµå¸¸À¸·Î »ç¿ëÇÒ ¼ö ÀÖµµ·Ï Á¤¸®ÇÑ ÇÊÅÍ½ºÆ®¸² Å¬·¡½º
- * PrintWriter : OutputStreamWriter Å¬·¡½ºÀÇ º¹ÀâÇÑ ¸Ş¼Òµå¸¦ print(), println()¸Ş¼Òµå¸¸À¸·Î »ç¿ëÇÒ ¼ö ÀÖµµ·Ï Á¤¸®ÇÑ ÇÊÅÍ½ºÆ®¸² Å¬·¡½º
+ * <í´ë˜ìŠ¤>
+ * PrintStream : OutputStream í´ë˜ìŠ¤ì˜ ë³µì¡í•œ ë©”ì†Œë“œë¥¼ print(), println()ë©”ì†Œë“œë§Œìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆë„ë¡ ì •ë¦¬í•œ í•„í„°ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * PrintWriter : OutputStreamWriter í´ë˜ìŠ¤ì˜ ë³µì¡í•œ ë©”ì†Œë“œë¥¼ print(), println()ë©”ì†Œë“œë§Œìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆë„ë¡ ì •ë¦¬í•œ í•„í„°ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
  * 
  * */
 public class PrtWrEx {
 	public static void main(String[] args) {
 		PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
-		out.print("ÀÚ¹Ù ÇÁ·Î±×·¡¹Ö");
+		out.print("ìë°” í”„ë¡œê·¸ë˜ë°");
 		out.flush();
 	}
 }

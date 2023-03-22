@@ -10,19 +10,19 @@ public class _06_StudentArrayList {
 		list = new ArrayList<_06_Student>();
 	}
 	
-	// ÇĞ»ı Ãß°¡
+	// í•™ìƒ ì¶”ê°€
 	public void addStudent(_06_Student student) {
 		list.add(student);
 	}
 	
-	// ÇĞ»ı »èÁ¦
+	// í•™ìƒ ì‚­ì œ
 	public boolean deleteStudent(String studentID) {
 		for (int i = 0; i < list.size(); i++) {
 			_06_Student std = list.get(i);
 			String tempID = std.getStudentID();
 			
-			// ÀÌ°Ô ¿Ö °°À»±î? tempID¿¡ µé¾î°£ °ªµµ »ç½Ç Ã³À½¿¡ »ó¼öÇ®¿¡ µé¾î°£ °ªÀÌ Àü´ŞµÈ °ÍÀÌ°í
-			// studentID´Â ¾ÖÃÊ¿¡ »ó¼öÇ®¿¡ °ªÀÌ µé¾î°¡´Ùº¸´Ï °°´Ù
+			// ì´ê²Œ ì™œ ê°™ì„ê¹Œ? tempIDì— ë“¤ì–´ê°„ ê°’ë„ ì‚¬ì‹¤ ì²˜ìŒì— ìƒìˆ˜í’€ì— ë“¤ì–´ê°„ ê°’ì´ ì „ë‹¬ëœ ê²ƒì´ê³ 
+			// studentIDëŠ” ì• ì´ˆì— ìƒìˆ˜í’€ì— ê°’ì´ ë“¤ì–´ê°€ë‹¤ë³´ë‹ˆ ê°™ë‹¤
 			if(tempID == studentID) {
 				System.out.println(System.identityHashCode(tempID));
 				System.out.println(System.identityHashCode(studentID));
@@ -31,11 +31,11 @@ public class _06_StudentArrayList {
 			}
 		}
 		
-		System.out.println("ÇØ´ç ID¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+		System.out.println("í•´ë‹¹ IDë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		return false;
 	}
 	
-	// ¸ğµç ÇĞ»ı Á¤º¸ Ãâ·Â
+	// ëª¨ë“  í•™ìƒ ì •ë³´ ì¶œë ¥
 	public void showStudentInfo() {
 		for (_06_Student student : list) {
 			System.out.println(student);

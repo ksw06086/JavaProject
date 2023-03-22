@@ -4,17 +4,17 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 /*
- * ÀÛ¼ºÀÏ : 2023.02.06.
- * ÀÛ¼ºÀÚ : ±è¼±¿ì
- * °³¿ä : ±¸¸Å¿Ï·á ¸ñ·Ï µ¥ÀÌÅÍ È£Ãâ ¿ëµµ
+ * ì‘ì„±ì¼ : 2023.02.06.
+ * ì‘ì„±ì : ê¹€ì„ ìš°
+ * ê°œìš” : êµ¬ë§¤ì™„ë£Œ ëª©ë¡ ë°ì´í„° í˜¸ì¶œ ìš©ë„
  * **/
 public class Buy implements Serializable {
-	// Á÷·ÄÈ­ °´Ã¼ ¹øÈ£
+	// ì§ë ¬í™” ê°ì²´ ë²ˆí˜¸
 	private static final long serialVersionUID = 200L;
 	
-	// ±¸¸ÅÇÑ Ã¥ ¸ñ·Ï
+	// êµ¬ë§¤í•œ ì±… ëª©ë¡
 	public static HashMap<Integer, Book> buyList = new HashMap<Integer, Book>();
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public Buy() {}
 }

@@ -8,14 +8,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * <Å¬·¡½º>
- * FileWriter : ¿µ¹® Æ÷ÇÔ ´Ù¸¥ ³ª¶ó ¾ğ¾î±îÁö ÀÔ·ÂµÇ¾î ÀÖ´Â ÆÄÀÏ¿¡ ³»¿ëÀ» Ãâ·ÂÇÏ´Â ½ºÆ®¸² Å¬·¡½º
- * <»ı¼ºÀÚ>
+ * <í´ë˜ìŠ¤>
+ * FileWriter : ì˜ë¬¸ í¬í•¨ ë‹¤ë¥¸ ë‚˜ë¼ ì–¸ì–´ê¹Œì§€ ì…ë ¥ë˜ì–´ ìˆëŠ” íŒŒì¼ì— ë‚´ìš©ì„ ì¶œë ¥í•˜ëŠ” ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * <ìƒì„±ì>
  * - FileWriter
- * + FileWriter(String name)								- ÆÄÀÏ¸íÀÌ nameÀÎ ÆÄÀÏ¿¡ Ãâ·ÂÇÏ´Â FileWriter
- * + FileWriter(String name, boolean apnd)		- ÆÄÀÏ¸íÀÌ nameÀÎ ÆÄÀÏÀ» ¿­¾î¼­ apnd °ª¿¡ µû¶ó Ãß°¡ÇÏ°Å³ª »õ·Î Ãâ·ÂÇÏ´Â FileWriter
- * + FileWriter(File file)									- file °´Ã¼°¡ °¡¸®Å°´Â ÆÄÀÏ¿¡ Ãâ·ÂÇÏ´Â FileWriter
- * 
+ * + FileWriter(String name)				- íŒŒì¼ëª…ì´ nameì¸ íŒŒì¼ì— ì¶œë ¥í•˜ëŠ” FileWriter
+ * + FileWriter(String name, boolean apnd)	- íŒŒì¼ëª…ì´ nameì¸ íŒŒì¼ì„ ì—´ì–´ì„œ apnd ê°’ì— ë”°ë¼ ì¶”ê°€í•˜ê±°ë‚˜ ìƒˆë¡œ ì¶œë ¥í•˜ëŠ” FileWriter
+ * + FileWriter(File file)					- file ê°ì²´ê°€ ê°€ë¦¬í‚¤ëŠ” íŒŒì¼ì— ì¶œë ¥í•˜ëŠ” FileWriter
+ *
  * **/
 public class FileCopyEx {
 	public static void main(String[] args) {

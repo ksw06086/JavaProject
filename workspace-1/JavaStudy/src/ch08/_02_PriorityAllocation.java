@@ -5,13 +5,13 @@ public class _02_PriorityAllocation implements _02_SchedulerImpl{
 	@Override
 	public void getNextCall() {
 		// TODO Auto-generated method stub
-		System.out.println("°í°´ µî±ŞÀÌ ³ôÀº °í°´ÀÇ ÀüÈ­¸¦ ¸ÕÀú °¡Á®¿É´Ï´Ù.");
+		System.out.println("ê³ ê° ë“±ê¸‰ì´ ë†’ì€ ê³ ê°ì˜ ì „í™”ë¥¼ ë¨¼ì € ê°€ì ¸ì˜µë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void sendCallToAgent() {
 		// TODO Auto-generated method stub
-		System.out.println("¾÷¹« skill °ªÀÌ ³ôÀº »ó´ã¿ø¿¡°Ô ¿ì¼±ÀûÀ¸·Î ¹èºĞÇÕ´Ï´Ù.");
+		System.out.println("ì—…ë¬´ skill ê°’ì´ ë†’ì€ ìƒë‹´ì›ì—ê²Œ ìš°ì„ ì ìœ¼ë¡œ ë°°ë¶„í•©ë‹ˆë‹¤.");
 	}
 	
 }

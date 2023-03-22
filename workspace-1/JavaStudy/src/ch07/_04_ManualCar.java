@@ -5,14 +5,14 @@ public class _04_ManualCar extends _04_Car{
 	@Override
 	public void drive() {
 		// TODO Auto-generated method stub
-		System.out.println("»ç¶÷ÀÌ ¿îÀüÇÕ´Ï´Ù.");
-		System.out.println("»ç¶÷ÀÌ ÇÚµéÀ» Á¶ÀÛÇÕ´Ï´Ù.");
+		System.out.println("ì‚¬ëŒì´ ìš´ì „í•©ë‹ˆë‹¤.");
+		System.out.println("ì‚¬ëŒì´ í•¸ë“¤ì„ ì¡°ì‘í•©ë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void stop() {
 		// TODO Auto-generated method stub
-		System.out.println("ºê·¹ÀÌÅ©·Î Á¤ÁöÇÕ´Ï´Ù.");
+		System.out.println("ë¸Œë ˆì´í¬ë¡œ ì •ì§€í•©ë‹ˆë‹¤.");
 	}
 	
 }

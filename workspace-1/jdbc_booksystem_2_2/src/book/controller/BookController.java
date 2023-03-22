@@ -41,43 +41,43 @@ public class BookController extends JFrame {
 		con = JDBCConnector.getCon();
 		dao = new BookDAO();
 		
-		// µµ¼­ °Ë»ö
+		// ë„ì„œ ê²€ìƒ‰
 		searchPan = new BookSearchView();
 		bookList = dao.select(searchPan.getSearchWord(), 0);
 		searchPan.setBookList(bookList);
 		searchPan.initView();
-		// µµ¼­ Ãß°¡
+		// ë„ì„œ ì¶”ê°€
 		insertPan = new BookInsertView();
 		bookList = dao.select( "", 0);
 		insertPan.setBookList(bookList);
 		insertPan.initView();
-		// µµ¼­ ¼öÁ¤
+		// ë„ì„œ ìˆ˜ì •
 		updatePan = new BookUpdateView();
 		bookList = dao.select( "", 0);
 		updatePan.setBookList(bookList);
 		updatePan.initView();
 		
-		// µµ¼­°Ë»ö¹öÆ°
+		// ë„ì„œê²€ìƒ‰ë²„íŠ¼
 		searchBtn = searchPan.getBtnSearch();
 		searchBtn.addActionListener(btnL);
 		searchPan.putSearchResult();
-		// µµ¼­Ãß°¡¹öÆ°
+		// ë„ì„œì¶”ê°€ë²„íŠ¼
 		insertBtn = insertPan.getBtnInsert();
 		insertBtn.addActionListener(btnL);
-		// µµ¼­¼öÁ¤¹öÆ°
+		// ë„ì„œìˆ˜ì •ë²„íŠ¼
 		updateBtn = updatePan.getBtnUpdate();
 		updateBtn.addActionListener(btnUpdateL);
 		table = updatePan.getTable();
 		table.addMouseListener(tableL);
 		
-		// ¸Ó¸®ÆÇ
-		tab.add("µµ¼­°Ë»ö", searchPan);
-		tab.add("µµ¼­Ãß°¡", insertPan);
-		tab.add("µµ¼­¼öÁ¤ ¹× »èÁ¦", updatePan);
+		// ë¨¸ë¦¬íŒ
+		tab.add("ë„ì„œê²€ìƒ‰", searchPan);
+		tab.add("ë„ì„œì¶”ê°€", insertPan);
+		tab.add("ë„ì„œìˆ˜ì • ë° ì‚­ì œ", updatePan);
 		
 		add(tab);
 		
-		setTitle("µµ¼­°ü¸®½Ã½ºÅÛ");
+		setTitle("ë„ì„œê´€ë¦¬ì‹œìŠ¤í…œ");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBounds(300, 500, 600, 500);
 		setVisible(true);
@@ -91,8 +91,8 @@ public class BookController extends JFrame {
 			}
 			
 			if(e.getClickCount() == 2) {
-				// PLAIN_MESSAGE´Â ¾ÆÀÌÄÜ ¾È¸¸µé¾îÁÜ, ¿¹ : 0 / ¾Æ´Ï¿À : 1
-				int result = JOptionPane.showConfirmDialog(BookController.this, "Á¤¸»·Î »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦¿©ºÎ", JOptionPane.WARNING_MESSAGE);
+				// PLAIN_MESSAGEëŠ” ì•„ì´ì½˜ ì•ˆë§Œë“¤ì–´ì¤Œ, ì˜ˆ : 0 / ì•„ë‹ˆì˜¤ : 1
+				int result = JOptionPane.showConfirmDialog(BookController.this, "ì •ë§ë¡œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œì—¬ë¶€", JOptionPane.WARNING_MESSAGE);
 				if(result == YES) {
 					BookVO vo = updatePan.neededUpdateData();
 					dao.delete(vo);

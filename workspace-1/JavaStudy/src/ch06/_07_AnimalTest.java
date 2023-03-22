@@ -33,7 +33,7 @@ public class _07_AnimalTest {
 				_07_Eagle e = (_07_Eagle)ani;
 				e.flying();
 			} else {
-				System.out.println("Áö¿øµÇÁö ¾Ê´Â ÇüÀÔ´Ï´Ù.");
+				System.out.println("í˜•ë³€í™˜ì„ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			}
 		}
 	}

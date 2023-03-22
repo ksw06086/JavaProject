@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 
 /**
- * <Å¬·¡½º>
- * OutputStream : ¿µ¹®À» »ç¿ëÇÒ ¶§ ÀÔ·Â ½ºÆ®¸² Å¬·¡½º
- * OutputStreamWriter : ¿µ¹® Æ÷ÇÔ ´Ù¸¥ ³ª¶ó ¾ğ¾î±îÁö »ç¿ëÇÒ ¶§ ÀÔ·Â ½ºÆ®¸² Å¬·¡½º
- * <¸Ş¼Òµå>
- * writer()		- Ãâ·ÂÇÒ ³»¿ë ¾²±â
- * flush()			- ¾²ÀÎ ³»¿ë Ãâ·Â
+ * <í´ë˜ìŠ¤>
+ * OutputStream : ì˜ë¬¸ì„ ì‚¬ìš©í•  ë•Œ ì…ë ¥ ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * OutputStreamWriter : ì˜ë¬¸ í¬í•¨ ë‹¤ë¥¸ ë‚˜ë¼ ì–¸ì–´ê¹Œì§€ ì‚¬ìš©í•  ë•Œ ì…ë ¥ ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * <ë©”ì†Œë“œ>
+ * writer()		- ì¶œë ¥í•  ë‚´ìš© ì“°ê¸°
+ * flush()		- ì“°ì¸ ë‚´ìš© ì¶œë ¥
  * 
  * **/
 public class OutStrWrEx {
@@ -17,7 +17,7 @@ public class OutStrWrEx {
 		OutputStreamWriter out = new OutputStreamWriter(System.out);
 		
 		try {
-			out.write("ÀÚ¹Ù ÇÁ·Î±×·¡¹Ö");
+			out.write("ìë°” í”„ë¡œê·¸ë˜ë°");
 			out.flush();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

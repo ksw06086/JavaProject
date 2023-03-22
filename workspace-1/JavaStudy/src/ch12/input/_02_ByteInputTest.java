@@ -4,12 +4,12 @@ import java.io.IOException;
 
 public class _02_ByteInputTest {
 	public static void main(String[] args) {
-		System.out.println("¾ËÆÄºª ÇÏ³ª¸¦ ¾²°í [Enter]¸¦ ´©¸£¼¼¿ä.");
+		System.out.println("ì•ŒíŒŒë²³ í•˜ë‚˜ë¥¼ ì“°ê³  [Enter]ë¥¼ ëˆ„ë¥´ì„¸ìš”.");
 		try {
 			while (true) {
 				int i = System.in.read();
 				if(i == -1) {
-					System.out.println("Ãâ·Â¿Ï·á");
+					System.out.println("ì¶œë ¥ì™„ë£Œ");
 					break;
 				}
 				System.out.println((char)i);

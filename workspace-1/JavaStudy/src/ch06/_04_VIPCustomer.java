@@ -21,7 +21,7 @@ public class _04_VIPCustomer extends _04_Customer{
 	@Override
 	public String showCustomerInfo() {
 		return super.showCustomerInfo() + "\n" +
-						customerName + "´ÔÀÇ »ó´ã¿ø ID´Â " + agentID + "ÀÔ´Ï´Ù.";
+						customerName + "ë‹˜ì˜ IDëŠ” " + agentID + "ì…ë‹ˆë‹¤.";
 	}
 
 	public int getAgentID() {

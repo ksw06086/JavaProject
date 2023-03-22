@@ -48,7 +48,7 @@ public class DailyDAO {
 		return defaultVO;
 	}
 	
-	// ÀÏ¹İ ÀÏ±â Ãß°¡
+	// ì¼ë°˜ ì¼ê¸° ì¶”ê°€
 	public void defaultInsert(DailyDefaultVO vo){
 		Connection con = JDBCConnector.getCon();
 		PreparedStatement pstmt = null;
@@ -59,9 +59,9 @@ public class DailyDAO {
 			pstmt.setString(2, vo.getContent());
 			int res = pstmt.executeUpdate();
 			if(res > 0) {
-				System.out.println("Àß Ãß°¡°¡ µÇ¾ú½À´Ï´Ù.");
+				System.out.println("ì˜ ì¶”ê°€ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			} else {
-				System.out.println("Ãß°¡°¡ µÇ´Â µµÁß ¿¡·¯°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+				System.out.println("ì¶”ê°€ê°€ ë˜ëŠ” ë„ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 			}
 			
 		} catch (SQLException e) {
@@ -77,7 +77,7 @@ public class DailyDAO {
 		
 	}
 	
-	// ÀÏ¹İ ÀÏ±â ¼öÁ¤
+	// ì¼ë°˜ ì¼ê¸° ìˆ˜ì •
 	public void defaultUpdate(DailyDefaultVO vo){
 		Connection con = JDBCConnector.getCon();
 		PreparedStatement pstmt = null;
@@ -88,9 +88,9 @@ public class DailyDAO {
 			pstmt.setDate(2, vo.getDate());
 			int res = pstmt.executeUpdate();
 			if(res > 0) {
-				System.out.println("Àß ¼öÁ¤ µÇ¾ú½À´Ï´Ù.");
+				System.out.println("ì˜ ìˆ˜ì • ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			} else {
-				System.out.println("¼öÁ¤µÇ´Â µµÁß ¿¡·¯°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+				System.out.println("ìˆ˜ì •ë˜ëŠ” ë„ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 			}
 			
 		} catch (SQLException e) {
@@ -106,7 +106,7 @@ public class DailyDAO {
 		
 	}
 	
-	// ÀÏ¹İ ÀÏ±â »èÁ¦
+	// ì¼ë°˜ ì¼ê¸° ì‚­ì œ
 /*public void defaultDelete(DailyDefaultVO vo){
 		Connection con = JDBCConnector.getCon();
 		PreparedStatement pstmt = null;
@@ -116,9 +116,9 @@ public class DailyDAO {
 			pstmt.setDate(1, vo.getDate());
 			int res = pstmt.executeUpdate();
 			if(res > 0) {
-				System.out.println("Àß »èÁ¦°¡ µÇ¾ú½À´Ï´Ù.");
+				System.out.println("ì˜ ì‚­ì œê°€ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			} else {
-				System.out.println("»èÁ¦°¡ µÇ´Â µµÁß ¿¡·¯°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+				System.out.println("ì‚­ì œê°€ ë˜ëŠ” ë„ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 			}
 			
 		} catch (SQLException e) {
@@ -170,7 +170,7 @@ public class DailyDAO {
 		return emotionList;
 	}
 	
-	// °¨Á¤ ÀÏ±â Ãß°¡
+	// ê°ì • ì¼ê¸° ì¶”ê°€
 	public void emotionInsert(ArrayList<DailyEmotionVO> vo){
 		Connection con = JDBCConnector.getCon();
 		PreparedStatement pstmt = null;
@@ -184,9 +184,9 @@ public class DailyDAO {
 				pstmt.setString(4, vo.get(i).getContent());
 				int res = pstmt.executeUpdate();
 				if(res > 0) {
-					System.out.println("Àß Ãß°¡°¡ µÇ¾ú½À´Ï´Ù.");
+					System.out.println("ì˜ ì¶”ê°€ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				} else {
-					System.out.println("Ãß°¡°¡ µÇ´Â µµÁß ¿¡·¯°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+					System.out.println("ì¶”ê°€ê°€ ë˜ëŠ” ë„ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				}
 			}
 			
@@ -203,7 +203,7 @@ public class DailyDAO {
 		
 	}
 	
-	// °¨Á¤ ÀÏ±â ¼öÁ¤
+	// ê°ì • ì¼ê¸° ìˆ˜ì •
 	public void emotionUpdate(ArrayList<DailyEmotionVO> vo){
 		Connection con = JDBCConnector.getCon();
 		PreparedStatement pstmt = null;
@@ -217,9 +217,9 @@ public class DailyDAO {
 				pstmt.setInt(4, vo.get(i).getIsbn());
 				int res = pstmt.executeUpdate();
 				if(res > 0) {
-					System.out.println("Àß ¼öÁ¤ µÇ¾ú½À´Ï´Ù.");
+					System.out.println("ì˜ ìˆ˜ì • ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				} else {
-					System.out.println("¼öÁ¤µÇ´Â µµÁß ¿¡·¯°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+					System.out.println("ìˆ˜ì •ë˜ëŠ” ë„ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				}
 			}
 			
@@ -271,7 +271,7 @@ public class DailyDAO {
 		return todoList;
 	}
 	
-	// Todo ¸®½ºÆ® Ãß°¡
+	// Todo ë¦¬ìŠ¤íŠ¸ ì¶”ê°€
 	public void todolistInsert(ArrayList<DailyTodoVO> vo){
 		Connection con = JDBCConnector.getCon();
 		PreparedStatement pstmt = null;
@@ -285,9 +285,9 @@ public class DailyDAO {
 				pstmt.setInt(4, vo.get(i).getChecked());
 				int res = pstmt.executeUpdate();
 				if(res > 0) {
-					System.out.println("Àß Ãß°¡°¡ µÇ¾ú½À´Ï´Ù.");
+					System.out.println("ì˜ ì¶”ê°€ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				} else {
-					System.out.println("Ãß°¡°¡ µÇ´Â µµÁß ¿¡·¯°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+					System.out.println("ì¶”ê°€ê°€ ë˜ëŠ” ë„ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				}
 			}
 			
@@ -304,7 +304,7 @@ public class DailyDAO {
 		
 	}
 	
-	// Todo ¸®½ºÆ® ¼öÁ¤
+	// Todo ë¦¬ìŠ¤íŠ¸ ìˆ˜ì •
 	public void todolistUpdate(ArrayList<DailyTodoVO> vo){
 		Connection con = JDBCConnector.getCon();
 		PreparedStatement pstmt = null;
@@ -318,9 +318,9 @@ public class DailyDAO {
 				pstmt.setInt(4, vo.get(i).getIsbn());
 				int res = pstmt.executeUpdate();
 				if(res > 0) {
-					System.out.println("Àß ¼öÁ¤ µÇ¾ú½À´Ï´Ù.");
+					System.out.println("ì˜ ìˆ˜ì • ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				} else {
-					System.out.println("¼öÁ¤µÇ´Â µµÁß ¿¡·¯°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+					System.out.println("ìˆ˜ì •ë˜ëŠ” ë„ì¤‘ ì—ëŸ¬ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				}
 			}
 			

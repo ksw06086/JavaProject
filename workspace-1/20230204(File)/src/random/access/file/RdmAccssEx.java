@@ -4,20 +4,20 @@ import java.io.RandomAccessFile;
 
 /**
  * 
- * <Å¬·¡½º>
- * - RandomAccessFile : ÆÄÀÏÀÇ ÀÓÀÇÀÇ À§Ä¡¿¡¼­ µ¥ÀÌÅÍ¸¦ ÀĞ°Å³ª ¾µ ¼ö ÀÖ°Ô ÇØÁÖ´Â Å¬·¡½º(ÀÔÃâ·Â ½ºÆ®¸² ¾îµğ¿¡µµ ¼ÓÇÏÁö ¾ÊÀ½)
- * <»ı¼ºÀÚ>
- * - RandomAccessFile(String name, String mode)		- ÆÄÀÏ¸íÀÌ nameÀÎ ÆÄÀÏ¿¡ ¿¬°áµÈ RandomAccessFile
- * - RandomAccessFile(File file, String mode)				- file °´Ã¼°¡ °¡¸®Å°´Â ÆÄÀÏ¿¡ ¿¬°áµÈ RandomAccessFile
- * +++ mode : r - ÀĞ±â ¸ğµå, rw - ÀĞ±â/¾²±â ¸ğµå
- * <ÁÖ¿ä¸Ş¼Òµå>
- * - long getFilePointer()						- ÆÄÀÏ Æ÷ÀÎÅÍÀÇ À§Ä¡ ¹İÈ¯
- * - int skipBytes(int n)						- ÆÄÀÏ Æ÷ÀÎÅÍ¸¦ ÇöÀç À§Ä¡·ÎºÎÅÍ n ¹ÙÀÌÆ®¸¸Å­ ÀÌµ¿
- * - void seek(long pos)						- ÆÄÀÏ Æ÷ÀÎÅÍ¸¦ pos·Î ÀÌµ¿
- * - int read()										- ÇöÀçÀÇ ÆÄÀÏ Æ÷ÀÎÅÍ À§Ä¡¿¡ ÀÖ´Â µ¥ÀÌÅÍ¸¦ ÀĞÀ½
- * - String readLine()							- ÇöÀçÀÇ ÆÄÀÏ Æ÷ÀÎÅÍ À§Ä¡·ÎºÎÅÍ ÇÑÁÙÀ» ÀĞÀ½
- * - void write(byte b[])						- ÇöÀçÀÇ ÆÄÀÏ Æ÷ÀÎÅÍ À§Ä¡¿¡ ¹ÙÀÌÆ® ¹è¿­ b¸¦ ÀúÀå
- * - long length()								- ÆÄÀÏÀÇ ±æÀÌ¸¦ ¹ÙÀÌÆ® ´ÜÀ§·Î ¹İÈ¯
+ * <í´ë˜ìŠ¤>
+ * - RandomAccessFile : íŒŒì¼ì˜ ì„ì˜ì˜ ìœ„ì¹˜ì—ì„œ ë°ì´í„°ë¥¼ ì½ê±°ë‚˜ ì“¸ ìˆ˜ ìˆê²Œ í•´ì£¼ëŠ” í´ë˜ìŠ¤(ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ì–´ë””ì—ë„ ì†í•˜ì§€ ì•ŠìŒ)
+ * <ìƒì„±ì>
+ * - RandomAccessFile(String name, String mode)	- íŒŒì¼ëª…ì´ nameì¸ íŒŒì¼ì— ì—°ê²°ëœ RandomAccessFile
+ * - RandomAccessFile(File file, String mode)	- file ê°ì²´ê°€ ê°€ë¦¬í‚¤ëŠ” íŒŒì¼ì— ì—°ê²°ëœ RandomAccessFile
+ * +++ mode : r - ì½ê¸° ëª¨ë“œ, rw - ì½ê¸°/ì“°ê¸° ëª¨ë“œ
+ * <ì£¼ìš”ë©”ì†Œë“œ>
+ * - long getFilePointer()						- íŒŒì¼ í¬ì¸í„°ì˜ ìœ„ì¹˜ ë°˜í™˜
+ * - int skipBytes(int n)						- íŒŒì¼ í¬ì¸í„°ë¥¼ í˜„ì¬ ìœ„ì¹˜ë¡œë¶€í„° n ë°”ì´íŠ¸ë§Œí¼ ì´ë™
+ * - void seek(long pos)						- íŒŒì¼ í¬ì¸í„°ë¥¼ posë¡œ ì´ë™
+ * - int read()									- í˜„ì¬ì˜ íŒŒì¼ í¬ì¸í„° ìœ„ì¹˜ì— ìˆëŠ” ë°ì´í„°ë¥¼ ì½ìŒ
+ * - String readLine()							- í˜„ì¬ì˜ íŒŒì¼ í¬ì¸í„° ìœ„ì¹˜ë¡œë¶€í„° í•œì¤„ì„ ì½ìŒ
+ * - void write(byte b[])						- í˜„ì¬ì˜ íŒŒì¼ í¬ì¸í„° ìœ„ì¹˜ì— ë°”ì´íŠ¸ ë°°ì—´ bë¥¼ ì €ì¥
+ * - long length()								- íŒŒì¼ì˜ ê¸¸ì´ë¥¼ ë°”ì´íŠ¸ ë‹¨ìœ„ë¡œ ë°˜í™˜
  * 
  * */
 public class RdmAccssEx {
@@ -34,7 +34,7 @@ public class RdmAccssEx {
 			
 			r.close();
 		} catch (Exception e) {
-			System.out.println("ÆÄÀÏÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("íŒŒì¼ì„ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
 }

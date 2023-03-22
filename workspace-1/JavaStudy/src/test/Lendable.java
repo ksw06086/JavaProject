@@ -1,9 +1,9 @@
 package test;
 
 public interface Lendable {
-	int STATE_BORROWED = 1; // ´ëÃâÁß
-	int STATE_NORMAL = 0; 		//ºñ´ëÃâ
+	int STATE_BORROWED = 1; 	// ëŒ€ì¶œì¤‘
+	int STATE_NORMAL = 0; 		// ë°˜ë‚©ì¤‘
 	
-	void checkOut(String borrower, int checkOutDate);		// ´ëÃâ
-	void checkIn();															// ¹Ý³³
+	void checkOut(String borrower, int checkOutDate);	// ëŒ€ì¶œ
+	void checkIn();															// ï¿½Ý³ï¿½
 }

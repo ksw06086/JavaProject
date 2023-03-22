@@ -6,32 +6,32 @@ import java.util.Map;
 
 public class _07_HashMap {
 	/*
-	 * ÇØ½Ì(hashing) : Å°¸¦ ÀÌ¿ëÇØ¼­ ÇØ½ÃÅ×ÀÌºí·ÎºÎÅÍ µ¥ÀÌÅÍ¸¦ °¡Á®¿À´Â °úÁ¤
+	 * í•´ì‹±(hashing) : í‚¤ë¥¼ ì´ìš©í•´ì„œ í•´ì‹œí…Œì´ë¸”ë¡œë¶€í„° ë°ì´í„°ë¥¼ ê°€ì ¸ì˜¤ëŠ” ê³¼ì •
 	 * 
 	 * HashMap
-	 * 1) Æ¯Â¡
-	 * - µ¥ÀÌÅÍÀÇ ¼ø¼­¸¦ º¸ÀåÇÏÁö ¾Ê´Â´Ù.
-	 * - key¿Í value ½ÖÀ¸·Î ÀúÀåµÈ´Ù.
-	 * - key´Â Áßº¹µÇ¸é ¾ÈµÈ´Ù.
-	 * - key¸¦ ÀÌ¿ëÇØ¼­ value¸¦ °¡Á®¿Ã ¼ö ÀÕ´Ù.
-	 * - List °è¿­°ú ´Ş¸® index°¡ ¾ø´Ù.
-	 * - MapÀÌ¶ó´Â ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º
+	 * 1) íŠ¹ì§•
+	 * - ë°ì´í„°ì˜ ìˆœì„œë¥¼ ë³´ì¥í•˜ì§€ ì•ŠëŠ”ë‹¤.
+	 * - keyì™€ value ìŒìœ¼ë¡œ ì €ì¥ëœë‹¤.
+	 * - keyëŠ” ì¤‘ë³µë˜ë©´ ì•ˆëœë‹¤.
+	 * - keyë¥¼ ì´ìš©í•´ì„œ valueë¥¼ ê°€ì ¸ì˜¬ ìˆ˜ ì‡ë‹¤.
+	 * - List ê³„ì—´ê³¼ ë‹¬ë¦¬ indexê°€ ì—†ë‹¤.
+	 * - Mapì´ë¼ëŠ” ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ë˜ìŠ¤
 	 * 
-	 * 2) ¼±¾ğ
-	 * - HashMap<key Å¸ÀÔ, value Å¸ÀÔ> map = new HashMap<key Å¸ÀÔ, value Å¸ÀÔ>();
-	 * - Map<key Å¸ÀÔ, value Å¸ÀÔ> map = new HashMap<key Å¸ÀÔ, value Å¸ÀÔ>(); // ´ÙÇü¼ºÀû¿ë
+	 * 2) ì„ ì–¸
+	 * - HashMap<key íƒ€ì…, value íƒ€ì…> map = new HashMap<key íƒ€ì…, value íƒ€ì…>();
+	 * - Map<key íƒ€ì…, value íƒ€ì…> map = new HashMap<key íƒ€ì…, value íƒ€ì…>(); // ë‹¤í˜•ì„±ì ìš©
 	 * 
-	 * 3) ¸Ş¼Òµå 
-	 * µ¥ÀÌÅÍ Ãß°¡ : put(key, value)
-	 * µ¥ÀÌÅÍ °¡Á®¿À±â : get(key)
-	 * µ¥ÀÌÅÍ »èÁ¦ : remove(key)
-	 * µ¥ÀÌÅÍ°¡ ºñ¾îÀÖ´ÂÁö ¿©ºÎ : isEmpty();
-	 * ÇØ´ç Å°°¡ ÀÖ´ÂÁö ¿©ºÎ : containsKey(key);
-	 * ÇØ´ç °ªÀÌ ÀÖ´ÂÁö ¿©ºÎ : containsValue(value);
-	 * ÇØ´ç °¹¼ö : size();
+	 * 3) ë©”ì†Œë“œ 
+	 * ë°ì´í„° ì¶”ê°€ : put(key, value)
+	 * ë°ì´í„° ê°€ì ¸ì˜¤ê¸° : get(key)
+	 * ë°ì´í„° ì‚­ì œ : remove(key)
+	 * ë°ì´í„°ê°€ ë¹„ì–´ìˆëŠ”ì§€ ì—¬ë¶€ : isEmpty();
+	 * í•´ë‹¹ í‚¤ê°€ ìˆëŠ”ì§€ ì—¬ë¶€ : containsKey(key);
+	 * í•´ë‹¹ ê°’ì´ ìˆëŠ”ì§€ ì—¬ë¶€ : containsValue(value);
+	 * í•´ë‹¹ ê°¯ìˆ˜ : size();
 	 * **/
 	public static void main(String[] args) {
-		//map »ı¼º
+		//map ìƒì„±
 		Map<Integer, String> map = new HashMap<Integer, String>();
 		map.put(1, "hong");
 		map.put(2, "kim");
@@ -39,34 +39,34 @@ public class _07_HashMap {
 		map.put(4, "park");
 		map.put(5, "son");
 		
-		// map ÀüÃ¼Ãâ·Â
+		// map ì „ì²´ì¶œë ¥
 		for (int i = 1; i <= map.size(); i++) {
 			System.out.println(map.get(i));
 		}
 		
-		// park µ¥ÀÌÅÍ °¡Á®¿À±â
+		// park ë°ì´í„° ê°€ì ¸ì˜¤ê¸°
 		System.out.println(map.get(4));
 		
-		// lee µ¥ÀÌÅÍ »èÁ¦
+		// lee ë°ì´í„° ì‚­ì œ
 		map.remove(3);
 		
-		// map ÀüÃ¼Ãâ·Â
+		// map ì „ì²´ì¶œë ¥
 		for (int i = 1; i <= map.size(); i++) {
 			System.out.println(map.get(i));
 		}
 		
-		// µ¥ÀÌÅÍ ºñ¾îÀÖ´ÂÁö
+		// ë°ì´í„° ë¹„ì–´ìˆëŠ”ì§€
 		System.out.println(map.isEmpty());
 		
-		// Å° Á¸Àç ¿©ºÎ
+		// í‚¤ ì¡´ì¬ ì—¬ë¶€
 		System.out.println(map.containsKey(2));
 		System.out.println(map.containsKey(3));
 		
-		// °ª Á¸Àç ¿©ºÎ
+		// ê°’ ì¡´ì¬ ì—¬ë¶€
 		System.out.println(map.containsValue("son"));
 		System.out.println(map.containsValue("lee"));
 		
-		// °³¼ö
+		// ê°œìˆ˜
 		System.out.println(map.size());
 	}
 }

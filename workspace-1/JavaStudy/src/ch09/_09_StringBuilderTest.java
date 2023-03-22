@@ -5,17 +5,17 @@ public class _09_StringBuilderTest {
 		String javaStr = new String("java");
 		String androidStr = new String("android");
 		System.out.println(javaStr);
-		System.out.println("Ã³À½ ¹®ÀÚ¿­ ÁÖ¼Ò °ª :" + System.identityHashCode(javaStr));
+		System.out.println("ì²˜ìŒ ë¬¸ìì—´ ì£¼ì†Œ ê°’ :" + System.identityHashCode(javaStr));
 		
 		StringBuilder buffer = new StringBuilder(javaStr);
-		System.out.println("¿¬»ê Àü buffer ÁÖ¼Ò °ª : " + System.identityHashCode(buffer));
+		System.out.println("ì—°ì‚° ì „ buffer ì£¼ì†Œ ê°’ : " + System.identityHashCode(buffer));
 		buffer.append(" and");
 		buffer.append(" android");
 		buffer.append(" programming is fun!!");
-		System.out.println("¿¬»ê ÈÄ buffer ÁÖ¼Ò °ª : " + System.identityHashCode(buffer));
+		System.out.println("ì—°ì‚° í›„ buffer ì£¼ì†Œ ê°’ : " + System.identityHashCode(buffer));
 		
 		javaStr = buffer.toString();
 		System.out.println(javaStr);
-		System.out.println("¿¬°áµÈ ¹®ÀÚ¿­ ÁÖ¼Ò °ª : " + System.identityHashCode(javaStr));
+		System.out.println("ì—°ê²°ëœ ë¬¸ìì—´ ì£¼ì†Œ ê°’ : " + System.identityHashCode(javaStr));
 	}
 }

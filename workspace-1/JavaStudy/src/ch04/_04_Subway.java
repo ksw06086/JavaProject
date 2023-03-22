@@ -1,9 +1,9 @@
 package ch04;
 
 public class _04_Subway {
-	String lineNumber; 		// ÁöÇÏÃ¶ ³ë¼± ¹øÈ£
-	int passengerCount;		// ½Â°´ ¼ö
-	int money;					// ÁöÇÏÃ¶ ¼öÀÔ
+	String lineNumber; 		// ì§€í•˜ì²  ë…¸ì„  ë²ˆí˜¸
+	int passengerCount;		// ìŠ¹ê° ìˆ˜
+	int money;					// ì§€í•˜ì²  ìˆ˜ì…
 	
 	public _04_Subway() {}
 	public _04_Subway(String lineNumber) {
@@ -16,8 +16,8 @@ public class _04_Subway {
 	}
 	
 	public void showInfo() {
-		System.out.println("ÁöÇÏÃ¶ " + lineNumber + "ÀÇ ½Â°´Àº " + passengerCount + "¸í");
-		System.out.println("¼öÀÔÀº " + money + "¿øÀÔ´Ï´Ù.");
+		System.out.println("ì§€í•˜ì²  " + lineNumber + "ì˜ ìŠ¹ê°ì€ " + passengerCount + "ëª…");
+		System.out.println("ìˆ˜ì…ì€ " + money + "ì›ì…ë‹ˆë‹¤.");
 	}
 	
 }

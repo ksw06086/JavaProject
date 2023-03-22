@@ -3,8 +3,8 @@ package test;
 public class BankMainEx {
 	public static void main(String[] args) {
 		Bank bank = new Bank();
-		bank.setName("½Ã¹Ù°ß");
-		bank.setBankName("µ·¸¹¾ÆÀºÇà");
+		bank.setName("ì‹œë°”ê²¬");
+		bank.setBankName("ëˆë§ì•„ì€í–‰");
 		bank.setAccountNumber("123-4567-89");
 		bank.setAssets(10000000);
 		bank.setDeposit(300000);
@@ -13,7 +13,7 @@ public class BankMainEx {
 		bank.printBankInfo();
 		System.out.println();
 		
-		Bank bank2 = new Bank("³ª", "µ·¾ø¾îÀºÇà", "123-456-789", 2000000000, 30000000, 50000000);
+		Bank bank2 = new Bank("ë‚˜", "ëˆì—†ì–´ì€í–‰", "123-456-789", 2000000000, 30000000, 50000000);
 		bank2.printBankInfo();
 	}
 }

@@ -1,14 +1,14 @@
 package ch03;
 
 public class _03_Student {
-	// ¸â¹öº¯¼ö
-	private int studentID; 										// ÇĞ¹ø
-	private String studentName;							// ÀÌ¸§
-	private int grade;											// ÇĞ³â
-	private String address;									// ÁÖ¼Ò
+	// ë©¤ë²„ë³€ìˆ˜
+	private int studentID; 										// í•™ë²ˆ
+	private String studentName;							// ì´ë¦„
+	private int grade;											// í•™ë…„
+	private String address;									// ì£¼ì†Œ
 	
 	public _03_Student() {
-		System.out.println("±âº»»ı¼ºÀÚ È£Ãâ");
+		System.out.println("ê¸°ë³¸ìƒì„±ì í˜¸ì¶œ");
 	}
 	
 	public _03_Student(int studentID, String studentName, int grade, String address) {

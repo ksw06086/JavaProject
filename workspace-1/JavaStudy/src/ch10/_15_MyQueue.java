@@ -3,22 +3,22 @@ package ch10;
 import java.util.ArrayList;
 
 public class _15_MyQueue {
-	// Å¥´Â ¸ÕÀú Ãß°¡µÈ µ¥ÀÌÅÍºÎÅÍ ²¨³»¼­ »ç¿ëÇÏ´Â ¹æ½Ä(First In First Out : FIFO)
+	// íëŠ” ë¨¼ì € ì¶”ê°€ëœ ë°ì´í„°ë¶€í„° êº¼ë‚´ì„œ ì‚¬ìš©í•˜ëŠ” ë°©ì‹(First In First Out : FIFO)
 	private ArrayList<String> arrayQueue = new ArrayList<String>();
 	
-	// Queue Ãß°¡ : Å¥ÀÇ ¸Ç µÚ¿¡ ¿ä¼Ò¸¦ Ãß°¡
+	// Queue ì¶”ê°€ : íì˜ ë§¨ ë’¤ì— ìš”ì†Œë¥¼ ì¶”ê°€
 	public void enQueue(String data) {
-		// ArrayList Ãß°¡
+		// ArrayList ì¶”ê°€
 		arrayQueue.add(data);
 	}
 	
-	// Queue »èÁ¦ : Å¥ÀÇ ¸Ç ¾ÕÀÇ ÀÚ·á¸¦ ¹İÈ¯ÇÏ°í ¹è¿­¿¡¼­ Á¦°Å
+	// Queue ì‚­ì œ : íì˜ ë§¨ ì•ì˜ ìë£Œë¥¼ ë°˜í™˜í•˜ê³  ë°°ì—´ì—ì„œ ì œê±°
 	public String deQueue() {
-		int len = arrayQueue.size();		// ArrayListÀÇ ÀÚ·á °³¼ö
+		int len = arrayQueue.size();		// ArrayListì˜ ìë£Œ ê°œìˆ˜
 		if(len == 0) {
-			System.out.println("½ºÅÃÀÌ ºñ¾ú½À´Ï´Ù.");
+			System.out.println("ìŠ¤íƒì´ ë¹„ì—ˆìŠµë‹ˆë‹¤.");
 			return null;
 		}
-		return arrayQueue.remove(0);		// ¸Ç ¾Õ¿¡ ÀÖ´Â ÀÚ·á¸¦ ¹İÈ¯ÇÏ°í ¹è¿­¿¡¼­ Á¦°Å
+		return arrayQueue.remove(0);		// ë§¨ ì•ì— ìˆëŠ” ìë£Œë¥¼ ë°˜í™˜í•˜ê³  ë°°ì—´ì—ì„œ ì œê±°
 	}
 }

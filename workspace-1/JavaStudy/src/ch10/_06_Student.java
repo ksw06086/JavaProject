@@ -1,10 +1,10 @@
 package ch10;
 
 public class _06_Student {
-	// ¸â¹öº¯¼ö
-	private String studentID;				// ÇĞ¹ø
-	private String studentName;		// ÀÌ¸§
-	private String email; 					// ÀÌ¸ŞÀÏ
+	// ë©¤ë²„ë³€ìˆ˜
+	private String studentID;				// í•™ë²ˆ
+	private String studentName;		// ì´ë¦„
+	private String email; 					// ì´ë©”ì¼
 	
 	public _06_Student() {}
 	
@@ -40,6 +40,6 @@ public class _06_Student {
 	
 	@Override
 	public String toString() {
-		return "ÇĞ¹ø : " + studentID + ", ÀÌ¸§ : " + studentName + ", email : " + email;
+		return "í•™ë²ˆ : " + studentID + ", ì´ë¦„ : " + studentName + ", email : " + email;
 	}
 }

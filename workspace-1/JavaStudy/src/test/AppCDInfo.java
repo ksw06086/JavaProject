@@ -9,37 +9,37 @@ public class AppCDInfo extends CDInfo implements Lendable{
 		super(registerNo, title);
 	}
 	
-	// ´ëÃâ
+	// ëŒ€ì¶œ
 	@Override
 	public void checkOut(String borrower, int checkOutDate) {
 		// TODO Auto-generated method stub
 		if(state == STATE_BORROWED) {
-			System.out.println("ÀÌ¹Ì ´ëÃâÁßÀÔ´Ï´Ù.");
+			System.out.println("ì´ë¯¸ ëŒ€ì¶œì¤‘ì…ë‹ˆë‹¤.");
 			return;
 		}
 		this.borrower = borrower;
 		this.checkOutDate = checkOutDate;
 		this.state = STATE_BORROWED;
-		System.out.println("´ëÃâ»óÅÂ : ´ëÃâÁß");
-		System.out.println(getTitle() + "°¡ ÅÂÃâµÇ¾ú½À´Ï´Ù.");
-		System.out.println("´ëÃâÀÎ : " + this.borrower);
-		System.out.println("´ëÃâÀÏ : " + this.checkOutDate);
+		System.out.println("ëŒ€ì¶œìƒíƒœ : ëŒ€ì¶œì¤‘");
+		System.out.println(getTitle() + "ê°€ íƒœì¶œë˜ì—ˆìŠµë‹ˆë‹¤.");
+		System.out.println("ëŒ€ì¶œì¸ : " + this.borrower);
+		System.out.println("ëŒ€ì¶œì¼ : " + this.checkOutDate);
 	}
 	
-	// ¹İ³³
+	// ë°˜ë‚©
 	@Override
 	public void checkIn() {
 		// TODO Auto-generated method stub
 		if(state == STATE_NORMAL) {
-			System.out.println("¹İ³³ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ë°˜ë‚©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			return;
 		}
 		this.borrower = "";
-		this.checkOutDate = 0; // String¿¡¼­ int·Î ¹Ù²ÙÁö ¾ÊÀ½
-		System.out.println("´ëÃâ»óÅÂ : ¹İ³³Áß");
+		this.checkOutDate = 0; // Stringì—ì„œ intë¡œ ë°”ê¾¸ì§€ ì•ŠìŒ
+		System.out.println("ëŒ€ì¶œìƒíƒœ : ë°˜ë‚©ì¤‘");
 		state = STATE_NORMAL;
-		System.out.println(getTitle() + "°¡ ¹İ³³µÇ¾ú½À´Ï´Ù.");
-		System.out.println("´ëÃâ»óÅÂ : ´ëÃâ°¡´É");
+		System.out.println(getTitle() + "ê°€ ë°˜ë‚©ë˜ì—ˆìŠµë‹ˆë‹¤.");
+		System.out.println("ëŒ€ì¶œìƒíƒœ : ëŒ€ì¶œê°€ëŠ¥");
 	}
 
 	public String getBorrower() {

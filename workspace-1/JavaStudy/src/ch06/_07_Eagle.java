@@ -3,10 +3,10 @@ package ch06;
 public class _07_Eagle extends _07_Animal{
 	@Override
 	public void move() {
-		System.out.println("µ¶¼ö¸®°¡ ÇÏ´ÃÀ» ³³´Ï´Ù.");
+		System.out.println("ë…ìˆ˜ë¦¬ê°€ í•˜ëŠ˜ì„ ë‚©ë‹ˆë‹¤.");
 	}
 	
 	public void flying() {
-		System.out.println("µ¶¼ö¸®°¡ ³¯°³¸¦ Æì°í ¸Ö¸® ³¯¾Æ°©´Ï´Ù.");
+		System.out.println("ë…ìˆ˜ë¦¬ê°€ ë‚ ê°œë¥¼ í´ê³  ë©€ë¦¬ ë‚ ì•„ê°‘ë‹ˆë‹¤.");
 	}
 }

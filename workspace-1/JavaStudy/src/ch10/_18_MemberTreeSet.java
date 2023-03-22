@@ -10,12 +10,12 @@ public class _18_MemberTreeSet {
 		treeSet = new TreeSet<_18_Member>();
 	}
 	
-	// È¸¿ø Ãß°¡
+	// íšŒì› ì¶”ê°€
 	public void addMember(_18_Member member) {
 		treeSet.add(member);
 	}
 	
-	// È¸¿ø »èÁ¦
+	// íšŒì› ì‚­ì œ
 	public boolean removeMember(int memberId) {
 		Iterator<_18_Member> ir = treeSet.iterator();
 		while (ir.hasNext()) {
@@ -26,12 +26,12 @@ public class _18_MemberTreeSet {
 				return true; 
 			}
 		}
-		System.out.println("Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+		System.out.println("ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		return false;
 		
 	}
 	
-	// Á¶È¸
+	// ì¡°íšŒ
 	public void showAllMember() {
 		for(_18_Member member : treeSet) {
 			System.out.println(member);

@@ -25,7 +25,7 @@ import daily.vo.DailyEmotionVO;
 import daily.vo.DailyTodoVO;
 
 public class DailyTodolistView  extends JPanel{
-	public static final int NUM_TODO = 14;	//To do list ÀÛ¼º °¹¼ö
+	public static final int NUM_TODO = 14;	//To do list ì‘ì„± ê°¯ìˆ˜
 	ArrayList<DailyTodoVO> todoList = new ArrayList<DailyTodoVO>();
 	Date date;
 	JLabel datelbl;
@@ -34,12 +34,12 @@ public class DailyTodolistView  extends JPanel{
 	Color checkColor = new Color(212,254,210);
 	JPanel panC = new JPanel(new GridLayout(NUM_TODO/2, 4));
 	JPanel panS = new JPanel(new FlowLayout());
-	JButton btnSave = new JButton("ÀÏ±â ÀúÀå");
+	JButton btnSave = new JButton("ì¼ê¸° ì €ì¥");
 	
 	public DailyTodolistView(Date date) {
 		setLayout(new BorderLayout());
 		this.date = date;
-		datelbl = new JLabel((date.getYear()+1900)+"³â"+(date.getMonth() + 1)+"¿ù"+date.getDate()+"ÀÏ");
+		datelbl = new JLabel((date.getYear()+1900)+"ë…„"+(date.getMonth() + 1)+"ì›”"+date.getDate()+"ì¼");
 		
 		for(int i = 0; i < NUM_TODO; i++) {
 			toDoList[i] = new JTextArea("");
@@ -51,8 +51,8 @@ public class DailyTodolistView  extends JPanel{
 			panC.add(checkBtns[i]);
 		}
 		
-		setBorder(BorderFactory.createRaisedBevelBorder()); //Å×µÎ¸®
-		setBackground(new Color(255, 242, 245)); // ¹è°æ ÇÎÄí
+		setBorder(BorderFactory.createRaisedBevelBorder()); //í…Œë‘ë¦¬
+		setBackground(new Color(255, 242, 245)); // ë°°ê²½ í•‘ì¿ 
 		
 		panS.add(btnSave);
 	}
@@ -77,13 +77,13 @@ public class DailyTodolistView  extends JPanel{
 	public void initView() {
 		putDailyResult();
 		
-		panC.setBorder(BorderFactory.createRaisedBevelBorder()); //Å×µÎ¸®
-		panC.setOpaque(true); // ¹è°æ Åõ¸íÇÏ°Ô
-		panC.setBackground(new Color(255, 242, 245)); // ¹è°æ ÇÎÄí
+		panC.setBorder(BorderFactory.createRaisedBevelBorder()); //í…Œë‘ë¦¬
+		panC.setOpaque(true); // ë°°ê²½ íˆ¬ëª…í•˜ê²Œ
+		panC.setBackground(new Color(255, 242, 245)); // ë°°ê²½ í•‘ì¿ 
 		
-		panS.setBorder(BorderFactory.createRaisedBevelBorder()); //Å×µÎ¸®
-		panS.setOpaque(true); // ¹è°æ Åõ¸íÇÏ°Ô
-		panS.setBackground(new Color(255, 242, 245)); // ¹è°æ ÇÎÄí
+		panS.setBorder(BorderFactory.createRaisedBevelBorder()); //í…Œë‘ë¦¬
+		panS.setOpaque(true); // ë°°ê²½ íˆ¬ëª…í•˜ê²Œ
+		panS.setBackground(new Color(255, 242, 245)); // ë°°ê²½ í•‘ì¿ 
 		
 		add("North", datelbl);
 		add("Center", panC);

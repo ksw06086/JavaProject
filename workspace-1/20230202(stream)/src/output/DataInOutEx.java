@@ -9,9 +9,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * <Å¬·¡½º>
- * DataOutputStream : ¹®ÀÚ,¹®ÀÚ¿­ÀÌ ¾Æ´Ñ ÀÏ¹İ µ¥ÀÌÅÍ(¼ıÀÚ, Bool, ½Ç¼ö µî)¸¦ Ãâ·ÂÇÒ ¶§ »ç¿ëÇÏ´Â ½ºÆ®¸² Å¬·¡½º
- * <¸Ş¼Òµå>
+ * <í´ë˜ìŠ¤>
+ * DataOutputStream : ë¬¸ì,ë¬¸ìì—´ì´ ì•„ë‹Œ ì¼ë°˜ ë°ì´í„°(ìˆ«ì, Bool, ì‹¤ìˆ˜ ë“±)ë¥¼ ì¶œë ¥í•  ë•Œ ì‚¬ìš©í•˜ëŠ” ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+ * <ë©”ì†Œë“œ>
  * + writeBoolean(), writeByte(), writeInt(), writeLong(), writeFloat(), writeDouble()
  * 
  * **/

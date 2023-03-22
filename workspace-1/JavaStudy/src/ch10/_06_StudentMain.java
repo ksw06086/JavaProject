@@ -3,21 +3,21 @@ package ch10;
 public class _06_StudentMain {
 	public static void main(String[] args) {
 		_06_StudentArrayList stdList = new _06_StudentArrayList();
-		_06_Student hong = new _06_Student("H001", "È«¼­À±", "hong@naver.com");
-		_06_Student lee = new _06_Student("H002", "ÀÌÁö¹Î", "lee@naver.com");
-		_06_Student kim = new _06_Student("H003", "±èÈñÁø", "kim@naver.com");
+		_06_Student hong = new _06_Student("H001", "í™ì„œìœ¤", "hong@naver.com");
+		_06_Student lee = new _06_Student("H002", "ì´ì§€ë¯¼", "lee@naver.com");
+		_06_Student kim = new _06_Student("H003", "ê¹€í¬ì§„", "kim@naver.com");
 		
-		// È¸¿ø Ãß°¡
+		// íšŒì› ì¶”ê°€
 		stdList.addStudent(hong);
 		stdList.addStudent(lee);
 		stdList.addStudent(kim);
 		
-		// ¸ğµçÇĞ»ı Á¤º¸ Ãâ·Â
+		// ëª¨ë“ í•™ìƒ ì •ë³´ ì¶œë ¥
 		stdList.showStudentInfo();
 		
-		// ÇĞ»ıÁ¤º¸ »èÁ¦
+		// í•™ìƒì •ë³´ ì‚­ì œ
 		stdList.deleteStudent("H001");
-		// ¸ğµçÇĞ»ı Á¤º¸ Ãâ·Â
+		// ëª¨ë“ í•™ìƒ ì •ë³´ ì¶œë ¥
 		stdList.showStudentInfo();
 				
 	}

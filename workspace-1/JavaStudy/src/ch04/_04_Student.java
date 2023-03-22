@@ -1,33 +1,33 @@
 package ch04;
 
 public class _04_Student {
-	// ¸â¹öº¯¼ö
-	public String studentName;				// ÇĞ»ıÀÌ¸§
-	public int grade;								// ÇĞ³â
-	public int money;								// ¼ÒÁö±İ¾×
+	// ë©¤ë²„ë³€ìˆ˜
+	public String studentName;				// í•™ìƒì´ë¦„
+	public int grade;								// í•™ë…„
+	public int money;								// ì†Œì§€ê¸ˆì•¡
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public _04_Student() {}
 	public _04_Student(String studentName, int money) {
 		this.studentName = studentName;
 		this.money = money;
 	}
 	
-	// ¸â¹ö¸Ş¼Òµå
-	// ¹ö½º Å½
+	// ë©¤ë²„ë©”ì†Œë“œ
+	// ë²„ìŠ¤ íƒ
 	public void takeBus(_04_Bus bus) {
 		bus.take(1250);
 		money -= 1250;
 	}
 	
-	// ÁöÇÏÃ¶ Å½
+	// ì§€í•˜ì²  íƒ
 	public void takeSubway(_04_Subway subway) {
 		subway.take(1500);
 		money -= 1500;
 	}
 	
 	public void showInfo() {
-		System.out.println(studentName + "´ÔÀÇ ³²Àº µ·Àº " + money + "¿øÀÔ´Ï´Ù.");
+		System.out.println(studentName + "ë‹˜ì˜ ë‚¨ì€ ëˆì€ " + money + "ì›ì…ë‹ˆë‹¤.");
 	}
 	
 	

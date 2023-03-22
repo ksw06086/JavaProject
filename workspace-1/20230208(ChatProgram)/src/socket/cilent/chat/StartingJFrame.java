@@ -10,7 +10,7 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-// ±¸ÇöµÈ Å¬¶óÀÌ¾ğÆ® ÇÁ·Î±×·¥ÀÇ ½ÇÇàÈ­¸éÀ» ¸ğ´ÏÅÍ Áß¾Ó¿¡ À§Ä¡ÇÏµµ·Ï ÇØÁÖ´Â ±â´É
+// êµ¬í˜„ëœ í´ë¼ì´ì–¸íŠ¸ í”„ë¡œê·¸ë¨ì˜ ì‹¤í–‰í™”ë©´ì„ ëª¨ë‹ˆí„° ì¤‘ì•™ì— ìœ„ì¹˜í•˜ë„ë¡ í•´ì£¼ëŠ” ê¸°ëŠ¥
 public class StartingJFrame extends JFrame{
 	private JPanel mainp;
 	public StartingJFrame() {

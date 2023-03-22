@@ -5,13 +5,13 @@ public class _02_LeastJob implements _02_SchedulerImpl{
 	@Override
 	public void getNextCall() {
 		// TODO Auto-generated method stub
-		System.out.println("»ó´ãÀüÈ­¸¦ ¼ø¼­´ë·Î ´ë±â¿­¿¡¼­ °¡Á®¿É´Ï´Ù.");
+		System.out.println("ìƒë‹´ì „í™”ë¥¼ ìˆœì„œëŒ€ë¡œ ëŒ€ê¸°ì—´ì—ì„œ ê°€ì ¸ì˜µë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void sendCallToAgent() {
 		// TODO Auto-generated method stub
-		System.out.println("¤¾³àÀç »ó´ã ¾÷¹«°¡ ¾ø°Å³ª ´ë±â°¡ °¡Àå ÀûÀº »ó´ã¿ø¿¡°Ô ÇÒ´çÇÕ´Ï´Ù.");
+		System.out.println("ã…ë…€ì¬ ìƒë‹´ ì—…ë¬´ê°€ ì—†ê±°ë‚˜ ëŒ€ê¸°ê°€ ê°€ì¥ ì ì€ ìƒë‹´ì›ì—ê²Œ í• ë‹¹í•©ë‹ˆë‹¤.");
 	}
 	
 }

@@ -3,10 +3,10 @@ package ch06;
 public class _07_Human extends _07_Animal {
 	@Override
 	public void move() {
-		System.out.println("»ç¶÷ÀÌ µÎ¹ß·Î °È½À´Ï´Ù.");
+		System.out.println("ì‚¬ëŒì´ ë‘ë°œë¡œ ê±·ìŠµë‹ˆë‹¤.");
 	}
 	
 	public void readBook() {
-		System.out.println("»ç¶÷ÀÌ Ã¥À» ÀĞ½À´Ï´Ù.");
+		System.out.println("ì‚¬ëŒì´ ì±…ì„ ì½ìŠµë‹ˆë‹¤.");
 	}
 }

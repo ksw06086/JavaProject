@@ -7,26 +7,26 @@ public class _05_ThrowException {
 	public static void main(String[] args) {
 		try {
 			String name = readName();
-			System.out.println("ÈÄ¾ÆÀ¯ : " + name);
+			System.out.println("í›„ì•„ìœ  : " + name);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			sc.close();
 		}
-		System.out.println("Á¤»óÁ¾·á");
+		System.out.println("ì •ìƒì¢…ë£Œ");
 	}
 	
-	public static String readName() throws Exception {	// 2, ¿¹¿Ü Ã³¸® ¹Ì·ç´Â throws
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
+	public static String readName() throws Exception {	// 2, ì˜ˆì™¸ ì²˜ë¦¬ ë¯¸ë£¨ëŠ” throws
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”.");
 		String name = sc.next();
 		
-		System.out.print("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.print("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”.");
 		String name2 = sc.nextLine();
 		System.out.println("sdfdfsfd" + name2);
 		
-		// 1. °­Á¦ ¿¹¿Ü ¹ß»ı : throw new Exception();
+		// 1. ê°•ì œ ì˜ˆì™¸ ë°œìƒ : throw new Exception();
 		if(name.length() < 2) {
-			throw new Exception("ÀÌ¸§Àº 2ÀÚ ÀÌ»óÀÔ´Ï´Ù.");
+			throw new Exception("ì´ë¦„ì€ 2ì ì´ìƒì…ë‹ˆë‹¤.");
 		} else {
 			return name;
 		}

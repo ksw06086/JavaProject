@@ -5,20 +5,20 @@ import java.util.ArrayList;
 public class _14_MyStack {
 	private ArrayList<String> arrayStack = new ArrayList<String>();
 	
-	// stack Ãß°¡ - push() : ½ºÅÃÀÇ ¸Ç µÚ¿¡ ¿ä¼Ò¸¦ Ãß°¡
+	// stack ì¶”ê°€ - push() : ìŠ¤íƒì˜ ë§¨ ë’¤ì— ìš”ì†Œë¥¼ ì¶”ê°€
 	public void push(String data) {
-		// ArrayList Ãß°¡ - add
+		// ArrayList ì¶”ê°€ - add
 		arrayStack.add(data);
 	}
 	
-	// stack »èÁ¦ - pop()
+	// stack ì‚­ì œ - pop()
 	public String pop() {
 		int len = arrayStack.size();
 		if(len == 0) {
-			System.out.println("½ºÅÃÀÌ ºñ¾ú½À´Ï´Ù.");
+			System.out.println("ìŠ¤íƒì´ ë¹„ì—ˆìŠµë‹ˆë‹¤.");
 			return null;
 		}
-		// ArrayList »èÁ¦ - remove();
-		return arrayStack.remove(len-1);	// ¸Ç µÚ¿¡ ÀÖ´Â ÀÚ·á¸¦ ¹İÈ¯ÇÏ°í ¹è¿­¿¡¼­ Á¦°Å 
+		// ArrayList ì‚­ì œ - remove();
+		return arrayStack.remove(len-1);	// ë§¨ ë’¤ì— ìˆëŠ” ìë£Œë¥¼ ë°˜í™˜í•˜ê³  ë°°ì—´ì—ì„œ ì œê±° 
 	}
 }

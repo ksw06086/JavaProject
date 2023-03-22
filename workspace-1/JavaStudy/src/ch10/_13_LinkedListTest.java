@@ -5,31 +5,31 @@ import java.util.LinkedList;
 public class _13_LinkedListTest {
 	public static void main(String[] args) {
 		/**
-		 * »ç¿ëÇÏ´Â ÀÚ·áÀÇ º¯µ¿(»ğÀÔ, »èÁ¦)ÀÌ ¸¹Àº °æ¿ì¿¡´Â ¸µÅ©µå ¸®½ºÆ®¸¦,
-		 * ÀÚ·áº¯µ¿ÀÌ °ÅÀÇ ¾ø´Â °æ¿ì¿¡´Â ¹è¿­À» »ç¿ëÇÏ´Â °ÍÀÌ È¿À²ÀûÀÌ´Ù.
+		 * ì‚¬ìš©í•˜ëŠ” ìë£Œì˜ ë³€ë™(ì‚½ì…, ì‚­ì œ)ì´ ë§ì€ ê²½ìš°ì—ëŠ” ë§í¬ë“œ ë¦¬ìŠ¤íŠ¸ë¥¼,
+		 * ìë£Œë³€ë™ì´ ê±°ì˜ ì—†ëŠ” ê²½ìš°ì—ëŠ” ë°°ì—´ì„ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ íš¨ìœ¨ì ì´ë‹¤.
 		 * 
-		 * ¸µÅ©µå ¸®½ºÆ®ÀÇ ¸Ç ¾Õ ¶Ç´Â ¸Ç µÚ¿¡ ¿ä¼Ò¸¦ Ãß°¡, »èÁ¦ÇÏ´Â addFirst(), addLast(), removeLast(), removeFirst() ¸Ş¼Òµå°¡ ÀÖ´Ù.
+		 * ë§í¬ë“œ ë¦¬ìŠ¤íŠ¸ì˜ ë§¨ ì• ë˜ëŠ” ë§¨ ë’¤ì— ìš”ì†Œë¥¼ ì¶”ê°€, ì‚­ì œí•˜ëŠ” addFirst(), addLast(), removeLast(), removeFirst() ë©”ì†Œë“œê°€ ìˆë‹¤.
 		 * */
 		
-		// ¸µÅ©µå ¸®½ºÆ® »ı¼º
+		// ë§í¬ë“œ ë¦¬ìŠ¤íŠ¸ ìƒì„±
 		LinkedList<String> myList = new LinkedList<String>();
 		
-		// ¸µÅ©µå¸®½ºÆ®¿¡ µ¥ÀÌÅÍ Ãß°¡
+		// ë§í¬ë“œë¦¬ìŠ¤íŠ¸ì— ë°ì´í„° ì¶”ê°€
 		myList.add("A");
 		myList.add("B");
 		myList.add("C");
 		
-		//¸®½ºÆ® ÀüÃ¼ Ãâ·Â
-		System.out.println(myList); // .toString »ı·«
+		//ë¦¬ìŠ¤íŠ¸ ì „ì²´ ì¶œë ¥
+		System.out.println(myList); // .toString ìƒëµ
 		
 		myList.add(1,"D");
-		System.out.println(myList); // .toString »ı·«
+		System.out.println(myList); // .toString ìƒëµ
 		
 		myList.addFirst("0");
-		System.out.println(myList); // .toString »ı·«
+		System.out.println(myList); // .toString ìƒëµ
 		
 		System.out.println(myList.removeLast());
-		System.out.println(myList); // .toString »ı·«
+		System.out.println(myList); // .toString ìƒëµ
 		
 	}
 }
