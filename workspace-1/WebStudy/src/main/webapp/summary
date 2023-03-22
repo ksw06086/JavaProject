@@ -1,0 +1,17 @@
+1. JSP jar 설정
+	WebContent > WEB-INF > lib에 jsp-api.jar, servlet-api.jar추가
+	
+2. 톰캣에서 GET 방식 파라미터를 위한 인코딩 처리하기
+
+serve xim에  URIEncoding - "UTF-8" 추가..
+63행 <Connector URIEncoding = "UTF-8" port = "80" ..../>
+
+- 주의사항 :
+	1. 톰캣 stop
+	2. 소스 추가 후 저장한다.
+	3. publish to the server 버튼을 클릭해서 동기화시킨다.(설정을 톰캣에도 적용)
+	  republish -> Synchronized 상태로 바뀜
+	  
+C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib ojdbc6.jar있는곳
+C:\Program Files\Java\jre1.8.0_201\lib\ext 자바 라이브러리에 넣기
+WebContent > WEB-INF > lib 붙여넣기
