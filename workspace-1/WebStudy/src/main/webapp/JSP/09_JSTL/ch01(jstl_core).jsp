@@ -19,12 +19,12 @@
 	<br>
 	<br>
 	
-	<!--
+	<%--
 		변수 지원태그 - <c:set> 태그 -- 여기 <c:set>안지우면 에러남
 		var : 값을 지정할 EL 변수의 이름을 지정한다.
 		value : 변수의 값을 지정한다.
 			표현식(<%= %>), EL(${key.value}), 정적인 텍스트("문자열"); -- 여기 표현식 에러남
-	 -->
+	 --%>
 	 <c:set var = "num1" value = "8"/>
 	 <c:set var = "num2" value = "4"/>
 	 <c:set var = "sum" value = "${num1 + num2}"/>

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h3> jstl - choose </h3>
-	<!-- 
+	<%-- 
 		c:choose
 			c:when test = "${조건식}"
 			..
@@ -21,7 +21,7 @@
 			..
 			/c:otherwise
 		/c:choose
-	 -->
+	 --%>
 	 <c:choose>
 	 	<c:when test="${param.num == 1}">
 	 		처음뵙겠습니다.
