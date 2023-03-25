@@ -12,36 +12,37 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class MemberEx
  */
-@WebServlet("/MemberEx")
+@WebServlet("/JSP/MemberEx")
 public class MemberEx extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	public MemberEx() {}
-	
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// 한글 안깨지게 함
-		req.setCharacterEncoding("UTF-8");
+       
+    public MemberEx() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 한글안깨지게 함
+		request.setCharacterEncoding("UTF-8");
 		
-		resp.setContentType("text/html; charset=UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
 		
-		PrintWriter out = resp.getWriter();
+		PrintWriter out = response.getWriter();
 		
 		out.println("<html>");
 		out.println("<head>");
 		out.println("</head>");
 		out.println("<body>");
-		out.println("성별 : ");
-		if(req.getParameter("gender").equals(1)) {
+		out.print("성별 : ");
+		if(request.getParameter("gender").equals(1)) {
 			out.println("남이신");
 		} else {
 			out.println("여이신");
 		}
-		out.println(req.getParameter("username") + "님 반갑습니다.<br>");
-		out.println("나이는" + req.getParameter("userage") + "세 이시고 <br>");
+		out.println(request.getParameter("username") +"님 반갑습니다.<br>");
+		out.println("나이는" + request.getParameter("userage") + "세 이시고<br>");
 		out.println("좋아하는 취미는");
-		String[] hobby = req.getParameterValues("hobby");
-		for(int i = 0; i < hobby.length; i++) {
+		String[] hobby = request.getParameterValues("hobby");
+		for(int i = 0; i<hobby.length; i++) {
 			if(hobby[i].equals("1")) {
 				out.print(" 영화");
 			}
@@ -57,11 +58,14 @@ public class MemberEx extends HttpServlet {
 		}
 		out.println("입니다.");
 		out.println("</body>");
-		out.println("</html>");
+		out.println("</html");
+		
+		out.close();
+		
 	}
-	
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doGet(req, resp);
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
 	}
+
 }
