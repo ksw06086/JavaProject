@@ -36,12 +36,15 @@ public class ClientGui extends JPanel implements ActionListener, Runnable{
 	BufferedReader br;
 	String str1;
 	
+	// Socket clientSocket = new Socket(frame, "128.12.1.1", 8558);
+	// JFrame 화면 생성 및 클라이언트 소켓 생성
 	public ClientGui(JFrame mainf, String ip, int port) {
-		this.mainf = mainf;
+		this.mainf = mainf; // 해당 클래스에 JFrame 기본 생성
 		System.out.println(this.getClass().getName() + "1. Start-->");
-		inits();															// 화면 구성
+		inits();  // JFrame 화면 디자인 입히기												// 화면 구성
 		try {
-			s = new Socket(ip, port);							// 소켓 연결
+			// 클라이언트 소캣 생성 및 서버 접속
+			s = new Socket(ip, port);						// 소켓 연결
 		} catch (Exception e) {
 			System.out.println("소켓 생성 실패");
 		}
@@ -67,28 +70,31 @@ public class ClientGui extends JPanel implements ActionListener, Runnable{
 		this.area1.setEditable(false);
 		this.tf1.requestFocus();
 	}
-	
-	// 메시지를 보내면 새로고침
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		this.tf1.requestFocus();
-		String strs = this.tf1.getText();
-		pw.println(strs);
-		this.tf1.setText("");
-	}
+
 	
 	// 메시지 읽고 쓰는 객체 생성해서 송수신
 	public void giveAndTake() {
 		try {
 			System.out.println(this.getClass().getName() + "3. inputOutput-->");
+			// 네트워크 입출력 스트림 생성(pw : 서버에게 값 보냄, br : 서버 값 가져옴)
 			pw = new PrintWriter(s.getOutputStream(), true);
 			br = new BufferedReader(new InputStreamReader(s.getInputStream()));
+			// 해당 사용자의 스레드를 생성해서 기동 시작
 			Thread ctr = new Thread(this);
 			ctr.start();
 		} catch (Exception e) {
 			e.getMessage();
 		}
+	}
+	
+	// tf1.action시 발생 : 메시지를 보내면 새로고침
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		this.tf1.requestFocus();
+		String strs = this.tf1.getText(); // -- tf1 값 가져오기
+		pw.println(strs);	// -- 서버에 tf1 값 출력해줌, flush 안쓰는 건 누적해서 화면에 모두 나오게 해야하기 때문
+		this.tf1.setText(""); // -- tf1 새로고침
 	}
 	
 	// 입력된 메시지 화면에 출력하기
@@ -97,7 +103,9 @@ public class ClientGui extends JPanel implements ActionListener, Runnable{
 		// TODO Auto-generated method stub
 		try {
 			System.out.println(this.getClass().getName() + "4. run-->");
+			// 서버에서 값 가져오기
 			br = new BufferedReader(new InputStreamReader(s.getInputStream()));
+			// 서버에서 가져온 값 area1에 출력해주기
 			while((str1 = br.readLine()) != null) {
 				this.area1.append(str1 + "\n");
 			}

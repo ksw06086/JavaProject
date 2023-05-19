@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2eca2023-99f6-4020-acdb-dc7655647e56" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../ChatProgram(프로젝트)/src/socket/cilent/chat/ClientGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatProgram(프로젝트)/src/socket/cilent/chat/ClientGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatProgram(프로젝트)/src/socket/cilent/chat/ClientGuiMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatProgram(프로젝트)/src/socket/cilent/chat/ClientGuiMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatProgram(프로젝트)/src/socket/cilent/chat/StartingJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatProgram(프로젝트)/src/socket/cilent/chat/StartingJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatProgram(프로젝트)/src/socket/server/chat/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatProgram(프로젝트)/src/socket/server/chat/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatProgram(프로젝트)/src/socket/server/chat/ServerSocketThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatProgram(프로젝트)/src/socket/server/chat/ServerSocketThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/socket/cilent/chat/ClientGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/cilent/chat/ClientGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/socket/cilent/chat/ClientGuiMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/cilent/chat/ClientGuiMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/socket/server/chat/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/server/chat/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/socket/server/chat/ServerSocketThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/server/chat/ServerSocketThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebStudy/src/main/webapp/HTML/html_2day/ch08(position_static).html" beforeDir="false" afterPath="$PROJECT_DIR$/../WebStudy/src/main/webapp/HTML/html_2day/ch08(position_static).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebStudy/src/main/webapp/HTML/html_2day/ch09(position_relative).html" beforeDir="false" afterPath="$PROJECT_DIR$/../WebStudy/src/main/webapp/HTML/html_2day/ch09(position_relative).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebStudy/src/main/webapp/HTML/html_2day/ch10(position_absolute).html" beforeDir="false" afterPath="$PROJECT_DIR$/../WebStudy/src/main/webapp/HTML/html_2day/ch10(position_absolute).html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2Q0MgmJnzP2TNyU5aCQOun248h5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Happy/Downloads/유한대학교 2학년/java programing/JavaProject/workspace-1/20230208(ChatProgram)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2eca2023-99f6-4020-acdb-dc7655647e56" name="Changes" comment="" />
+      <created>1684486158864</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684486158864</updated>
+      <workItem from="1684486159966" duration="54000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

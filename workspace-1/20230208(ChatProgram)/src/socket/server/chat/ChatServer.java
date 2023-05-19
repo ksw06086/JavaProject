@@ -17,17 +17,17 @@ public class ChatServer {
 	
 	public void giveAndTake() {
 		try {
-			ss = new ServerSocket(9876);																				// 서버 준비
+			ss = new ServerSocket(9876); // 서버 준비
 			
 			// TCP 접속을 닫은 뒤 해당 접속이 일정시간 동안 타임아웃 상태로 지속되는 경우가 있음.
 			// 이러한 경우에는 동일 포트로 바인드를 할 수 없으므로,
 			// true로 설정하면 접속이 닫힌 뒤 타임아웃이 지속되더라도 동일 포트로 바인드가 가능함.	*바인드 : 두 정보를 연결해주는 작업
 			ss.setReuseAddress(true);																					
 			while(true) {
-				s=ss.accept();																									// 서버 켜기
+				s=ss.accept(); // 연결 요청 기다리다가 요청이 오면 새 소켓 반환함
 				ServerSocketThread svrth = new ServerSocketThread(this, s);						// ServerSocketThread 객체 생성
 				addClient(svrth);
-				svrth.start();
+				svrth.start(); // 해당 스레드를 생성했으니 사용할 수 있게 실행시켜줌
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -42,7 +42,7 @@ public class ChatServer {
 	
 	// 클라이언트 퇴장
 	public synchronized void removeClient(Thread tr) {
-		v.add(tr);
+		v.remove(tr);
 		System.out.println("클라이언트 1명 퇴장, 총 " + v.size() + "명");
 	}
 	
